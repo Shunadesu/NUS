@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Video</title>
+  </head>
+  <body>
+    <header>
+      <h1>Video trang web</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Trang chủ</a></li>
+          <li><a href="/about">Giới thiệu</a></li>
+          <li><a href="/contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Phần chính của trang web</h2>
+        <article>
+          <h3>Ficture</h3>
+          <picture>
+            <source media="(max-width: 768px)" srcset="mobile-image.jpg" />
+            <source media="(min-width: 769px)" srcset="desktop-image.jpg" />
+            <img src="default-image.jpg" alt="Mô tả hình ảnh" />
+          </picture>
+        </article>
+        <article>
+          <h3>Video</h3>
+          <video controls>
+            <source src="video2.mp4" type="video/mp4" />
+          </video>
+        </article>
+        <article>
+          <h3>Bài viết 2</h3>
+          <p>Nội dung bài viết 2...</p>
+          <figure>
+            <img src="image2.jpg" alt="Hình ảnh mô tả bài viết 2" />
+            <figcaption>Mô tả hình ảnh của bài viết 2</figcaption>
+          </figure>
+        </article>
+      </section>
+    </main>
+    <aside>
+      <h2>Cột bên</h2>
+      <p>Thông tin bổ sung hoặc quảng cáo có thể được đặt ở đây.</p>
+    </aside>
+    <footer>
+      <p>&copy; 2024 Example Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
