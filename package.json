@@ -1,0 +1,24 @@
+{
+  "name": "sunny",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass scss/main.scss css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shunadesu/sunny.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shunadesu/sunny/issues"
+  },
+  "homepage": "https://github.com/Shunadesu/sunny#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  }
+}

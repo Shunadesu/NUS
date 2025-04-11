@@ -1,0 +1,108 @@
+  /* --------------------
+     Animations
+  -------------------- */
+  .fade-in {
+    animation: fadeIn var(--transition-normal) forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut var(--transition-normal) forwards;
+  }
+  
+  .slide-down {
+    animation: slideDown var(--transition-normal) forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp var(--transition-normal) forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+  }
+
+
+  /* Update and synchronize all animation keyframes */
+
+/* Define different keyframes for header vs mega menu */
+
+/* Header animations - TOP to BOTTOM and back */
+@keyframes headerSlideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes headerSlideUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+/* Mega menu animations - BOTTOM to TOP and back */
+@keyframes megaMenuSlideUp {
+  from { transform: translateY(5%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes megaMenuSlideDown {
+  0% { 
+    transform: translateY(0);
+    visibility: visible;
+  }
+  70% { 
+    visibility: hidden; /* Hide earlier in the animation */
+  }
+  100% { 
+    transform: translateY(5%);
+    visibility: hidden;
+  }
+}
+
+/* Adjust transition property for faster exit */
+.mega-menu {
+  /* Different timing for entering vs exiting */
+  transition: 
+    transform var(--transition-normal) ease-out, /* Normal timing for appearing */
+    visibility 0s linear var(--transition-exit); /* Quick visibility change when disappearing */
+}
+
+/* When active, delay the visibility change */
+.mega-menu.active {
+  transition: 
+    transform var(--transition-normal) ease-out,
+    visibility 0s linear 0s; /* No delay when appearing */
+}
+
+/* Apply these animations to the respective elements */
+.header__bg.slide-down {
+  animation: headerSlideDown var(--transition-normal) forwards;
+}
+
+.header__bg.slide-up {
+  animation: headerSlideUp var(--transition-normal) forwards;
+}
+
+.mega-menu.slide-up {
+  animation: megaMenuSlideUp var(--transition-normal) forwards;
+}
+
+/* Faster exit animation */
+.mega-menu.slide-down {
+  animation: megaMenuSlideDown var(--transition-exit) forwards !important; /* Override with faster time */
+}
+
