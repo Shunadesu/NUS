@@ -6,87 +6,6 @@
 /* --------------------
    Variables
 -------------------- */
-:root {
-  --primary-color: #000;
-  --accent-color: #e11d48;
-  --text-color: #57534e;
-  --text-dark: #1c1917;
-  --text-light: #777;
-  --bg-color: #f4f0ea;
-  --white: #fff;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --border-color: #eee;
-  --border-color-dark: #ddd;
-  --header-height: 20px;
-  --sidebar-width: 250px;
-  --container-width: 1200px;
-  --transition-fast: 0.2s;
-  --transition-normal: 0.4s;
-  --transition-exit: 0.15s; /* Even faster for exit animations */
-}
-
-/* --------------------
-   Reset & Base Styles
--------------------- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  min-height: 100vh;
-  position: relative;
-  line-height: 1.5;
-}
-
-.wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.container {
-  // max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 60px;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color var(--transition-fast);
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  font-family: inherit;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.relative {
-  position: relative;
-}
-
 .banner {
   width: 100%;
   height: 100%;
@@ -361,7 +280,7 @@ img {
   z-index: 10;
   color: var(--white);
   margin-top: 40px;
-  padding: 30px 0;
+  padding: 20px 0;
   
   &.menu-active {
     color: var(--text-dark);
@@ -377,10 +296,19 @@ img {
 }
 
 .header__logo {
-  font-size: 28px;
+  font-size: 33px;
   font-weight: 600;
   letter-spacing: 0.1em;
+  // line-height: 30px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1025px) {
+  .header__logo {
+    font-size: 28px;
+    // line-height: 30px;
+  }
+  
 }
 
 .header__icons {
@@ -484,9 +412,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 0;
-  font-size: 14px;
-  font-weight: 300;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  // line-height: 32px;
   color: var(--white);
   transition: color var(--transition-normal);
   
@@ -518,7 +447,7 @@ img {
 /* Fix for the mega menu alignment */
 .mega-menu {
   position: fixed;
-  top: 140px;
+  top: 130px;
   left: 0;
   width: 100%;
   background-color: var(--white);
@@ -728,13 +657,16 @@ img {
 }
 
 .hero-title {
-  font-size: 48px;
-  font-weight: 300;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: capitalize;
   margin-bottom: 8px;
 }
 
 .hero-subtitle {
-  font-size: 18px;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 24px;
   font-weight: 300;
   margin-bottom: 24px;
 }
@@ -806,8 +738,8 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  max-width: 320px;
-  padding: 16px;
+  max-width: 470px;
+  // padding: 16px;
   background-color: var(--white);
   border: 1px solid var(--border-color-dark);
   border-radius: 4px;
@@ -823,8 +755,9 @@ img {
 }
 
 .notification-image {
-  width: 64px;
-  height: 64px;
+  // width: 64px;
+  height: 100%;
+  max-height: 115px;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 4px;
@@ -840,6 +773,12 @@ img {
 .notification-content {
   flex: 1;
   font-size: 14px;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .notification-text {
@@ -847,12 +786,27 @@ img {
 }
 
 .notification-product {
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  margin: 0;
   color: var(--text-dark);
+  cursor: pointer;
+  .product{
+    margin-left: 3px;
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+  }
 }
 
 .notification-time {
-  margin-top: 4px;
+  margin-top: 12px;
   font-size: 12px;
   color: var(--text-light);
 }

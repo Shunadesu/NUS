@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #000;
+    --accent-color: #e11d48;
+    --text-color: #57534e;
+    --text-dark: #1c1917;
+    --text-light: #777;
+    --bg-color: #f4f0ea;
+    --white: #fff;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-color: #eee;
+    --border-color-dark: #ddd;
+    --header-height: 35px;
+    --sidebar-width: 250px;
+    --container-width: 1200px;
+    --transition-fast: 0.2s;
+    --transition-normal: 0.4s;
+    --transition-exit: 0.15s; /* Even faster for exit animations */
+  }
+  
+  /* --------------------
+     Reset & Base Styles
+  -------------------- */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    // max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .relative {
+    position: relative;
+  }
