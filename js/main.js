@@ -550,3 +550,94 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize auto play
   startAutoPlay();
 });
+
+
+function toggleSearchInput() {
+  const searchText = document.querySelector('.search-text');
+  const searchInput = document.querySelector('.search-input');
+  
+  // Toggle between text and input
+  if (searchInput.style.display === 'none') {
+    // Hide text, show input
+    searchText.style.display = 'none';
+    searchInput.style.display = 'inline-block';
+    searchInput.focus();
+    
+    // Prevent the event from bubbling up and immediately hiding the input
+    event.stopPropagation();
+    
+    // Add click outside handler to revert back to text when clicking elsewhere
+    document.addEventListener('click', revertToSearchText);
+  } else {
+    // If input has value, submit the search
+    if (searchInput.value.trim() !== '') {
+      submitSearch(searchInput.value);
+    }
+  }
+}
+
+function revertToSearchText(event) {
+  const searchButton = document.querySelector('.icon-btn.search');
+  const searchText = document.querySelector('.search-text');
+  const searchInput = document.querySelector('.search-input');
+  
+  // If click is outside the search button
+  if (!searchButton.contains(event.target)) {
+    // Hide input, show text
+    searchInput.style.display = 'none';
+    searchText.style.display = 'inline-block';
+    
+    // Remove this event listener
+    document.removeEventListener('click', revertToSearchText);
+  }
+}
+
+function submitSearch(query) {
+  console.log('Searching for:', query);
+  // Add your search submission logic here
+  // e.g., window.location.href = '/search?q=' + encodeURIComponent(query);
+}
+function toggleSearch() {
+  const button = document.querySelector('.icon-btn.search');
+  const popup = document.getElementById('searchPopup');
+  const searchInput = document.querySelector('.search-input');
+
+  if (!popup) {
+    console.error('Search popup element not found!');
+    return;
+  }
+
+  // Toggle popup display
+  const currentDisplay = window.getComputedStyle(popup).display;
+  popup.style.display = currentDisplay === 'none' ? 'block' : 'none';
+
+  // Toggle button class
+  button.classList.toggle('active');
+
+  // Focus input if active
+  if (button.classList.contains('active')) {
+    searchInput.focus();
+  }
+}
+
+
+
+
+// Add event listener for Enter key on the search input
+document.querySelector('.search-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter' && this.value.trim() !== '') {
+    submitSearch(this.value);
+    e.preventDefault(); // Prevent form submission if within a form
+  }
+});
+
+
+// Close search popup when clicking outside
+document.addEventListener('click', function(event) {
+  const searchBtn = document.querySelector('.search');
+  const popup = document.getElementById('searchPopup');
+  
+  if (!searchBtn.contains(event.target) && event.target !== popup && !popup.contains(event.target)) {
+    popup.style.display = 'none';
+  }
+});

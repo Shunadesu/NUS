@@ -101,19 +101,121 @@
             <a href="/" class="header__logo font-montserrat">BAGRATICA</a>
             <div class="header__icons">
              
-              <button class="icon-btn" aria-label="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-                <span>Search</span>
+              <button class="icon-btn search" aria-label="Search" >
+                <input type="text" class="search-input" placeholder="Search" />
+                <svg onclick="toggleSearch()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                <span class="search-text" onclick="toggleSearch()" >Search</span>
               </button>
 
-              <button class="icon-btn customer_Service" aria-label="Search">
-                <svg class="icon" role="img" aria-label="Info" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <title>Info</title>
-                  <desc>Info</desc>
-                  <use xlink:href="#icon-info"></use>
+              <div class="search-popup" id="searchPopup">
+                <div class="">
+                  <h3>TOP SEARCHES</h3>
+                  <div class="search-tags">
+                    <div class="search-tag">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                      </svg>
+                      page builder
+                    </div>
+                    <div class="search-tag">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                      </svg>
+                      bigcommerce template
+                    </div>
+                    <div class="search-tag">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                      </svg>
+                      bigcommerce store
+                    </div>
+                    <div class="search-tag">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                      </svg>
+                      brides
+                    </div>
+                  </div>
+                  
+                  <h3>MOST POPULAR</h3>
+                  <div class="products-container">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Holographic Bag with Black Straps">
+                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/421/21401452-2__18223.1623337169.jpg?c=1" alt="Holographic Bag Alternative View">
+                      </div>
+                      <div class="product-title">[Sample Product 56] - Bag And Accessory Boutiques For Sale</div>
+                      <div class="product-price">
+                        <span class="original-price">$314.00</span>
+                        <span class="sale-price">$289.00</span>
+                      </div>
+                      <button class="buy-now-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                        BUY NOW
+                      </button>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="White Tote Bag with Pink Trim">
+                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/421/21401452-2__18223.1623337169.jpg?c=1" alt="Holographic Bag Alternative View">
+
+                      
+                      </div>
+                      <div class="product-title">[Sample Product 34] - Bag And Accessory Boutiques For Sale</div>
+                      <div class="product-price">
+                        <span class="original-price">$219.00</span>
+                        <span class="sale-price">$214.00</span>
+                      </div>
+                      <button class="buy-now-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                        BUY NOW
+                      </button>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Gray Structured Tote Bag">
+                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/421/21401452-2__18223.1623337169.jpg?c=1" alt="Holographic Bag Alternative View">
+
+                      
+                      </div>
+                      <div class="product-title">[Sample Product 57] - Bag And Accessory Boutiques For Sale</div>
+                      <div class="product-color">Anti-Flash White</div>
+                      <div class="product-price">
+                        <span class="original-price">$315.00</span>
+                        <span class="sale-price">$300.00</span>
+                      </div>
+                      <div class="color-options">
+                        <div class="color-option" style="background-color: #f5f5f5;"></div>
+                        <div class="color-option" style="background-color: #8b2e36;"></div>
+                        <div class="color-option" style="background-color: #f8d7d2;"></div>
+                        <div class="color-option" style="background-color: #7a7a7a;"></div>
+                      </div>
+                      <button class="buy-now-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                        BUY NOW
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HTML -->
+              <div class="help-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm0-10h2v8h-2z"/>
                 </svg>
-              </button>
-
+              </div>
 
               <button class="icon-btn" aria-label="Account">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -125,6 +227,20 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                 <span class="cart-count" aria-live="polite">0</span>
               </button>
+            </div>
+                        <!-- Search popup -->
+            
+
+            <!-- Recently Viewed sidebar -->
+            <div class="recently-viewed">
+              <h4>Recently Viewed</h4>
+              <div class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" stroke="#ddd" stroke-width="2" fill="none"/>
+                  <path d="M12 8v4M12 16v.01" stroke="#ddd" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <p>Sorry, there are no products.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -204,7 +320,7 @@
       </div>
   
       <!-- Mega Menu -->
-      <div class="mega-menu" aria-hidden="true">
+      <div class="mega-menu active slide-up" aria-hidden="true">
         <div class="container">
           <div class="mega-menu__content">
             <!-- Sidebar spacer -->
@@ -242,6 +358,23 @@
                       <li class="column-item"><a href="#">Dapboes</a></li>
                       <li class="column-item"><a href="#">Gravidas</a></li>
                     </ul>
+                  </div>
+
+                </div>
+                <div class="mega-menu__featured">
+                  <h3 class="featured-title">FEATURED PRODUCTS</h3>
+                  <div class="featured-product">
+                    <div class="product-image">
+                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Featured product" width="300" height="300" loading="lazy">
+                    </div>
+                    <div class="product-details">
+                      <div class="product-label">For Sale</div>
+                      <h4 class="product-title">[Sample Product 1] - Bag And Accessory Boutiques</h4>
+                      <div class="product-price">
+                        <span class="original-price">$201.00</span>
+                        <span class="sale-price">$189.00</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -290,21 +423,8 @@
             </div>
             
             <!-- Featured Product -->
-            <div class="mega-menu__featured">
-              <h3 class="featured-title">FEATURED PRODUCTS</h3>
-              <div class="featured-product">
-                <div class="product-image">
-                  <!-- <img src="images/products/featured-product.jpg" alt="Featured product" width="300" height="300" loading="lazy"> -->
-                </div>
-                <div class="product-details">
-                  <div class="product-label">For Sale</div>
-                  <h4 class="product-title">[Sample Product 1] - Bag And Accessory Boutiques</h4>
-                  <div class="product-price">
-                    <span class="original-price">$201.00</span>
-                    <span class="sale-price">$189.00</span>
-                  </div>
-                </div>
-              </div>
+            <div class="mega-menu_gap">
+
             </div>
           </div>
         </div>
