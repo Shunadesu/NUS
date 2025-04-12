@@ -812,7 +812,7 @@ img {
 .sidebar {
   z-index: 20;
   width: var(--sidebar-width);
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .sidebar:hover .sidebar__link {
   color: var(--text-dark);
@@ -832,7 +832,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 5px 0;
   font-size: 15px;
   font-weight: 600;
   color: var(--white);
@@ -840,6 +840,7 @@ img {
 }
 .sidebar__link:hover {
   text-decoration: underline;
+  font-weight: 600;
 }
 .sidebar__link.active {
   color: var(--text-dark);
@@ -888,7 +889,7 @@ img {
 .mega-menu__sidebar-space {
   width: var(--sidebar-width);
   flex-shrink: 0;
-  padding-left: 60px; /* Match the container's left padding */
+  padding-left: 80px; /* Match the container's left padding */
 }
 
 .mega-menu__columns {

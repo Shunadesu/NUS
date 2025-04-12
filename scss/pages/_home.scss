@@ -391,7 +391,7 @@
 .sidebar {
   z-index: 20;
   width: var(--sidebar-width);
-  padding: 40px 0;
+  padding: 20px 0;
   
   &:hover .sidebar__link {
     color: var(--text-dark);
@@ -412,7 +412,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 5px 0;
   font-size: 15px;
   font-weight: 600;
   // line-height: 32px;
@@ -421,6 +421,7 @@
   
   &:hover {
     text-decoration: underline;
+    font-weight: 600;
   }
   
   &.active {
@@ -473,7 +474,7 @@
 .mega-menu__sidebar-space {
   width: var(--sidebar-width);
   flex-shrink: 0;
-  padding-left: 60px; /* Match the container's left padding */
+  padding-left: 80px; /* Match the container's left padding */
 }
 
 .mega-menu__columns {
