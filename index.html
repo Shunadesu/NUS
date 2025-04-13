@@ -16,10 +16,29 @@
     <!-- Page loading spinner -->
     <div class="loading" id="page-loader"></div>
     
-    <div class="wrapper">
+    <section class="home-wrapper">
       <!-- Hero Section -->
-       
-      <section class="hero-section">
+       <!-- Updated Top Bar with Infinite Scrolling -->
+      <div class="top-bar">
+        <div class="top-bar__scroll-container">
+          <!-- First copy of the content -->
+          <div class="top-bar__content">
+            <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
+            <div class="customer-service">Customer Service (123) 456 7890</div>
+            
+          </div>
+          
+          <!-- Duplicate copy for seamless scrolling -->
+          <div class="top-bar__content">
+            <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
+            <div class="customer-service">Customer Service (123) 456 7890</div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="hero-section">
         <!-- Slides container -->
         <div class="hero-slides">
           <!-- Slide 1 -->
@@ -72,28 +91,8 @@
             </svg>
           </button>
         </div>
-      </section>
-
-
-      <!-- Updated Top Bar with Infinite Scrolling -->
-      <div class="top-bar">
-        <div class="top-bar__scroll-container">
-          <!-- First copy of the content -->
-          <div class="top-bar__content">
-            <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
-            <div class="customer-service">Customer Service (123) 456 7890</div>
-            
-          </div>
-          
-          <!-- Duplicate copy for seamless scrolling -->
-          <div class="top-bar__content">
-            <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
-            <div class="customer-service">Customer Service (123) 456 7890</div>
-            
-          </div>
-        </div>
       </div>
-      
+
       <!-- Header -->
       <header class="header">
         <div class="container">
@@ -142,8 +141,8 @@
                     <!-- Product 1 -->
                     <div class="product-card">
                       <div class="product-image">
-                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Holographic Bag with Black Straps">
-                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/421/21401452-2__18223.1623337169.jpg?c=1" alt="Holographic Bag Alternative View">
+                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/145/412/14887410-1-white__89233.1623336877.jpg?c=1" alt="Holographic Bag with Black Straps">
+                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/145/413/14887410-2__09649.1623336877.jpg?c=1" alt="Holographic Bag Alternative View">
                       </div>
                       <div class="product-title">[Sample Product 56] - Bag And Accessory Boutiques For Sale</div>
                       <div class="product-price">
@@ -182,8 +181,8 @@
                     <!-- Product 3 -->
                     <div class="product-card">
                       <div class="product-image">
-                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Gray Structured Tote Bag">
-                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/421/21401452-2__18223.1623337169.jpg?c=1" alt="Holographic Bag Alternative View">
+                        <img class="primary-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/960w/products/168/431/20142112-2__26907.1623337769.jpg?c=1" alt="Gray Structured Tote Bag">
+                        <img class="hover-image" src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/960w/products/168/510/20142112-1-grey__54504.1624349479.jpg?c=1" alt="Holographic Bag Alternative View">
 
                       
                       </div>
@@ -210,11 +209,16 @@
                 </div>
               </div>
 
-              <!-- HTML -->
-              <div class="help-icon">
+              
+
+              <button onclick="toggleHelp()"  class="icon-btn help-icon">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm0-10h2v8h-2z"/>
                 </svg>
+              </button>
+
+              <div class="help-popup" id="helpPopup">
+                sunny
               </div>
 
               <button class="icon-btn" aria-label="Account">
@@ -227,20 +231,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                 <span class="cart-count" aria-live="polite">0</span>
               </button>
-            </div>
-                        <!-- Search popup -->
-            
-
-            <!-- Recently Viewed sidebar -->
-            <div class="recently-viewed">
-              <h4>Recently Viewed</h4>
-              <div class="empty-state">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10" stroke="#ddd" stroke-width="2" fill="none"/>
-                  <path d="M12 8v4M12 16v.01" stroke="#ddd" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <p>Sorry, there are no products.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -429,6 +419,31 @@
           </div>
         </div>
       </div>
+
+       <!-- Recently Viewed sidebar -->
+      <div class="recently-viewed">
+        <div class="tab-toggle">
+          <span>&raquo;</span>
+        </div>
+        <div class="recently-viewed-box">
+          <h4>Recently Viewed</h4>
+          <div class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" stroke="#ddd" stroke-width="2" fill="none"/>
+              <path d="M12 8v4M12 16v.01" stroke="#ddd" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p>Sorry, there are no products.</p>
+          </div>
+        </div>
+      </div> 
+      <div class="floating-buttons">
+        <button class="btn external-link">
+          <div class="icon">🌞</div>
+        </button>
+        <button class="btn">
+          <div class="icon">⬆️</div>
+        </button>
+      </div>
       
       
       <!-- Recent Purchase Notification -->
@@ -444,15 +459,11 @@
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
-    </div>
-    
+    </section>
+    <!-- Adding new section here -->
+    <section class="hidden">Sunny</section>
+    <!-- Footer -->    
     <!-- Load scripts optimized -->
-    <script>
-      // Remove loader when page is fully loaded
-      window.addEventListener('load', function() {
-        document.getElementById('page-loader').style.display = 'none';
-      });
-    </script>
     
     <!-- Load critical scripts first -->
     <script src="js/main.js"></script>

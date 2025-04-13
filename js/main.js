@@ -1,5 +1,12 @@
 // Fixed and optimized script.js
 
+
+// Remove loader when page is fully loaded
+window.addEventListener('load', function() {
+  document.getElementById('page-loader').style.display = 'none';
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Cache DOM elements
     const header = document.querySelector('.header');
@@ -576,21 +583,6 @@ function toggleSearchInput() {
   }
 }
 
-function revertToSearchText(event) {
-  const searchButton = document.querySelector('.icon-btn.search');
-  const searchText = document.querySelector('.search-text');
-  const searchInput = document.querySelector('.search-input');
-  
-  // If click is outside the search button
-  if (!searchButton.contains(event.target)) {
-    // Hide input, show text
-    searchInput.style.display = 'none';
-    searchText.style.display = 'inline-block';
-    
-    // Remove this event listener
-    document.removeEventListener('click', revertToSearchText);
-  }
-}
 
 function submitSearch(query) {
   console.log('Searching for:', query);
@@ -602,26 +594,52 @@ function toggleSearch() {
   const popup = document.getElementById('searchPopup');
   const searchInput = document.querySelector('.search-input');
 
-  if (!popup) {
-    console.error('Search popup element not found!');
+  if (!popup || !button || !searchInput) {
     return;
   }
 
   // Toggle popup display
-  const currentDisplay = window.getComputedStyle(popup).display;
-  popup.style.display = currentDisplay === 'none' ? 'block' : 'none';
-
-  // Toggle button class
-  button.classList.toggle('active');
+  const isActive = button.classList.toggle('active');
+  popup.style.display = isActive ? 'block' : 'none';
 
   // Focus input if active
-  if (button.classList.contains('active')) {
+  if (isActive) {
     searchInput.focus();
+  }
+
+  // Set up outside click listener only once
+  document.addEventListener('click', handleOutsideClick);
+  
+  function handleOutsideClick(e) {
+    if (!popup.contains(e.target) && !button.contains(e.target)) {
+      popup.style.display = 'none';
+      button.classList.remove('active');
+      document.removeEventListener('click', handleOutsideClick);
+    }
   }
 }
 
+function toggleHelp(){
+  const button = document.querySelector('.icon-btn.help-icon');
+  const popup = document.getElementById('helpPopup');
+  if (!popup || !button) {
+    return;
+  }
 
+   // Toggle popup display
+   const isActive = button.classList.toggle('active');
+   popup.style.display = isActive ? 'block' : 'none';
 
+   document.addEventListener('click', handleOutsideClick);
+  
+  function handleOutsideClick(e) {
+    if (!popup.contains(e.target) && !button.contains(e.target)) {
+      popup.style.display = 'none';
+      button.classList.remove('active');
+      document.removeEventListener('click', handleOutsideClick);
+    }
+  }
+}
 
 // Add event listener for Enter key on the search input
 document.querySelector('.search-input').addEventListener('keypress', function(e) {
@@ -631,7 +649,6 @@ document.querySelector('.search-input').addEventListener('keypress', function(e)
   }
 });
 
-
 // Close search popup when clicking outside
 document.addEventListener('click', function(event) {
   const searchBtn = document.querySelector('.search');
@@ -640,4 +657,33 @@ document.addEventListener('click', function(event) {
   if (!searchBtn.contains(event.target) && event.target !== popup && !popup.contains(event.target)) {
     popup.style.display = 'none';
   }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const recentlyViewed = document.querySelector('.recently-viewed');
+  const floatingBtn = document.querySelector('.floating-buttons');
+  const externalLink = document.querySelector('.external-link');
+
+  const toggleBtn = recentlyViewed.querySelector('.tab-toggle');
+
+  externalLink.addEventListener('click', () => {
+    recentlyViewed.classList.toggle('close');
+    floatingBtn.classList.toggle('open');
+  });
+
+  toggleBtn.addEventListener('click', () => {
+    recentlyViewed.classList.toggle('close');
+    floatingBtn.classList.toggle('open');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollTopBtn = document.querySelector('.scroll-top');
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });

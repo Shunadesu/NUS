@@ -37,6 +37,15 @@
     to { transform: translateY(-100%); }
   }
 
+/* Animation keyframes for infinite scrolling */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move left by exactly half the width */
+    }
+  }
 
   /* Update and synchronize all animation keyframes */
 

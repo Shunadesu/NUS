@@ -36,7 +36,7 @@
     line-height: 1.5;
   }
   
-  .wrapper {
+  .home-wrapper {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -77,4 +77,49 @@
   
   .relative {
     position: relative;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .flex {
+    display: flex;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .flex-nowrap {
+    flex-wrap: nowrap;
+  }
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .flex-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .flex-between {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex-around {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .flex-evenly {
+    justify-content: space-evenly;
+    align-items: center;
   }
