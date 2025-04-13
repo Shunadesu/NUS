@@ -687,3 +687,107 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Color selection functionality
+  const colorOptions = document.querySelectorAll('.color-option');
+  const productColorText = document.querySelector('.product-color');
+  
+  colorOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      // Remove active class from all options
+      colorOptions.forEach(opt => opt.classList.remove('active'));
+      
+      // Add active class to clicked option
+      this.classList.add('active');
+      
+      // Update the color text
+      const colorName = this.getAttribute('data-color');
+      productColorText.textContent = colorName;
+    });
+  });
+  
+  // Navigation buttons functionality
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+  
+  // For demonstration purposes - in a real implementation, 
+  // these would navigate through actual products
+  prevButton.addEventListener('click', function() {
+    console.log('Previous product clicked');
+    // Here you would implement logic to show the previous product
+  });
+  
+  nextButton.addEventListener('click', function() {
+    console.log('Next product clicked');
+    // Here you would implement logic to show the next product
+  });
+  
+  // Details button functionality
+  const detailsButton = document.querySelector('.details-button');
+  
+  detailsButton.addEventListener('click', function() {
+    console.log('Details button clicked');
+    // Here you would implement logic to show more product details
+    // For example, open a modal or expand a section
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get DOM elements
+  const modal = document.getElementById('customerServiceModal');
+  const openButton = document.getElementById('openCustomerService');
+  const closeButton = document.getElementById('closeModal');
+  
+  // Function to open the modal
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+  
+  // Event listeners
+  openButton.addEventListener('click', openModal);
+  closeButton.addEventListener('click', closeModal);
+  
+  // Close modal when clicking outside the modal content
+  modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Close modal when pressing Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+  
+  // Prevent event propagation for links
+  const links = document.querySelectorAll('.modal-content a');
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('Link clicked:', this.textContent);
+      // In a real application, you would handle the link action here
+    });
+  });
+  
+  // Handle send message click
+  const sendMessageLink = document.querySelector('.send-message');
+  if (sendMessageLink) {
+    sendMessageLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('Opening message form...');
+      // In a real application, you would show a message form here
+      alert('Message form would open here');
+    });
+  }
+});

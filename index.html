@@ -209,16 +209,55 @@
                 </div>
               </div>
 
-              
-
-              <button onclick="toggleHelp()"  class="icon-btn help-icon">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm0-10h2v8h-2z"/>
-                </svg>
+              <button class="icon-btn open-button" id="openCustomerService" >
+               Sunny
               </button>
 
-              <div class="help-popup" id="helpPopup">
-                sunny
+              <div id="customerServiceModal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-header font-dm-serif">
+                    <h2>Customer Service</h2>
+                    <button id="closeModal" class="close-button">&times;</button>
+                  </div>
+                  
+                  <div class="modal-notice font-montserrat">
+                    <p>By contacting Customer Service, you agree that your data will be transferred outside your country/region. <a href="#" class="learn-more">Learn more!</a></p>
+                  </div>
+                  
+                  <div class="modal-body">
+                    <div class="contact-options">
+                      <div class="contact-option">
+                        <div class="icon-container">
+                          <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h3>+01 (123) 456 7890</h3>
+                          <p>(Mon-Sat from 7am to 9pm SGT)</p>
+                        </div>
+                      </div>
+                      
+                      <div class="contact-option">
+                        <div class="icon-container">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h3>EMAIL US</h3>
+                          <p>We'll reply within 36 hours</p>
+                          <a href="#" class="send-message">Send a message</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="help-links">
+                      <ul>
+                        <li><a href="#">Shipping and Returns Information</a></li>
+                        <li><a href="#">Refunds and Exchange Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">View all the FAQs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <button class="icon-btn" aria-label="Account">
@@ -349,41 +388,97 @@
                       <li class="column-item"><a href="#">Gravidas</a></li>
                     </ul>
                   </div>
-
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
+                      <li class="column-item"><a href="#">Gravidas</a></li>
+                    </ul>
+                  </div>
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
+                      <li class="column-item"><a href="#">Gravidas</a></li>
+                    </ul>
+                  </div>
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
+                      <li class="column-item"><a href="#">Gravidas</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="mega-menu__featured">
-                  <h3 class="featured-title">FEATURED PRODUCTS</h3>
-                  <div class="featured-product">
-                    <div class="product-image">
-                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Featured product" width="300" height="300" loading="lazy">
+                <div class="featured-products">
+                  <div class="products-menu-container">
+                    <!-- Product Card -->
+                    <div class="featured-product">
+                      <h3 class="featured-title">FEATURED PRODUCTS</h3>
+                      <div class="product-image-container">
+                        <button class="nav-button prev-button" aria-label="Previous product">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+
+                        <a href="/#" class="product-image">
+                          <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/320w/products/167/422/21401452-1-silver__51362.1623337169.jpg?c=1" alt="Featured product" width="300" height="300" loading="lazy">
+                        </a>
+
+                        <button class="nav-button next-button" aria-label="Next product">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      
+                      <div class="product-details">
+                        <div class="product-label">For Sale</div>
+                        <h4 class="product-title">[Sample Product 5] - Bag And Accessory Boutiques</h4>
+                        <div class="product-color">White</div>
+                        <div class="product-price">
+                          <span class="price-prefix">As low as</span>
+                          <span class="sale-price">$289.00</span>
+                        </div>
+                        
+                        <div class="color-options">
+                          <button class="color-option white active" data-color="White"></button>
+                          <button class="color-option coral" data-color="Coral"></button>
+                          <button class="color-option cream" data-color="Cream"></button>
+                          <button class="color-option blue" data-color="Blue"></button>
+                          <span class="more-colors">+3</span>
+                        </div>
+                        
+                        <button class="details-button">+ DETAILS</button>
+                      </div>
                     </div>
-                    <div class="product-details">
-                      <div class="product-label">For Sale</div>
-                      <h4 class="product-title">[Sample Product 1] - Bag And Accessory Boutiques</h4>
-                      <div class="product-price">
-                        <span class="original-price">$201.00</span>
-                        <span class="sale-price">$189.00</span>
+                    
+                    <!-- Promotional Banner -->
+                    <div class="promotional-banner">
+                      <div class="banner-content">
+                        <div class="brand-name">LOREMOUS</div>
+                        <h2 class="collection-name">Milancé</h2>
+                        <div class="tagline">Cosmo de Metropolis</div>
+                        <button class="shop-now-button">SHOP NOW</button>
                       </div>
                     </div>
                   </div>
                 </div>
+              
               </div>
               
               <!-- LUXURY BAGS Menu -->
               <div class="mega-menu__column" data-category="LUXURY BAGS">
                 <div class="column-content">
                   <div class="column-section">
-                    <h3 class="column-title">METROPOLIS</h3>
-                    <ul class="column-list">
-                      <li class="column-item"><a href="#">Bibendumetos</a></li>
-                      <li class="column-item"><a href="#">Consequate</a></li>
-                      <li class="column-item"><a href="#">Loremous</a></li>
-                      <li class="column-item"><a href="#">Pellente Habitanto</a></li>
-                      <li class="column-item"><a href="#">Pellentes Habitanto</a></li>
-                    </ul>
-                  </div>
-                  <div class="column-section">
-                    <h3 class="column-title">LOREMIRUS</h3>
+                    <h3 class="column-title">MILANCELOS</h3>
                     <ul class="column-list">
                       <li class="column-item"><a href="#">Dincidunteros</a></li>
                       <li class="column-item"><a href="#">Gravidas</a></li>
@@ -393,19 +488,233 @@
                     </ul>
                   </div>
                   <div class="column-section">
-                    <h3 class="column-title">ACCESSORIUS</h3>
+                    <h3 class="column-title">COSMOPOLIS</h3>
                     <ul class="column-list">
-                      <li class="column-item"><a href="#">Dincidunteros</a></li>
+                      <li class="column-item"><a href="#">Bibendumetos</a></li>
+                      <li class="column-item"><a href="#">Deuismod</a></li>
+                      <li class="column-item"><a href="#">Milancelos</a></li>
+                      <li class="column-item"><a href="#">Senectus</a></li>
+                    </ul>
+                  </div>
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
                       <li class="column-item"><a href="#">Gravidas</a></li>
-                      <li class="column-item"><a href="#">Sale</a></li>
+                    </ul>
+                  </div>
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
+                      <li class="column-item"><a href="#">Gravidas</a></li>
+                    </ul>
+                  </div>
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
+                      <li class="column-item"><a href="#">Gravidas</a></li>
+                    </ul>
+                  </div>
+                  <div class="column-section">
+                    <h3 class="column-title">BIBENDUMETOS</h3>
+                    <ul class="column-list">
+                      <li class="column-item"><a href="#">Comodianos</a></li>
+                      <li class="column-item"><a href="#">Dapboe</a></li>
+                      <li class="column-item"><a href="#">Dapboes</a></li>
+                      <li class="column-item"><a href="#">Gravidas</a></li>
                     </ul>
                   </div>
                 </div>
+                <div class="featured-products">
+                  <div class="products-menu-container">
+                    <!-- Banner-Card -->
+                    <div class="featured-card">
+                      <div class="card-image">
+                        <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-2.png" alt="">
+                      </div>
+
+                      <div class="card-image">
+                        <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-3.png" alt="">
+                      </div>
+                    </div>
+                    
+                    <!-- Promotional Banner -->
+                    <div class="promotional-banner">
+                      <div class="banner-content">
+                        <div class="brand-name">LOREMOUS</div>
+                        <h2 class="collection-name">Milancé</h2>
+                        <div class="tagline">Cosmo de Metropolis</div>
+                        <button class="shop-now-button">SHOP NOW</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
               </div>
               
               <!-- Add stubs for other categories -->
-              <div class="mega-menu__column" data-category="BELTS"></div>
-              <div class="mega-menu__column" data-category="ACCESSORIES"></div>
+              <div class="mega-menu__column grid-1" data-category="BELTS">
+                <div class="product-grid">
+                  <!-- Product Card 1 -->
+                  <div class="product-card">
+                    <h3 class="column-title">LOREMOUS</h3>
+                    <div class="product-image">
+                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-5.png" alt="">                      
+                    </div>
+                    <div class="product-categories">
+                      <ul>
+                        <li><a href="#">Dincidunteros</a></li>
+                        <li><a href="#">Gravidas</a></li>
+                        <li><a href="#">Loremous</a></li>
+                        <li><a href="#">Montemous</a></li>
+                        <li><a href="#">Scelerisque Durnas</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            
+                  <!-- Product Card 2 -->
+                  <div class="product-card">
+                    <h3 class="column-title">LOREMOUS</h3>
+                    <div class="product-image">
+                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-6.png" alt="">                      
+                    </div>
+                    <div class="product-categories">
+                      <ul>
+                        <li><a href="#">Dincidunteros</a></li>
+                        <li><a href="#">Gravidas</a></li>
+                        <li><a href="#">Loremous</a></li>
+                        <li><a href="#">Montemous</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            
+                  <!-- Product Card 3 -->
+                  <div class="product-card">
+                    <h3 class="column-title">LOREMOUS</h3>
+                    <div class="product-image">
+                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-7.png" alt="">                      
+                    </div>
+                    <div class="product-categories">
+                      <ul>
+                        <li><a href="#">Dincidunteros</a></li>
+                        <li><a href="#">Gravidas</a></li>
+                        <li><a href="#">Loremous</a></li>
+                        <li><a href="#">Montemous</a></li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+            
+                  <!-- Product Card 4 -->
+                  <div class="product-card">
+                    <h3 class="column-title">LOREMOUS</h3>
+                    <div class="product-image">
+                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-8.png" alt="">                      
+                    </div>
+                    <div class="product-categories">
+                      <ul>
+                        <li><a href="#">Dincidunteros</a></li>
+                        <li><a href="#">Gravidas</a></li>
+                        <li><a href="#">Loremous</a></li>
+                        <li><a href="#">Montemous</a></li>
+                        <li><a href="#">Scelerisque Durnas</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            
+                  <!-- Product Card 5 -->
+                  <div class="product-card">
+                    <h3 class="column-title">LOREMOUS</h3>
+                    <div class="product-image">
+                      <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-9.png" alt="">                      
+                    </div>
+                    <div class="product-categories">
+                      <ul>
+                        <li><a href="#">Dincidunteros</a></li>
+                        <li><a href="#">Gravidas</a></li>
+                        <li><a href="#">Loremous</a></li>
+                        <li><a href="#">Montemous</a></li>
+                        <li><a href="#">Scelerisque Durnas</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__column" data-category="ACCESSORIES">
+                <div class="products-banner">
+                  <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/product_images/uploaded_images/halo-megamenu-banner-10.png" alt="">
+                 </div>
+                 
+                 <div class="column-content">
+                   <div class="column-section">
+                     <h3 class="column-title">MILANCELOS</h3>
+                     <ul class="column-list">
+                       <li class="column-item"><a href="#">Dincidunteros</a></li>
+                       <li class="column-item"><a href="#">Gravidas</a></li>
+                       <li class="column-item"><a href="#">Loremous</a></li>
+                       <li class="column-item"><a href="#">Montemous</a></li>
+                       <li class="column-item"><a href="#">Scelerisque Durnas</a></li>
+                     </ul>
+                   </div>
+                   <div class="column-section">
+                     <h3 class="column-title">COSMOPOLIS</h3>
+                     <ul class="column-list">
+                       <li class="column-item"><a href="#">Bibendumetos</a></li>
+                       <li class="column-item"><a href="#">Deuismod</a></li>
+                       <li class="column-item"><a href="#">Milancelos</a></li>
+                       <li class="column-item"><a href="#">Senectus</a></li>
+                     </ul>
+                   </div>
+                   <div class="column-section">
+                     <h3 class="column-title">BIBENDUMETOS</h3>
+                     <ul class="column-list">
+                       <li class="column-item"><a href="#">Comodianos</a></li>
+                       <li class="column-item"><a href="#">Dapboe</a></li>
+                       <li class="column-item"><a href="#">Dapboes</a></li>
+                       <li class="column-item"><a href="#">Gravidas</a></li>
+                     </ul>
+                   </div>
+                   <div class="column-section">
+                     <h3 class="column-title">BIBENDUMETOS</h3>
+                     <ul class="column-list">
+                       <li class="column-item"><a href="#">Comodianos</a></li>
+                       <li class="column-item"><a href="#">Dapboe</a></li>
+                       <li class="column-item"><a href="#">Dapboes</a></li>
+                       <li class="column-item"><a href="#">Gravidas</a></li>
+                     </ul>
+                   </div>
+                   <div class="column-section">
+                     <h3 class="column-title">BIBENDUMETOS</h3>
+                     <ul class="column-list">
+                       <li class="column-item"><a href="#">Comodianos</a></li>
+                       <li class="column-item"><a href="#">Dapboe</a></li>
+                       <li class="column-item"><a href="#">Dapboes</a></li>
+                       <li class="column-item"><a href="#">Gravidas</a></li>
+                     </ul>
+                   </div>
+                   <div class="column-section">
+                     <h3 class="column-title">BIBENDUMETOS</h3>
+                     <ul class="column-list">
+                       <li class="column-item"><a href="#">Comodianos</a></li>
+                       <li class="column-item"><a href="#">Dapboe</a></li>
+                       <li class="column-item"><a href="#">Dapboes</a></li>
+                       <li class="column-item"><a href="#">Gravidas</a></li>
+                     </ul>
+                   </div>
+                 </div>
+             
+              </div>
+
+
               <div class="mega-menu__column" data-category="WALLETS"></div>
               <div class="mega-menu__column" data-category="DEMO"></div>
               <div class="mega-menu__column" data-category="PAGES"></div>

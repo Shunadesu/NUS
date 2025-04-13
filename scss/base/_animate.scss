@@ -82,6 +82,10 @@
   }
 }
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* Adjust transition property for faster exit */
 .mega-menu {
   /* Different timing for entering vs exiting */
