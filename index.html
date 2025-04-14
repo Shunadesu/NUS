@@ -210,7 +210,17 @@
               </div>
 
               <button class="icon-btn open-button" id="openCustomerService" >
-               Sunny
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 48 48" style="color: white; fill: white;">
+                  <g id="a">
+                    <g>
+                      <circle fill="currentColor" cx="24" cy="34.7477" r=".75"/>
+                      <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m17.0796,19.4227c0-1.911.7746-3.6411,2.0269-4.8935s2.9825-2.027,4.8935-2.027c3.8221,0,6.9204,3.0984,6.9204,6.9204,0,1.911-.6454,3.7852-2.0269,4.8935-1.4322,1.1489-4.9184,3.0309-4.9184,5.959"/>
+                    </g>
+                  </g>
+                  <g id="b">
+                    <circle fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" cx="24" cy="24" r="21.5"/>
+                  </g>
+                </svg>
               </button>
 
               <div id="customerServiceModal" class="modal">
@@ -263,13 +273,103 @@
               <button class="icon-btn" aria-label="Account">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
               </button>
+
+              <!-- Add this HTML to your page -->
+              <div id="login-modal" class="login-modal font-jost">
+                <button class="close-modal">&times;</button>
+                <div class="login-modal-content">
+                  <div class="login-form">
+                    <h2>CUSTOMER LOGIN</h2>
+                    
+                    <div class="form-group">
+                      <label for="email">Email Address <span class="required">*</span></label>
+                      <input type="email" id="email" placeholder="john.smith@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="password">Password <span class="required">*</span></label>
+                      <input type="password" id="password" required>
+                    </div>
+                    
+                    <button class="login-btn">LOGIN</button>
+                    
+                    <div class="form-links">
+                      <a href="#" class="forgot-password">Forgot your password?</a>
+                    </div>
+                    
+                    <button class="create-account-btn">CREATE AN ACCOUNT</button>
+                  </div>
+                </div>
+              </div>
+
               <button class="icon-btn" aria-label="Wishlist">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
               </button>
+
               <button class="icon-btn cart-btn" aria-label="Shopping Cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                 <span class="cart-count" aria-live="polite">0</span>
               </button>
+
+              <!-- Cart Sidebar -->
+              <div id="cart-sidebar" class="cart-sidebar font-jost">
+                <div class="cart-content">
+                  <div class="cart-header">
+                    <h2>REVIEW YOUR CART</h2>
+                    <span class="items-count">1 item</span>
+                    <button class="close-cart">&times;</button>
+                  </div>
+                  
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <p class="free-shipping-info">Only $791.00 away from Free Shipping.</p>
+                  </div>
+                  
+                  <div class="cart-items">
+                    <div class="cart-item">
+                      <div class="item-image">
+                        <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/80w/attribute_rule_images/401_source_1636082935.jpg" alt="Product image">
+                      </div>
+                      <div class="item-details">
+                        <h3 class="item-title">[Sample Product 60] - Bag And Accessory Boutiques For Sale</h3>
+                        <p class="item-variant">Tonys Pink / XS <span class="edit-icon">✎</span></p>
+                        <p class="item-price">$209.00</p>
+                        
+                        <div class="item-quantity">
+                          <label for="quantity">Quantity:</label>
+                          <div class="quantity-control">
+                            <input type="number" id="quantity" name="quantity" value="1" min="1">
+                            <div class="quantity-buttons">
+                              <button class="quantity-up">▲</button>
+                              <button class="quantity-down">▼</button>
+                            </div>
+                          </div>
+                          <button class="remove-btn">Remove</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="cart-summary">
+                    <div class="summary-row">
+                      <span>Subtotal:</span>
+                      <span class="price">$209.00</span>
+                    </div>
+                    <div class="summary-row total">
+                      <span>Grand total:</span>
+                      <span class="price">$209.00</span>
+                    </div>
+                  </div>
+                  
+                  <div class="cart-actions">
+                    <button class="checkout-btn">CHECK OUT NOW</button>
+                    <button class="view-cart-btn">VIEW CART</button>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -753,8 +853,6 @@
           <div class="icon">⬆️</div>
         </button>
       </div>
-      
-      
       <!-- Recent Purchase Notification -->
       <div class="purchase-notification" id="purchase-notification" aria-live="polite">
         <div class="notification-image">
@@ -775,7 +873,6 @@
     <!-- Load scripts optimized -->
     
     <!-- Load critical scripts first -->
-    <script src="js/main.js"></script>
-    
+    <script type="module" src="./js/main.js"></script>    
   </body>
 </html>
