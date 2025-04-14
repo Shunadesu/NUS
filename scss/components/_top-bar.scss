@@ -1,0 +1,49 @@
+/* --------------------
+   Top Bar
+-------------------- */
+/* Infinite left scrolling animation for top bar */
+
+/* Update top-bar to have scrolling content */
+.top-bar {
+    background-color: #222;
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 12px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden; /* Hide content that scrolls outside the top bar */
+    
+    .container {
+      padding: 0;
+      width: 100%;
+      max-width: none;
+    }
+    
+    &:hover .top-bar__scroll-container {
+      animation-play-state: paused;
+    }
+    /* Create a container for the scrolling content */
+    .top-bar__scroll-container {
+      display: flex;
+      width: 200%; /* Make it wider than viewport to allow continuous scrolling */
+      animation: scrollLeft 30s linear infinite; /* Adjust speed with the duration value */
+    }
+    /* Each content section that will be duplicated */
+    .top-bar__content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%; /* Each copy takes up half of the container */
+      padding: 0 20px;
+      
+      > * {
+        margin: 0 30px;
+      }
+    }
+  }
+  

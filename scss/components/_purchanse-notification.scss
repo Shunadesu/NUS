@@ -1,0 +1,90 @@
+/* --------------------
+   Purchase Notification
+-------------------- */
+.purchase-notification {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    z-index: 50;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 470px;
+    // padding: 16px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color-dark);
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+    
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .notification-image {
+      // width: 64px;
+      height: 100%;
+      max-height: 115px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .notification-content {
+      flex: 1;
+      font-size: 14px;
+      padding: 16px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .notification-product {
+        font-size: 15px;
+        font-weight: 400;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        margin: 0;
+        color: var(--text-dark);
+        cursor: pointer;
+        .product{
+          margin-left: 3px;
+          &:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+          }
+        }
+      }
+      .notification-time {
+        margin-top: 12px;
+        font-size: 12px;
+        color: var(--text-light);
+      }
+    }
+    .notification-text {
+      color: var(--text-light);
+    }
+    .notification-close {
+      color: #999;
+      transition: color var(--transition-fast);
+      padding: 4px;
+      
+      &:hover {
+        color: var(--text-dark);
+      }
+    }
+    
+    
+  }
+  

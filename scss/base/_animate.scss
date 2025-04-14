@@ -1,121 +1,97 @@
-  /* --------------------
-     Animations
-  -------------------- */
-  .fade-in {
-    animation: fadeIn var(--transition-normal) forwards;
-  }
-  
-  .fade-out {
-    animation: fadeOut var(--transition-normal) forwards;
-  }
-  
-  .slide-down {
-    animation: slideDown var(--transition-normal) forwards;
-  }
-  
-  .slide-up {
-    animation: slideUp var(--transition-normal) forwards;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-  }
-  
-  @keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-  }
-  
-  @keyframes slideUp {
-    from { transform: translateY(0); }
-    to { transform: translateY(-100%); }
-  }
-
-/* Animation keyframes for infinite scrolling */
-  @keyframes scrollLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%); /* Move left by exactly half the width */
-    }
-  }
-
-  /* Update and synchronize all animation keyframes */
-
-/* Define different keyframes for header vs mega menu */
-
-/* Header animations - TOP to BOTTOM and back */
-@keyframes headerSlideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
+/* --------------------
+   Variables for Reuse
+-------------------- */
+:root {
+  --transition-normal: 0.4s;
+  --transition-fast: 0.2s;
+  --transition-exit: 0.2s;
 }
 
-@keyframes headerSlideUp {
-  from { transform: translateY(0); }
-  to { transform: translateY(-100%); }
+/* --------------------
+   Mixins (optional for DRY)
+-------------------- */
+@mixin fade($from: 0, $to: 1) {
+  from { opacity: $from; }
+  to   { opacity: $to; }
 }
 
-/* Mega menu animations - BOTTOM to TOP and back */
+@mixin slideY($from, $to) {
+  from { transform: translateY($from); }
+  to   { transform: translateY($to); }
+}
+
+@mixin slideX($from, $to) {
+  from { transform: translateX($from); }
+  to   { transform: translateX($to); }
+}
+
+/* --------------------
+   Reusable Animation Classes
+-------------------- */
+.fade-in    { animation: fadeIn var(--transition-normal) forwards; }
+.fade-out   { animation: fadeOut var(--transition-normal) forwards; }
+.slide-down { animation: slideDown var(--transition-normal) forwards; }
+.slide-up   { animation: slideUp var(--transition-normal) forwards; }
+
+.header__bg.slide-down { animation: headerSlideDown var(--transition-normal) forwards; }
+.header__bg.slide-up   { animation: headerSlideUp var(--transition-normal) forwards; }
+.mega-menu.slide-up    { animation: megaMenuSlideUp var(--transition-normal) forwards; }
+.mega-menu.slide-down  { animation: megaMenuSlideDown var(--transition-exit) forwards !important; }
+
+/* --------------------
+   Keyframes
+-------------------- */
+
+/* Fade */
+@keyframes fadeIn   { @include fade(0, 1); }
+@keyframes fadeOut  { @include fade(1, 0); }
+
+/* Vertical Slide */
+@keyframes slideDown     { @include slideY(-100%, 0); }
+@keyframes slideUp       { @include slideY(0, -100%); }
+@keyframes headerSlideDown { @include slideY(-100%, 0); }
+@keyframes headerSlideUp   { @include slideY(0, -100%); }
+
+/* Mega Menu Slide */
 @keyframes megaMenuSlideUp {
   from { transform: translateY(5%); }
-  to { transform: translateY(0); }
+  to   { transform: translateY(0); }
 }
 
 @keyframes megaMenuSlideDown {
-  0% { 
-    transform: translateY(0);
-    visibility: visible;
-  }
-  70% { 
-    visibility: hidden; /* Hide earlier in the animation */
-  }
-  100% { 
-    transform: translateY(5%);
-    visibility: hidden;
-  }
+  0%   { transform: translateY(0); visibility: visible; }
+  70%  { visibility: hidden; }
+  100% { transform: translateY(5%); visibility: hidden; }
 }
 
+/* Slide In/Out Right */
+@keyframes slideInRight  { @include slideX(100%, 0); }
+@keyframes slideOutRight { @include slideX(0, 100%); }
+
+/* Spinner */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
-/* Adjust transition property for faster exit */
+/* --------------------
+   Scroll Animation
+-------------------- */
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --------------------
+   Mega Menu Transition Override
+-------------------- */
 .mega-menu {
-  /* Different timing for entering vs exiting */
-  transition: 
-    transform var(--transition-normal) ease-out, /* Normal timing for appearing */
-    visibility 0s linear var(--transition-exit); /* Quick visibility change when disappearing */
-}
-
-/* When active, delay the visibility change */
-.mega-menu.active {
-  transition: 
+  transition:
     transform var(--transition-normal) ease-out,
-    visibility 0s linear 0s; /* No delay when appearing */
-}
+    visibility 0s linear var(--transition-exit);
 
-/* Apply these animations to the respective elements */
-.header__bg.slide-down {
-  animation: headerSlideDown var(--transition-normal) forwards;
+  &.active {
+    transition:
+      transform var(--transition-normal) ease-out,
+      visibility 0s linear 0s;
+  }
 }
-
-.header__bg.slide-up {
-  animation: headerSlideUp var(--transition-normal) forwards;
-}
-
-.mega-menu.slide-up {
-  animation: megaMenuSlideUp var(--transition-normal) forwards;
-}
-
-/* Faster exit animation */
-.mega-menu.slide-down {
-  animation: megaMenuSlideDown var(--transition-exit) forwards !important; /* Override with faster time */
-}
-

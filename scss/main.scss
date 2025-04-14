@@ -13,6 +13,10 @@
 @import "./base/reset";
 @import "./base/responsive";
 // components
+
+@import "./components/top-bar";
+@import "./components/megamenu";
+@import "./components/purchanse-notification";
 @import "./components/breadcrumb";
 @import "./components/button";
 @import "./components/form";
@@ -23,9 +27,12 @@
 @import "./components/herosection";
 
 // layout
+@import "./layout/login";
 @import "./layout/footer";
 @import "./layout/header";
 // pages
+@import "./pages/shop";
 @import "./pages/home";
+
 
 

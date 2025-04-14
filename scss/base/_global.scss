@@ -30,13 +30,20 @@
   body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     min-height: 100vh;
     position: relative;
     line-height: 1.5;
   }
   
   .home-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .shop-wapper {
     position: relative;
     width: 100%;
     min-height: 100vh;
