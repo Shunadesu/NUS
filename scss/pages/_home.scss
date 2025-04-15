@@ -86,61 +86,6 @@
   // opacity: 0.2;
 }
 
-/* Navigation Controls */
-.hero-navigation {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  z-index: 3;
-}
-
-.hero-prev-btn,
-.hero-next-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Dots Navigation */
-.hero-dots {
-  display: flex;
-  gap: 8px;
-  .hero-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &.active {
-      width: 30px;
-      border-radius: 10px;
-      background-color: var(--white);
-    }
-  }
-}
 
 /* Search popup styles */
 .search-popup {
@@ -788,10 +733,10 @@
   max-width: 90px;
   position: fixed;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 50px;
   background-color: var(--white);
   z-index: 2;
+  padding: 10px;
   transition: all 0.5s ease-in-out;
 
   &.close {
@@ -801,8 +746,9 @@
   .tab-toggle {
     position: absolute;
     left: -20px;
+    top: 0;
     width: 20px;
-    height: 40px;
+    height: 30px;
     background: #fff;
     display: flex;
     align-items: center;
@@ -811,7 +757,15 @@
   }
 
   .recently-viewed-box{
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .btn{
+      // padding: 10px;
+      .icon{
+        font-size: 20px;
+      }
+    }
   }
   h4 {
     font-size: 14px;
@@ -825,8 +779,7 @@
   position: fixed;
   right: -200px;
   padding: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 50px;
   background-color: var(--white);
   z-index: 50;
   transition: all 0.5s ease-in-out;
@@ -844,7 +797,7 @@
     cursor: pointer;
 
     .icon {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 }
@@ -858,10 +811,10 @@
   text-align: center;
   
   svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     fill: #eee;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
   }
 }
 
@@ -880,7 +833,9 @@
   z-index: 2;
   width: var(--sidebar-width);
   padding: 20px 0;
-  
+  &.hide{
+    display: none;
+  }
   &:hover .sidebar__link {
     color: var(--text-dark);
   }
@@ -1143,4 +1098,9 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+.sunny{
+  height: 100vh;
 }

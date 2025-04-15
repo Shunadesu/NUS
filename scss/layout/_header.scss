@@ -7,12 +7,32 @@ width: 100%;
 z-index: 10;
 color: var(--white);
 margin-top: 40px;
+// border-bottom: 1px solid var(--border-color);
 padding: 20px 0;
+&.shrink {
+    background-color: white;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    // transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+}
 
 &.menu-active {
     color: var(--text-dark);
 }
 .header__content {
+    .nav{
+        .nav__list{
+            display: flex;
+            gap: 24px;
+            &.main_nav{
+                display: none;
+            }
+        }
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
