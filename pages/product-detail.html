@@ -336,7 +336,9 @@
               <div class="product__gallery">
 
                 <div class="product__thumbnails-wrapper">
+
                   <div class="product__thumbnails">
+                    <div class="thumbnails-container">
                     <div class="thumbnail active" data-index="0">
                       <img src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=600" alt="Square Textured Striped - Thumbnail 1">
                     </div>
@@ -350,21 +352,30 @@
                       <img src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_4_425fa01a-2d89-4a16-bc8d-fb4c81465190.jpg?v=1680169369&width=600" alt="Square Textured Striped - Thumbnail 4">
                     </div>
                   </div>
+                  </div>
                 </div>
-
-                  <div class="product__main-image">
-                    <span class="product__badge">-3%</span>
-                    <button class="main-nav main-prev" aria-label="Previous image">
-                      <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <img id="mainImage" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=600" alt="Square Textured Striped">
-                    <button class="zoom-btn" id="zoomBtn">
+                <div class="product__main-image">
+                  <span class="product__badge">-3%</span>
+                  <button class="main-nav main-prev" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <div class="image-container">
+                    <img id="mainImage" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=600" alt="Striped Ribbed T-shirt">
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+                  <button class="main-nav main-next" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                  <div class="gallery-controls">
+                    <button class="zoom-btn" id="zoomBtn" aria-label="Zoom image">
                       <i class="fas fa-expand"></i>
                     </button>
-                    <button class="main-nav main-next" aria-label="Next image">
-                      <i class="fas fa-chevron-right"></i>
+                    <button class="fullscreen-btn" id="fullscreenBtn" aria-label="View fullscreen gallery">
+                      <i class="fas fa-th"></i>
                     </button>
-                  </div>               
+                  </div>
+                </div>          
               </div>
       
               <!-- Product Info -->
@@ -435,7 +446,11 @@
                     <div class="stock-progress" style="width: 65%;"></div>
                   </div>
                 </div>
-                
+                <div class="terms-agreement-inline">
+                  <input type="checkbox" id="agreeTermsInline" class="terms-checkbox">
+                  <label for="agreeTermsInline">I agree with <a href="#" class="terms-link">Terms & Conditions</a></label>
+                </div>
+                        
                 <div class="product__add-to-cart">
                   <div class="quantity-selector">
                     <button class="quantity-btn quantity-decrease">
@@ -463,12 +478,318 @@
               </div>
             </div>
           </div>
+
+        </div>
+        <div class="product__tabs">
+          <div class="product-tabs">
+            <!-- <button class="tab-btn" data-tab="description">Description</button> -->
+            <button class="tab-btn" data-tab="reviews">Customer Reviews</button>
+            <button class="tab-btn active" data-tab="shipping">Shipping & Returns</button>
+            <button class="tab-btn" data-tab="policies">Return Policies</button>
+          </div>
+  
+          <div class="tab-content">
+              <!-- Description Tab Content -->
+              <!-- <div class="tab-pane" id="description">
+                  <h2>Product Description</h2>
+                  <p>Product description content would go here.</p>
+              </div> -->
+  
+              <!-- Customer Reviews Tab Content -->
+               <!-- Customer Reviews Tab Content -->
+            <div class="tab-pane" id="reviews">
+              <h2>Customer Reviews</h2>
+              
+              <div class="reviews-summary">
+                  <div class="overall-rating">
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <p class="rating-text">4.25 out of 5</p>
+                      <p class="review-count">Based on 4 reviews</p>
+                  </div>
+
+                  <div class="rating-breakdown">
+                      <div class="rating-row">
+                          <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <div class="progress-container">
+                              <div class="progress-bar" style="width: 50%;"></div>
+                          </div>
+                          <span class="count">2</span>
+                      </div>
+                      <div class="rating-row">
+                          <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <div class="progress-container">
+                              <div class="progress-bar" style="width: 25%;"></div>
+                          </div>
+                          <span class="count">1</span>
+                      </div>
+                      <div class="rating-row">
+                          <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <div class="progress-container">
+                              <div class="progress-bar" style="width: 25%;"></div>
+                          </div>
+                          <span class="count">1</span>
+                      </div>
+                      <div class="rating-row">
+                          <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <div class="progress-container">
+                              <div class="progress-bar" style="width: 0%;"></div>
+                          </div>
+                          <span class="count">0</span>
+                      </div>
+                      <div class="rating-row">
+                          <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <div class="progress-container">
+                              <div class="progress-bar" style="width: 0%;"></div>
+                          </div>
+                          <span class="count">0</span>
+                      </div>
+                  </div>
+
+                  <div class="write-review">
+                      <button class="review-btn">WRITE A REVIEW</button>
+                  </div>
+              </div>
+
+              <div class="reviews-filter">
+                  <div class="dropdown">
+                      <button class="dropdown-btn">Most Recent <i class="fas fa-chevron-down"></i></button>
+                      <div class="dropdown-content">
+                          <a href="#" data-sort="recent">Most Recent</a>
+                          <a href="#" data-sort="highest">Highest Rating</a>
+                          <a href="#" data-sort="lowest">Lowest Rating</a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="reviews-list">
+                  <div class="review-item">
+                      <div class="review-header">
+                          <div class="review-stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <div class="review-date">12/02/2024</div>
+                      </div>
+                      <div class="review-user">
+                          <div class="user-avatar">
+                              <i class="fas fa-user-circle"></i>
+                          </div>
+                          <div class="user-name">Zzs</div>
+                      </div>
+                      <div class="review-content">
+                          <p>Ddd</p>
+                          <p>Fff</p>
+                      </div>
+                  </div>
+                  
+                  <!-- Additional review examples -->
+                  <div class="review-item">
+                      <div class="review-header">
+                          <div class="review-stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <div class="review-date">11/28/2024</div>
+                      </div>
+                      <div class="review-user">
+                          <div class="user-avatar">
+                              <i class="fas fa-user-circle"></i>
+                          </div>
+                          <div class="user-name">JohnD</div>
+                      </div>
+                      <div class="review-content">
+                          <p>Excellent product! Exactly as described and arrived quickly. The quality exceeded my expectations and I would definitely purchase again.</p>
+                      </div>
+                  </div>
+                  
+                  <div class="review-item">
+                      <div class="review-header">
+                          <div class="review-stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <div class="review-date">11/15/2024</div>
+                      </div>
+                      <div class="review-user">
+                          <div class="user-avatar">
+                              <i class="fas fa-user-circle"></i>
+                          </div>
+                          <div class="user-name">SarahM</div>
+                      </div>
+                      <div class="review-content">
+                          <p>Very good product overall. Shipping was fast and the item was well-packaged. Taking off one star because the color was slightly different than shown in the photos.</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Review Form (hidden by default) -->
+              <div class="review-form-container" id="reviewForm">
+                  <div class="review-form">
+                      <h3>Write Your Review</h3>
+                      <button class="close-form">&times;</button>
+                      
+                      <div class="form-group">
+                          <label>Your Rating</label>
+                          <div class="rating-select">
+                              <i class="far fa-star" data-rating="1"></i>
+                              <i class="far fa-star" data-rating="2"></i>
+                              <i class="far fa-star" data-rating="3"></i>
+                              <i class="far fa-star" data-rating="4"></i>
+                              <i class="far fa-star" data-rating="5"></i>
+                          </div>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="reviewName">Name</label>
+                          <input type="text" id="reviewName" placeholder="Your name">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="reviewEmail">Email</label>
+                          <input type="email" id="reviewEmail" placeholder="Your email (will not be published)">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="reviewContent">Review</label>
+                          <textarea id="reviewContent" rows="5" placeholder="Write your review here..."></textarea>
+                      </div>
+                      
+                      <button type="submit" class="submit-review">Submit Review</button>
+                  </div>
+              </div>
+          </div>
+  
+              <!-- Shipping & Returns Tab Content -->
+              <div class="tab-pane active" id="shipping">
+                  <p>For all orders exceeding a value of 100USD shipping is offered for free.</p>
+                  
+                  <p>Returns will be accepted for up to 10 days of Customer's receipt or tracking number on unworn items. You, as a Customer, are obliged to inform us via email before you return the item.</p>
+                  
+                  <p>Otherwise, standard shipping charges apply. Check out our delivery <a href="#" class="terms-link">Terms & Conditions</a> for more details.</p>
+              </div>
+  
+              <!-- Return Policies Tab Content -->
+              <div class="tab-pane" id="policies">
+                  <p>Returns will be accepted for up to 10 days of Customer's receipt or tracking number on unworn items. You, as a Customer, are obliged to inform us via email before you return the item, only in the case of:</p>
+                  
+                  <ul class="policy-list">
+                      <li>Received the wrong item.</li>
+                      <li>Item arrived not as expected (ie. damaged packaging).</li>
+                      <li>Item had defects.</li>
+                      <li>Over delivery time.</li>
+                      <li>The shipper does not allow the goods to be inspected before payment.</li>
+                  </ul>
+                  
+                  <p>The returned product(s) must be in the original packaging, safely wrapped, undamaged and unworn. This means that the item(s) must be safely packed in a carton box for protection during transport, possibly the same carton used to ship to you as a customer.</p>
+              </div>
+          </div>
         </div>
       </main>
-  
+      <!-- Fullscreen Gallery Modal -->
+      <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal__header">
+          <h3>Striped Ribbed T-shirt</h3>
+          <button class="close-gallery">&times;</button>
+        </div>
+        <div class="gallery-modal__content">
+          <div class="gallery-main">
+            <button class="gallery-nav gallery-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="gallery-main__image">
+              <img id="galleryMainImage" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vPgZcw1Z26EaAJJULMnq47deckU2lR.png" alt="Striped Ribbed T-shirt">
+            </div>
+            <button class="gallery-nav gallery-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="gallery-thumbs">
+            <!-- Thumbnails will be generated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+       <!-- Add this modal after the gallery modal -->
+      <div id="termsModal" class="terms-modal">
+        <div class="terms-modal__content">
+          <div class="terms-modal__header">
+            <h3>Terms Of Service</h3>
+            <button class="close-terms">&times;</button>
+          </div>
+          <div class="terms-modal__body">
+            <p class="terms-updated">Last Updated: September 08, 2023</p>
+            
+            <p>Welcome to the Bagratica Store, Inc. ("Bagratica") web site. Bagratica provides this Site as a service to our customers. Please read the following terms of service ("Terms") as they govern your use of our Site and our services and content accessible via our Site. To make these Terms easier to read, the Site and our services and content are collectively called the "Services."</p>
+            
+            <h4>Privacy Policy</h4>
+            <p>Please refer to our Privacy Policy https://www.bagratica.com/privacy for information on how we collect, use and disclose information from our users. You acknowledge and agree that your use of the Services is subject to our Privacy Policy.</p>
+            
+            <h4>Customer Satisfaction</h4>
+            <p>At Bagratica, we are committed to providing our customers with great quality products at low prices. Our products are sold online only in limited quantities and availabilities. We have done our best to display our items as accurately as possible via our Services. Please be aware however that variations in style, color, size, shape and look may occur. If you are not satisfied your purchase, please review our return policy under our FAQ at https://www.bagratica.com/help.</p>
+            
+            <h4>Product Personalization</h4>
+            <p>When you choose to personalize a product, please be aware that personalized items cannot be returned or exchanged unless there is a manufacturing defect. Please ensure all spelling and customization details are correct before submitting your order.</p>
+            
+            <h4>Shipping & Delivery</h4>
+            <p>Shipping times may vary depending on your location and the availability of the product. Standard shipping typically takes 3-7 business days. Express shipping options are available at checkout for an additional fee.</p>
+          </div>
+          <div class="terms-modal__footer">
+            <div class="terms-agreement">
+              <input type="checkbox" id="agreeTerms" class="terms-checkbox">
+              <label for="agreeTerms">I agree with Terms & Conditions</label>
+            </div>
+            <button class="terms-accept-btn">Accept & Continue</button>
+          </div>
+        </div>
+      </div>
       <!-- Image Zoom Modal -->
       <div id="imageModal" class="image-modal">
-        <span class="close-modal">&times;</span>
+        <span class="close-img-modal">&times;</span>
         <img class="modal-content" id="zoomedImage">
       </div>
        <!-- Recently Viewed sidebar -->
@@ -496,11 +817,146 @@
       </div>
     </section>
     <!-- Adding new section here -->
-    <section class="sunny">Sunny</section>
     <!-- Footer -->    
     <!-- Load scripts optimized -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <!-- Logo and Contact Info Column -->
+          <div class="footer__column footer__column--brand">
+            <div class="footer__logo">
+              <a href="/">
+                <img src="assets/images/logo.png" alt="UMINO" class="logo-img">
+              </a>
+            </div>
+            <div class="footer__contact">
+              <p class="footer__address">268 St, South New York/NY 98944, United States.</p>
+              <p class="footer__phone">+222-1800-2628</p>
+              <p class="footer__email">
+                <a href="mailto:blueskytechcompany@gmail.com">blueskytechcompany@gmail.com</a>
+              </p>
+            </div>
+            <div class="footer__social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">Company</h3>
+            <ul class="footer__links">
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="stores.html">Our Stores</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="size-guide.html">Size Guide</a></li>
+              <li><a href="account.html">My Account</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Service Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">Customer Service</h3>
+            <ul class="footer__links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="refund-policy.html">Refund Policy</a></li>
+              <li><a href="shipping-return.html">Shipping & Return</a></li>
+              <li><a href="terms-conditions.html">Term & Conditions</a></li>
+              <li><a href="advanced-search.html">Advanced Search</a></li>
+              <li><a href="faqs.html">Theme FAQs</a></li>
+              <li><a href="store-locations.html">Store Locations</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Column -->
+          <div class="footer__column footer__column--newsletter">
+            <h3 class="footer__title">Sign Up to Newsletter</h3>
+            <p class="newsletter__text">
+              Enter your email address to get $10 off your first order and free shipping.
+              Updates information on Sales and Offers.
+            </p>
+            <form class="newsletter__form" id="newsletterForm">
+              <div class="newsletter__input-group">
+                <input 
+                  type="email" 
+                  class="newsletter__input font-montserrat" 
+                  placeholder="Enter your email..." 
+                  required
+                >
+                <button type="submit" class="newsletter__btn">SUBSCRIBE</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-row">
+            <!-- Language and Currency Selector -->
+            <div class="footer__selectors">
+              <div class="language-selector">
+                <select id="languageSelector" class="selector">
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                  <option value="es">Español</option>
+                </select>
+              </div>
+              <div class="currency-selector">
+                <select id="currencySelector" class="selector">
+                  <option value="USD">United States (USD $)</option>
+                  <option value="EUR">Europe (EUR €)</option>
+                  <option value="GBP">United Kingdom (GBP £)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer__copyright">
+              © 2025 RUS. All Rights Reserved
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="footer__payment">
+              <img src="https://umino-demo.myshopify.com/cdn/shop/files/payment_4.png?v=1680677580&width=360" alt="">
+              <!-- <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>  
     
     <!-- Load critical scripts first -->
+    <!-- <script type="module" src="../js/product-detail.js"></script> -->
+    <script type="module" src="../js/pro-detail.js"></script>
     <script type="module" src="../js/main.js"></script>    
   </body>
 </html>

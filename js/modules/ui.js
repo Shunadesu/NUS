@@ -1,5 +1,14 @@
+
+export function initUI() {
+  // Initialize product hover effects
+  setupRecentlyViewed();
+  initProductHoverEffects();
+  setupScrollingTopBar()
+  setupHelp();
+  // setupScrollingTopBar();
+}
 // Infinite scrolling top bar
-export function setupScrollingTopBar() {
+function setupScrollingTopBar() {
     const topBar = document.querySelector('.top-bar');
     if (!topBar) return;
     
@@ -42,24 +51,24 @@ export function setupScrollingTopBar() {
     
     adjustScrollSpeed();
     window.addEventListener('resize', adjustScrollSpeed);
-  }
+}
   
-  // Help popup functionality
-  export function setupHelp() {
-    const helpBtn = document.querySelector('.icon-btn.help-icon');
-    const helpPopup = document.getElementById('helpPopup');
-    
-    if (!helpBtn || !helpPopup) return;
-    
-    helpBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const isActive = this.classList.toggle('active');
-      helpPopup.style.display = isActive ? 'block' : 'none';
-    });
-  }
+// Help popup functionality
+function setupHelp() {
+  const helpBtn = document.querySelector('.icon-btn.help-icon');
+  const helpPopup = document.getElementById('helpPopup');
   
-  // Recently viewed and floating buttons
-  export function setupRecentlyViewed() {
+  if (!helpBtn || !helpPopup) return;
+  
+  helpBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const isActive = this.classList.toggle('active');
+    helpPopup.style.display = isActive ? 'block' : 'none';
+  });
+}
+  
+// Recently viewed and floating buttons
+function setupRecentlyViewed() {
     const recentlyViewed = document.querySelector('.recently-viewed');
     if (!recentlyViewed) return;
     
@@ -80,17 +89,24 @@ export function setupScrollingTopBar() {
         if (floatingBtn) floatingBtn.classList.toggle('open');
       });
     }
-  }
+}
   
-  // Scroll to top button
-  export function setupScrollTop() {
-    const scrollTopBtn = document.querySelector('.scroll-top');
-    if (!scrollTopBtn) return;
-    
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+// Handle product card hover effects
+function initProductHoverEffects() {
+  const productCards = document.querySelectorAll('.product-card');
+  
+  productCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      const img = this.querySelector('.product-card__image img');
+      img.style.transform = 'scale(1.05)';
     });
-  }
+    
+    card.addEventListener('mouseleave', function() {
+      const img = this.querySelector('.product-card__image img');
+      img.style.transform = 'scale(1)';
+    });
+  });
+}
+
+  
+  

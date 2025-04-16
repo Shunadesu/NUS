@@ -397,13 +397,10 @@
                               </div>
                               <div class="checkbox">
                                   <input type="checkbox" id="out-of-stock" class="checkbox__input">
-                                  <label for="out-of-stock" class="checkbox__label">Out of stock <span class="count">(6)</span></label>
+                                  <label for="out-of-stock" class="checkbox__label">Thuê <span class="count">(6)</span></label>
                               </div>
 
-                              <div class="checkbox">
-                                <input type="checkbox" id="out-of-stock" class="checkbox__input">
-                                <label for="out-of-stock" class="checkbox__label">Thuê <span class="count">(6)</span></label>
-                              </div>
+                              
                               
                               </div>
                           </div>
@@ -1580,6 +1577,140 @@
     <section class="hidden">Sunny</section>
     <!-- Footer -->    
     <!-- Load scripts optimized -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <!-- Logo and Contact Info Column -->
+          <div class="footer__column footer__column--brand">
+            <div class="footer__logo">
+              <a href="/">
+                <img src="assets/images/logo.png" alt="UMINO" class="logo-img">
+              </a>
+            </div>
+            <div class="footer__contact">
+              <p class="footer__address">268 St, South New York/NY 98944, United States.</p>
+              <p class="footer__phone">+222-1800-2628</p>
+              <p class="footer__email">
+                <a href="mailto:blueskytechcompany@gmail.com">blueskytechcompany@gmail.com</a>
+              </p>
+            </div>
+            <div class="footer__social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">Company</h3>
+            <ul class="footer__links">
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="stores.html">Our Stores</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="size-guide.html">Size Guide</a></li>
+              <li><a href="account.html">My Account</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Service Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">Customer Service</h3>
+            <ul class="footer__links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="refund-policy.html">Refund Policy</a></li>
+              <li><a href="shipping-return.html">Shipping & Return</a></li>
+              <li><a href="terms-conditions.html">Term & Conditions</a></li>
+              <li><a href="advanced-search.html">Advanced Search</a></li>
+              <li><a href="faqs.html">Theme FAQs</a></li>
+              <li><a href="store-locations.html">Store Locations</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Column -->
+          <div class="footer__column footer__column--newsletter">
+            <h3 class="footer__title">Sign Up to Newsletter</h3>
+            <p class="newsletter__text">
+              Enter your email address to get $10 off your first order and free shipping.
+              Updates information on Sales and Offers.
+            </p>
+            <form class="newsletter__form" id="newsletterForm">
+              <div class="newsletter__input-group">
+                <input 
+                  type="email" 
+                  class="newsletter__input font-montserrat" 
+                  placeholder="Enter your email..." 
+                  required
+                >
+                <button type="submit" class="newsletter__btn">SUBSCRIBE</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-row">
+            <!-- Language and Currency Selector -->
+            <div class="footer__selectors">
+              <div class="language-selector">
+                <select id="languageSelector" class="selector">
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                  <option value="es">Español</option>
+                </select>
+              </div>
+              <div class="currency-selector">
+                <select id="currencySelector" class="selector">
+                  <option value="USD">United States (USD $)</option>
+                  <option value="EUR">Europe (EUR €)</option>
+                  <option value="GBP">United Kingdom (GBP £)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer__copyright">
+              © 2025 RUS. All Rights Reserved
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="footer__payment">
+              <img src="https://umino-demo.myshopify.com/cdn/shop/files/payment_4.png?v=1680677580&width=360" alt="">
+              <!-- <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div>
+              <div class="payment-icon">
+                <img src="assets/images/payment-visa.png" alt="Visa">
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>  
     
     <!-- Load critical scripts first -->
     <script type="module" src="../js/main.js"></script>    
