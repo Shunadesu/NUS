@@ -13,6 +13,7 @@ import { initGallery } from './modules/gallery.js';
 import { initNotifications } from './modules/notification.js';
 import { initFilters } from './modules/filter.js';
 import { initFooterFunctionality } from './modules/footer.js';
+import {init404Page} from './modules/404.js';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -35,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
   initProductOptions();
   initCart();  
   initFooterFunctionality();
-
+  if (document.querySelector('.error-page')) {
+    init404Page();
+  }
   console.log('[Debug] Initialization complete');
 });
 
