@@ -1,17 +1,23 @@
 .font-jost {
-    font-family: "Jost", sans-serif;
+    font-family: "Jost", sans-serif !important;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 .font-montserrat {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 .font-dm-serif {
-    font-family: "DM Serif Display", serif;
+    font-family: "DM Serif Display", serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.font-prata{
+    font-family: "Prata", serif !important;
     font-optical-sizing: auto;
     font-style: normal;
 }

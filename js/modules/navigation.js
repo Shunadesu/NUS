@@ -4,7 +4,8 @@ export function setupNavigation() {
     const headerBg = document.querySelector('.header__bg');
     const sidebar = document.querySelector('.sidebar');
     const megaMenu = document.querySelector('.mega-menu');
-    
+    const logoWhite = document.querySelector('.logo_div.white');
+    const logoNormal = document.querySelector('.logo_div:not(.white)');
     if (!header || !headerBg || !sidebar || !megaMenu) return;
     
     const sidebarItems = document.querySelectorAll('.sidebar__item[data-category]');
@@ -37,7 +38,8 @@ export function setupNavigation() {
         // Header background animation
         headerBg.classList.remove('slide-up');
         headerBg.classList.add('active');
-        
+        logoWhite.style.display = 'none';
+        logoNormal.style.display = 'block';
         // Mega menu preparation
         megaMenu.classList.remove('slide-down');
         
@@ -97,7 +99,8 @@ export function setupNavigation() {
           
           megaMenu.classList.remove('slide-up');
           megaMenu.classList.add('slide-down');
-          
+          logoWhite.style.display = 'block';
+          logoNormal.style.display = 'none';
           setTimeout(() => {
             megaMenu.classList.remove('active', 'slide-down');
           }, 150);

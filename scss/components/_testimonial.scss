@@ -1,0 +1,126 @@
+/* Testimonial Slider Styles */
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    // max-width: var(--container-width);
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  .testimonial-track {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    transition: transform var(--transition-normal);
+    cursor: grab;
+  }
+
+  .testimonial-track.grabbing {
+    cursor: grabbing;
+    transition: none;
+  }
+
+  .testimonial-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 60px 20px;
+  }
+
+  .testimonial-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    position: relative;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .testimonial-source {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: white;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .testimonial-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    z-index: 10;
+    padding: 10px;
+  }
+
+  .testimonial-nav:hover {
+    color: var(--accent-color);
+  }
+
+  .testimonial-nav:focus {
+    outline: none;
+  }
+
+  .testimonial-prev {
+    left: 20px;
+  }
+
+  .testimonial-next {
+    right: 20px;
+  }
+
+  .testimonial-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .indicator {
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+
+  .indicator.active {
+    background-color: var(--accent-color);
+  }
+
+  .indicator:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-quote {
+      font-size: 2.2rem;
+    }
+    
+    .testimonial-source {
+      font-size: 1rem;
+    }
+  }

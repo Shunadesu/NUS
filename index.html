@@ -97,8 +97,17 @@
         <header class="header">
           <div class="container">
             <div class="header__content">
-              <a href="/" class="header__logo font-montserrat">BAGRATICA</a>
+              <a href="/" class="header__logo font-prata">
+                <!-- NUS -->
+                <div class="logo_div white">
+                  <img src="./img/logo/Nussunny-white.png" alt="">
+                </div>
 
+                <div class="logo_div" style="display: none;">
+                  <img src="./img/logo/Nussunny-black.png" alt="">
+                </div>
+              </a>
+              <!-- <img src="./img/logo/LOGO-NUS-Da tach Background.png" class="header__logo" alt="logo"> -->
               <nav class="nav">
                 <ul class="nav__list main_nav">
                   <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
@@ -450,11 +459,6 @@
                 </li>
               </ul>
             </nav>
-    
-            <!-- Content area -->
-            <main class="content">
-            
-            </main>
           </div>
         </div>
     
@@ -839,7 +843,7 @@
           </div>
         </div>
 
-        <!-- Recently Viewed sidebar -->
+        <!-- Recently Viewed sidebar
         <div class="recently-viewed">
           <div class="tab-toggle">
             <span>&raquo;</span>
@@ -861,7 +865,7 @@
           <button class="btn scroll-top">
             <div class="icon">⬆️</div>
           </button>
-        </div>
+        </div> -->
         <!-- Recent Purchase Notification -->
         <!-- <div class="purchase-notification" id="purchase-notification" aria-live="polite">
           <div class="notification-image">
@@ -879,141 +883,114 @@
       <!-- Adding new section here -->
      
     <!-- Footer -->
-     <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__row">
-          <!-- Logo and Contact Info Column -->
-          <div class="footer__column footer__column--brand">
-            <div class="footer__logo">
-              <a href="/">
-                <img src="assets/images/logo.png" alt="UMINO" class="logo-img">
-              </a>
-            </div>
-            <div class="footer__contact">
-              <p class="footer__address">268 St, South New York/NY 98944, United States.</p>
-              <p class="footer__phone">+222-1800-2628</p>
-              <p class="footer__email">
-                <a href="mailto:blueskytechcompany@gmail.com">blueskytechcompany@gmail.com</a>
-              </p>
-            </div>
-            <div class="footer__social">
-              <a href="#" class="social-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Company Column -->
-          <div class="footer__column">
-            <h3 class="footer__title">Company</h3>
-            <ul class="footer__links">
-              <li><a href="/pages/404.html">About Us</a></li>
-              <li><a href="/pages/404.html">Our Stores</a></li>
-              <li><a href="/pages/404.html">Contact Us</a></li>
-              <li><a href="/pages/404.html">Size Guide</a></li>
-              <li><a href="/pages/404.html">My Account</a></li>
-            </ul>
-          </div>
-
-          <!-- Customer Service Column -->
-          <div class="footer__column">
-            <h3 class="footer__title">Customer Service</h3>
-            <ul class="footer__links">
-              <li><a href="/pages/404.html">Privacy Policy</a></li>
-              <li><a href="/pages/404.html">Refund Policy</a></li>
-              <li><a href="/pages/404.html">Shipping & Return</a></li>
-              <li><a href="/pages/404.html">Term & Conditions</a></li>
-              <li><a href="/pages/404.html">Advanced Search</a></li>
-              <li><a href="/pages/404.html">Theme FAQs</a></li>
-              <li><a href="/pages/404.html">Store Locations</a></li>
-            </ul>
-          </div>
-
-          <!-- Newsletter Column -->
-          <div class="footer__column footer__column--newsletter">
-            <h3 class="footer__title">Sign Up to Newsletter</h3>
-            <p class="newsletter__text">
-              Enter your email address to get $10 off your first order and free shipping.
-              Updates information on Sales and Offers.
-            </p>
-            <form class="newsletter__form" id="newsletterForm">
-              <div class="newsletter__input-group">
-                <input 
-                  type="email" 
-                  class="newsletter__input font-montserrat" 
-                  placeholder="Enter your email..." 
-                  required
-                >
-                <button type="submit" class="newsletter__btn">SUBSCRIBE</button>
-              </div>
-            </form>
+    <div class="testimonial-container">
+      <div class="testimonial-track">
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <blockquote class="testimonial-quote">
+              "Kinn makes beautiful, responsibly sourced pieces that are bound to be your next family heirlooms."
+            </blockquote>
+            <cite class="testimonial-source">— MARIE CLAIRE</cite>
           </div>
         </div>
-
-        <div class="footer__bottom">
-          <div class="footer__bottom-row">
-            <!-- Language and Currency Selector -->
-            <div class="footer__selectors">
-              <div class="language-selector">
-                <select id="languageSelector" class="selector">
-                  <option value="en">English</option>
-                  <option value="fr">Français</option>
-                  <option value="es">Español</option>
-                </select>
-              </div>
-              <div class="currency-selector">
-                <select id="currencySelector" class="selector">
-                  <option value="USD">United States (USD $)</option>
-                  <option value="EUR">Europe (EUR €)</option>
-                  <option value="GBP">United Kingdom (GBP £)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="footer__copyright">
-              © 2025 RUS. All Rights Reserved
-            </div>
-
-            <!-- Payment Methods -->
-            <div class="footer__payment">
-              <img src="https://umino-demo.myshopify.com/cdn/shop/files/payment_4.png?v=1680677580&width=360" alt="">
-              <!-- <div class="payment-icon">
-                <img src="assets/images/payment-visa.png" alt="Visa">
-              </div>
-              <div class="payment-icon">
-                <img src="assets/images/payment-visa.png" alt="Visa">
-              </div>
-              <div class="payment-icon">
-                <img src="assets/images/payment-visa.png" alt="Visa">
-              </div>
-              <div class="payment-icon">
-                <img src="assets/images/payment-visa.png" alt="Visa">
-              </div>
-              <div class="payment-icon">
-                <img src="assets/images/payment-visa.png" alt="Visa">
-              </div>
-              <div class="payment-icon">
-                <img src="assets/images/payment-visa.png" alt="Visa">
-              </div> -->
-            </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <blockquote class="testimonial-quote">
+              "Exquisite craftsmanship and ethical practices make these pieces truly special and timeless."
+            </blockquote>
+            <cite class="testimonial-source">— VOGUE</cite>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <blockquote class="testimonial-quote">
+              "Sustainable luxury at its finest. Each piece tells a story that will last for generations."
+            </blockquote>
+            <cite class="testimonial-source">— HARPER'S BAZAAR</cite>
           </div>
         </div>
       </div>
-    </footer>    
+      
+      <button class="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="testimonial-nav testimonial-next" aria-label="Next testimonial">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+      
+      <div class="testimonial-indicators">
+        <button class="indicator active" data-index="0" aria-label="Go to slide 1"></button>
+        <button class="indicator" data-index="1" aria-label="Go to slide 2"></button>
+        <button class="indicator" data-index="2" aria-label="Go to slide 3"></button>
+      </div>
+    </div>
+     <!-- Footer Section -->
+      <footer class="footer">
+        <div class="container">
+          <div class="legacy-section">
+            <h2 class="legacy-title font-dm-serif">Join The Legacy Club</h2>
+            <p class="legacy-text">Sign up to be the first to know about new arrivals & exclusive offers.</p>
+            <form class="email-form">
+              <input type="email" class="email-input" placeholder="ENTER E-MAIL ADDRESS">
+              <button type="submit" class="submit-btn">›</button>
+            </form>
+          </div>
+
+          
+          <div class="footer__columns">
+            <div class="footer-column">
+              <h3 class="column-title">INFO</h3>
+              <ul class="footer-links">
+                <li class="footer-link"><a href="#">Flagship Store</a></li>
+                <li class="footer-link"><a href="#">Account</a></li>
+                <li class="footer-link"><a href="#">Jewelry Care Guide</a></li>
+                <li class="footer-link"><a href="#">Stockists</a></li>
+                <li class="footer-link"><a href="#">Terms & Privacy</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-column">
+              <h3 class="column-title">SUPPORT</h3>
+              <ul class="footer-links">
+                <li class="footer-link"><a href="#">Contact</a></li>
+                <li class="footer-link"><a href="#">FAQ</a></li>
+                <li class="footer-link"><a href="#">Start a Return</a></li>
+                <li class="footer-link"><a href="#">Shipping</a></li>
+                <li class="footer-link"><a href="#">Accessibility</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-column">
+              <h3 class="column-title">SERVICES</h3>
+              <ul class="footer-links">
+                <li class="footer-link"><a href="#">Private Appointments</a></li>
+                <li class="footer-link"><a href="#">Diamond Guide</a></li>
+                <li class="footer-link"><a href="#">Concierge</a></li>
+                <li class="footer-link"><a href="#">Repairs</a></li>
+                <li class="footer-link"><a href="#">KinnCycle®</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-column">
+              <h3 class="column-title">CONNECT</h3>
+              <ul class="footer-links">
+                <li class="footer-link"><a href="#">Journal</a></li>
+                <li class="footer-link"><a href="#">Affiliates</a></li>
+                <li class="footer-link"><a href="#">Instagram</a></li>
+                <li class="footer-link"><a href="#">Pinterest</a></li>
+                <li class="footer-link"><a href="#">TikTok</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__logo__div">
+          <img src="./img/logo/Nussunny-black.png" alt="">
+        </div>
+      </footer>   
     <!-- Load scripts optimized -->
     
     <!-- Load critical scripts first -->

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
 // abstracts
 @import "./abstracts/mixin";
 @import "./abstracts/variable";
@@ -13,6 +13,7 @@
 @import "./base/reset";
 @import "./base/responsive";
 // components
+@import "./components/testimonial";
 @import "./components/review";
 @import "./components/top-bar";
 @import "./components/megamenu";
