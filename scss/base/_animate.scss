@@ -68,10 +68,13 @@
 @keyframes slideInRight  { @include slideX(100%, 0); }
 @keyframes slideOutRight { @include slideX(0, 100%); }
 
-/* Spinner */
+
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
+
 
 /* --------------------
    Scroll Animation
@@ -79,6 +82,17 @@
 @keyframes scrollLeft {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --------------------

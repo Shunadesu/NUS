@@ -1,5 +1,8 @@
 .shop-wapper{
-    
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
     .header{
         background-color: var(--white);
         color: var(--black);
@@ -62,6 +65,7 @@
     }
     .hero-banner{
         padding: 0 10rem;
+        margin-bottom: 60px;
         .breadcrumb {
         display: flex;
         align-items: center;
@@ -199,7 +203,7 @@
         margin-bottom: 1.5rem;
         border-bottom: 1px solid #eee;
         padding-bottom: 1.5rem;
-        
+        transition: all 0.3s ease;
             &:last-child {
                 border-bottom: none;
             }
@@ -218,20 +222,21 @@
             }
             
             &__toggle {
-                width: 24px;
-                height: 24px;
+                
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 
                 .minus {
+                width: 24px;
+                height: 24px;
                 font-size: 1.5rem;
                 line-height: 1;
                 }
             }
             
             &__content {
-                // For collapsible functionality
+              // overflow: hidden;
             }
             
             &__list {
@@ -487,7 +492,10 @@
     margin-top: 2rem;
     border-radius: 8px;
     overflow: hidden;
-    
+    &:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
     img {
       width: 100%;
       height: auto;

@@ -127,18 +127,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
     z-index: 3;
   }
   
   .hero-prev-btn,
   .hero-next-btn {
+
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--white);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -163,6 +164,7 @@
   }
   
   .hero-dot {
+    display: none;
     width: 10px;
     height: 10px;
     border-radius: 50%;

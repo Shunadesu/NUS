@@ -1,5 +1,14 @@
- // Product features (images, color selection, nav buttons)
-export function setupProductFeatures() {
+export function initProducts() {
+  // Initialize product hover effects
+  setupProductFeatures();
+  setupPurchaseNotification();
+  setupPagination();
+  setupProductsView();
+}
+
+
+// Product features (images, color selection, nav buttons)
+ function setupProductFeatures() {
   // Product hover effects
   const productImages = document.querySelectorAll('.product-image img');
   productImages.forEach(img => {
@@ -40,7 +49,7 @@ export function setupProductFeatures() {
 }
 
 // Purchase notification functionality
-export function setupPurchaseNotification() {
+ function setupPurchaseNotification() {
   const notification = document.getElementById('purchase-notification');
   const closeBtn = document.getElementById('notification-close');
   
@@ -68,7 +77,7 @@ export function setupPurchaseNotification() {
 }
 
 // Pagination functionality
-export function setupPagination() {
+ function setupPagination() {
   const prevBtn = document.querySelector('.pagination-btn.prev');
   const nextBtn = document.querySelector('.pagination-btn.next');
   const paginationText = document.querySelector('.pagination-text');
@@ -99,4 +108,36 @@ export function setupPagination() {
   });
   
   updatePagination();
+}
+
+// products.js - Handles product display and view options
+
+ function setupProductsView() {
+  const viewButtons = document.querySelectorAll('.view-btn');
+  const productsGrid = document.querySelector('.products__grid');
+  
+  if (!viewButtons.length || !productsGrid) return;
+  
+  viewButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      viewButtons.forEach(btn => btn.classList.remove('view-btn--active'));
+      
+      // Add active class to clicked button
+      this.classList.add('view-btn--active');
+      
+      // Change grid layout based on selected view
+      const icon = this.querySelector('i').className;
+      
+      if (icon.includes('sunny2')) {
+        productsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+      } else if (icon.includes('sunny3')) {
+        productsGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      } else if (icon.includes('sunny4')) {
+        productsGrid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+      } else if (icon.includes('sunnyflex')) {
+        productsGrid.style.gridTemplateColumns = '1fr';
+      }
+    });
+  });
 }
