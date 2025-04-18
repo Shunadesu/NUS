@@ -538,4 +538,106 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  // Get collection items
+  const collectionItems = document.querySelectorAll('.collection-item');
+  
+  // Add animation with staggered delay
+  collectionItems.forEach((item, index) => {
+    // Initial state
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = 'opacity var(--transition-normal) ease, transform var(--transition-normal) ease';
+    
+    // Reveal with staggered delay
+    setTimeout(() => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    }, 100 * index);
+  });
+  
+  // Add hover effect for better mobile experience
+  const addTouchInteraction = () => {
+    if (window.innerWidth <= 768) {
+      collectionItems.forEach(item => {
+        const btn = item.querySelector('.collection-btn');
+        
+        // Add click event to show button on mobile
+        item.addEventListener('click', function(e) {
+          // If the click was on the button, don't prevent default
+          if (e.target === btn) return;
+          
+          e.preventDefault();
+          
+          // Toggle active state for this item
+          const isActive = item.classList.contains('active');
+          
+          // Remove active class from all items
+          collectionItems.forEach(i => i.classList.remove('active'));
+          
+          // If this item wasn't active, make it active
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+    }
+  };
+  
+  // Call on load and resize
+  addTouchInteraction();
+  window.addEventListener('resize', addTouchInteraction);
+  
+  // Add custom CSS for active state
+  const style = document.createElement('style');
+  style.textContent = `
+    @media (max-width: 768px) {
+      .collection-item.active .overlay {
+        opacity: 0.2;
+      }
+      
+      .collection-item.active .collection-btn {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // Add intersection observer for scroll animations
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // Observe the section
+    const section = document.querySelector('.featured-collections');
+    observer.observe(section);
+  }
+  
+  // Add scroll-triggered animation styles
+  const scrollStyle = document.createElement('style');
+  scrollStyle.textContent = `
+    .featured-collections {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .featured-collections.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `;
+  document.head.appendChild(scrollStyle);
+});
 
