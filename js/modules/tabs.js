@@ -90,6 +90,6 @@ export function initTabs() {
     termsLink.addEventListener('click', (e) => {
       e.preventDefault();
       // This would typically open a modal or navigate to terms page
-      alert('Terms & Conditions would open here');
+      // alert('Terms & Conditions would open here');
     });
   }

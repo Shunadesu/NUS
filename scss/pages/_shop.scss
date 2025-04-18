@@ -711,21 +711,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 4px;
+        border-radius: 36px;
         font-size: 0.9rem;
         transition: all 0.3s;
         
         &:hover:not(:disabled) {
-            background-color: #f5f5f5;
-        }
+            border: 1px solid black;
+          }
         
         &--active {
-            background-color: #333;
-            color: white;
+            // background-color: #333;
+            border: 1px solid black;
+            color: black;
         }
         
         &--prev, &--next {
-            background-color: #f5f5f5;
+            // background-color: #f5f5f5;
+            color: black;
         }
         
         &:disabled {
