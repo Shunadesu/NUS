@@ -278,3 +278,267 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('productCarousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('carouselDots');
+  
+  // Get all product cards
+  const productCards = carousel.querySelectorAll('.product-card');
+  const cardWidth = productCards[0].offsetWidth + 20; // Card width + margin
+  
+  // Clone products for infinite loop
+  const cloneFirst = [];
+  const cloneLast = [];
+  
+  // Clone first set of cards for appending at the end
+  for (let i = 0; i < Math.min(4, productCards.length); i++) {
+    cloneFirst.push(productCards[i].cloneNode(true));
+  }
+  
+  // Clone last set of cards for prepending at the beginning
+  for (let i = Math.max(0, productCards.length - 4); i < productCards.length; i++) {
+    cloneLast.push(productCards[i].cloneNode(true));
+  }
+  
+  // Append clones
+  cloneLast.reverse().forEach(clone => {
+    carousel.insertBefore(clone, carousel.firstChild);
+  });
+  
+  cloneFirst.forEach(clone => {
+    carousel.appendChild(clone);
+  });
+  
+  // Update all cards after cloning
+  const allCards = carousel.querySelectorAll('.product-card');
+  
+  // Set initial position to show the original first card
+  let currentIndex = cloneLast.length;
+  let position = -currentIndex * cardWidth;
+  carousel.style.transform = `translateX(${position}px)`;
+  
+  // Create dots
+  const totalDots = productCards.length;
+  for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+    });
+    dotsContainer.appendChild(dot);
+  }
+  
+  // Update active dot
+  function updateDots() {
+    const activeDotIndex = (currentIndex - cloneLast.length) % productCards.length;
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === activeDotIndex);
+    });
+  }
+  
+  // Go to specific slide
+  function goToSlide(index) {
+    currentIndex = index + cloneLast.length;
+    position = -currentIndex * cardWidth;
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(${position}px)`;
+    updateDots();
+  }
+  
+  // Next slide
+  function nextSlide() {
+    currentIndex++;
+    position = -currentIndex * cardWidth;
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(${position}px)`;
+    updateDots();
+  }
+  
+  // Previous slide
+  function prevSlide() {
+    currentIndex--;
+    position = -currentIndex * cardWidth;
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(${position}px)`;
+    updateDots();
+  }
+  
+  // Handle infinite loop
+  carousel.addEventListener('transitionend', function() {
+    // If we're at the cloned last slides
+    if (currentIndex >= productCards.length + cloneLast.length) {
+      currentIndex = cloneLast.length;
+      position = -currentIndex * cardWidth;
+      carousel.style.transition = 'none';
+      carousel.style.transform = `translateX(${position}px)`;
+    }
+    
+    // If we're at the cloned first slides
+    if (currentIndex < cloneLast.length) {
+      currentIndex = productCards.length + cloneLast.length - 1;
+      position = -currentIndex * cardWidth;
+      carousel.style.transition = 'none';
+      carousel.style.transform = `translateX(${position}px)`;
+    }
+    
+    updateDots();
+  });
+  
+  // Event listeners for buttons
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+  
+  // Autoplay
+  let autoplayInterval;
+  
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 3000);
+  }
+  
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+  
+  // Start autoplay
+  startAutoplay();
+  
+  // Pause autoplay on hover
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  
+  // Pause autoplay when user interacts with controls
+  prevBtn.addEventListener('mouseenter', stopAutoplay);
+  nextBtn.addEventListener('mouseenter', stopAutoplay);
+  prevBtn.addEventListener('mouseleave', startAutoplay);
+  nextBtn.addEventListener('mouseleave', startAutoplay);
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    const newCardWidth = productCards[0].offsetWidth + 20;
+    if (newCardWidth !== cardWidth) {
+      // Recalculate position based on new card width
+      position = -currentIndex * newCardWidth;
+      carousel.style.transition = 'none';
+      carousel.style.transform = `translateX(${position}px)`;
+    }
+  });
+  
+  // ===== DRAG FUNCTIONALITY =====
+  
+  // Variables for drag functionality
+  let isDragging = false;
+  let startPosition = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationID = 0;
+  let dragged = false;
+  
+  // Add cursor styles to indicate draggable
+  carousel.style.cursor = 'grab';
+  
+  // Prevent default behavior for images and links during drag
+  allCards.forEach(card => {
+    const images = card.querySelectorAll('img');
+    images.forEach(img => {
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+    
+    card.addEventListener('click', e => {
+      if (dragged) {
+        e.preventDefault();
+      }
+    });
+  });
+  
+  // Touch events
+  carousel.addEventListener('touchstart', touchStart);
+  carousel.addEventListener('touchmove', touchMove);
+  carousel.addEventListener('touchend', touchEnd);
+  
+  // Mouse events
+  carousel.addEventListener('mousedown', touchStart);
+  carousel.addEventListener('mousemove', touchMove);
+  carousel.addEventListener('mouseup', touchEnd);
+  carousel.addEventListener('mouseleave', touchEnd);
+  
+  function touchStart(event) {
+    stopAutoplay();
+    dragged = false;
+    
+    // Get start position
+    startPosition = getPositionX(event);
+    isDragging = true;
+    
+    // Change cursor style
+    carousel.style.cursor = 'grabbing';
+    
+    // Get current position from transform
+    const transform = getComputedStyle(carousel).transform;
+    const matrix = new DOMMatrix(transform);
+    currentTranslate = matrix.m41;
+    prevTranslate = currentTranslate;
+    
+    // Stop any current animation
+    cancelAnimationFrame(animationID);
+    
+    // Remove transition during drag
+    carousel.style.transition = 'none';
+  }
+  
+  function touchMove(event) {
+    if (!isDragging) return;
+    
+    // Calculate how far the user has dragged
+    const currentPosition = getPositionX(event);
+    const diff = currentPosition - startPosition;
+    
+    // Update position with drag amount
+    currentTranslate = prevTranslate + diff;
+    
+    // Apply transform
+    carousel.style.transform = `translateX(${currentTranslate}px)`;
+    
+    // If dragged more than 5px, consider it a drag not a click
+    if (Math.abs(diff) > 5) {
+      dragged = true;
+    }
+  }
+  
+  function touchEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    
+    // Change cursor back
+    carousel.style.cursor = 'grab';
+    
+    // Calculate which slide to snap to
+    const movedBy = currentTranslate - prevTranslate;
+    
+    // If dragged more than 100px or 20% of card width, move to next/prev slide
+    if (movedBy < -100 || movedBy < -cardWidth * 0.2) {
+      // Dragged left - go to next slide
+      currentIndex++;
+    } else if (movedBy > 100 || movedBy > cardWidth * 0.2) {
+      // Dragged right - go to prev slide
+      currentIndex--;
+    }
+    
+    // Snap to the closest slide
+    position = -currentIndex * cardWidth;
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(${position}px)`;
+    
+    updateDots();
+    startAutoplay();
+  }
+  
+  function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+  }
+});
