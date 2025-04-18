@@ -17,7 +17,13 @@
     position: fixed;
     z-index: 10;
     overflow: hidden; /* Hide content that scrolls outside the top bar */
-    
+    @media (max-width: 1400px) {
+      font-size: 10px;
+    }
+
+    @media (max-width: 1400px) {
+      font-size: 8px;
+    }
     .container {
       padding: 0;
       width: 100%;
@@ -38,7 +44,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 50%; /* Each copy takes up half of the container */
+      width: 80%; /* Each copy takes up half of the container */
       padding: 0 20px;
       
       > * {

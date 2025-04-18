@@ -880,51 +880,384 @@
       </section>
       <!-- Adding new section here -->
 
-      <section class="featured-collections">
-        <div class="container">
-          <h2 class="section-title">Featured Collections</h2>
-          <p class="section-description">Upgrade your style with our curated sets. Choose confidence, embrace your unique look.</p>
-          
-          <div class="collections-grid">
-            <!-- Clothing Collection -->
-            <div class="collection-item clothing">
-              <div class="collection-image">
-                <img src="/api/placeholder/400/500" alt="Clothing Collection">
-                <div class="overlay"></div>
-                <a href="#" class="collection-btn">Clothing</a>
-              </div>
-            </div>
+      <section class="container">
+        <div class="hero-banner">
+          <div class="shopcarousel">
+            <h1 class="shopcarousel__title">People Also Bought</h1>
+            <p class="shopcarousel__subtitle">Here's some of our most similar products people are buying. Click to discover trending style.</p>
             
-            <!-- Sunglasses Collection -->
-            <div class="collection-item sunglasses">
-              <div class="collection-image">
-                <img src="/api/placeholder/400/300" alt="Sunglasses Collection">
-                <div class="overlay"></div>
-                <a href="#" class="collection-btn">Sunglasses</a>
+            <div class="carousel-container">
+              <!-- Single navigation controls for both rows -->
+              <div class="carousel-controls">
+                <button class="carousel-control prev" id="prevBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="carousel-control next" id="nextBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
-            </div>
-            
-            <!-- Bags Collection -->
-            <div class="collection-item bags">
-              <div class="collection-image">
-                <img src="/api/placeholder/400/300" alt="Bags Collection">
-                <div class="overlay"></div>
-                <a href="#" class="collection-btn">Bags</a>
+              
+              <!-- First row carousel -->
+              <div class="carousel-wrapper">
+                <div class="carousel" id="topRowCarousel">
+                  <!-- Product cards for first row -->
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-3%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                        <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Square Textured Striped</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--teal"></span>
+                        <span class="color-option color-option--pink"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-3%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                          <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Square Textured Striped</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--teal"></span>
+                        <span class="color-option color-option--pink"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-3%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                                  <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Square Textured Striped</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--teal"></span>
+                        <span class="color-option color-option--pink"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-3%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                        <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Square Textured Striped</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--teal"></span>
+                        <span class="color-option color-option--pink"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            <!-- Sneaker Collection -->
-            <div class="collection-item sneaker">
-              <div class="collection-image">
-                <img src="/api/placeholder/400/500" alt="Sneaker Collection">
-                <div class="overlay"></div>
-                <a href="#" class="collection-btn">Sneaker</a>
+              
+              <!-- Second row carousel -->
+              <div class="carousel-wrapper">
+                <div class="carousel" id="bottomRowCarousel">
+                  <!-- Product cards for second row -->
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-5%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                                  <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Cotton Blend Top</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$95.00</span>
+                        <span class="price-regular">$100.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--black"></span>
+                        <span class="color-option color-option--white"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-10%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                                  <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">V-Neck Basic Tee</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$90.00</span>
+                        <span class="price-regular">$100.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--pink"></span>
+                        <span class="color-option color-option--navy"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-5%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                        <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Slim Fit Jeans</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$142.00</span>
+                        <span class="price-regular">$150.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--blue"></span>
+                        <span class="color-option color-option--black"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <span class="product-card__badge">-10%</span>
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                        <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Oversized Blazer</h3>
+                      <div class="product-card__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="product-card__price">
+                        <span class="price-sale">$189.00</span>
+                        <span class="price-regular">$210.00</span>
+                      </div>
+                      <div class="product-card__colors">
+                        <span class="color-option color-option--black"></span>
+                        <span class="color-option color-option--beige"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="carousel-dots" id="carouselDots">
+                <!-- Dots will be added by JavaScript -->
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
-     
+
     <!-- Footer -->
       <div class="testimonial-container">
         <div class="testimonial-track">
