@@ -147,6 +147,16 @@
     transform: rotate(360deg);
   }
 }
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 /* --------------------
    Scroll Animation
 -------------------- */
@@ -2165,18 +2175,29 @@ img {
   }
 }
 /* Calendar Container */
+/* Calendar Popup */
 .calendar-container {
   display: none;
-  background-color: var(--white);
-  border-radius: 8px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  margin-top: 15px;
-  box-shadow: var(--shadow-sm);
+}
+.calendar-container .calendar-container--content {
+  padding: 10px;
+  min-width: 500px;
+  background-color: var(--white);
 }
 
 .calendar-container.active {
-  display: block;
-  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: popup var(--transition-normal) ease;
 }
 
 /* Calendar Header */

@@ -489,67 +489,6 @@
                     </button>
                   </div>
                   
-                  <!-- Rent Calendar Container -->
-                  <div class="calendar-container" id="rent-calendar">
-                    <div class="calendar-header">
-                      <span>Chọn thời gian thuê</span>
-                      <button class="close-btn" data-calendar="rent-calendar">✕</button>
-                    </div>
-                    
-                    <div class="flatpickr-calendar-container">
-                      <input type="text" id="rent-date-picker" placeholder="Chọn ngày" hidden>
-                    </div>
-                    
-                    <div class="selected-dates">
-                      <div>Chọn ngày bắt đầu và kết thúc</div>
-                      <div class="date-range-info" id="rent-date-range-display">
-                        <div>
-                          <div class="date-label">Từ ngày</div>
-                          <div class="date-value" id="rent-start-date">--/--/----</div>
-                        </div>
-                        <div>
-                          <div class="date-label">Đến ngày</div>
-                          <div class="date-value" id="rent-end-date">--/--/----</div>
-                        </div>
-                      </div>
-                      <div class="rental-duration" id="rent-duration"></div>
-                    </div>
-                    
-                    <button class="confirm-btn" id="rent-confirm-btn" disabled>Xác nhận</button>
-                  </div>
-                  
-                  <!-- Try Calendar Container -->
-                  <div class="calendar-container" id="try-calendar">
-                    <div class="calendar-header try">
-                      <span>Chọn ngày thử đồ</span>
-                      <button class="close-btn" data-calendar="try-calendar">✕</button>
-                    </div>
-                    
-                    <div class="flatpickr-calendar-container">
-                      <input type="text" id="try-date-picker" placeholder="Chọn ngày" hidden>
-                    </div>
-                    
-                    <div class="selected-dates">
-                      <div>Chọn ngày thử đồ</div>
-                      <div class="single-date-display">
-                        <div class="date-value" id="try-date">Chưa chọn ngày</div>
-                      </div>
-                    </div>
-                    
-                    <button class="confirm-btn try" id="try-confirm-btn" disabled>Xác nhận</button>
-                  </div>
-                  
-                  <!-- Confirmation Messages -->
-                  <div class="confirmation-message" id="rent-confirmation">
-                    <div>Bạn đã đặt lịch thuê đồ thành công:</div>
-                    <div id="rent-confirmed-period" class="confirmed-period"></div>
-                    <div id="rent-confirmed-duration" class="confirmed-duration"></div>
-                  </div>
-                  
-                  <div class="confirmation-message" id="try-confirmation">
-                    <div>Bạn đã đặt lịch thử đồ thành công:</div>
-                    <div id="try-confirmed-date" class="confirmed-date"></div>
-                  </div>
                 </div>
                         
                 <div class="product__add-to-cart">
@@ -1145,6 +1084,73 @@
           </div>
         </div>
       </div>
+
+       <!-- Rent Calendar Container -->
+       <div class="calendar-container" id="rent-calendar">
+        <div class="calendar-container--content">
+          <div class="calendar-header">
+            <span>Chọn thời gian thuê</span>
+            <button class="close-btn" data-calendar="rent-calendar">✕</button>
+          </div>
+          
+          <div class="flatpickr-calendar-container">
+            <input type="text" id="rent-date-picker" placeholder="Chọn ngày" hidden>
+          </div>
+          
+          <div class="selected-dates">
+            <div>Chọn ngày bắt đầu và kết thúc</div>
+            <div class="date-range-info" id="rent-date-range-display">
+              <div>
+                <div class="date-label">Từ ngày</div>
+                <div class="date-value" id="rent-start-date">--/--/----</div>
+              </div>
+              <div>
+                <div class="date-label">Đến ngày</div>
+                <div class="date-value" id="rent-end-date">--/--/----</div>
+              </div>
+            </div>
+            <div class="rental-duration" id="rent-duration"></div>
+          </div>
+          
+          <button class="confirm-btn" id="rent-confirm-btn" disabled>Xác nhận</button>
+        </div>
+      </div>
+      
+      <!-- Try Calendar Container -->
+      <div class="calendar-container" id="try-calendar">
+        <div class="calendar-container--content">
+          <div class="calendar-header try">
+            <span>Chọn ngày thử đồ</span>
+            <button class="close-btn" data-calendar="try-calendar">✕</button>
+          </div>
+          
+          <div class="flatpickr-calendar-container">
+            <input type="text" id="try-date-picker" placeholder="Chọn ngày" hidden>
+          </div>
+          
+          <div class="selected-dates">
+            <div>Chọn ngày thử đồ</div>
+            <div class="single-date-display">
+              <div class="date-value" id="try-date">Chưa chọn ngày</div>
+            </div>
+          </div>
+          
+          <button class="confirm-btn try" id="try-confirm-btn" disabled>Xác nhận</button>
+        </div>
+      </div>
+      
+      <!-- Confirmation Messages -->
+      <div class="confirmation-message" id="rent-confirmation">
+        <div>Bạn đã đặt lịch thuê đồ thành công:</div>
+        <div id="rent-confirmed-period" class="confirmed-period"></div>
+        <div id="rent-confirmed-duration" class="confirmed-duration"></div>
+      </div>
+      
+      <div class="confirmation-message" id="try-confirmation">
+        <div>Bạn đã đặt lịch thử đồ thành công:</div>
+        <div id="try-confirmed-date" class="confirmed-date"></div>
+      </div>
+
        <!-- Add this modal after the gallery modal -->
       <div id="termsModal" class="terms-modal">
         <div class="terms-modal__content">
