@@ -3345,6 +3345,32 @@ Header
   background-color: #f5f5f5;
   color: #000;
 }
+.shop-wapper .size-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.shop-wapper .size-filter {
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.shop-wapper .size-filter:hover {
+  border-color: #777;
+}
+.shop-wapper .size-filter.selected {
+  background-color: #777;
+  color: #fff;
+  border-color: #777;
+}
 .shop-wapper .sort {
   display: flex;
   align-items: center;

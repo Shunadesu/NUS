@@ -620,7 +620,32 @@
         color: #000;
         }
     }
-    
+    .size-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+     .size-filter {
+      min-width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #333;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+     .size-filter:hover {
+      border-color: #777;
+    }
+     .size-filter.selected {
+      background-color: #777;
+      color: #fff;
+      border-color: #777;
+    }
     // Sort
     .sort {
         display: flex;
