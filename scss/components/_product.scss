@@ -129,13 +129,14 @@
       gap: 0.5rem;
     }
   }
-
+  .product-card__actions{
   .action-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: white;
     border: none;
+    color: #333;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -147,6 +148,7 @@
       background-color: #333;
       color: white;
     }
+  }
   }
 
   .color-option {
