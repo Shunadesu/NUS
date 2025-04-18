@@ -578,7 +578,7 @@
                           <div class="brand-name">LOREMOUS</div>
                           <h2 class="collection-name">Milancé</h2>
                           <div class="tagline">Cosmo de Metropolis</div>
-                          <button class="shop-now-button">SHOP NOW</button>
+                          <a href="./pages/shop.html" class="shop-now-button">SHOP NOW</a>
                         </div>
                       </div>
                     </div>
@@ -993,5 +993,49 @@
     
     <!-- Load critical scripts first -->
     <script type="module" src="./js/main.js"></script>    
+    <script>
+      // Main initialization function
+      document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.header');
+      const sidebar = document.querySelector('.sidebar');
+      const mainnav = document.querySelector('.nav__list');
+
+      const logoWhite = document.querySelector('.logo_div.white');
+      const logoNormal = document.querySelector('.logo_div:not(.white)');
+
+      let lastScrollTop = 0;+
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > 0) {
+          if (currentScroll > lastScrollTop) {
+            // Cuộn xuống
+            header.classList.add('shrink');
+            sidebar.classList.add('hide');
+            mainnav.classList.remove('main_nav');
+
+
+            // Toggle logo visibility
+            logoWhite.style.display = 'none';
+            logoNormal.style.display = 'block';
+          } else {
+            // Cuộn lên
+            // header.classList.remove('shrink');
+            // sidebar.classList.remove('hide');
+            // mainnav.classList.add('main_nav');
+          
+          }
+        }if (currentScroll === 0) {
+          header.classList.remove('shrink');
+          sidebar.classList.remove('hide');
+          mainnav.classList.add('main_nav');
+          logoWhite.style.display = 'block';
+          logoNormal.style.display = 'none';
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevent negative scroll
+      });
+      });
+    </script>
   </body>
 </html>

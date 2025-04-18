@@ -366,41 +366,70 @@
     &.color-beige { background-color: #f5f5dc; }
   }
   
-  // Size Filters
-  .size-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-  }
-  
-  .size-filter {
-    min-width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s;
+  // Size Selector Component
+  .size-selector {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
     
-    &:hover {
-      border-color:  #777;
+    &__label {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 8px;
     }
     
-    &.selected {
-      background-color:  #777;
-      color:  #fff;
-      border-color:  #777;
+    &__current {
+      font-weight: 600;
+      color: #111827;
+    }
+    
+    &__options {
+      display: flex;
+      gap: 8px;
+    }
+    
+    &__option {
+      min-width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background-color: #fff;
+      color: #6b7280;
+      border: 1px solid #e5e7eb;
+      outline: none;
+      
+      &:hover:not(&--active) {
+        border-color: #d1d5db;
+        color: #4b5563;
+      }
+      
+      &--active {
+        background-color: #111827;
+        color: #ffffff;
+        border-color: #111827;
+      }
+      
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+      }
+      
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: #f3f4f6;
+      }
     }
   }
   
 // Featured Products
-.featured-products {
-    margin-top: 1rem;
-  }
+  .featured-products {
+      margin-top: 1rem;
+    }
   
   .featured-product {
     display: flex;

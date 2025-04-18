@@ -2,14 +2,15 @@
     position: relative;
     background-color: #fff;
     border-radius: 8px;
-    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
     color: inherit;
     display: block;
+    height: fit-content;
+    // min-width: none;
     
     &:hover {
-      transform: translateY(-5px);
+      // transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
       
       .product-card__actions {

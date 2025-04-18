@@ -1,0 +1,256 @@
+ 
+    /* Product Action Container */
+    
+      
+      /* Button Container */
+      .button-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      
+      /* Action Buttons */
+      .action-btn {
+        flex: 1;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        color: var(--white);
+        font-weight: 600;
+        padding: 0 1.5rem;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+        background-color: transparent;
+      }
+      
+      /* Animated Background */
+      .action-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-size: 200% 100%;
+        animation: gradientMove 3s linear infinite;
+        z-index: 0;
+      }
+      
+      /* Button Text and Icon */
+      .action-btn span, 
+      .action-btn svg {
+        position: relative;
+        z-index: 1;
+      }
+      
+      /* Button Icons */
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+      
+      /* Button Variants */
+      .rent-btn::before {
+        background: linear-gradient(to right, var(--primary-color), var(--text-dark), var(--primary-color), var(--text-dark));
+      }
+      
+      .try-btn::before {
+        background: linear-gradient(to right, var(--accent-color), #9e1534, var(--accent-color), #9e1534);
+      }
+      
+      /* Button Animation */
+      @keyframes gradientMove {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      
+      /* Calendar Container */
+      .calendar-container {
+        display: none;
+        background-color: var(--white);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 15px;
+        box-shadow: var(--shadow-sm);
+      }
+      
+      .calendar-container.active {
+        display: block;
+        max-width: 350px;
+
+      }
+      
+      /* Calendar Header */
+      .calendar-header {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 15px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .calendar-header.try {
+        background-color: var(--accent-color);
+      }
+      
+      /* Close Button */
+      .close-btn {
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      /* Flatpickr Calendar Customizations */
+      .flatpickr-calendar {
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .flatpickr-calendar-container{
+        padding: 20px 0;
+      }
+      .flatpickr-innerContainer{
+        justify-content: center;
+      }
+      
+      .flatpickr-day.selected,
+      .flatpickr-day.startRange,
+      .flatpickr-day.endRange,
+      .flatpickr-day.inRange {
+        background: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+      }
+      
+      .flatpickr-day.inRange {
+        opacity: 0.7;
+      }
+      
+      /* Try-On Calendar Customizations */
+      #try-calendar .flatpickr-day.selected {
+        background: var(--accent-color) !important;
+        border-color: var(--accent-color) !important;
+      }
+      
+      /* Confirm Button */
+      .confirm-btn {
+        width: 100%;
+        padding: 12px;
+        margin: 0 auto 15px;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color var(--transition-fast);
+      }
+      
+      .confirm-btn.try {
+        background-color: var(--accent-color);
+      }
+      
+      .confirm-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      
+      .confirm-btn:hover:not(:disabled) {
+        opacity: 0.9;
+      }
+      
+      /* Selected Dates Display */
+      .selected-dates {
+        margin: 10px 15px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        text-align: center;
+      }
+      
+      /* Date Range Display */
+      .date-range-info {
+        display: none;
+        justify-content: space-between;
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px dashed #ddd;
+      }
+      
+      .date-label {
+        font-size: 0.9em;
+        color: var(--text-light);
+        margin-bottom: 2px;
+      }
+      
+      .date-value {
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+      
+      /* Rental Duration Display */
+      .rental-duration {
+        margin-top: 12px;
+        font-weight: 600;
+        color: var(--accent-color);
+      }
+      
+      /* Single Date Display for Try-On */
+      .single-date-display {
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px dashed #ddd;
+      }
+      
+      /* Confirmation Messages */
+      .confirmation-message {
+        display: none;
+        margin-top: 15px;
+        padding: 15px;
+        background-color: #f0fff4;
+        border: 1px solid #c6f6d5;
+        border-radius: 4px;
+        color: #2f855a;
+      }
+      
+      .confirmation-message.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .confirmed-period,
+      .confirmed-date {
+        font-weight: 600;
+        margin-top: 8px;
+      }
+      
+      .confirmed-duration {
+        color: var(--accent-color);
+        font-weight: 600;
+        margin-top: 5px;
+      }

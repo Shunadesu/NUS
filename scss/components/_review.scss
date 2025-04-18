@@ -33,6 +33,9 @@
   .rating-breakdown {
     flex: 2;
     min-width: 300px;
+    @media (max-width: 768px) {
+      min-width: 100%;
+    }
   }
   
   .rating-row {
@@ -44,6 +47,7 @@
   .rating-row .stars {
     display: flex;
     width: 120px;
+    gap: 4px;
     color: #000;
     font-size: 16px;
   }
@@ -200,6 +204,7 @@
   .review-content p {
     margin-bottom: 10px;
     color: #555;
+    font-size: 14px;
   }
   
   /* Review Form */
@@ -264,7 +269,7 @@
     display: flex;
     gap: 5px;
     font-size: 24px;
-    color: #ccc;
+    color: #000;
   }
   
   .rating-select i {

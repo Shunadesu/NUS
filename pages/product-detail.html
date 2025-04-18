@@ -11,6 +11,7 @@
     <!-- Load Font Awesome asynchronously -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
   </head>
   <body>
     <!-- Page loading spinner -->
@@ -43,7 +44,7 @@
             <a href="/" class="header__logo">
 
               <div class="logo_div">
-                <img src="./img/logo/Nussunny-black.png" alt="">
+                <img src="../img/logo/Nussunny-black.png" alt="">
               </div>
             </a>
             
@@ -321,7 +322,7 @@
                   </div>
                 </div>
               </div>
-
+              
             </div>
           </div>
         </div>
@@ -411,6 +412,15 @@
                       <div class="color-option" data-color="Pink" style="background-color: #ffb6c1;"></div>
                     </div>
                   </div>
+                  <!-- Size Selector Component -->
+                  <div class="size-selector">
+                    <div class="size-selector__label">Size: <span class="size-selector__current">S</span></div>
+                    <div class="size-selector__options">
+                      <button class="size-selector__option size-selector__option--active" data-size="S">S</button>
+                      <button class="size-selector__option" data-size="M">M</button>
+                      <button class="size-selector__option" data-size="L">L</button>
+                    </div>
+                  </div>
                   
                   <div class="product__actions">
                     
@@ -438,8 +448,6 @@
                     <div class="form-group">
                       <input type="text" id="customNote" placeholder="Customize note">
                     </div>
-                    
-                    
                   </div>
                 </div>
                 
@@ -455,6 +463,94 @@
                   <input type="checkbox" id="agreeTermsInline" class="terms-checkbox">
                   <label for="agreeTermsInline">I agree with <a href="#" class="terms-link">Terms & Conditions</a></label>
                 </div>
+
+                <div class="product-actions">
+                  <!-- Button Container -->
+                  <div class="button-container">
+                    <!-- Rent Button -->
+                    <button class="action-btn rent-btn" id="rent-btn">
+                      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Thuê đồ</span>
+                    </button>
+                    
+                    <!-- Try Button -->
+                    <button class="action-btn try-btn" id="try-btn">
+                      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      </svg>
+                      <span>Thử đồ</span>
+                    </button>
+                  </div>
+                  
+                  <!-- Rent Calendar Container -->
+                  <div class="calendar-container" id="rent-calendar">
+                    <div class="calendar-header">
+                      <span>Chọn thời gian thuê</span>
+                      <button class="close-btn" data-calendar="rent-calendar">✕</button>
+                    </div>
+                    
+                    <div class="flatpickr-calendar-container">
+                      <input type="text" id="rent-date-picker" placeholder="Chọn ngày" hidden>
+                    </div>
+                    
+                    <div class="selected-dates">
+                      <div>Chọn ngày bắt đầu và kết thúc</div>
+                      <div class="date-range-info" id="rent-date-range-display">
+                        <div>
+                          <div class="date-label">Từ ngày</div>
+                          <div class="date-value" id="rent-start-date">--/--/----</div>
+                        </div>
+                        <div>
+                          <div class="date-label">Đến ngày</div>
+                          <div class="date-value" id="rent-end-date">--/--/----</div>
+                        </div>
+                      </div>
+                      <div class="rental-duration" id="rent-duration"></div>
+                    </div>
+                    
+                    <button class="confirm-btn" id="rent-confirm-btn" disabled>Xác nhận</button>
+                  </div>
+                  
+                  <!-- Try Calendar Container -->
+                  <div class="calendar-container" id="try-calendar">
+                    <div class="calendar-header try">
+                      <span>Chọn ngày thử đồ</span>
+                      <button class="close-btn" data-calendar="try-calendar">✕</button>
+                    </div>
+                    
+                    <div class="flatpickr-calendar-container">
+                      <input type="text" id="try-date-picker" placeholder="Chọn ngày" hidden>
+                    </div>
+                    
+                    <div class="selected-dates">
+                      <div>Chọn ngày thử đồ</div>
+                      <div class="single-date-display">
+                        <div class="date-value" id="try-date">Chưa chọn ngày</div>
+                      </div>
+                    </div>
+                    
+                    <button class="confirm-btn try" id="try-confirm-btn" disabled>Xác nhận</button>
+                  </div>
+                  
+                  <!-- Confirmation Messages -->
+                  <div class="confirmation-message" id="rent-confirmation">
+                    <div>Bạn đã đặt lịch thuê đồ thành công:</div>
+                    <div id="rent-confirmed-period" class="confirmed-period"></div>
+                    <div id="rent-confirmed-duration" class="confirmed-duration"></div>
+                  </div>
+                  
+                  <div class="confirmation-message" id="try-confirmation">
+                    <div>Bạn đã đặt lịch thử đồ thành công:</div>
+                    <div id="try-confirmed-date" class="confirmed-date"></div>
+                  </div>
+                </div>
                         
                 <div class="product__add-to-cart">
                   <div class="quantity-selector">
@@ -467,7 +563,7 @@
                     </button>
                   </div>
                   
-                  <button class="add-to-cart-btn">
+                  <button class="add-to-cart-btn add-to-cart-btn--alt1">
                     <i class="fas fa-shopping-cart"></i>
                     ADD TO CART
                   </button>
@@ -480,6 +576,8 @@
                     <i class="fas fa-random"></i>
                   </button>
                 </div>
+
+                
               </div>
             </div>
           </div>
@@ -488,8 +586,8 @@
         <div class="product__tabs">
           <div class="product-tabs">
             <!-- <button class="tab-btn" data-tab="description">Description</button> -->
-            <button class="tab-btn" data-tab="reviews">Customer Reviews</button>
-            <button class="tab-btn active" data-tab="shipping">Shipping & Returns</button>
+            <button class="tab-btn active" data-tab="reviews">Customer Reviews</button>
+            <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
             <button class="tab-btn" data-tab="policies">Return Policies</button>
           </div>
   
@@ -502,7 +600,7 @@
   
               <!-- Customer Reviews Tab Content -->
                <!-- Customer Reviews Tab Content -->
-            <div class="tab-pane" id="reviews">
+            <div class="tab-pane active" id="reviews">
               <h2>Customer Reviews</h2>
               
               <div class="reviews-summary">
@@ -673,7 +771,7 @@
               </div>
               
               <!-- Review Form (hidden by default) -->
-              <div class="review-form-container" id="reviewForm">
+              <div class="review-form-container " id="reviewForm">
                   <div class="review-form">
                       <h3>Write Your Review</h3>
                       <button class="close-form">&times;</button>
@@ -691,26 +789,26 @@
                       
                       <div class="form-group">
                           <label for="reviewName">Name</label>
-                          <input type="text" id="reviewName" placeholder="Your name">
+                          <input class="font-montserrat" type="text" id="reviewName" placeholder="Your name">
                       </div>
                       
                       <div class="form-group">
                           <label for="reviewEmail">Email</label>
-                          <input type="email" id="reviewEmail" placeholder="Your email (will not be published)">
+                          <input class="font-montserrat" type="email" id="reviewEmail" placeholder="Your email (will not be published)">
                       </div>
                       
                       <div class="form-group">
                           <label for="reviewContent">Review</label>
-                          <textarea id="reviewContent" rows="5" placeholder="Write your review here..."></textarea>
+                          <textarea class="font-montserrat" id="reviewContent" rows="5" placeholder="Write your review here..."></textarea>
                       </div>
                       
                       <button type="submit" class="submit-review">Submit Review</button>
                   </div>
               </div>
-          </div>
+            </div>
   
               <!-- Shipping & Returns Tab Content -->
-              <div class="tab-pane active" id="shipping">
+              <div class="tab-pane" id="shipping">
                   <p>For all orders exceeding a value of 100USD shipping is offered for free.</p>
                   
                   <p>Returns will be accepted for up to 10 days of Customer's receipt or tracking number on unworn items. You, as a Customer, are obliged to inform us via email before you return the item.</p>
@@ -734,52 +832,296 @@
               </div>
           </div>
         </div>
-        <div class="testimonial-container">
-          <div class="testimonial-track">
-            <div class="testimonial-slide">
-              <div class="testimonial-content">
-                <blockquote class="testimonial-quote">
-                  "Kinn makes beautiful, responsibly sourced pieces that are bound to be your next family heirlooms."
-                </blockquote>
-                <cite class="testimonial-source">— MARIE CLAIRE</cite>
-              </div>
-            </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-content">
-                <blockquote class="testimonial-quote">
-                  "Exquisite craftsmanship and ethical practices make these pieces truly special and timeless."
-                </blockquote>
-                <cite class="testimonial-source">— VOGUE</cite>
-              </div>
-            </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-content">
-                <blockquote class="testimonial-quote">
-                  "Sustainable luxury at its finest. Each piece tells a story that will last for generations."
-                </blockquote>
-                <cite class="testimonial-source">— HARPER'S BAZAAR</cite>
-              </div>
-            </div>
-          </div>
+
+        <div class="shopcarousel">
+          <h1 class="shopcarousel__title">People Also Bought</h1>
+          <p class="shopcarousel__subtitle">Here's some of our most similar products people are buying. Click to discover trending style.</p>
           
-          <button class="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="testimonial-nav testimonial-next" aria-label="Next testimonial">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-          
-          <div class="testimonial-indicators">
-            <button class="indicator active" data-index="0" aria-label="Go to slide 1"></button>
-            <button class="indicator" data-index="1" aria-label="Go to slide 2"></button>
-            <button class="indicator" data-index="2" aria-label="Go to slide 3"></button>
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <div class="carousel" id="productCarousel">
+
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <span class="product-card__badge">-3%</span>
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Square Textured Striped</h3>
+                    <div class="product-card__rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    <div class="product-card__colors">
+                      <span class="color-option color-option--teal"></span>
+                      <span class="color-option color-option--pink"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <span class="product-card__badge">-3%</span>
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Square Textured Striped</h3>
+                    <div class="product-card__rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    <div class="product-card__colors">
+                      <span class="color-option color-option--teal"></span>
+                      <span class="color-option color-option--pink"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <span class="product-card__badge">-3%</span>
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Square Textured Striped</h3>
+                    <div class="product-card__rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    <div class="product-card__colors">
+                      <span class="color-option color-option--teal"></span>
+                      <span class="color-option color-option--pink"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <span class="product-card__badge">-3%</span>
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Square Textured Striped</h3>
+                    <div class="product-card__rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    <div class="product-card__colors">
+                      <span class="color-option color-option--teal"></span>
+                      <span class="color-option color-option--pink"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <span class="product-card__badge">-3%</span>
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
+                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Square Textured Striped</h3>
+                    <div class="product-card__rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    <div class="product-card__colors">
+                      <span class="color-option color-option--teal"></span>
+                      <span class="color-option color-option--pink"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="carousel-controls">
+              <button class="carousel-control prev" id="prevBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="carousel-control next" id="nextBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="carousel-dots" id="carouselDots">
+              <!-- Dots will be added by JavaScript -->
+            </div>
           </div>
         </div>
       </main>
+      <div class="testimonial-container">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <blockquote class="testimonial-quote">
+                "Kinn makes beautiful, responsibly sourced pieces that are bound to be your next family heirlooms."
+              </blockquote>
+              <cite class="testimonial-source">— MARIE CLAIRE</cite>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <blockquote class="testimonial-quote">
+                "Exquisite craftsmanship and ethical practices make these pieces truly special and timeless."
+              </blockquote>
+              <cite class="testimonial-source">— VOGUE</cite>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <blockquote class="testimonial-quote">
+                "Sustainable luxury at its finest. Each piece tells a story that will last for generations."
+              </blockquote>
+              <cite class="testimonial-source">— HARPER'S BAZAAR</cite>
+            </div>
+          </div>
+        </div>
+        
+        <button class="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="testimonial-nav testimonial-next" aria-label="Next testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        
+        <div class="testimonial-indicators">
+          <button class="indicator active" data-index="0" aria-label="Go to slide 1"></button>
+          <button class="indicator" data-index="1" aria-label="Go to slide 2"></button>
+          <button class="indicator" data-index="2" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
       <!-- Fullscreen Gallery Modal -->
       <div id="galleryModal" class="gallery-modal">
         <div class="gallery-modal__header">
@@ -803,7 +1145,6 @@
           </div>
         </div>
       </div>
-
        <!-- Add this modal after the gallery modal -->
       <div id="termsModal" class="terms-modal">
         <div class="terms-modal__content">
@@ -933,8 +1274,10 @@
     </footer>     
     
     <!-- Load critical scripts first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
     <!-- <script type="module" src="../js/product-detail.js"></script> -->
     <script type="module" src="../js/pro-detail.js"></script>
     <script type="module" src="../js/main.js"></script>    
+    <!-- Add this right before the closing body tag -->
   </body>
 </html>

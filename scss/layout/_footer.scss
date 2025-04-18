@@ -11,11 +11,11 @@
     // flex-wrap: wrap;
     // padding: 40px;
     margin: 60px 0;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }  
   // Responsive adjustment
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 }
 
 // Legacy club section
@@ -74,14 +74,13 @@
 .footer__columns{
   display: flex;
   gap: 20px;
+  @media (max-width: 1424px) {
+      flex-wrap: wrap;
+  }
   .footer-column {
     flex: 1;
     min-width: 180px;
     margin-bottom: 30px;
-    
-    @media (max-width: 768px) {
-      min-width: 100%;
-    }
     .column-title {
       font-weight: bold;
       font-size: 16px;

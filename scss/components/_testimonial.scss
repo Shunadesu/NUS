@@ -5,8 +5,9 @@
     // max-width: var(--container-width);
     margin: 0 auto;
     overflow: hidden;
-    background-color: var(--primary-color);
+    background-image: url(https://kinnstudio.com/cdn/shop/files/home_Press_home_Press_2880x100_desktop.jpg?v=1713400262);
     color: var(--white);
+    background-position: center;
   }
 
   .testimonial-track {
@@ -32,10 +33,20 @@
     padding: 60px 20px;
   }
 
+
   .testimonial-content {
     text-align: center;
     max-width: 800px;
     padding: 0 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .testimonial-slide{
+      padding: 40px 10px;
+      .testimonial-content{
+        padding: 0px;
+      }
+    }
   }
 
   .testimonial-quote {
@@ -84,6 +95,16 @@
 
   .testimonial-next {
     right: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .testimonial-prev {
+      left: 5px;
+    }
+  
+    .testimonial-next {
+      right: 5px;
+    }
   }
 
   .testimonial-indicators {

@@ -15,6 +15,8 @@ export function initCart() {
   
   // Initialize compare button
   initCompare();
+
+  initCartQuantityControls();
 }
 
 // Cart sidebar functionality
@@ -124,7 +126,7 @@ function initCartQuantityControls(updateCartCount, closeCart) {
   if (quantityUp) {
     quantityUp.addEventListener('click', () => {
       quantityInput.value = parseInt(quantityInput.value) + 1;
-      updateCartTotals();
+      // updateCartTotals();
     });
   }
   
@@ -133,14 +135,14 @@ function initCartQuantityControls(updateCartCount, closeCart) {
     quantityDown.addEventListener('click', () => {
       if (parseInt(quantityInput.value) > 1) {
         quantityInput.value = parseInt(quantityInput.value) - 1;
-        updateCartTotals();
+        // updateCartTotals();
       }
     });
   }
   
   // Quantity input change
   if (quantityInput) {
-    quantityInput.addEventListener('change', updateCartTotals);
+    // quantityInput.addEventListener('change', updateCartTotals);
   }
   
   // Remove button
@@ -153,17 +155,17 @@ function initCartQuantityControls(updateCartCount, closeCart) {
   }
   
   // Update cart totals
-  const updateCartTotals = () => {
-    if (!quantityInput) return;
+  // const updateCartTotals = () => {
+  //   if (!quantityInput) return;
     
-    const quantity = parseInt(quantityInput.value);
-    const unitPrice = 209.00; // This should be dynamic in a real application
-    const total = quantity * unitPrice;
+  //   const quantity = parseInt(quantityInput.value);
+  //   const unitPrice = 209.00; // This should be dynamic in a real application
+  //   const total = quantity * unitPrice;
     
-    document.querySelectorAll('.item-price, .summary-row .price').forEach(el => {
-      el.textContent = `$${total.toFixed(2)}`;
-    });
-  };
+  //   document.querySelectorAll('.item-price, .summary-row .price').forEach(el => {
+  //     el.textContent = `$${total.toFixed(2)}`;
+  //   });
+  // };
 }
 
 // Add to cart functionality (for product detail page)

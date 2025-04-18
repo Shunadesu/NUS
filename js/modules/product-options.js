@@ -62,6 +62,7 @@ export function initProductOptions() {
     const agreeTerms = document.getElementById("agreeTerms");
     const agreeTermsInline = document.getElementById("agreeTermsInline");
     const termsAcceptBtn = document.querySelector(".terms-accept-btn");
+
     const addToCartBtn = document.querySelector(".add-to-cart-btn");
     
     if (!termsModal || !termsLink) return;
@@ -69,7 +70,7 @@ export function initProductOptions() {
     // Disable add to cart button initially if terms checkbox exists
     if (agreeTermsInline && addToCartBtn) {
       addToCartBtn.disabled = true;
-      addToCartBtn.style.opacity = "0.6";
+      addToCartBtn.style.opacity = "0.8";
       addToCartBtn.style.cursor = "not-allowed";
     }
   
