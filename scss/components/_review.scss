@@ -6,6 +6,20 @@
     margin-bottom: 40px;
     gap: 20px;
     flex-wrap: wrap;
+    .progress-container {
+      flex: 1;
+      height: 8px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      margin: 0 15px;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      background-color: #333;
+      border-radius: 4px;
+    }
   }
   
   .overall-rating {
@@ -52,20 +66,7 @@
     font-size: 16px;
   }
   
-  .progress-container {
-    flex: 1;
-    height: 8px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    margin: 0 15px;
-    overflow: hidden;
-  }
-  
-  .progress-bar {
-    height: 100%;
-    background-color: #333;
-    border-radius: 4px;
-  }
+
   
   .count {
     width: 20px;

@@ -1,46 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
-// abstracts
-@import "./abstracts/mixin";
+// Font imports - Optimized for performance
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&family=Prata&display=swap');
+
+// Abstracts - Variables and mixins
 @import "./abstracts/variable";
-// base
-@import "./base/animate";
+@import "./abstracts/mixin";
+
+// Base - Reset, typography, and global styles
+@import "./base/reset";
 @import "./base/font";
 @import "./base/global";
+@import "./base/animate";
 @import "./base/grid";
-@import "./base/reset";
 @import "./base/responsive";
-// components
-@import "./components/testimonial";
-@import "./components/review";
-@import "./components/top-bar";
-@import "./components/megamenu";
-@import "./components/purchanse-notification";
-@import "./components/breadcrumb";
+
+// Components - Reusable UI components
 @import "./components/button";
 @import "./components/form";
 @import "./components/loading";
-@import "./components/pagination";
-@import "./components/search";
 @import "./components/to-top";
+@import "./components/search";
+@import "./components/breadcrumb";
+@import "./components/pagination";
+@import "./components/top-bar";
+@import "./components/megamenu";
 @import "./components/herosection";
 @import "./components/tabs";
 @import "./components/product";
 @import "./components/carousel";
-@import "./components/product-actions";
 @import "./components/carousel2col";
-// layout
-@import "./layout/feature-collections";
-@import "./layout/login";
-@import "./layout/footer";
+@import "./components/product-actions";
+@import "./components/purchanse-notification";
+@import "./components/review";
+@import "./components/category-banner";
+@import "./components/brand";
+@import "./components/testimonial";
+@import "./components/policy";
+
+// Layout - Page structure components
 @import "./layout/header";
-// pages
-@import "./pages/blog";
+@import "./layout/footer";
+@import "./layout/login";
+@import "./layout/feature-collections";
+
+// Pages - Page-specific styles
+@import "./pages/home";
 @import "./pages/shop";
 @import "./pages/product-detail";
-@import "./pages/home";
-@import "./pages/error"
+@import "./pages/blog";
+@import "./pages/error";
 
 

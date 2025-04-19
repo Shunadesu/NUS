@@ -24,3 +24,156 @@
 		@content;
 	}
 }
+
+// Flexbox Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Media Query Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) { @content; }
+  }
+  @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// Typography Mixins
+@mixin font-primary {
+  font-family: $font-primary;
+}
+
+@mixin font-secondary {
+  font-family: $font-secondary;
+}
+
+@mixin font-display {
+  font-family: $font-display;
+}
+
+@mixin font-accent {
+  font-family: $font-accent;
+}
+
+// Text Truncation
+@mixin text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Hover Effects
+@mixin hover-lift {
+  transition: transform $transition-fast;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@mixin hover-fade {
+  transition: opacity $transition-normal;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Button Styles
+@mixin button-base {
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $border-radius-lg;
+  font-weight: 600;
+  transition: all $transition-fast;
+  cursor: pointer;
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $primary-color;
+  color: $white;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background-color: $white;
+  color: $primary-color;
+  border: 1px solid $border-color;
+  &:hover {
+    background-color: $background-light;
+  }
+}
+
+// Card Styles
+@mixin card-base {
+  background-color: $white;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  transition: all $transition-normal;
+}
+
+@mixin card-hover {
+  transform: translateY(-2px);
+  box-shadow: $shadow-lg;
+}
+
+// Grid System
+@mixin grid-columns($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $spacing-md;
+}
+
+// Animation Mixins
+@mixin fade-in {
+  opacity: 0;
+  animation: fadeIn $transition-slow forwards;
+}
+
+@mixin slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp $transition-slow forwards;
+}
+
+// Keyframes
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -2,14 +2,32 @@
    Variables for Reuse
 -------------------- */
 :root {
-  --transition-normal: 0.4s;
-  --transition-fast: 0.2s;
-  --transition-exit: 0.2s;
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.4s;
+  --animation-duration-slow: 0.6s;
+  --animation-timing-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-timing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* --------------------
    Mixins (optional for DRY)
 -------------------- */
+@mixin animate($name, $duration: var(--animation-duration-normal), $timing: var(--animation-timing-ease)) {
+  animation: $name $duration $timing;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@mixin transition($properties...) {
+  $transitions: ();
+  @each $property in $properties {
+    $transitions: append($transitions, $property var(--animation-duration-normal) var(--animation-timing-ease), comma);
+  }
+  transition: $transitions;
+  will-change: $properties;
+}
+
 @mixin fade($from: 0, $to: 1) {
   from { opacity: $from; }
   to   { opacity: $to; }
@@ -28,27 +46,66 @@
 /* --------------------
    Reusable Animation Classes
 -------------------- */
-.fade-in    { animation: fadeIn var(--transition-normal) forwards; }
-.fade-out   { animation: fadeOut var(--transition-normal) forwards; }
-.slide-down { animation: slideDown var(--transition-normal) forwards; }
-.slide-up   { animation: slideUp var(--transition-normal) forwards; }
+.fade-in    { @include animate(fadeIn); }
+.fade-out   { @include animate(fadeOut); }
+.slide-down { @include animate(slideDown); }
+.slide-up   { @include animate(slideUp); }
 
-.header__bg.slide-down { animation: headerSlideDown var(--transition-normal) forwards; }
-.header__bg.slide-up   { animation: headerSlideUp var(--transition-normal) forwards; }
-.mega-menu.slide-up    { animation: megaMenuSlideUp var(--transition-normal) forwards; }
-.mega-menu.slide-down  { animation: megaMenuSlideDown var(--transition-exit) forwards !important; }
+.header__bg.slide-down { animation: headerSlideDown var(--animation-duration-normal) forwards; }
+.header__bg.slide-up   { animation: headerSlideUp var(--animation-duration-normal) forwards; }
+.mega-menu.slide-up    { animation: megaMenuSlideUp var(--animation-duration-normal) forwards; }
+.mega-menu.slide-down  { animation: megaMenuSlideDown var(--animation-duration-slow) forwards !important; }
 
 /* --------------------
    Keyframes
 -------------------- */
 
 /* Fade */
-@keyframes fadeIn   { @include fade(0, 1); }
-@keyframes fadeOut  { @include fade(1, 0); }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateZ(0);
+  }
+}
 
 /* Vertical Slide */
-@keyframes slideDown     { @include slideY(-100%, 0); }
-@keyframes slideUp       { @include slideY(0, -100%); }
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
 @keyframes headerSlideDown { @include slideY(-100%, 0); }
 @keyframes headerSlideUp   { @include slideY(0, -100%); }
 
@@ -65,26 +122,52 @@
 }
 
 /* Slide In/Out Right */
-@keyframes slideInRight  { @include slideX(100%, 0); }
-@keyframes slideOutRight { @include slideX(0, 100%); }
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+}
 
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px) translateZ(0);
+  }
+}
 
 @keyframes spin {
+  from {
+    transform: rotate(0deg) translateZ(0);
+  }
   to {
-    transform:  rotate(360deg);
+    transform: rotate(360deg) translateZ(0);
   }
 }
 
 @keyframes popup {
   0% {
     opacity: 0;
-    transform: translateY(-10px) scale(0.95);
+    transform: scale(0.8) translateZ(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateZ(0);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: scale(1) translateZ(0);
   }
 }
+
 /* --------------------
    Scroll Animation
 -------------------- */
@@ -109,12 +192,22 @@
 -------------------- */
 .mega-menu {
   transition:
-    transform var(--transition-normal) ease-out,
-    visibility 0s linear var(--transition-exit);
+    transform var(--animation-duration-normal) ease-out,
+    visibility 0s linear var(--animation-duration-slow);
 
   &.active {
     transition:
-      transform var(--transition-normal) ease-out,
+      transform var(--animation-duration-normal) ease-out,
       visibility 0s linear 0s;
+  }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

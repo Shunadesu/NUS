@@ -2,5 +2,67 @@
 $black-color: #333333;
 $white-color: #FFFFFF;
 
+// Colors
+$primary-color: #000;
+$secondary-color: #666;
+$accent-color: #f44336;
+$text-color: #222;
+$text-light: #999;
+$border-color: #e5e5e5;
+$background-light: #f5f5f5;
+$white: #fff;
+
+// Typography
+$font-primary: 'Jost', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-display: 'DM Serif Display', serif;
+$font-accent: 'Prata', serif;
+
+// Font Sizes
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 44px;
+$font-size-medium: 24px;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 40px;
+$spacing-xxl: 60px;
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Shadows
+$shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 2px 8px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 30px;
+$border-radius-circle: 50%;
+
 
 

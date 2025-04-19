@@ -2,146 +2,200 @@
 .testimonial-container {
     position: relative;
     width: 100%;
-    // max-width: var(--container-width);
     margin: 0 auto;
+    padding: $spacing-xl 0;
     overflow: hidden;
     background-image: url(https://kinnstudio.com/cdn/shop/files/home_Press_home_Press_2880x100_desktop.jpg?v=1713400262);
     color: var(--white);
     background-position: center;
-  }
+    
+    @include respond-to(md) {
+        padding: $spacing-lg 0;
+    }
+}
 
-  .testimonial-track {
-    display: flex;
+.testimonial-track {
+    position: relative;
     width: 100%;
     height: 300px;
-    transition: transform var(--transition-normal);
-    cursor: grab;
-  }
+    @include respond-to(md) {
+        height: 200px;
+    }
+    @include respond-to(sm) {
+        height: 150px;
+    }
+}
 
-  .testimonial-track.grabbing {
-    cursor: grabbing;
-    transition: none;
-  }
-
-  .testimonial-slide {
-    flex: 0 0 100%;
+.testimonial-slide {
+    color: $white-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    user-select: none;
-    padding: 60px 20px;
-  }
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1), opacity 0.6s ease;
+    will-change: transform, opacity;
 
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 2;
+    }
 
-  .testimonial-content {
+    &.prev {
+        transform: translateX(-100%);
+        z-index: 1;
+    }
+
+    &.next {
+        transform: translateX(100%);
+        z-index: 1;
+    }
+}
+
+.testimonial-content {
     text-align: center;
     max-width: 800px;
-    padding: 0 20px;
-  }
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+    transform: translateZ(0);
+}
 
-  @media screen and (max-width: 767px) {
-    .testimonial-slide{
-      padding: 40px 10px;
-      .testimonial-content{
-        padding: 0px;
-      }
-    }
-  }
-
-  .testimonial-quote {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    margin-bottom: 20px;
+.testimonial-quote {
+    @include font-display;
+    font-size: $font-size-large;
+    line-height: 1.3;
+    color: $white-color;
+    margin-bottom: $spacing-lg;
     position: relative;
     font-style: italic;
     font-weight: 300;
-  }
+    
+    @include respond-to(md) {
+        font-size: $font-size-medium;
+    }
+    
+    @include respond-to(sm) {
+        font-size: $font-size-base;
+    }
+}
 
-  .testimonial-source {
-    display: block;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: white;
+.testimonial-source {
+    @include font-secondary;
+    font-size: $font-size-base;
+    color: $white-color;
     font-style: normal;
     text-transform: uppercase;
     font-weight: 500;
-  }
+    display: block;
+}
 
-  .testimonial-nav {
+.testimonial-nav {
+    @include flex-center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-circle;
     cursor: pointer;
-    transition: color var(--transition-fast);
-    z-index: 10;
-    padding: 10px;
-  }
-
-  .testimonial-nav:hover {
-    color: var(--accent-color);
-  }
-
-  .testimonial-nav:focus {
-    outline: none;
-  }
-
-  .testimonial-prev {
-    left: 20px;
-  }
-
-  .testimonial-next {
-    right: 20px;
-  }
-
-  @media screen and (max-width: 767px) {
-    .testimonial-prev {
-      left: 5px;
+    transition: all 0.3s ease;
+    z-index: 3;
+    
+    &:hover {
+        background-color: $background-light;
+        box-shadow: $shadow-md;
     }
-  
-    .testimonial-next {
-      right: 5px;
+    
+    &.testimonial-prev {
+        left: $spacing-md;
     }
-  }
+    
+    &.testimonial-next {
+        right: $spacing-md;
+    }
+    
+    svg {
+        width: 20px;
+        height: 20px;
+        color: $text-color;
+    }
+    
+    @include respond-to(sm) {
+        width: 35px;
+        height: 35px;
+        
+        &.testimonial-prev {
+            left: $spacing-xs;
+        }
+        
+        &.testimonial-next {
+            right: $spacing-xs;
+        }
+    }
+}
 
-  .testimonial-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-  }
+.testimonial-indicators {
+    @include flex-center;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+}
 
-  .indicator {
+.indicator {
     display: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: none;
-    cursor: pointer;
-    transition: background-color var(--transition-fast);
-  }
+}
 
-  .indicator.active {
-    background-color: var(--accent-color);
-  }
-
-  .indicator:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .testimonial-quote {
-      font-size: 2.2rem;
+        font-size: 2.2rem;
     }
     
     .testimonial-source {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
+}
+
+// Accessibility
+.testimonial-container {
+    &:focus-within {
+        outline: 2px solid $primary-color;
+        outline-offset: 2px;
+    }
+}
+
+.testimonial-nav,
+.indicator {
+    &:focus {
+        outline: 2px solid $primary-color;
+        outline-offset: 2px;
+    }
+    
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+// Touch device optimizations
+@media (hover: none) {
+    .testimonial-nav {
+        &:hover {
+            background-color: $white;
+            box-shadow: none;
+        }
+    }
+    
+    .indicator {
+        &:hover:not(.active) {
+            background-color: $border-color;
+        }
+    }
+}

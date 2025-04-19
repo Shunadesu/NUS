@@ -115,8 +115,19 @@ export function initProducts() {
  function setupProductsView() {
   const viewButtons = document.querySelectorAll('.view-btn');
   const productsGrid = document.querySelector('.products__grid');
+  const productCards = document.querySelectorAll('.product-card');
   
   if (!viewButtons.length || !productsGrid) return;
+  
+  // Set initial grid layout
+  productsGrid.classList.add('grid-3');
+  
+  // Initially animate in all product cards at once
+  requestAnimationFrame(() => {
+    productCards.forEach(card => {
+      card.classList.add('animate-in');
+    });
+  });
   
   viewButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -126,18 +137,34 @@ export function initProducts() {
       // Add active class to clicked button
       this.classList.add('view-btn--active');
       
+      // Remove animate-in class from all cards
+      productCards.forEach(card => card.classList.remove('animate-in'));
+      
       // Change grid layout based on selected view
       const icon = this.querySelector('i').className;
       
+      // Remove all grid classes first
+      productsGrid.classList.remove('grid-2', 'grid-3', 'grid-4', 'grid-1');
+      
+      // Add appropriate grid class
       if (icon.includes('sunny2')) {
-        productsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+        productsGrid.classList.add('grid-2');
       } else if (icon.includes('sunny3')) {
-        productsGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+        productsGrid.classList.add('grid-3');
       } else if (icon.includes('sunny4')) {
-        productsGrid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+        productsGrid.classList.add('grid-4');
       } else if (icon.includes('sunnyflex')) {
-        productsGrid.style.gridTemplateColumns = '1fr';
+        productsGrid.classList.add('grid-1');
       }
+      
+      // Re-animate all product cards with a slower delay
+      setTimeout(() => {
+        productCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('animate-in');
+          }, index * 50);
+        });
+      }, 30);
     });
   });
 }

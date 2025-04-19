@@ -1,23 +1,176 @@
-.font-jost {
-    font-family: "Jost", sans-serif !important;
-    font-optical-sizing: auto;
-    font-style: normal;
+/* Font Variables */
+:root {
+  --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-secondary: 'Jost', var(--font-primary);
+  --font-accent: 'DM Serif Display', Georgia, serif;
+  --font-decorative: 'Prata', Georgia, serif;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
 }
 
-.font-montserrat {
-    font-family: "Montserrat", sans-serif !important;
-    font-optical-sizing: auto;
-    font-style: normal;
+/* Font Classes */
+.font-primary {
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.font-dm-serif {
-    font-family: "DM Serif Display", serif !important;
-    font-optical-sizing: auto;
-    font-style: normal;
+.font-secondary {
+  font-family: var(--font-secondary);
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.font-prata{
-    font-family: "Prata", serif !important;
-    font-optical-sizing: auto;
-    font-style: normal;
+.font-accent {
+  font-family: var(--font-accent);
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+.font-decorative {
+  font-family: var(--font-decorative);
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font Weight Utilities */
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Font Size Utilities */
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+
+.text-5xl {
+  font-size: var(--font-size-5xl);
+}
+
+/* Line Height Utilities */
+.leading-tight {
+  line-height: var(--line-height-tight);
+}
+
+.leading-normal {
+  line-height: var(--line-height-normal);
+}
+
+.leading-relaxed {
+  line-height: var(--line-height-relaxed);
+}
+
+.leading-loose {
+  line-height: var(--line-height-loose);
+}
+
+/* Font Loading Optimization */
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-display: swap;
+//   src: url('../fonts/montserrat-regular.woff2') format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Jost';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-display: swap;
+//   src: url('../fonts/jost-regular.woff2') format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'DM Serif Display';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-display: swap;
+//   src: url('../fonts/dm-serif-display-regular.woff2') format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Prata';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-display: swap;
+//   src: url('../fonts/prata-regular.woff2') format('woff2');
+// }
