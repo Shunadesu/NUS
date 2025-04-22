@@ -10,7 +10,10 @@ export function setupHeroSlider() {
     
     let currentSlide = 0;
     let slideInterval;
-    const autoPlayDelay = 5000;
+    const autoPlayDelay = 2000;
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
     
     const showSlide = (index) => {
       slides.forEach(slide => slide.classList.remove('active'));
@@ -69,6 +72,34 @@ export function setupHeroSlider() {
       }
     });
     
+    // Mouse drag functionality
+    heroSection.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX;
+      currentX = startX;
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      currentX = e.pageX;
+      const diff = currentX - startX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          prevSlide();
+        } else {
+          nextSlide();
+        }
+        isDragging = false;
+        resetAutoPlay();
+      }
+    });
+    
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+    
+    // Touch functionality
     let touchStartX = 0;
     let touchEndX = 0;
     
@@ -90,7 +121,10 @@ export function setupHeroSlider() {
     }, { passive: true });
     
     heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    heroSection.addEventListener('mouseleave', startAutoPlay);
+    heroSection.addEventListener('mouseleave', () => {
+      isDragging = false;
+      startAutoPlay();
+    });
     
     window.heroSlider = {
       next: nextSlide,
