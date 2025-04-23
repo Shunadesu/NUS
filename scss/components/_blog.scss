@@ -1,0 +1,180 @@
+// Variables
+$primary-color: #000;
+$secondary-color: #fff;
+$background-color: #f8f8f8;
+$border-radius: 25px;
+$transition-speed: 0.3s;
+
+// Blog Section
+.blog {
+  padding: 60px 0;
+  
+  &__title {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  &__subtitle {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+  }
+}
+
+// Blog Grid
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  
+  .blog-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: $background-color;
+    
+    &.fashion {
+      grid-column: span 5;
+      grid-row: span 2;
+    }
+    
+    &.style {
+        grid-column: span 7;
+        grid-row: span 1;
+    }
+    
+    &.sustainability{
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+
+    &.lifestyle {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    
+    .blog-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-speed ease;
+    }
+    
+    &:hover .blog-image {
+      transform: scale(1.05);
+    }
+
+    .blog-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      color: $secondary-color;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+
+      .blog-category {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .blog-post-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .blog-excerpt {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .read-more {
+        color: $secondary-color;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 992px) {
+  .blog-grid {
+    grid-template-rows: repeat(3, 250px);
+    
+    .blog-item {
+      &.fashion {
+        grid-column: span 12;
+        grid-row: span 1;
+      }
+      
+      &.style {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+
+      &.sustainability {
+        grid-column: span 6;
+        grid-row: span 1;
+      }
+      
+      &.lifestyle {
+        grid-column: span 6;
+        grid-row: span 1;
+      }
+
+      
+
+      .blog-content {
+        .blog-post-title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-rows: repeat(3, 200px);
+    
+    .blog-item {
+      grid-column: span 12 !important;
+      grid-row: span 1 !important;
+
+      .blog-content {
+        .blog-post-title {
+          font-size: 18px;
+        }
+        
+        .blog-excerpt {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  .blog {
+    padding: 40px 0;
+    
+    .blog-title {
+      font-size: 28px;
+    }
+    
+    .blog-subtitle {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+}
