@@ -17,6 +17,7 @@ import { init404Page } from './modules/404.js';
 import { createTestimonialSlider } from './modules/testimonial.js';
 import ScrollHandler from './modules/scroll-handler.js';
 
+
 document.addEventListener('DOMContentLoaded', function() {
   initFooterFunctionality();
   setupPageLoader();
@@ -25,12 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
   setupSearch();
   submitSearch();
   initUI();
+
   const testimonialContainer = document.querySelector('.testimonial-container');
   if (testimonialContainer) {
     const testimonialSlider = createTestimonialSlider(testimonialContainer);
   }
-
-  
 
   initCart();
   initNotifications();
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initFullscreenGallery();
   initProductOptions();
   initFooterFunctionality();
+  ScrollHandler.init();
   if (document.querySelector('.error-page')) {
     init404Page();
   }
@@ -77,8 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(category);
   });
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
   const header = document.querySelector('.header');
@@ -163,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const categoryTitles = document.querySelectorAll('.shopcarousel__category-title');
 
@@ -180,12 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Initialize all modules
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize scroll handler
-  ScrollHandler.init();
-  
-  // You can initialize other modules here
-});
+
 
 

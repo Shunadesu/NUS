@@ -615,7 +615,6 @@ img {
 }
 .hero-banner-fixed__image {
   width: 100%;
-  max-height: 600px;
   height: 100%;
   transition: transform 0.3s ease;
 }
@@ -635,7 +634,6 @@ img {
 .hero-banner-fixed::after {
   content: "";
   display: block;
-  height: 100vh;
   width: 100%;
 }
 
@@ -1627,6 +1625,36 @@ img {
 .add-to-cart-button:hover {
   background-color: #333;
   color: white;
+}
+
+.carousel {
+  background-color: var(--white);
+  padding: 2rem 0;
+}
+.carousel__content {
+  text-align: center;
+}
+.carousel__title {
+  font-size: 2rem;
+}
+.carousel__categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.carousel__category-title {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.carousel__category-title.active {
+  color: var(--color-primary);
+}
+.carousel__slider {
+  position: relative;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* Product Action Container */
@@ -2628,6 +2656,61 @@ img {
   }
 }
 
+.swiper-container {
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 200px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide .product-card .product-card__content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.swiper-slide .product-card:hover .product-card__content {
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 2rem;
+  color: black;
+}
+
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+  opacity: 1;
+}
+
 /* --------------------
 Header
 -------------------- */
@@ -2637,7 +2720,7 @@ Header
   width: 100%;
   color: var(--white);
   padding: 20px 0;
-  z-index: 10;
+  z-index: 100;
 }
 .header.shrink {
   background-color: white;
@@ -3335,10 +3418,6 @@ Header
 /* --------------------
    Variables
 -------------------- */
-section {
-  margin-top: 140px;
-}
-
 .banner {
   width: 100%;
   height: 100%;

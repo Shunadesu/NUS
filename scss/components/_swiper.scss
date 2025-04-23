@@ -1,0 +1,60 @@
+.swiper-container {
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    overflow: hidden;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 200px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    .product-card{
+        .product-card__content{
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+            .product-card__content {
+                opacity: 1;
+            }
+        }
+    }
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    &::after {
+      font-size: 2rem;
+      color: black;
+    }
+  }
+
+  .swiper-container:hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 1;
+    }
+  }

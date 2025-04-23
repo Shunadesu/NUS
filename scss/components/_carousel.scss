@@ -1,0 +1,36 @@
+.carousel{
+    background-color: var(--white);
+    padding: 2rem 0;
+    
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__categories {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__category-title {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        
+        &.active {
+            color: var(--color-primary);
+        }
+    }
+
+    &__slider {
+        position: relative;
+        padding: 2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
