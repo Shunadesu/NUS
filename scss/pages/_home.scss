@@ -838,6 +838,8 @@
   z-index: 2;
   width: var(--sidebar-width);
   padding: 20px 0;
+  position: absolute;
+  top: 140px;
   &.hide{
     display: none;
   }

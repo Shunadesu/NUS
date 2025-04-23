@@ -2,13 +2,12 @@
 Header
 -------------------- */
 .header {
-position: relative;
+position: fixed;
+top: 40px;
 width: 100%;
-z-index: 10;
 color: var(--white);
-margin-top: 40px;
-// border-bottom: 1px solid var(--border-color);
 padding: 20px 0;
+z-index: 10;
 &.shrink {
     background-color: white;
     color: var(--text-dark);

@@ -125,7 +125,7 @@ export function setupNavigation() {
       if (!category) return;
       
       item.addEventListener('mouseenter', () => {
-        header.classList.add('sidebar-hover');
+        // header.classList.add('sidebar-hover');
         
         megaMenu.classList.remove('active', 'slide-up', 'slide-down');
         void megaMenu.offsetWidth;
@@ -141,7 +141,7 @@ export function setupNavigation() {
     
     sidebar.addEventListener('mouseleave', () => {
       if (!header.classList.contains('menu-active')) {
-        header.classList.remove('sidebar-hover');
+        // header.classList.remove('sidebar-hover');
       }
       hideMenu();
     });

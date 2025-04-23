@@ -14,8 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 10;
     overflow: hidden; /* Hide content that scrolls outside the top bar */
     @media (max-width: 1400px) {
       font-size: 10px;
