@@ -7,7 +7,13 @@ $transition-speed: 0.3s;
 
 // Blog Section
 .blog {
-  padding: 60px 0;
+  padding: 2rem 0;
+  @media (max-width: 767px) {
+    padding: 1rem 0;
+  }
+  @media (max-width: 480px) {
+    padding: 0.5rem 0;
+  }
   
   &__title {
     font-size: 2rem;

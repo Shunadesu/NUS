@@ -1,0 +1,64 @@
+.membership{
+    width: 100%;
+    height: 100%;
+    background: url('https://kinnstudio.com/cdn/shop/files/HOME-MD25.png?v=1744088165') no-repeat center center;
+    background-size: cover;
+    padding: 2rem 0;
+    @media (max-width: 767px) {
+        padding: 1rem 0;
+    }
+    @media (max-width: 480px) {
+        padding: 0.5rem 0;
+    }
+    &__content{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @media (max-width: 767px) {
+            height: 300px;
+        }
+        @media (max-width: 480px) {
+            height: 200px;
+        }
+    }
+    &__content-title{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        h2{
+            font-size: 50px;
+            font-weight: 700;
+            color: #fff;
+            opacity: 1;
+            text-transform: uppercase;
+            @media (max-width: 767px) {
+                font-size: 30px;
+            }
+            @media (max-width: 480px) {
+                font-size: 20px;
+            }
+            span{
+                color: #fff;
+                opacity: 1;
+            }
+        }
+        p{
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+            @media (max-width: 480px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+

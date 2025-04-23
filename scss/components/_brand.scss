@@ -6,6 +6,12 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+  @media (max-width: 767px) {
+    padding: 1rem 0;
+  }
+  @media (max-width: 480px) {
+    padding: 0.5rem 0;
+  }
   &__title {
     text-align: center;
     font-size: 2rem;
@@ -27,8 +33,9 @@
             height: fit-content;
                 .swiper-wrapper {
                     display: flex;
+                    transition-timing-function: linear !important;
                     transition-property: transform;
-                    box-sizing: content-box;
+                    box-sizing: content-box;              
                 }
     
                 .swiper-slide {
