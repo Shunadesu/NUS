@@ -15,6 +15,7 @@ import { initFilters } from './modules/filter.js';
 import { initFooterFunctionality } from './modules/footer.js';
 import { init404Page } from './modules/404.js';
 import { createTestimonialSlider } from './modules/testimonial.js';
+import ScrollHandler from './modules/scroll-handler.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   initFooterFunctionality();
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(category);
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -176,6 +178,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.add('active');
     });
   });
+});
+
+// Initialize all modules
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize scroll handler
+  ScrollHandler.init();
+  
+  // You can initialize other modules here
 });
 
 

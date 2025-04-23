@@ -607,6 +607,38 @@ img {
     scroll-behavior: auto !important;
   }
 }
+.hero-banner-fixed {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-banner-fixed__image {
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.hero-banner-fixed__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-banner-fixed__image.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100vh;
+}
+.hero-banner-fixed::after {
+  content: "";
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
 /* --------------------
    Loading Indicator
 -------------------- */
@@ -1145,6 +1177,7 @@ img {
 }
 
 .hero-title {
+  font-family: var(--font-accent);
   font-size: 40px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -1156,6 +1189,7 @@ img {
 }
 
 .hero-subtitle {
+  font-family: var(--font-accent);
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 30px;
@@ -2265,7 +2299,7 @@ img {
   color: #000;
 }
 
-.brand-banner {
+.brand {
   padding: 60px 0;
   width: 100%;
   height: 100%;
@@ -2274,21 +2308,21 @@ img {
   align-items: center;
   justify-content: center;
 }
-.brand-banner .brand-banner__title {
+.brand .brand__title {
   text-align: center;
   margin-bottom: 10px;
   font-size: 44px;
   font-weight: 200;
   font-family: var(--font-accent);
 }
-.brand-banner .brand-banner__subtitle {
+.brand .brand__subtitle {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.125rem;
   font-weight: 200;
   color: #333;
 }
-.brand-banner .brand-banner__container {
+.brand .brand__container {
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -2297,49 +2331,49 @@ img {
   gap: 20px;
 }
 @media (max-width: 1200px) {
-  .brand-banner .brand-banner__container {
+  .brand .brand__container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .brand-banner .brand-banner__container {
+  .brand .brand__container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 480px) {
-  .brand-banner .brand-banner__container {
+  .brand .brand__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.brand-banner .brand-banner__container .brand-banner__item {
+.brand .brand__container .brand__item {
   width: 250px;
   height: 250px;
 }
 @media (max-width: 1200px) {
-  .brand-banner .brand-banner__container .brand-banner__item {
+  .brand .brand__container .brand__item {
     width: 200px;
     height: 200px;
   }
 }
 @media (max-width: 1024px) {
-  .brand-banner .brand-banner__container .brand-banner__item {
+  .brand .brand__container .brand__item {
     width: 175px;
     height: 175px;
   }
 }
 @media (max-width: 768px) {
-  .brand-banner .brand-banner__container .brand-banner__item {
+  .brand .brand__container .brand__item {
     width: 150px;
     height: 150px;
   }
 }
 @media (max-width: 480px) {
-  .brand-banner .brand-banner__container .brand-banner__item {
+  .brand .brand__container .brand__item {
     width: 125px;
     height: 125px;
   }
 }
-.brand-banner .brand-banner__container .brand-banner__item img {
+.brand .brand__container .brand__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -3301,6 +3335,10 @@ Header
 /* --------------------
    Variables
 -------------------- */
+section {
+  margin-top: 140px;
+}
+
 .banner {
   width: 100%;
   height: 100%;
