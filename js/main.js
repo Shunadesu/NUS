@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const categoryTitles = document.querySelectorAll('.shopcarousel__category-title');
+  const categoryTitles = document.querySelectorAll('.carousel__category-title');
 
   categoryTitles.forEach(title => {
     title.addEventListener('click', function() {
