@@ -1,6 +1,6 @@
 import { setupPageLoader, handlePageLoad } from './modules/loader.js';
 import { setupNavigation } from './modules/navigation.js';
-import { setupHeroSlider } from './modules/slider.js';
+import { initPriceSlider, setupHeroSlider } from './modules/slider.js';
 import { setupSearch, submitSearch } from './modules/search.js';
 import { initModals } from './modules/modal.js';
 import { initUI } from './modules/ui.js';
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (testimonialContainer) {
     const testimonialSlider = createTestimonialSlider(testimonialContainer);
   }
-
+  initPriceSlider();
   initCart();
   initNotifications();
   initModals();

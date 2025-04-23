@@ -139,103 +139,105 @@ export function setupHeroSlider() {
     startAutoPlay();
 }
 
-// slider.js - Handles the price range slider functionality
 export function initPriceSlider() {
-  const priceSlider = document.querySelector('.price-slider');
-  if (!priceSlider) return;
+  const priceSliders = document.querySelectorAll('.price-slider');
+  console.log(priceSliders);
+  if (priceSliders.length === 0) return;
   
-  const minThumb = document.querySelector('.price-slider__thumb[data-value="min"]');
-  const maxThumb = document.querySelector('.price-slider__thumb[data-value="max"]');
-  const range = document.querySelector('.price-slider__range');
-  const minPrice = document.querySelector('.price-min');
-  const maxPrice = document.querySelector('.price-max');
-  
-  let isDragging = false;
-  let currentThumb = null;
-  let startX = 0;
-  let startLeft = 0;
-  
-  const minValue = 0;
-  const maxValue = 200;
-  let currentMinValue = minValue;
-  let currentMaxValue = maxValue;
-  
-  function updatePriceRange() {
-    const track = priceSlider.querySelector('.price-slider__track');
-    const trackWidth = track.offsetWidth;
-    
-    const minPercent = ((currentMinValue - minValue) / (maxValue - minValue)) * 100;
-    const maxPercent = ((currentMaxValue - minValue) / (maxValue - minValue)) * 100;
-    
-    minThumb.style.left = `${minPercent}%`;
-    maxThumb.style.left = `${maxPercent}%`;
-    
-    range.style.left = `${minPercent}%`;
-    range.style.right = `${100 - maxPercent}%`;
-    
-    minPrice.textContent = `$${currentMinValue.toFixed(2)}`;
-    maxPrice.textContent = `$${currentMaxValue.toFixed(2)}`;
-  }
-  
-  function startDrag(e, thumb) {
-    e.preventDefault();
-    isDragging = true;
-    currentThumb = thumb;
-    
-    startX = e.clientX || e.touches[0].clientX;
-    startLeft = parseFloat(currentThumb.style.left) || 
-                (currentThumb.dataset.value === 'min' ? 0 : 100);
-    
-    document.addEventListener('mousemove', drag);
-    document.addEventListener('touchmove', drag);
-    document.addEventListener('mouseup', stopDrag);
-    document.addEventListener('touchend', stopDrag);
-  }
-  
-  function drag(e) {
-    if (!isDragging) return;
-    
-    const track = priceSlider.querySelector('.price-slider__track');
-    const trackRect = track.getBoundingClientRect();
-    const trackWidth = trackRect.width;
-    
-    const clientX = e.clientX || e.touches[0].clientX;
-    const deltaX = clientX - startX;
-    const deltaPercent = (deltaX / trackWidth) * 100;
-    let newLeft = startLeft + deltaPercent;
-    
-    // Constrain to track bounds
-    newLeft = Math.max(0, Math.min(100, newLeft));
-    
-    // Prevent thumbs from crossing
-    if (currentThumb.dataset.value === 'min') {
-      const maxLeft = parseFloat(maxThumb.style.left) || 100;
-      newLeft = Math.min(newLeft, maxLeft - 5);
-      currentMinValue = minValue + (newLeft / 100) * (maxValue - minValue);
-    } else {
-      const minLeft = parseFloat(minThumb.style.left) || 0;
-      newLeft = Math.max(newLeft, minLeft + 5);
-      currentMaxValue = minValue + (newLeft / 100) * (maxValue - minValue);
+  priceSliders.forEach(priceSlider => {
+    const minThumb = priceSlider.querySelector('.price-slider__thumb[data-value="min"]');
+    const maxThumb = priceSlider.querySelector('.price-slider__thumb[data-value="max"]');
+    const range = priceSlider.querySelector('.price-slider__range');
+    const minPrice = priceSlider.closest('.filter').querySelector('.price-min');
+    const maxPrice = priceSlider.closest('.filter').querySelector('.price-max');
+
+    let isDragging = false;
+    let currentThumb = null;
+    let startX = 0;
+    let startLeft = 0;
+
+    const minValue = 0;
+    const maxValue = 200;
+    let currentMinValue = minValue;
+    let currentMaxValue = maxValue;
+
+    function updatePriceRange() {
+      const track = priceSlider.querySelector('.price-slider__track');
+      const trackWidth = track.offsetWidth;
+      
+      const minPercent = ((currentMinValue - minValue) / (maxValue - minValue)) * 100;
+      const maxPercent = ((currentMaxValue - minValue) / (maxValue - minValue)) * 100;
+      
+      minThumb.style.left = `${minPercent}%`;
+      maxThumb.style.left = `${maxPercent}%`;
+      
+      range.style.left = `${minPercent}%`;
+      range.style.right = `${100 - maxPercent}%`;
+      
+      minPrice.textContent = `$${currentMinValue.toFixed(2)}`;
+      maxPrice.textContent = `$${currentMaxValue.toFixed(2)}`;
     }
-    
-    currentThumb.style.left = `${newLeft}%`;
+
+    function startDrag(e, thumb) {
+      e.preventDefault();
+      isDragging = true;
+      currentThumb = thumb;
+      
+      startX = e.clientX || e.touches[0].clientX;
+      startLeft = parseFloat(currentThumb.style.left) || 
+                  (currentThumb.dataset.value === 'min' ? 0 : 100);
+      
+      document.addEventListener('mousemove', drag);
+      document.addEventListener('touchmove', drag);
+      document.addEventListener('mouseup', stopDrag);
+      document.addEventListener('touchend', stopDrag);
+    }
+
+    function drag(e) {
+      if (!isDragging) return;
+      
+      const track = priceSlider.querySelector('.price-slider__track');
+      const trackRect = track.getBoundingClientRect();
+      const trackWidth = trackRect.width;
+      
+      const clientX = e.clientX || e.touches[0].clientX;
+      const deltaX = clientX - startX;
+      const deltaPercent = (deltaX / trackWidth) * 100;
+      let newLeft = startLeft + deltaPercent;
+      
+      // Constrain to track bounds
+      newLeft = Math.max(0, Math.min(100, newLeft));
+      
+      // Prevent thumbs from crossing
+      if (currentThumb.dataset.value === 'min') {
+        const maxLeft = parseFloat(maxThumb.style.left) || 100;
+        newLeft = Math.min(newLeft, maxLeft - 5);
+        currentMinValue = minValue + (newLeft / 100) * (maxValue - minValue);
+      } else {
+        const minLeft = parseFloat(minThumb.style.left) || 0;
+        newLeft = Math.max(newLeft, minLeft + 5);
+        currentMaxValue = minValue + (newLeft / 100) * (maxValue - minValue);
+      }
+      
+      currentThumb.style.left = `${newLeft}%`;
+      updatePriceRange();
+    }
+
+    function stopDrag() {
+      isDragging = false;
+      document.removeEventListener('mousemove', drag);
+      document.removeEventListener('touchmove', drag);
+      document.removeEventListener('mouseup', stopDrag);
+      document.removeEventListener('touchend', stopDrag);
+    }
+
+    // Add event listeners for thumbs
+    minThumb.addEventListener('mousedown', e => startDrag(e, minThumb));
+    minThumb.addEventListener('touchstart', e => startDrag(e, minThumb));
+    maxThumb.addEventListener('mousedown', e => startDrag(e, maxThumb));
+    maxThumb.addEventListener('touchstart', e => startDrag(e, maxThumb));
+
+    // Initialize price slider
     updatePriceRange();
-  }
-  
-  function stopDrag() {
-    isDragging = false;
-    document.removeEventListener('mousemove', drag);
-    document.removeEventListener('touchmove', drag);
-    document.removeEventListener('mouseup', stopDrag);
-    document.removeEventListener('touchend', stopDrag);
-  }
-  
-  // Add event listeners for thumbs
-  minThumb.addEventListener('mousedown', e => startDrag(e, minThumb));
-  minThumb.addEventListener('touchstart', e => startDrag(e, minThumb));
-  maxThumb.addEventListener('mousedown', e => startDrag(e, maxThumb));
-  maxThumb.addEventListener('touchstart', e => startDrag(e, maxThumb));
-  
-  // Initialize price slider
-  updatePriceRange();
+  });
 }
