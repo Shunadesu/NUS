@@ -25,8 +25,9 @@ Header
         color: var(--text-dark);
     }
     .header__content{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
         position: relative;
         z-index: 2;
@@ -101,7 +102,11 @@ Header
         }
         .header__logo{
             @media (max-width: 768px) { 
-                margin-left: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0;
+
             }
         }
         .nav{   
@@ -112,7 +117,7 @@ Header
             display: flex;
             justify-content: space-around;
             align-items: center;
-            gap: 24px;
+            // gap: 24px;
             &.main_nav{
                 display: none;
             }
@@ -133,6 +138,7 @@ Header
     }
     .header__icons{
         display: flex;
+        justify-content: flex-end;
         align-items: center;
         gap: 24px;
              

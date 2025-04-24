@@ -3,32 +3,7 @@
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    .header{
-        background-color: var(--white);
-        color: var(--black);
-        .header__content{
-            .nav{   
-                // width: 100%;
-                .nav__list{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                .nav__item{
-                    padding: 10px;
-                    font-size: 16px;
-                    color: var(--black);
-                    text-decoration: none;
-                    font-weight: 600;
-                    &:hover{
-                        color: var(--primary);
-                        scale: 1.01;
-                        transition: all 0.3s ease-in-out;
-                    }
-                }
-                }
-            }
-        }
-    }
+    
     .hero {
         position: relative;
         height: 300px;
@@ -515,11 +490,6 @@
       &__add-to-cart {
         display: flex;
         gap: 0.75rem;
-      }
-    }
-    .container{
-      @media (max-width: 1824px) {
-        padding: 0 40px;
       }
     }
     
