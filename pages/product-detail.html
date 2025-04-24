@@ -12,6 +12,11 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+
+    
+    <!-- Add Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/modules/grid/grid.min.css" />
   </head>
   <body>
     <!-- Page loading spinner -->
@@ -549,7 +554,6 @@
               </div>
             </div>
           </div>
-
         </div>
         <div class="product__tabs">
           <div class="product-tabs">
@@ -800,64 +804,64 @@
               </div>
           </div>
         </div>
+        <section class="carousel ">
+          <div class="carousel__content container">
+            <h1 class="carousel__title font-accent">Highlights</h1>
+            <div class="carousel__categories">
+              <div class="carousel__category-title font-primary active">Dress</div>
+                <div class="carousel__category-separator">|</div>
+              <div class="carousel__category-title font-primary">Accessories</div>
+                <div class="carousel__category-separator">|</div>
+              <div class="carousel__category-title font-primary">Shoes</div>
+            </div>
+                  
 
-        <div class="shopcarousel">
-          <h1 class="shopcarousel__title">People Also Bought</h1>
-          <p class="shopcarousel__subtitle">Here's some of our most similar products people are buying. Click to discover trending style.</p>
-          
-          <div class="carousel-container">
-            <div class="carousel-wrapper">
-              <div class="carousel" id="productCarousel">
+          </div>
+          <div class="carousel__slider container">
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="../pages/product-detail.html">
+                        <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                        <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
 
-                <div class="product-card">
-                  <div class="product-card__image">
-                    <span class="product-card__badge">-3%</span>
-                    <a href="/pages/product-detail.html">
-                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                    </a>
-                    <div class="product-card__actions">
-                      <button class="action-btn" aria-label="Quick view">
-                        <i class="fas fa-eye"></i>
-                      </button>
-                      <button class="action-btn" aria-label="Add to wishlist">
-                        <i class="fas fa-heart"></i>
-                      </button>
-                      <button class="action-btn" aria-label="Compare">
-                        <i class="fas fa-sync-alt"></i>
-                      </button>
-
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
                     </div>
-                    <div class="add-to-cart-wrapper">
-                      <button class="add-to-cart-button">ADD TO CART</button>
-                    </div>
-                  </div>
-                  <div class="product-card__content">
-                    <h3 class="product-card__title">Square Textured Striped</h3>
-                    <div class="product-card__rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="product-card__price">
-                      <span class="price-sale">$116.00</span>
-                      <span class="price-regular">$120.00</span>
-                    </div>
-                    <div class="product-card__colors">
-                      <span class="color-option color-option--teal"></span>
-                      <span class="color-option color-option--pink"></span>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Parissa Dress</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <div class="product-card">
+                <div class="swiper-slide">
+                  <div class="product-card">
                   <div class="product-card__image">
-                    <span class="product-card__badge">-3%</span>
-                    <a href="/pages/product-detail.html">
-                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    
+                    <a href="../pages/product-detail.html">
+                      <img class="primary-image" src="../img/Dress/Ayserkris/Satin Skirt/1.jpg" alt="Satin Skirt">
+                      <img class="hover-image" src="../img/Dress/Ayserkris/Satin Skirt/2.jpg" alt="Satin Skirt Hover">
                     </a>
                     <div class="product-card__actions">
                       <button class="action-btn" aria-label="Quick view">
@@ -876,31 +880,55 @@
                     </div>
                   </div>
                   <div class="product-card__content">
-                    <h3 class="product-card__title">Square Textured Striped</h3>
-                    <div class="product-card__rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <h3 class="product-card__title">Satin Skirt</h3>
                     <div class="product-card__price">
                       <span class="price-sale">$116.00</span>
                       <span class="price-regular">$120.00</span>
                     </div>
-                    <div class="product-card__colors">
-                      <span class="color-option color-option--teal"></span>
-                      <span class="color-option color-option--pink"></span>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="../pages/product-detail.html">
+                        <img class="primary-image" src="../img/Dress/Ayserkris/Zora Dress/1.jpg" alt="Zora Dress">
+                        <img class="hover-image" src="../img/Dress/Ayserkris/Zora Dress/2.jpg" alt="Zora Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Zora Dress</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                        
                     </div>
                   </div>
                 </div>
-                
-                <div class="product-card">
+                <div class="swiper-slide">
+                  <div class="product-card">
                   <div class="product-card__image">
-                    <span class="product-card__badge">-3%</span>
-                    <a href="/pages/product-detail.html">
-                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                    
+                    <a href="../pages/product-detail.html">
+                      <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                      <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
                     </a>
                     <div class="product-card__actions">
                       <button class="action-btn" aria-label="Quick view">
@@ -919,31 +947,57 @@
                     </div>
                   </div>
                   <div class="product-card__content">
-                    <h3 class="product-card__title">Square Textured Striped</h3>
-                    <div class="product-card__rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <h3 class="product-card__title">Aponi Dress</h3>
+                    
                     <div class="product-card__price">
                       <span class="price-sale">$116.00</span>
                       <span class="price-regular">$120.00</span>
                     </div>
-                    <div class="product-card__colors">
-                      <span class="color-option color-option--teal"></span>
-                      <span class="color-option color-option--pink"></span>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                        <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Aponi Dress</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
-                
-                <div class="product-card">
+                <div class="swiper-slide">
+                  <div class="product-card">
                   <div class="product-card__image">
-                    <span class="product-card__badge">-3%</span>
+                    
                     <a href="/pages/product-detail.html">
-                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                      <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
                     </a>
                     <div class="product-card__actions">
                       <button class="action-btn" aria-label="Quick view">
@@ -962,31 +1016,54 @@
                     </div>
                   </div>
                   <div class="product-card__content">
-                    <h3 class="product-card__title">Square Textured Striped</h3>
-                    <div class="product-card__rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <h3 class="product-card__title">Aponi Dress</h3>             
                     <div class="product-card__price">
                       <span class="price-sale">$116.00</span>
                       <span class="price-regular">$120.00</span>
                     </div>
-                    <div class="product-card__colors">
-                      <span class="color-option color-option--teal"></span>
-                      <span class="color-option color-option--pink"></span>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                        <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Square Textured Striped</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <div class="product-card">
+                <div class="swiper-slide">
+                  <div class="product-card">
                   <div class="product-card__image">
-                    <span class="product-card__badge">-3%</span>
+                    
                     <a href="/pages/product-detail.html">
-                      <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                      <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
+                      <img class="primary-image" src="./img/Dress/Pham Studio Official/Cherry Maxi Dress/2.jpg" alt="Cherry Maxi Dress">
+                      <img class="hover-image" src="./img/Dress/Pham Studio Official/Cherry Maxi Dress/3.jpg" alt="Cherry Maxi Dress Hover">
                     </a>
                     <div class="product-card__actions">
                       <button class="action-btn" aria-label="Quick view">
@@ -1006,13 +1083,147 @@
                   </div>
                   <div class="product-card__content">
                     <h3 class="product-card__title">Square Textured Striped</h3>
-                    <div class="product-card__rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
                     </div>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/OnOn MADE/Cosmos Dress/1.jpg" alt="Cosmos Dress">
+                        <img class="hover-image" src="./img/Dress/OnOn MADE/Cosmos Dress/2.jpg" alt="Cosmos Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Cosmos Dress</h3>
+                      
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/OnOn MADE/Lyra Dress/1.jpg" alt="Lyra Dress">
+                      <img class="hover-image" src="./img/Dress/OnOn MADE/Lyra Dress/2.jpg" alt="Lyra Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Lyra Dress</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/Ayserkris/Satin Skirt/1.jpg" alt="Satin Skirt">
+                        <img class="hover-image" src="./img/Dress/Ayserkris/Satin Skirt/2.jpg" alt="Satin Skirt Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Satin Skirt</h3>
+                      
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/OnOn MADE/Lyra Dress/1.jpg" alt="Lyra Dress">
+                      <img class="hover-image" src="./img/Dress/OnOn MADE/Lyra Dress/2.jpg" alt="Lyra Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Lyra Dress</h3>
+                    
                     <div class="product-card__price">
                       <span class="price-sale">$116.00</span>
                       <span class="price-regular">$120.00</span>
@@ -1021,29 +1232,576 @@
                       <span class="color-option color-option--teal"></span>
                       <span class="color-option color-option--pink"></span>
                     </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/Jirene/Darkside Set/1.jpg" alt="Darkside Set">
+                        <img class="hover-image" src="./img/Dress/Jirene/Darkside Set/2.jpg" alt="Darkside Set Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Darkside Set</h3>
+                      
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/POEM/Aurora/2.jpg" alt="Aurora">
+                      <img class="hover-image" src="./img/Dress/POEM/Aurora/3.jpg" alt="Aurora Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Aria Dress</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="./pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                        <img class="hover-image" src="./img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Parissa Dress</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="./pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/Ayserkris/Satin Skirt/1.jpg" alt="Satin Skirt">
+                      <img class="hover-image" src="./img/Dress/Ayserkris/Satin Skirt/2.jpg" alt="Satin Skirt Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Satin Skirt</h3>
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/Ayserkris/Zora Dress/1.jpg" alt="Zora Dress">
+                        <img class="hover-image" src="./img/Dress/Ayserkris/Zora Dress/2.jpg" alt="Zora Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Zora Dress</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                      <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Aponi Dress</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                        <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Aponi Dress</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                      <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Aponi Dress</h3>             
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="../img/Dress/Huelleyrose/Aponi Dress/1.jpg" alt="Aponi Dress">
+                        <img class="hover-image" src="../img/Dress/Huelleyrose/Aponi Dress/2.jpg" alt="Aponi Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Square Textured Striped</h3>
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/Pham Studio Official/Cherry Maxi Dress/2.jpg" alt="Cherry Maxi Dress">
+                      <img class="hover-image" src="./img/Dress/Pham Studio Official/Cherry Maxi Dress/3.jpg" alt="Cherry Maxi Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Square Textured Striped</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/OnOn MADE/Cosmos Dress/1.jpg" alt="Cosmos Dress">
+                        <img class="hover-image" src="./img/Dress/OnOn MADE/Cosmos Dress/2.jpg" alt="Cosmos Dress Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Cosmos Dress</h3>
+                      
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/OnOn MADE/Lyra Dress/1.jpg" alt="Lyra Dress">
+                      <img class="hover-image" src="./img/Dress/OnOn MADE/Lyra Dress/2.jpg" alt="Lyra Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Lyra Dress</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/Ayserkris/Satin Skirt/1.jpg" alt="Satin Skirt">
+                        <img class="hover-image" src="./img/Dress/Ayserkris/Satin Skirt/2.jpg" alt="Satin Skirt Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Satin Skirt</h3>
+                      
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/OnOn MADE/Lyra Dress/1.jpg" alt="Lyra Dress">
+                      <img class="hover-image" src="./img/Dress/OnOn MADE/Lyra Dress/2.jpg" alt="Lyra Dress Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Lyra Dress</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    <div class="product-card__colors">
+                      <span class="color-option color-option--teal"></span>
+                      <span class="color-option color-option--pink"></span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      
+                      <a href="/pages/product-detail.html">
+                        <img class="primary-image" src="./img/Dress/Jirene/Darkside Set/1.jpg" alt="Darkside Set">
+                        <img class="hover-image" src="./img/Dress/Jirene/Darkside Set/2.jpg" alt="Darkside Set Hover">
+                      </a>
+                      <div class="product-card__actions">
+                        <button class="action-btn" aria-label="Quick view">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Add to wishlist">
+                          <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn" aria-label="Compare">
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+
+                      </div>
+                      <div class="add-to-cart-wrapper">
+                        <button class="add-to-cart-button">ADD TO CART</button>
+                      </div>
+                    </div>
+                    <div class="product-card__content">
+                      <h3 class="product-card__title">Darkside Set</h3>
+                      
+                      <div class="product-card__price">
+                        <span class="price-sale">$116.00</span>
+                        <span class="price-regular">$120.00</span>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                  <div class="product-card__image">
+                    
+                    <a href="/pages/product-detail.html">
+                      <img class="primary-image" src="./img/Dress/POEM/Aurora/2.jpg" alt="Aurora">
+                      <img class="hover-image" src="./img/Dress/POEM/Aurora/3.jpg" alt="Aurora Hover">
+                    </a>
+                    <div class="product-card__actions">
+                      <button class="action-btn" aria-label="Quick view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Add to wishlist">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                      <button class="action-btn" aria-label="Compare">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                      <button class="add-to-cart-button">ADD TO CART</button>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Aria Dress</h3>
+                    
+                    <div class="product-card__price">
+                      <span class="price-sale">$116.00</span>
+                      <span class="price-regular">$120.00</span>
+                    </div>
+                    
+                  </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div class="carousel-controls">
-              <button class="carousel-control prev" id="prevBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="carousel-control next" id="nextBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-            
-            <div class="carousel-dots" id="carouselDots">
-              <!-- Dots will be added by JavaScript -->
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
-        </div>
+        </section>
+        
       </main>
       <div class="testimonial-container">
         <div class="testimonial-track">
@@ -1218,33 +1976,8 @@
         <span class="close-img-modal">&times;</span>
         <img class="modal-content" id="zoomedImage">
       </div>
-       <!-- Recently Viewed sidebar
-       <div class="recently-viewed">
-        <div class="tab-toggle">
-          <span>&raquo;</span>
-        </div>
-        <div class="recently-viewed-box">
-          <button class="btn">
-            <div class="icon">📞</div>
-          </button>
-
-          <button class="btn">
-            <div class="icon">🎁</div>
-          </button>
-        </div>
-      </div> 
-      <div class="floating-buttons">
-        <button class="btn external-link">
-          <div class="icon">🌞</div>
-        </button>
-        <button class="btn scroll-top">
-          <div class="icon">⬆️</div>
-        </button>
-      </div> -->
     </section>
-    <!-- Adding new section here -->
     <!-- Footer -->    
-    <!-- Load scripts optimized -->
     <footer class="footer">
       <div class="footer-container">
           <!-- Logo and contact info -->
@@ -1324,6 +2057,68 @@
     <!-- <script type="module" src="../js/product-detail.js"></script> -->
     <script type="module" src="../js/pro-detail.js"></script>
     <script type="module" src="../js/main.js"></script>    
-    <!-- Add this right before the closing body tag -->
+    <!-- Add this before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Add Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+           // Optional parameters
+            // Responsive breakpoints
+            breakpoints: {
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                grid: {
+                  rows: 1
+                }
+              },
+              480: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                grid: {
+                  rows: 1
+                }
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                grid: {
+                  rows: 1
+                }
+              },
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                grid: {
+                  rows: 1
+                }
+              }
+            },
+            direction: 'horizontal',
+            slidesPerView: 5,
+            grid: {
+              rows: 1,
+              fill: 'row'
+            },
+            autoplay: {
+              delay: 5000,
+            },
+            spaceBetween: 30,
+            loop: true,
+            grabCursor: true,
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          });
+    </script>
   </body>
 </html>
