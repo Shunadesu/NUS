@@ -100,13 +100,6 @@
       margin-bottom: 0.5rem;
     }
     
-    &__rating {
-      display: flex;
-      gap: 0.25rem;
-      margin-bottom: 0.5rem;
-      color: #f39c12;
-      font-size: 0.8rem;
-    }
     
     &__price {
       margin-bottom: 0.75rem;
@@ -139,11 +132,18 @@
     color: #333;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
-    
+
+    @media (max-width: 768px) {
+      border-radius: 100%;
+      padding: 5px;
+      font-size: 12px;
+      width: 25px;
+      height: 25px;
+    }
     &:hover {
       background-color: #333;
       color: white;
@@ -206,7 +206,11 @@
     cursor: pointer;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
-    
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      width: 100%;
+      padding: 8px 12px;
+    }
     &:hover {
       background-color: #333;
       color: white;
