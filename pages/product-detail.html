@@ -342,7 +342,7 @@
           </div>
         </div>
       </div>
-      </header>
+    </header>
 
       <!-- Mobile Navigation -->
       <nav class="mobile-nav" id="mobileNav">
@@ -376,20 +376,19 @@
               <div class="product__gallery">
 
                 <div class="product__thumbnails-wrapper">
-
                   <div class="product__thumbnails">
                     <div class="thumbnails-container">
                     <div class="thumbnail active" data-index="0">
-                      <img src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=600" alt="Square Textured Striped - Thumbnail 1">
+                      <img src="../img/Dress/Ayserkris/Satin Skirt/1.jpg" alt="Thumbnail 1">
                     </div>
                     <div class="thumbnail" data-index="1">
-                      <img src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369" alt="Square Textured Striped - Thumbnail 2">
+                      <img src="../img/Dress/Ayserkris/Satin Skirt/2.jpg" alt="Thumbnail 2">
                     </div>
                     <div class="thumbnail" data-index="2">
-                      <img src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_3_9444cb16-d6aa-4cd9-b850-8ed21254e45a.jpg?v=1680169369" alt="Square Textured Striped - Thumbnail 3">
+                      <img src="../img/Dress/Ayserkris/Satin Skirt/3.jpg" alt="Thumbnail 3">
                     </div>
                     <div class="thumbnail" data-index="3">
-                      <img src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_4_425fa01a-2d89-4a16-bc8d-fb4c81465190.jpg?v=1680169369&width=600" alt="Square Textured Striped - Thumbnail 4">
+                      <img src="../img/Dress/Ayserkris/Satin Skirt/4.jpg" alt="Thumbnail 4">
                     </div>
                   </div>
                   </div>
@@ -400,7 +399,7 @@
                     <i class="fas fa-chevron-left"></i>
                   </button>
                   <div class="image-container">
-                    <img id="mainImage" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=600" alt="Striped Ribbed T-shirt">
+                    <img id="mainImage" src="../img/Dress/Ayserkris/Satin Skirt/1.jpg" alt="Striped Ribbed T-shirt">
                     <div class="zoom-lens"></div>
                     <div class="zoom-result"></div>
                   </div>
@@ -439,13 +438,7 @@
                 </div>
                 
                 <div class="product__options">
-                  <div class="option">
-                    <label class="option__label">Color: <span class="selected-option">Green</span></label>
-                    <div class="color-options">
-                      <div class="color-option selected" data-color="Green" style="background-color: #4ecdc4;"></div>
-                      <div class="color-option" data-color="Pink" style="background-color: #ffb6c1;"></div>
-                    </div>
-                  </div>
+                 
                   <!-- Size Selector Component -->
                   <div class="size-selector">
                     <div class="size-selector__label">Size: <span class="size-selector__current">S</span></div>
@@ -522,7 +515,17 @@
                       <span>Thử đồ</span>
                     </button>
                   </div>
+                  <!-- Confirmation Messages -->
+                  <div class="confirmation-message" id="rent-confirmation">
+                    <div>Bạn đã đặt lịch thuê đồ thành công:</div>
+                    <div id="rent-confirmed-period" class="confirmed-period"></div>
+                    <div id="rent-confirmed-duration" class="confirmed-duration"></div>
+                  </div>
                   
+                  <div class="confirmation-message" id="try-confirmation">
+                    <div>Bạn đã đặt lịch thử đồ thành công:</div>
+                    <div id="try-confirmed-date" class="confirmed-date"></div>
+                  </div>
                 </div>
                         
                 <div class="product__add-to-cart">
@@ -1924,18 +1927,6 @@
           
           <button class="confirm-btn try" id="try-confirm-btn" disabled>Xác nhận</button>
         </div>
-      </div>
-      
-      <!-- Confirmation Messages -->
-      <div class="confirmation-message" id="rent-confirmation">
-        <div>Bạn đã đặt lịch thuê đồ thành công:</div>
-        <div id="rent-confirmed-period" class="confirmed-period"></div>
-        <div id="rent-confirmed-duration" class="confirmed-duration"></div>
-      </div>
-      
-      <div class="confirmation-message" id="try-confirmation">
-        <div>Bạn đã đặt lịch thử đồ thành công:</div>
-        <div id="try-confirmed-date" class="confirmed-date"></div>
       </div>
 
        <!-- Add this modal after the gallery modal -->

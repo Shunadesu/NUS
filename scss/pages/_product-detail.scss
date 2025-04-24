@@ -267,7 +267,7 @@
       }
       
       &__thumbnails {
-        height: 380px;
+        height: fit-content;
         overflow: hidden;
         position: relative;
         
@@ -497,8 +497,8 @@
     .zoom-lens {
       position: absolute;
       border: 1px solid #d4d4d4;
-      width: 50px;
-      height: 50px;
+      width: 150px;
+      height: 150px;
       background-color: rgba(255, 255, 255, 0.4);
       cursor: crosshair;
       display: none;
@@ -508,7 +508,7 @@
     .zoom-result {
       position: absolute;
       top: 0;
-      right: -350px;
+      // right: -350px;
       width: 350px;
       height: 350px;
       border: 1px solid #d4d4d4;

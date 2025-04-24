@@ -22,7 +22,7 @@ export function setupSearch() {
       searchPopup.style.display = isActive ? 'block' : 'none';
       
       if (isActive && searchInput) {
-        // searchInput.classList.display = 'block';
+        searchInput.classList.display = 'block';
         searchInput.focus();
       }
     });

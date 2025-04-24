@@ -456,7 +456,7 @@
   height: 100vh;
   background: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 12;
+  z-index: 20;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
@@ -704,7 +704,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 11;
+  z-index: 2;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;

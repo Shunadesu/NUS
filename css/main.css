@@ -1916,6 +1916,7 @@ img {
 .confirmation-message {
   display: none;
   margin-top: 15px;
+  margin-bottom: 15px;
   padding: 15px;
   background-color: #f0fff4;
   border: 1px solid #c6f6d5;
@@ -4232,7 +4233,7 @@ a:hover {
   height: 100vh;
   background: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 12;
+  z-index: 20;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
@@ -4442,7 +4443,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 11;
+  z-index: 2;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
@@ -5755,7 +5756,7 @@ a:hover {
   }
 }
 .product-detail-wapper .product__thumbnails {
-  height: 380px;
+  height: fit-content;
   overflow: hidden;
   position: relative;
 }
@@ -5961,8 +5962,8 @@ a:hover {
 .product-detail-wapper .zoom-lens {
   position: absolute;
   border: 1px solid #d4d4d4;
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   background-color: rgba(255, 255, 255, 0.4);
   cursor: crosshair;
   display: none;
@@ -5971,7 +5972,6 @@ a:hover {
 .product-detail-wapper .zoom-result {
   position: absolute;
   top: 0;
-  right: -350px;
   width: 350px;
   height: 350px;
   border: 1px solid #d4d4d4;

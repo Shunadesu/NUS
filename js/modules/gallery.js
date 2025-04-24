@@ -38,6 +38,9 @@ export function initGallery() {
     }
   }
 
+  // Add transition style to main image
+  mainImage.style.transition = "opacity 0.3s ease-in-out";
+
   // Thumbnail click handler
   thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener("click", () => {
@@ -122,9 +125,8 @@ export function initGallery() {
   // Initialize zoom functionality after image is loaded
   mainImage.addEventListener("load", () => {
     const zoomLens = document.querySelector(".zoom-lens");
-    const zoomResult = document.querySelector(".zoom-result");
-    if (zoomLens && zoomResult) {
-      imageZoom(mainImage, zoomLens, zoomResult);
+    if (zoomLens) {
+      imageZoom(mainImage, zoomLens);
     }
   });
 }
@@ -141,27 +143,26 @@ function preloadImages(sources) {
 export function updateMainImage(index, thumbnails, mainImage) {
   if (!thumbnails || !mainImage) return;
   
-  // Fade out current image
-  mainImage.style.opacity = "0";
+  mainImage.style.opacity = "0.7"; // Slight fade for smooth transition
 
-  // After fade out, update src and fade in
-  setTimeout(() => {
-    const imgSrc = thumbnails[index].querySelector("img").src;
-    mainImage.src = imgSrc;
+  const imgSrc = thumbnails[index].querySelector("img").src;
+  mainImage.src = imgSrc;
     
-    // Update zoomed image if it exists
-    if (document.getElementById("zoomedImage")) {
-      document.getElementById("zoomedImage").src = imgSrc;
-    }
+  // Update zoomed image if it exists
+  if (document.getElementById("zoomedImage")) {
+    document.getElementById("zoomedImage").src = imgSrc;
+  }
     
-    // Update gallery main image if it exists
-    const galleryMainImage = document.getElementById("galleryMainImage");
-    if (galleryMainImage) {
-      galleryMainImage.src = imgSrc;
-    }
+  // Update gallery main image if it exists
+  const galleryMainImage = document.getElementById("galleryMainImage");
+  if (galleryMainImage) {
+    galleryMainImage.src = imgSrc;
+  }
     
+  // Restore opacity after image loads
+  mainImage.onload = () => {
     mainImage.style.opacity = "1";
-  }, 200);
+  };
 }
 
 // Function to update active thumbnail
@@ -226,97 +227,81 @@ function handleTouchEnd(thumbnails, thumbnailsContainer, visibleThumbnails, thum
   touchEndX = 0;
 }
 
-// Image zoom functionality
-function imageZoom(img, lens, result) {
-  if (!img || !lens || !result) return;
-  
-  let cx, cy;
+// Image zoom functionality - Modified for zoom inside the lens
+function imageZoom(img, lens) {
+  if (!img || !lens) return;
 
-  // Calculate the ratio between result DIV and lens
-  cx = result.offsetWidth / lens.offsetWidth;
-  cy = result.offsetHeight / lens.offsetHeight;
+  const zoomFactor = 3; // Adjust this value to control zoom level
 
-  // Set background properties for the result DIV
-  result.style.backgroundImage = `url('${img.src}')`;
-  result.style.backgroundSize = `${img.width * cx}px ${img.height * cy}px`;
+  // Set background image for the lens
+  lens.style.backgroundImage = `url('${img.src}')`;
+  lens.style.backgroundRepeat = 'no-repeat';
 
-  // Mouse move function
-  function moveLens(e) {
-    let pos, x, y;
-    // Prevent any other actions that may occur when moving over the image
-    e.preventDefault();
-    // Get the cursor's x and y positions
-    pos = getCursorPos(e);
-    // Calculate the position of the lens
-    x = pos.x - lens.offsetWidth / 2;
-    y = pos.y - lens.offsetHeight / 2;
+  // Calculate background size based on zoom factor
+  const bgWidth = img.width * zoomFactor;
+  const bgHeight = img.height * zoomFactor;
+  // lens.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
 
-    // Prevent the lens from being positioned outside the image
-    if (x > img.width - lens.offsetWidth) {
-      x = img.width - lens.offsetWidth;
-    }
-    if (x < 0) {
-      x = 0;
-    }
-    if (y > img.height - lens.offsetHeight) {
-      y = img.height - lens.offsetHeight;
-    }
-    if (y < 0) {
-      y = 0;
-    }
-
-    // Set the position of the lens
-    lens.style.left = `${x}px`;
-    lens.style.top = `${y}px`;
-    // Display what the lens "sees"
-    result.style.backgroundPosition = `-${x * cx}px -${y * cy}px`;
-  }
-
+  // Helper function to get cursor position relative to the image
   function getCursorPos(e) {
-    let a,
-      x = 0,
-      y = 0;
-    e = e || window.event;
-    // Get the x and y positions of the image
-    a = img.getBoundingClientRect();
-    // Calculate the cursor's x and y coordinates, relative to the image
-    x = e.pageX - a.left - window.pageXOffset;
-    y = e.pageY - a.top - window.pageYOffset;
-    // Consider any page scrolling
-    return { x: x, y: y };
+    const bounds = img.getBoundingClientRect();
+    // Use clientX/clientY for position relative to viewport, then adjust for image position
+    const x = e.clientX - bounds.left;
+    const y = e.clientY - bounds.top;
+    return { x, y };
   }
 
-  // Show zoom on hover
-  img.addEventListener("mouseover", () => {
+  // Function to move the lens and update its background position
+  function moveLens(e) {
+    e.preventDefault();
+
+    // Get cursor position
+    const pos = getCursorPos(e);
+    let x = pos.x;
+    let y = pos.y;
+
+    // Calculate lens center offsets
+    const lensWidthHalf = lens.offsetWidth / 2;
+    const lensHeightHalf = lens.offsetHeight / 2;
+
+    // Calculate lens position (top-left corner)
+    let lensX = x - lensWidthHalf;
+    let lensY = y - lensHeightHalf;
+
+    // Prevent lens from going outside the image boundaries
+    lensX = Math.max(0, Math.min(lensX, img.width - lens.offsetWidth));
+    lensY = Math.max(0, Math.min(lensY, img.height - lens.offsetHeight));
+
+    // Set the lens position
+    lens.style.left = `${lensX}px`;
+    lens.style.top = `${lensY}px`;
+
+    // Calculate the background position for the lens
+    // Offset the background by the negative of the lens position multiplied by the zoom factor
+    const bgPosX = -(lensX * zoomFactor);
+    const bgPosY = -(lensY * zoomFactor);
+    lens.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
+  }
+
+  // Show lens on mouse enter
+  img.addEventListener("mouseenter", (e) => {
+    // Initial calculation for background size (in case image size changes)
+    const bgWidth = img.width * zoomFactor;
+    const bgHeight = img.height * zoomFactor;
+    lens.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
+    lens.style.backgroundImage = `url('${img.src}')`; // Ensure image src is current
+    
     lens.style.display = "block";
-    result.style.display = "block";
+    moveLens(e); // Position lens immediately
   });
 
-  // Hide zoom when mouse leaves
+  // Hide lens on mouse leave
   img.addEventListener("mouseleave", () => {
     lens.style.display = "none";
-    result.style.display = "none";
   });
 
-  // Move lens on mouse move
+  // Move lens on mouse move over the image
   img.addEventListener("mousemove", moveLens);
-  lens.addEventListener("mousemove", moveLens);
-
-  // Click events for lens and image
-  const imageModal = document.getElementById("imageModal");
-  if (imageModal) {
-    // Add a click event listener to the zoom-lens element to open the modal
-    lens.addEventListener("click", (e) => {
-      e.preventDefault();
-      // Open the zoom modal when lens is clicked
-      imageModal.style.display = "block";
-    });
-
-    // Also, let's make the main image clickable to open the zoom modal
-    img.addEventListener("click", (e) => {
-      e.preventDefault();
-      // Open the zoom modal when image is clicked
-      imageModal.style.display = "block";
-    });
-  }
+  // Optional: Allow moving mouse over the lens itself (might feel smoother)
+  lens.addEventListener("mousemove", moveLens); 
 }
