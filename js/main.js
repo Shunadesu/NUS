@@ -178,6 +178,26 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavClose = document.getElementById('mobileNavClose');
+const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+
+function toggleMobileMenu() {
+  mobileMenuBtn.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+  mobileNavOverlay.classList.toggle('active');
+  document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+}
+
+mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+mobileNavClose.addEventListener('click', toggleMobileMenu);
+mobileNavOverlay.addEventListener('click', toggleMobileMenu);
+});
+
+
 
 
 

@@ -23,6 +23,18 @@ z-index: 100;
     color: var(--text-dark);
 }
 .header__content {
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-right: 10px;
+      }
     .nav{
         .nav__list{
             display: flex;
@@ -37,32 +49,20 @@ z-index: 100;
     align-items: center;
     position: relative;
     z-index: 2;
-    .header__logo {
-    font-size: 36px;
-    font-weight: 100;
-    letter-spacing: -1px;
-    // line-height: 30px;
-    text-transform: uppercase;
-
-        .logo_div{
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: fill;
-            }
+    .logo_div{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
         }
     }
-    
-    @media screen and (max-width: 1025px) {
-    .header__logo {
-        font-size: 28px;
-        // line-height: 30px;
-    }
+
+
     
     }
     .header__icons {
@@ -126,7 +126,8 @@ z-index: 100;
 
     }
 }
-}
+
+  
 
 .header__bg {
 position: absolute;
@@ -224,23 +225,23 @@ border-radius: 50%;
         }
       }
     }
-  }
-  
-  // Add overlay when mobile menu is active
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 8;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--transition-normal), visibility var(--transition-normal);
-    
-    &.active {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+}
+
+// Add overlay when mobile menu is active
+.menu-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 8;
+opacity: 0;
+visibility: hidden;
+transition: opacity var(--transition-normal), visibility var(--transition-normal);
+
+&.active {
+    opacity: 1;
+    visibility: visible;
+}
+}

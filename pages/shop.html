@@ -42,6 +42,11 @@
       <header class="header">
         <div class="container">
           <div class="header__content">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+              <span></span>
+            </button>
+
             <a href="/" class="header__logo">
               <div class="logo_div">
                 <img src="../img/logo/Nussunny-black.png" alt="">
@@ -49,14 +54,14 @@
             </a>
             
             <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-                  <li class="nav__item"><a href="shop.html" class="nav__link nav__link--active">Shop</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Collections</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                </ul>
-              </nav>
+              <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="shop.html" class="nav__link nav__link--active">Shop</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Collections</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+              </ul>
+            </nav>
             
             <div class="header__icons">
              
@@ -334,6 +339,24 @@
         </div>
       </header>
 
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav__header">
+          <h3>Menu</h3>
+          <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
+        </div>
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item"><a href="/" class="mobile-nav__link">Home</a></li>
+          <li class="mobile-nav__item"><a href="shop.html" class="mobile-nav__link active">Shop</a></li>
+          <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Collections</a></li>
+          <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">About</a></li>
+          <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation Overlay -->
+      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
       <main>
           <!-- Hero Banner -->
           <div class="hero">
@@ -341,7 +364,7 @@
               <div class="hero__content">
               <h1 class="hero__title">Shop</h1>
               <div class="breadcrumb">
-                  <a href="#" class="breadcrumb__link">Home</a>
+                  <a href="../index.html" class="breadcrumb__link">Home</a>
                   <span class="breadcrumb__separator">/</span>
                   <span class="breadcrumb__current">Shop</span>
               </div>
@@ -350,35 +373,65 @@
           <div class="container">
             <div class="hero-banner">
                 <div class="shop">
-                    <!-- Sidebar Filters -->
-                    <aside class="filters">
-                      <!-- Availability Filter -->
-                      <div class="filter">
-                          <div class="filter__header">
-                          <h3 class="filter__title">Availability</h3>
-                          <button class="filter__toggle">
-                              <span class="minus">−</span>
-                          </button>
-                          </div>
-                          <div class="filter__content">
-                          <div class="checkbox">
-                              <input type="checkbox" id="in-stock" class="checkbox__input">
-                              <label for="in-stock" class="checkbox__label">In stock <span class="count">(30)</span></label>
-                          </div>
-                          <div class="checkbox">
-                              <input type="checkbox" id="out-of-stock" class="checkbox__input">
-                              <label for="out-of-stock" class="checkbox__label">Thuê <span class="count">(6)</span></label>
-                          </div>
+                    <!-- Filter Overlay -->
+                    <div class="filter-overlay" id="filterOverlay"></div>
 
-                          
-                          
-                          </div>
-                      </div>
-              
-                      <!-- Giá thuê filter -->
-                      <div class="filter">
+                    <!-- Sidebar Filters -->
+                    <aside class="filters" id="filterSidebar">
+                        <div class="filter-header">
+                            <h3>Filters</h3>
+                            <button class="close-filter-btn" id="closeFilterBtn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <!-- Availability Filter -->
+                        <div class="filter">
+                            <div class="filter__header">
+                            <h3 class="filter__title">Availability</h3>
+                            <button class="filter__toggle">
+                                <span class="minus">−</span>
+                            </button>
+                            </div>
+                            <div class="filter__content">
+                            <div class="checkbox">
+                                <input type="checkbox" id="in-stock" class="checkbox__input">
+                                <label for="in-stock" class="checkbox__label">In stock <span class="count">(30)</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="out-of-stock" class="checkbox__input">
+                                <label for="out-of-stock" class="checkbox__label">Thuê <span class="count">(6)</span></label>
+                            </div>
+
+                            
+                            
+                            </div>
+                        </div>
+                
+                        <!-- Giá thuê filter -->
+                        <div class="filter">
+                            <div class="filter__header">
+                            <h3 class="filter__title">Giá thuê</h3>
+                            <button class="filter__toggle">
+                                <span class="minus">−</span>
+                            </button>
+                            </div>
+                            <div class="filter__content">
+                            <div class="price-slider">
+                                <div class="price-slider__track">
+                                <div class="price-slider__range"></div>
+                                <div class="price-slider__thumb" data-value="min"></div>
+                                <div class="price-slider__thumb" data-value="max"></div>
+                                </div>
+                            </div>
+                            <div class="price-display">
+                                <p>Price: <span class="price-min">$0.00</span> - <span class="price-max">$200.00</span></p>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Giá sản phẩm filter -->
+                        <div class="filter">
                           <div class="filter__header">
-                          <h3 class="filter__title">Giá thuê</h3>
+                          <h3 class="filter__title">Giá sản phẩm</h3>
                           <button class="filter__toggle">
                               <span class="minus">−</span>
                           </button>
@@ -396,537 +449,475 @@
                           </div>
                           </div>
                       </div>
-                      <!-- Giá sản phẩm filter -->
-                      <div class="filter">
+                
+                        <!-- Brand Filter -->
+                        <div class="filter">
+                            <div class="filter__header">
+                            <h3 class="filter__title">Brand</h3>
+                            <button class="filter__toggle">
+                                <span class="minus">−</span>
+                            </button>
+                            </div>
+                            <div class="filter__content">
+                            <div class="checkbox">
+                                <input type="checkbox" id="brand-1" class="checkbox__input">
+                                <label for="brand-1" class="checkbox__label">Ayserkris <span class="count">(1)</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="brand-2" class="checkbox__input">
+                                <label for="brand-2" class="checkbox__label">Briller Studio <span class="count">(1)</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="brand-3" class="checkbox__input">
+                                <label for="brand-3" class="checkbox__label">Huelleyrose <span class="count">(2)</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="brand-4" class="checkbox__input">
+                                <label for="brand-4" class="checkbox__label">Jesmee Jewelry Gallery <span class="count">(1)</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="brand-5" class="checkbox__input">
+                                <label for="brand-5" class="checkbox__label">Jirene <span class="count">(1)</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="brand-6" class="checkbox__input">
+                                <label for="brand-6" class="checkbox__label">Lespoir <span class="count">(1)</span></label>
+                            </div>
+                            
+                          </div>
+                        </div>
+
+                          <!-- Color Filter -->
+                        <div class="filter">
                         <div class="filter__header">
-                        <h3 class="filter__title">Giá sản phẩm</h3>
-                        <button class="filter__toggle">
+                          <h3 class="filter__title">Color</h3>
+                          <button class="filter__toggle">
                             <span class="minus">−</span>
-                        </button>
+                          </button>
                         </div>
                         <div class="filter__content">
-                        <div class="price-slider">
-                            <div class="price-slider__track">
-                            <div class="price-slider__range"></div>
-                            <div class="price-slider__thumb" data-value="min"></div>
-                            <div class="price-slider__thumb" data-value="max"></div>
-                            </div>
+                          <div class="color-filters">
+                            <div class="color-filter color-white" title="White"></div>
+                            <div class="color-filter color-lightgray" title="Light Gray"></div>
+                            <div class="color-filter color-blue selected" title="Blue"></div>
+                            <div class="color-filter color-navy" title="Navy"></div>
+                            <div class="color-filter color-brown" title="Brown"></div>
+                            <div class="color-filter color-teal" title="Teal"></div>
+                            <div class="color-filter color-mint" title="Mint"></div>
+                            <div class="color-filter color-olive" title="Olive"></div>
+                            <div class="color-filter color-yellow" title="Yellow"></div>
+                            <div class="color-filter color-orange" title="Orange"></div>
+                            <div class="color-filter color-pink" title="Pink"></div>
+                            <div class="color-filter color-rose" title="Rose"></div>
+                            <div class="color-filter color-red" title="Red"></div>
+                            <div class="color-filter color-turquoise" title="Turquoise"></div>
+                            <div class="color-filter color-magenta" title="Magenta"></div>
+                            <div class="color-filter color-beige" title="Beige"></div>
+                          </div>
                         </div>
-                        <div class="price-display">
-                            <p>Price: <span class="price-min">$0.00</span> - <span class="price-max">$200.00</span></p>
                         </div>
-                        </div>
-                    </div>
-              
-                      <!-- Brand Filter -->
-                      <div class="filter">
-                          <div class="filter__header">
-                          <h3 class="filter__title">Brand</h3>
+
+                        <!-- Size Filter -->
+                        <div class="filter">
+                        <div class="filter__header">
+                          <h3 class="filter__title">Size</h3>
                           <button class="filter__toggle">
-                              <span class="minus">−</span>
+                            <span class="minus">−</span>
                           </button>
-                          </div>
-                          <div class="filter__content">
-                          <div class="checkbox">
-                              <input type="checkbox" id="brand-1" class="checkbox__input">
-                              <label for="brand-1" class="checkbox__label">Adrianna Papell <span class="count">(1)</span></label>
-                          </div>
-                          <div class="checkbox">
-                              <input type="checkbox" id="brand-2" class="checkbox__input">
-                              <label for="brand-2" class="checkbox__label">AG - Adriano <span class="count">(1)</span></label>
-                          </div>
-                          <div class="checkbox">
-                              <input type="checkbox" id="brand-3" class="checkbox__input">
-                              <label for="brand-3" class="checkbox__label">Aglini <span class="count">(2)</span></label>
-                          </div>
-                          <div class="checkbox">
-                              <input type="checkbox" id="brand-4" class="checkbox__input">
-                              <label for="brand-4" class="checkbox__label">Alberta Ferretti <span class="count">(1)</span></label>
-                          </div>
-                          <div class="checkbox">
-                              <input type="checkbox" id="brand-5" class="checkbox__input">
-                              <label for="brand-5" class="checkbox__label">Alexander McQueen <span class="count">(1)</span></label>
-                          </div>
-                          <div class="checkbox">
-                              <input type="checkbox" id="brand-6" class="checkbox__input">
-                              <label for="brand-6" class="checkbox__label">Allegra K <span class="count">(1)</span></label>
-                          </div>
-                          </div>
-                      </div>
-
-                        <!-- Color Filter -->
-                    <div class="filter">
-                    <div class="filter__header">
-                      <h3 class="filter__title">Color</h3>
-                      <button class="filter__toggle">
-                        <span class="minus">−</span>
-                      </button>
-                    </div>
-                    <div class="filter__content">
-                      <div class="color-filters">
-                        <div class="color-filter color-white" title="White"></div>
-                        <div class="color-filter color-lightgray" title="Light Gray"></div>
-                        <div class="color-filter color-blue selected" title="Blue"></div>
-                        <div class="color-filter color-navy" title="Navy"></div>
-                        <div class="color-filter color-brown" title="Brown"></div>
-                        <div class="color-filter color-teal" title="Teal"></div>
-                        <div class="color-filter color-mint" title="Mint"></div>
-                        <div class="color-filter color-olive" title="Olive"></div>
-                        <div class="color-filter color-yellow" title="Yellow"></div>
-                        <div class="color-filter color-orange" title="Orange"></div>
-                        <div class="color-filter color-pink" title="Pink"></div>
-                        <div class="color-filter color-rose" title="Rose"></div>
-                        <div class="color-filter color-red" title="Red"></div>
-                        <div class="color-filter color-turquoise" title="Turquoise"></div>
-                        <div class="color-filter color-magenta" title="Magenta"></div>
-                        <div class="color-filter color-beige" title="Beige"></div>
-                      </div>
-                    </div>
-                    </div>
-
-                    <!-- Size Filter -->
-                    <div class="filter">
-                    <div class="filter__header">
-                      <h3 class="filter__title">Size</h3>
-                      <button class="filter__toggle">
-                        <span class="minus">−</span>
-                      </button>
-                    </div>
-                    <div class="filter__content">
-                      <div class="size-filters">
-                        <div class="size-filter">S</div>
-                        <div class="size-filter">M</div>
-                        <div class="size-filter">L</div>
-                        <div class="size-filter">XL</div>
-                        <div class="size-filter">XXL</div>
-                      </div>
-                    </div>
-                    </div>
-
-                    <!-- Featured Products -->
-                    <!-- <div class="filter">
-                    <div class="filter__header">
-                      <h3 class="filter__title">Featured Product</h3>
-                      <button class="filter__toggle">
-                        <span class="minus">−</span>
-                      </button>
-                    </div>
-                    <div class="filter__content">
-                      <div class="featured-products">
-                        <div class="featured-product">
-                          <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_7_1_6858d5e7-b1a2-4f31-92f2-16681ef4dcd4.jpg?v=1679883456&width=533" alt="Short Sleeve Sweater" class="featured-product__image">
-                          <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_7_2.jpg?v=1680665925&width=533" alt="Short Sleeve Sweater" class="featured-product__image">
-
-                          <div class="featured-product__info">
-                            <h4 class="featured-product__title">Short Sleeve Sweater</h4>
-                            <div class="featured-product__rating">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                            <div class="featured-product__price">$175.00</div>
+                        </div>
+                        <div class="filter__content">
+                          <div class="size-filters">
+                            <div class="size-filter">S</div>
+                            <div class="size-filter">M</div>
+                            <div class="size-filter">L</div>
+                            <div class="size-filter">XL</div>
+                            <div class="size-filter">XXL</div>
                           </div>
                         </div>
+                        </div>
+
+                        <!-- Featured Products -->
+                        <!-- <div class="filter">
+                        <div class="filter__header">
+                          <h3 class="filter__title">Featured Product</h3>
+                          <button class="filter__toggle">
+                            <span class="minus">−</span>
+                          </button>
+                        </div>
+                        <div class="filter__content">
+                          <div class="featured-products">
+                            <div class="featured-product">
+                              <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_7_1_6858d5e7-b1a2-4f31-92f2-16681ef4dcd4.jpg?v=1679883456&width=533" alt="Short Sleeve Sweater" class="featured-product__image">
+                              <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_7_2.jpg?v=1680665925&width=533" alt="Short Sleeve Sweater" class="featured-product__image">
+
+                              <div class="featured-product__info">
+                                <h4 class="featured-product__title">Short Sleeve Sweater</h4>
+                                <div class="featured-product__rating">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                </div>
+                                <div class="featured-product__price">$175.00</div>
+                              </div>
+                            </div>
+                            
+                            <div class="featured-product">
+                              <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_19_3.jpg?v=1679883376&width=533" alt="Polo-neck Body Dress" class="featured-product__image">
+                              <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_19_1.jpg?v=1679883376&width=533" alt="Polo-neck Body Dress" class="featured-product__image">
+
+                              <div class="featured-product__info">
+                                <h4 class="featured-product__title">Polo-neck Body Dress</h4>
+                                <div class="featured-product__rating">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                </div>
+                                <div class="featured-product__price">$116.00</div>
+                              </div>
+                            </div>
+                            
+                            <div class="featured-product">
+                              <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_10_1_62e4194a-b07b-44e9-aea7-3a1172290af0.jpg?v=1679883360&width=533" alt="Long sleeve Denim" class="featured-product__image">
+                              <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_10_2_3743a0d8-bb8c-4e1d-ba0d-db4b80c5cde1.jpg?v=1679883360&width=533" alt="Long sleeve Denim" class="featured-product__image">
+
+                              <div class="featured-product__info">
+                                <h4 class="featured-product__title">Long sleeve Denim</h4>
+                                <div class="featured-product__rating">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                </div>
+                                <div class="featured-product__price">$30.00</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div> -->
+
+                        <!-- Promo Banner -->
+                        <div class="promo-banner">
+                          <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner.png?v=1700473199" alt="Fashion Sale" style="opacity: 0.8;">
                         
-                        <div class="featured-product">
-                          <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_19_3.jpg?v=1679883376&width=533" alt="Polo-neck Body Dress" class="featured-product__image">
-                          <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_19_1.jpg?v=1679883376&width=533" alt="Polo-neck Body Dress" class="featured-product__image">
-
-                          <div class="featured-product__info">
-                            <h4 class="featured-product__title">Polo-neck Body Dress</h4>
-                            <div class="featured-product__rating">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                            <div class="featured-product__price">$116.00</div>
-                          </div>
                         </div>
-                        
-                        <div class="featured-product">
-                          <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_10_1_62e4194a-b07b-44e9-aea7-3a1172290af0.jpg?v=1679883360&width=533" alt="Long sleeve Denim" class="featured-product__image">
-                          <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_10_2_3743a0d8-bb8c-4e1d-ba0d-db4b80c5cde1.jpg?v=1679883360&width=533" alt="Long sleeve Denim" class="featured-product__image">
-
-                          <div class="featured-product__info">
-                            <h4 class="featured-product__title">Long sleeve Denim</h4>
-                            <div class="featured-product__rating">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                            <div class="featured-product__price">$30.00</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </div> -->
-
-                    <!-- Promo Banner -->
-                    <div class="promo-banner">
-                      <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner.png?v=1700473199" alt="Fashion Sale" style="opacity: 0.8;">
-                    <!-- <div class="promo-banner__content">
-                      <div class="promo-banner__title">Perfect</div>
-                      <div class="promo-banner__subtitle">Up to 50% Off</div>
-                      <button class="promo-banner__btn">BUY NOW</button>
-                    </div> -->
-                    </div>
 
                     </aside>
-            
-                    <!-- Products Section -->
+                
+                        <!-- Products Section -->
                     <div class="products">
-                    <!-- Products Header -->
-                      <div class="products__header">
-                        <div class="products__count">There are 30 results in total</div>
-                        <div class="products__controls">
-                          <button class="view-btn view-btn--active" aria-label="Grid view 3x3">
-                          <i class="fas fa-th sunny3"></i>
-                          </button>
-                          <button class="view-btn" aria-label="Grid view 4x4">
-                          <i class="fas fa-th-list sunny4"></i>
-                          </button>
-                        </div>
-                        <div class="sort">
-                            <label for="sort-by">Sort by:</label>
-                            <div class="custom-select">
-                            <select id="sort-by" class="sort-select">
-                                <option value="best-selling">Best Selling</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                                <option value="newest">Newest</option>
-                            </select>
-                            <div class="select-icon">
-                                <i class="fas fa-chevron-down"></i>
+                        <!-- Products Header -->
+                        <div class="products__header">
+                          <!-- Filter Toggle Button (Mobile Only) -->
+                          
+                            <button class="filter-toggle-btn" id="filterToggleBtn">
+                              <i class="fas fa-filter"></i>
+                              <span>Filters</span>
+                            </button>
+                            <div class="products__count">There are 30 results in total</div>
+                            <div class="products__controls">
+                              <button class="view-btn view-btn--active" aria-label="Grid view 3x3">
+                              <i class="fas fa-th sunny3"></i>
+                              </button>
+                              <button class="view-btn" aria-label="Grid view 4x4">
+                              <i class="fas fa-th-list sunny4"></i>
+                              </button>
                             </div>
+                            <div class="sort">
+                                <label for="sort-by">Sort by:</label>
+                                <div class="custom-select">
+                                <select id="sort-by" class="sort-select">
+                                    <option value="best-selling">Best Selling</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="newest">Newest</option>
+                                </select>
+                                <div class="select-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-            
-                    <!-- Products Grid -->
-                    <div class="products__grid">
-                      <!-- Product 1 -->
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
+                
+                        <!-- Products Grid -->
+                        <div class="products__grid">
+                          <!-- Product 1 -->
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
+                          </div>
 
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
                           </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
-                          </div>
-                        </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
+                          </div>
 
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
                           </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
-                          </div>
-                        </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
+                          </div>
 
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
                           </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
-                          </div>
-                        </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
+                          </div>
 
-                          </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
-                          </div>
-                        </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
-
-                          </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
+                          <div class="product-card">
+                            <div class="product-card__image">
+                              
+                              <a href="../pages/product-detail.html">
+                                <img class="primary-image" src="../img/Dress/Ayserkris/Parissa Dress/1.jpg" alt="Parissa Dress">
+                                <img class="hover-image" src="../img/Dress/Ayserkris/Parissa Dress/2.jpg" alt="Parissa Dress Hover">
+                              </a>
+                              <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Quick view">
+                                  <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Add to wishlist">
+                                  <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Compare">
+                                  <i class="fas fa-sync-alt"></i>
+                                </button>
+        
+                              </div>
+                              <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">ADD TO CART</button>
+                              </div>
+                            </div>
+                            <div class="product-card__content">
+                              <h3 class="product-card__title">Parissa Dress</h3>
+                              <div class="product-card__price">
+                                <span class="price-sale">$116.00</span>
+                                <span class="price-regular">$120.00</span>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
-
-                          </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
-                          </div>
-                        </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="product-card">
-                        <div class="product-card__image">
-                          <span class="product-card__badge">-3%</span>
-                          <a href="/pages/product-detail.html">
-                            <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_1_35bfb1ff-ba53-4183-8165-40ad7779a8a7.jpg?v=1680169369&width=360" alt="Square Textured Striped">
-                            <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_22_2_c238fe43-81a4-447f-a039-c1257bce442a.jpg?v=1680169369&width=533" alt="Square Textured Striped Hover">
-                          </a>
-                          <div class="product-card__actions">
-                            <button class="action-btn" aria-label="Quick view">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Add to wishlist">
-                              <i class="fas fa-heart"></i>
-                            </button>
-                            <button class="action-btn" aria-label="Compare">
-                              <i class="fas fa-sync-alt"></i>
-                            </button>
-
-                          </div>
-                          <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">ADD TO CART</button>
-                          </div>
-                        </div>
-                        <div class="product-card__content">
-                          <h3 class="product-card__title">Square Textured Striped</h3>
-                          <div class="product-card__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          </div>
-                          <div class="product-card__price">
-                            <span class="price-sale">$116.00</span>
-                            <span class="price-regular">$120.00</span>
-                          </div>
-                          <div class="product-card__colors">
-                            <span class="color-option color-option--teal"></span>
-                            <span class="color-option color-option--pink"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Pagination -->
-                    <div class="pagination">
-                        <button class="pagination__btn pagination__btn--prev" disabled>
-                        <i class="fas fa-chevron-left"></i>
-                        </button>
                         
-                        <button class="pagination__btn pagination__btn--next">
-                        <i class="fas fa-chevron-right"></i>
-                        </button>
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination__btn pagination__btn--prev" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                            </button>
+                            
+                            <button class="pagination__btn pagination__btn--next">
+                            <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
           </div>
+         
       </main>
     </section>
      
@@ -1060,6 +1051,23 @@
     </footer>
     <section class="hidden">Sunny</section>
     <!-- Load critical scripts first -->
-    <script type="module" src="../js/main.js"></script>    
+    <script type="module" src="../js/main.js"></script>   
+    <script>
+      // Filter Sidebar Toggle
+      const filterToggleBtn = document.getElementById('filterToggleBtn');
+      const filterSidebar = document.getElementById('filterSidebar');
+      const filterOverlay = document.getElementById('filterOverlay');
+      const closeFilterBtn = document.getElementById('closeFilterBtn');
+
+      function toggleFilter() {
+          filterSidebar.classList.toggle('active');
+          filterOverlay.classList.toggle('active');
+          document.body.style.overflow = filterSidebar.classList.contains('active') ? 'hidden' : '';
+      }
+
+      filterToggleBtn.addEventListener('click', toggleFilter);
+      closeFilterBtn.addEventListener('click', toggleFilter);
+      filterOverlay.addEventListener('click', toggleFilter);
+    </script> 
   </body>
 </html>
