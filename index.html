@@ -554,12 +554,17 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
       </main>
         <!-- Header -->
       <header class="header" role="banner">
         <div class="container">
           <div class="header__content">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+              <span></span>
+            </button>
+
             <a href="/" class="header__logo font-prata" aria-label="Bagratica Home">
               <div class="logo_div white">
               <img src="./img/logo/Nussunny-white.png" alt="Bagratica Logo" width="150" height="50">
@@ -571,8 +576,8 @@
           
             <nav class="nav" role="navigation" aria-label="Main navigation">
               <ul class="nav__list main_nav">
-                <li class="nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
-                <li class="nav__item"><a href="./pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
+                <li class="nav__item"><a href="/" class="nav__link nav__link--active" aria-current="page">HOME</a></li>
+                <li class="nav__item"><a href="./pages/shop.html" class="nav__link ">SHOP</a></li>
                 <li class="nav__item"><a href="./pages/blog.html" class="nav__link">BLOGS</a></li>
                 <li class="nav__item"><a href="./pages/about-us.html" class="nav__link">ABOUT US</a></li>
                 <li class="nav__item"><a href="./pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
@@ -799,6 +804,23 @@
         <!-- Animated header background -->
         <div class="header__bg"></div>
       </header>
+
+      <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav__header">
+          <h3>Menu</h3>
+          <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
+        </div>
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item"><a href="/" class="mobile-nav__link active">Home</a></li>
+          <li class="mobile-nav__item"><a href="./pages/shop.html" class="mobile-nav__link">Shop</a></li>
+          <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Collections</a></li>
+          <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">About</a></li>
+          <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation Overlay -->
+      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
       <section class="carousel ">
         <div class="carousel__content container">

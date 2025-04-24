@@ -3,13 +3,13 @@ Header
 -------------------- */
 .header{
     // background-color: var(--white);
-    color: var(--black);
+    // color: var(--black);
     position: fixed;
     top: 40px;
     width: 100%;
-    // color: var(--white);
+    color: var(--white);
     padding: 20px 0;
-    z-index: 100;
+    z-index: 10;
     &.shrink {
         background-color: white;
         color: var(--text-dark);
@@ -30,6 +30,7 @@ Header
         align-items: center;
         position: relative;
         z-index: 2;
+        // color: var(--white);
         .logo_div{
             width: 100px;
             height: 100px;
@@ -56,6 +57,7 @@ Header
         cursor: pointer;
         padding: 0;
         margin-right: 10px;
+        
         }
 
         .mobile-menu-btn span {
@@ -98,7 +100,9 @@ Header
         bottom: 0;
         }
         .header__logo{
-        margin-left: 60px;
+            @media (max-width: 768px) { 
+                margin-left: 60px;
+            }
         }
         .nav{   
             @media (max-width: 768px) {
