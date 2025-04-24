@@ -25,7 +25,6 @@
           <div class="top-bar__content">
             <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
             <div class="customer-service">Customer Service (123) 456 7890</div>
-            
           </div>
           
           <!-- Duplicate copy for seamless scrolling -->
@@ -374,44 +373,91 @@
             </div>
             <div class="container">
                 <div class="hero-banner">
-                  
-        
-        
                     <div class="blog">
                         <!-- Sidebar Filters -->
-                        <aside class="filters">
-                  
-                          <!-- Availability Filter -->
-                          <div class="filter">
-                              <div class="filter__header">
-                              <h3 class="filter__title">Popular pots</h3>
-                              <button class="filter__toggle">
-                                  <span class="minus">−</span>
-                              </button>
-                              </div>
-                              <div class="filter__content">
-
-                              sunny
-                              
-                              </div>
+                        <aside class="filters" id="filterSidebar">
+                          <div class="filter-header">
+                            <h3>Filters</h3>
+                            <button class="close-filter-btn" id="closeFilterBtn">
+                                <i class="fas fa-times"></i>
+                            </button>
                           </div>
-                  
-                          <!-- Price Filter -->
                           <div class="filter">
-                              <div class="filter__header">
-                              <h3 class="filter__title">Category</h3>
-                              <button class="filter__toggle">
-                                  <span class="minus">−</span>
-                              </button>
-                              </div>
-                              <div class="filter__content">
-                                <div>
-
+                            <div class="filter__header">
+                            <h3 class="filter__title">Popular posts</h3>
+                            <button class="filter__toggle">
+                                <span class="minus">−</span>
+                            </button>
+                            </div>
+                            <div class="filter__content">
+                              <div class="popular-posts">
+                                <div class="post-item">
+                                    <div class="post-thumbnail">
+                                        <img src="https://umino-demo.myshopify.com/cdn/shop/articles/3_4664beb9-b258-43b0-9497-4d5664d35458.jpg?v=1680238208&width=360" alt="Fashion blog post">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">Good Products For Lovely Girls</a>
+                                        <div class="post-date">NOV 18 2023</div>
+                                    </div>
                                 </div>
+                                
+                                <div class="post-item">
+                                    <div class="post-thumbnail">
+                                        <img src="https://umino-demo.myshopify.com/cdn/shop/articles/3_4664beb9-b258-43b0-9497-4d5664d35458.jpg?v=1680238208&width=360" alt="Swimsuit model">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">Latest Swimsuit Model This Year</a>
+                                        <div class="post-date">NOV 18 2023</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="post-item">
+                                    <div class="post-thumbnail">
+                                        <img src="https://umino-demo.myshopify.com/cdn/shop/articles/3_4664beb9-b258-43b0-9497-4d5664d35458.jpg?v=1680238208&width=360" alt="Summer travel">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">Summer Travel Fashion 2023</a>
+                                        <div class="post-date">NOV 18 2023</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="post-item">
+                                    <div class="post-thumbnail">
+                                        <img src="https://umino-demo.myshopify.com/cdn/shop/articles/3_4664beb9-b258-43b0-9497-4d5664d35458.jpg?v=1680238208&width=360" alt="Fashion allure">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">Exploring the Timeless Allure of Fashion</a>
+                                        <div class="post-date">NOV 18 2023</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="post-item">
+                                    <div class="post-thumbnail">
+                                        <img src="https://umino-demo.myshopify.com/cdn/shop/articles/3_4664beb9-b258-43b0-9497-4d5664d35458.jpg?v=1680238208&width=360" alt="Fashion trends">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">A Chic Journey Through Fashion Trends</a>
+                                        <div class="post-date">NOV 18 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="filter">
+                              <div class="filter__header">
+                              <h3 class="filter__title">Categories</h3>
+                              <button class="filter__toggle">
+                                  <span class="minus">−</span>
+                              </button>
+                              </div>
+                              <div class="filter__content categories">
+                                <div class="category">Design Ideas</div>
+                                <div class="category">Events</div>
+                                <div class="category">Healthier</div>
+                                <div class="category">Technology</div>
+                                <div class="category">Life Style</div>
                               </div>
                           </div>
-                  
-                          <!-- Brand Filter -->
                           <div class="filter">
                               <div class="filter__header">
                               <h3 class="filter__title">Tags</h3>
@@ -419,322 +465,293 @@
                                   <span class="minus">−</span>
                               </button>
                               </div>
-                              <div class="filter__content">
-                              
+                              <div class="filter__content tags">
+                                <div class="tag">Branding</div>
+                                <div class="tag">Business</div>
+                                <div class="tag">Fashion</div>
+                                <div class="tag">Men's</div>
+                                <div class="tag">Shopping</div>
+                                <div class="tag">Summer</div>
                               </div>
                           </div>
-
-
-                        <!-- Featured Products -->
-                        <!-- <div class="filter">
-                        <div class="filter__header">
-                          <h3 class="filter__title">Featured Product</h3>
-                          <button class="filter__toggle">
-                            <span class="minus">−</span>
-                          </button>
-                        </div>
-                        <div class="filter__content">
-                          <div class="featured-products">
-                            <div class="featured-product">
-                              <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_7_1_6858d5e7-b1a2-4f31-92f2-16681ef4dcd4.jpg?v=1679883456&width=533" alt="Short Sleeve Sweater" class="featured-product__image">
-                              <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_7_2.jpg?v=1680665925&width=533" alt="Short Sleeve Sweater" class="featured-product__image">
-
-                              <div class="featured-product__info">
-                                <h4 class="featured-product__title">Short Sleeve Sweater</h4>
-                                <div class="featured-product__rating">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                </div>
-                                <div class="featured-product__price">$175.00</div>
-                              </div>
-                            </div>
-                            
-                            <div class="featured-product">
-                              <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_19_3.jpg?v=1679883376&width=533" alt="Polo-neck Body Dress" class="featured-product__image">
-                              <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_19_1.jpg?v=1679883376&width=533" alt="Polo-neck Body Dress" class="featured-product__image">
-
-                              <div class="featured-product__info">
-                                <h4 class="featured-product__title">Polo-neck Body Dress</h4>
-                                <div class="featured-product__rating">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                </div>
-                                <div class="featured-product__price">$116.00</div>
-                              </div>
-                            </div>
-                            
-                            <div class="featured-product">
-                              <img class="primary-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_10_1_62e4194a-b07b-44e9-aea7-3a1172290af0.jpg?v=1679883360&width=533" alt="Long sleeve Denim" class="featured-product__image">
-                              <img class="hover-image" src="https://umino-demo.myshopify.com/cdn/shop/products/fashion_products_10_2_3743a0d8-bb8c-4e1d-ba0d-db4b80c5cde1.jpg?v=1679883360&width=533" alt="Long sleeve Denim" class="featured-product__image">
-
-                              <div class="featured-product__info">
-                                <h4 class="featured-product__title">Long sleeve Denim</h4>
-                                <div class="featured-product__rating">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                </div>
-                                <div class="featured-product__price">$30.00</div>
-                              </div>
-                            </div>
+                          <!-- Promo Banner -->
+                          <div class="promo-banner">
+                            <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner.png?v=1700473199" alt="Fashion Sale" style="opacity: 0.8;">
+                          <!-- <div class="promo-banner__content">
+                            <div class="promo-banner__title">Perfect</div>
+                            <div class="promo-banner__subtitle">Up to 50% Off</div>
+                            <button class="promo-banner__btn">BUY NOW</button>
+                          </div> -->
                           </div>
-                        </div>
-                        </div> -->
-
-                        <!-- Promo Banner -->
-                        <div class="promo-banner">
-                          <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner.png?v=1700473199" alt="Fashion Sale" style="opacity: 0.8;">
-                        <!-- <div class="promo-banner__content">
-                          <div class="promo-banner__title">Perfect</div>
-                          <div class="promo-banner__subtitle">Up to 50% Off</div>
-                          <button class="promo-banner__btn">BUY NOW</button>
-                        </div> -->
-                        </div>
 
                         </aside>
-                
-                        <div class="blog-grid">
-                            <!-- Fashion Item 1 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Beach Products">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Beach Products For Lovely Girls</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                        <div class="blog-sidebar">
+                          <div class="blog-sidebar__header">
+                            <!-- Filter Toggle Button (Mobile Only) -->
+                            
+                              <button class="filter-toggle-btn" id="filterToggleBtn">
+                                <i class="fas fa-filter"></i>
+                                <span>Filters</span>
+                              </button>
+                              <div class="blog-sidebar__count">There are 30 results in total</div>
+                              <div class="sort">
+                                  <label for="sort-by">Sort by:</label>
+                                  <div class="custom-select">
+                                    <select id="sort-by" class="sort-select">
+                                        <option value="best-selling">Best Selling</option>
+                                        <option value="price-low">Price: Low to High</option>
+                                        <option value="price-high">Price: High to Low</option>
+                                        <option value="newest">Newest</option>
+                                    </select>
+                                    <div class="select-icon">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 2 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Latest Swimsuit Model">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Latest Swimsuit Model This Year</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 3 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Summer Travel Fashion">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Summer Travel Fashion 2023</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 4 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Timeless Allure">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Exploring the Timeless Allure of</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 5 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Chic Journey">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">A Chic Journey Through Fashion</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 6 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Autumn Fashion">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Unique Autumn Fashion Ideas</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 7 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Loose T-shirts">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Tips For Wearing Loose Tshirts</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 8 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Patterned Dresses">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">The History Of Patterned Dresses</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 9 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Shirt Style">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">The Shirt Makes Your Style</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 10 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Fashion Trends">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Fashion Trends This Year 2023</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 11 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Family Swimsuits">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Swimsuits For The Whole Family</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Fashion Item 12 -->
-                            <div class="blog-card">
-                                <div class="blog-image">
-                                    <img src="/api/placeholder/400/320" alt="Picnic Fashion">
-                                    <span class="category">NEWS</span>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="blog-title">Top 5 Picnic Fashion Of Girls</h3>
-                                    <div class="blog-description">
-                                        <p>These are the people who make your life easier.</p>
-                                        <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="blog-date">NOV 18 2023</span>
-                                        <span class="blog-author">POST BY UIHARU DEMO</span>
-                                    </div>
-                                </div>
-                            </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog-sidebar__grid">
+                              <!-- Fashion Item 1 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Beach Products">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Beach Products For Lovely Girls</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 2 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Latest Swimsuit Model">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Latest Swimsuit Model This Year</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 3 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Summer Travel Fashion">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Summer Travel Fashion 2023</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 4 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Timeless Allure">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Exploring the Timeless Allure of</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 5 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Chic Journey">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">A Chic Journey Through Fashion</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 6 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Autumn Fashion">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Unique Autumn Fashion Ideas</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 7 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Loose T-shirts">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Tips For Wearing Loose Tshirts</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 8 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Patterned Dresses">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">The History Of Patterned Dresses</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 9 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Shirt Style">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">The Shirt Makes Your Style</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 10 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Fashion Trends">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Fashion Trends This Year 2023</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 11 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Family Swimsuits">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Swimsuits For The Whole Family</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <!-- Fashion Item 12 -->
+                              <div class="blog-card">
+                                  <div class="blog-image">
+                                      <img src="https://umino-demo.myshopify.com/cdn/shop/articles/6.jpg?v=1700295312&width=1100" alt="Picnic Fashion">
+                                      <span class="category">NEWS</span>
+                                  </div>
+                                  <div class="blog-content">
+                                      <h3 class="blog-title">Top 5 Picnic Fashion Of Girls</h3>
+                                      <div class="blog-description">
+                                          <p>These are the people who make your life easier.</p>
+                                          <p>Large files were arranged on the counter top plate near the window of the living room, they...</p>
+                                      </div>
+                                      <div class="blog-meta">
+                                          <span class="blog-date">NOV 18 2023</span>
+                                          <span class="blog-author">POST BY UIHARU DEMO</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                           <!-- Pagination -->
+                          <div class="pagination">
+                            <button class="pagination__btn pagination__btn--prev" disabled>
+                              <i class="fas fa-chevron-left"></i>
+                            </button>
+                            
+                            <button class="pagination__btn pagination__btn--next">
+                              <i class="fas fa-chevron-right"></i>
+                            </button>
+                          </div>
                         </div>
                     </div>
-
-                  
                 </div>
-
             </div>
         </div>
 
@@ -785,33 +802,8 @@
           <button class="indicator" data-index="2" aria-label="Go to slide 3"></button>
         </div>
       </div>
-  
-       <!-- Recently Viewed sidebar
-       <div class="recently-viewed">
-        <div class="tab-toggle">
-          <span>&raquo;</span>
-        </div>
-        <div class="recently-viewed-box">
-          <button class="btn">
-            <div class="icon">📞</div>
-          </button>
-
-          <button class="btn">
-            <div class="icon">🎁</div>
-          </button>
-        </div>
-      </div> 
-      <div class="floating-buttons">
-        <button class="btn external-link">
-          <div class="icon">🌞</div>
-        </button>
-        <button class="btn scroll-top">
-          <div class="icon">⬆️</div>
-        </button>
-      </div> -->
     </section>
 
-    <!-- Adding new section here -->
      
     <!-- Footer -->    
     <footer class="footer">
@@ -887,137 +879,154 @@
           </div>
       </div>
     </footer>   
-    <section class="hidden">Sunny</section>
     <!-- Load critical scripts first -->
-    <script type="module" src="../js/main.js"></script>    
+    <script type="module" src="../js/main.js"></script>   
+    <script>
+      // Filter Sidebar Toggle
+      const filterToggleBtn = document.getElementById('filterToggleBtn');
+      const filterSidebar = document.getElementById('filterSidebar');
+      const filterOverlay = document.getElementById('filterOverlay');
+      const closeFilterBtn = document.getElementById('closeFilterBtn');
+
+      function toggleFilter() {
+          filterSidebar.classList.toggle('active');
+          filterOverlay.classList.toggle('active');
+          document.body.style.overflow = filterSidebar.classList.contains('active') ? 'hidden' : '';
+      }
+
+      filterToggleBtn.addEventListener('click', toggleFilter);
+      closeFilterBtn.addEventListener('click', toggleFilter);
+      filterOverlay.addEventListener('click', toggleFilter);
+    </script>  
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-  // Get all blog cards
-  const blogCards = document.querySelectorAll('.blog-card');
-  
-  // Add animation classes with delay for staggered appearance
-  blogCards.forEach((card, index) => {
-    // Add initial hidden state
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity var(--transition-normal) ease, transform var(--transition-normal) ease';
-    
-    // Staggered appearance
-    setTimeout(() => {
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0)';
-    }, 80 * index);
-  });
-  
-  // Lazy loading for images
-  const lazyLoadImages = () => {
-    const images = document.querySelectorAll('.blog-image img');
-    
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            
-            // Add loading animation
-            img.style.animation = 'fadeIn var(--transition-normal) ease-in-out';
-            
-            // Stop observing after loading
-            observer.unobserve(img);
-          }
-        });
-      });
-      
-      // Observe each image
-      images.forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
-  };
-  
-  lazyLoadImages();
-  
-  // Add click event to cards for navigation
-  blogCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const title = card.querySelector('.blog-title').textContent;
-      console.log(`Navigating to article: ${title}`);
-      
-      // Add click animation
-      card.classList.add('card-clicked');
-      setTimeout(() => {
-        card.classList.remove('card-clicked');
-      }, 300);
-    });
-  });
-  
-  // Optional: Create simple filtering functionality
-  const addFilterSystem = () => {
-    const categories = ['All', 'Fashion', 'Travel', 'Beauty', 'Lifestyle'];
-    const filterContainer = document.createElement('div');
-    filterContainer.className = 'filter-container';
-    
-    categories.forEach(category => {
-      const button = document.createElement('button');
-      button.className = category === 'All' ? 'filter-btn active' : 'filter-btn';
-      button.textContent = category;
-      
-      button.addEventListener('click', (e) => {
-        // Remove active class from all buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-          btn.classList.remove('active');
-        });
+        // Get all blog cards
+        const blogCards = document.querySelectorAll('.blog-card');
         
-        // Add active class to clicked button
-        e.target.classList.add('active');
-        
-        // Filter cards based on category
-        filterCards(category);
-      });
-      
-      filterContainer.appendChild(button);
-    });
-    
-    // Insert filter at top of container
-    const container = document.querySelector('.container');
-    container.insertBefore(filterContainer, container.firstChild);
-  };
-  
-  // Function to filter cards
-  const filterCards = (category) => {
-    const cards = document.querySelectorAll('.blog-card');
-    
-    if (category === 'All') {
-      cards.forEach(card => {
-        card.style.display = 'block';
-        setTimeout(() => {
-          card.style.opacity = '1';
-        }, 100);
-      });
-    } else {
-      cards.forEach(card => {
-        // This is just for demo - in a real implementation,
-        // you would check the actual category of each card
-        const randomShow = Math.random() > 0.5;
-        
-        if (randomShow) {
-          card.style.display = 'block';
+        // Add animation classes with delay for staggered appearance
+        blogCards.forEach((card, index) => {
+          // Add initial hidden state
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          card.style.transition = 'opacity var(--transition-normal) ease, transform var(--transition-normal) ease';
+          
+          // Staggered appearance
           setTimeout(() => {
             card.style.opacity = '1';
-          }, 100);
-        } else {
-          card.style.opacity = '0';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 500);
-        }
+            card.style.transform = 'translateY(0)';
+          }, 80 * index);
+        });
+        
+        // Lazy loading for images
+        const lazyLoadImages = () => {
+          const images = document.querySelectorAll('.blog-image img');
+          
+          if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const img = entry.target;
+                  
+                  // Add loading animation
+                  img.style.animation = 'fadeIn var(--transition-normal) ease-in-out';
+                  
+                  // Stop observing after loading
+                  observer.unobserve(img);
+                }
+              });
+            });
+            
+            // Observe each image
+            images.forEach(img => {
+              imageObserver.observe(img);
+            });
+          }
+        };
+        
+        lazyLoadImages();
+        
+        // Add click event to cards for navigation
+        blogCards.forEach(card => {
+          card.addEventListener('click', () => {
+            const title = card.querySelector('.blog-title').textContent;
+            console.log(`Navigating to article: ${title}`);
+            
+            // Add click animation
+            card.classList.add('card-clicked');
+            setTimeout(() => {
+              card.classList.remove('card-clicked');
+            }, 300);
+          });
+        });
+        
+        // Optional: Create simple filtering functionality
+        const addFilterSystem = () => {
+          const categories = ['All', 'Fashion', 'Travel', 'Beauty', 'Lifestyle'];
+          const filterContainer = document.createElement('div');
+          filterContainer.className = 'filter-container';
+          
+          categories.forEach(category => {
+            const button = document.createElement('button');
+            button.className = category === 'All' ? 'filter-btn active' : 'filter-btn';
+            button.textContent = category;
+            
+            button.addEventListener('click', (e) => {
+              // Remove active class from all buttons
+              document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+              });
+              
+              // Add active class to clicked button
+              e.target.classList.add('active');
+              
+              // Filter cards based on category
+              filterCards(category);
+            });
+            
+            filterContainer.appendChild(button);
+          });
+          
+          // Insert filter at top of container
+          const container = document.querySelector('.container');
+          container.insertBefore(filterContainer, container.firstChild);
+        };
+        
+        // Function to filter cards
+        const filterCards = (category) => {
+          const cards = document.querySelectorAll('.blog-card');
+          
+          if (category === 'All') {
+            cards.forEach(card => {
+              card.style.display = 'block';
+              setTimeout(() => {
+                card.style.opacity = '1';
+              }, 100);
+            });
+          } else {
+            cards.forEach(card => {
+              // This is just for demo - in a real implementation,
+              // you would check the actual category of each card
+              const randomShow = Math.random() > 0.5;
+              
+              if (randomShow) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                  card.style.opacity = '1';
+                }, 100);
+              } else {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                  card.style.display = 'none';
+                }, 500);
+              }
+            });
+          }
+        };
+        
+        // Uncomment to enable filtering
+        // addFilterSystem();
       });
-    }
-  };
-  
-  // Uncomment to enable filtering
-  // addFilterSystem();
-});
     </script>
+   
   </body>
 </html>

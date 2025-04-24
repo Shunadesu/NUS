@@ -964,59 +964,7 @@
   }
 }
 
-.pagination {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 2;
-  .pagination-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--white);
-    backdrop-filter: blur(4px);
-    transition: background-color var(--transition-fast);
-    
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-    
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  }
-  .pagination-text {
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--white);
-  }
-}
 
-/* --------------------
-   Responsive Styles
--------------------- */
-@media (max-width: 1024px) {
-  :root {
-    --sidebar-width: 220px;
-  }
-  
-  .hero-title {
-    font-size: 42px;
-  }
-  
-  .mega-menu__featured {
-    width: 240px;
-  }
-}
 
 @media (max-width: 768px) {
   :root {
