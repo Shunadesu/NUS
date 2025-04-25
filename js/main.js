@@ -16,6 +16,7 @@ import { initFooterFunctionality } from './modules/footer.js';
 import { init404Page } from './modules/404.js';
 import { createTestimonialSlider } from './modules/testimonial.js';
 import ScrollHandler from './modules/scroll-handler.js';
+import { initCounterAnimation } from './components/counter-animation.js';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -47,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
     init404Page();
   }
   console.log('[Debug] Initialization complete');
+
+  // Initialize counter animation
+  initCounterAnimation();
 });
 
 // Handle page load

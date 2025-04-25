@@ -9,7 +9,8 @@ Header
     width: 100%;
     color: var(--white);
     padding: 20px 0;
-    z-index: 10;
+    z-index: 100;
+
     &.shrink {
         background-color: white;
         color: var(--text-dark);
@@ -20,7 +21,6 @@ Header
         position: fixed;
         top: 0;
     }
-
     &.menu-active {
         color: var(--text-dark);
     }
@@ -31,6 +31,7 @@ Header
         align-items: center;
         position: relative;
         z-index: 2;
+        
         // color: var(--white);
         .logo_div{
             width: 100px;
@@ -47,7 +48,7 @@ Header
         
         .mobile-menu-btn {
         display: none;
-        @media (max-width: 768px) {
+        @media (max-width: 1400px) {
             display: block;
         }
 
@@ -58,7 +59,6 @@ Header
         cursor: pointer;
         padding: 0;
         margin-right: 10px;
-        
         }
 
         .mobile-menu-btn span {
@@ -75,7 +75,7 @@ Header
         position: absolute;
         width: 24px;
         height: 2px;
-        background-color: #000;
+        background-color: black;
         transition: all 0.3s ease;
         }
     
@@ -101,7 +101,7 @@ Header
         bottom: 0;
         }
         .header__logo{
-            @media (max-width: 768px) { 
+            @media (max-width: 1400px) { 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -110,7 +110,7 @@ Header
             }
         }
         .nav{   
-            @media (max-width: 768px) {
+            @media (max-width: 1400px) {
                 display: none;
             }
             .nav__list{
