@@ -1,0 +1,111 @@
+/* Login Page Styles */
+.login-page-main {
+    padding: 40px 0; // Adjust as needed
+    margin-top: 140px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem; // Adjust size
+    font-weight: 600;
+}
+
+.breadcrumb {
+    margin-bottom: 3rem; // Space below breadcrumbs
+    justify-content: center; // Center breadcrumbs
+    ol {
+        justify-content: center;
+    }
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem; // Space between login and new customer sections
+    max-width: 1100px; // Limit overall width
+    margin: 0 auto;
+
+    @media (max-width: 991.98px) {
+        gap: 3rem;
+    }
+
+    @media (max-width: 767.98px) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+.login-form-section,
+.new-customer-section {
+    h2 {
+        font-size: 1.5rem; // Adjust size
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        color: #6c757d; // Bootstrap secondary color
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+}
+
+#login-form {
+    .form-group {
+        margin-bottom: 1.5rem;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            .required {
+                color: red; // Or your theme's required color
+            }
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ced4da; // Bootstrap form input border color
+            border-radius: 25px; // Fully rounded corners like image
+            font-size: 1rem;
+            &:focus {
+                outline: none;
+                border-color: #86b7fe; // Bootstrap focus color
+                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); // Bootstrap focus shadow
+            }
+        }
+    }
+    .form-links {
+        margin-bottom: 1.5rem;
+        .forgot-password {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 25px;
+        // Assumes .btn and .btn-dark provide base button styling
+    }
+}
+
+.new-customer-section {
+    .btn-create {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 25px;
+        // Assumes .btn and .btn-dark provide base button styling
+    }
+} 

@@ -1,0 +1,35 @@
+/* Account Page Styles */
+.account-page-main {
+    padding: 40px 0; // Adjust as needed
+    min-height: 60vh; // Ensure content pushes footer down
+}
+
+// Reuse .page-title and .breadcrumb styles if defined globally or in _login.scss
+// Or redefine them here if needed.
+
+.account-content {
+    max-width: 800px; // Adjust as needed
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: #333;
+        #account-email {
+            font-weight: 600;
+        }
+    }
+
+    #logout-btn {
+        // Assuming .btn and .btn-outline provide base styling
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 25px; // Match login buttons
+    }
+} 

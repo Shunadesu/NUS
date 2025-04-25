@@ -3,205 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Us - Discover Our Story and Mission">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
-    <title>About Us - Nussunny</title>
+    <meta name="description" content="Login or Create an Account - Nussunny">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/logo/LOGO-NUS-01.png" />
+    <title>Login - Nus</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <!-- Page loading spinner -->
-    <div class="loading" id="page-loader"></div>
+    <div class="loading" id="page-loader" role="status" aria-label="Loading"></div>
 
-    <!-- Updated Top Bar with Infinite Scrolling -->
     <div class="top-bar" role="marquee" aria-label="Announcements">
         <div class="top-bar__scroll-container">
+          <!-- First copy of the content -->
           <div class="top-bar__content">
             <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
             <div class="customer-service">Customer Service (123) 456 7890</div>
           </div>
+
+          <!-- Duplicate copy for seamless scrolling -->
           <div class="top-bar__content" aria-hidden="true">
             <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
             <div class="customer-service">Customer Service (123) 456 7890</div>
           </div>
         </div>
     </div>
-
-    <!-- About Us Content -->
-    <div class="about-us-wrapper">
-        <div class="about-content container">
-            <!-- Breadcrumb -->
-            <div class="breadcrumb">
-                <nav aria-label="breadcrumb">
-                    <ol>
-                        <li><a href="/">Home</a></li>
-                        <li class="active">About Us</li>
-                    </ol>
-                </nav>
-            </div>
-    
-            <!-- Hero Section -->
-            <section class="about-hero">
-                <div class="about-hero__content">
-                    <p class="section-subtitle">WELCOME TO NUS</p>
-                    <h1>Perfect Store</h1>
-                    <h1>Available to Everyone!</h1>
-                    <p>Over 20 years of experience, we have meticulously curated collections that transcend fleeting trends, embodying a timeless elegance that resonates with our discerning clientele.</p>
-                </div>
-                <div class="about-hero__image">
-                    <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-us.png?v=1704963946" alt="Our fashion store interior">
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Mission Section -->
-            <section class="about-mission">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="56">0</span>
-                        <span class="stat-suffix">M</span>
-                        <h3>Products for Sale</h3>
-                        <p>That's why we strive to offer a diverse range of products that cater to all styles.</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="9.6">0</span>
-                        <span class="stat-suffix">M</span>
-                        <h3>Happy Customer</h3>
-                        <p>We pride ourselves on creating great products and experiences with our valued customers.</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="13">0</span>
-                        <span class="stat-suffix">M</span>
-                        <h3>Partner Brand</h3>
-                        <p>Partner with brands that share our values, striving to protect our environment.</p>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="unique-things-section">
-                <div class="container"> <!-- Assuming a common container class for centering content -->
-                  <p class="section-subtitle text-center">WHY CHOOSE US</p>
-                  <h1 class="text-center">Our Unique Things</h1>
-                  <p class="section-description text-center">
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra per inceptos vel pretium lectus qua. Nunc id cursus metus ididunt ut labore metus episcing.
-                  </p>
-                  <div class="things-grid">
-                    <div class="thing-item">
-                      <!-- Placeholder image - replace src with actual image path -->
-                      <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner-about.png?v=1704963946" alt="Unique fashion for Women" class="img-fluid rounded">
-                      </div>
-                      <h3 class="item-title">Unique for Women's</h3>
-                      <p class="item-description">Our collections dress a unique and feminine woman. The pieces showcase a timeless style while keeping in mind fashion aesthetics and trends.</p>
-                    </div>
-                    <div class="thing-item">
-                       <!-- Placeholder image - replace src with actual image path -->
-                       <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner-about-2.png?v=1704963946" alt="Elegant fashion for Men" class="img-fluid rounded">
-                       </div>
-                      <h3 class="item-title">Elegant for Men's</h3>
-                      <p class="item-description">From traditional tailoring to the most informal pieces. Our Umino Man collections feature the latest trends with the maximum comfort.</p>
-                    </div>
-                    <div class="thing-item">
-                       <!-- Placeholder image - replace src with actual image path -->
-                       <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner-about-3.png?v=1704963946" alt="Fashion Freedom for Everyone" class="img-fluid rounded">
-                       </div>
-                      <h3 class="item-title">Freedom for Everyone</h3>
-                      <p class="item-description">The designs have been created adopting the current trends, while leaving room for personal expression among young people.</p>
-                    </div>
-                  </div>
-                </div>
-            </section>
-
-            <section class="info-section timeless-products">
-                <div class="info-image">
-                  <div class="img-hover-wrapper">
-                    <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-2.png?v=1704963946" alt="Folded polo shirts in a box" class="img-fluid rounded">
-                  </div>
-                </div>
-                <div class="info-content">
-                  <p class="section-subtitle">OUR QUALITY</p>
-                  <h2 class="section-title">Timeless Products</h2>
-                  <p class="section-description">
-                    At Umino, we're not big on trends. We want you to wear our pieces for years, even decades, to come. That's why we source the finest materials and factories for our timeless products— like our Grade-A cashmere sweaters, Italian shoes, and Peruvian Pima tees.
-                  </p>
-                   <a href="#" class="btn btn-dark">LEARN MORE</a>
-                </div>
-            </section>
-           
-            <section class="info-section best-product">
-              <div class="info-content">
-                <p class="section-subtitle">OUR FACTORIES</p>
-                <h2 class="section-title">The Best Product</h2>
-                <p class="section-description">
-                  We spend months finding the best factories around the world—the same ones that produce your favorite designer labels. We visit them often and build strong personal relationships with the owners. Each factory is given a compliance audit to evaluate factors like fair wages.
-                </p>
-                <a href="#" class="btn btn-dark">LEARN MORE</a> <!-- Assuming btn and btn-dark classes exist -->
-              </div>
-              <div class="info-image">
-                <!-- Placeholder image - replace src -->
-                <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-1.png?v=1704963946" alt="Woman in a clothing factory" class="img-fluid rounded">
-                </div>
-              </div>
-            </section>
-        </div>
-
-        
-        <section class="about-us-quote-section">
-          <div class="container"> <!-- Use container for text width limit -->
-            <blockquote class="about-us-quote-text">
-              " Umino will become an example of the responsible business model by doing business with kindness, profit and bringing practical and long-term values to customers, employees, partners, the community for the environment and for shareholders "
-            </blockquote>
-            <p class="about-us-quote-author">Michael Anthony, CEO & Founder Umino</p>
-          </div>
-        </section>
-        
-        <!-- ========== START MORE TO EXPLORE SECTION ========== -->
-        <section class="more-explore-section">
-          <div class="container"> <!-- Use container for centering and width limit -->
-            <p class="section-subtitle text-center">HOW WE WORK</p>
-            <h2 class="section-title text-center">More to Explore</h2>
-            <p class="section-description text-center">
-              At Umino, our work culture is deeply rooted in collaboration, innovation and passion. We believe that a positive and inclusive work environment is the foundation for creativity and success.
-            </p>
-            <div class="explore-grid">
-              <div class="explore-item">
-                <!-- Placeholder image - replace src -->
-                <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-3.png?v=1704963945" alt="Team high-fiving in office" class="img-fluid rounded">
-                </div>
-                <h3 class="item-title">Who We Are</h3>
-                <p class="item-description">Adipisicing elit sed do eiusmod tempor labore et dolore dignissimos cumque. Excepteur sint occaecat cupidatat proident.</p>
-              </div>
-              <div class="explore-item">
-                 <!-- Placeholder image - replace src -->
-                 <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-4.png?v=1704963945" alt="Delivery man holding a package" class="img-fluid rounded">
-                 </div>
-                <h3 class="item-title">Our Products</h3>
-                <p class="item-description">Adipisicing elit sed do eiusmod tempor labore et dolore dignissimos cumque. Excepteur sint occaecat cupidatat proident.</p>
-              </div>
-              <div class="explore-item">
-                 <!-- Placeholder image - replace src -->
-                 <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-5.png?v=1704963945" alt="Team working on laptops" class="img-fluid rounded">
-                 </div>
-                <h3 class="item-title">Our Careers</h3>
-                <p class="item-description">Adipisicing elit sed do eiusmod tempor labore et dolore dignissimos cumque. Excepteur sint occaecat cupidatat proident.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ========== END MORE TO EXPLORE SECTION ========== -->
-
-    </div>
-
-     <!-- Header -->
-     <header class="header text-black">
+    <!-- Header (Assuming it's included dynamically or copy-pasted) -->
+    <!-- Header -->
+    <header class="header text-black">
         <div class="container">
           <div class="header__content">
             <!-- Mobile Menu Button -->
@@ -218,8 +48,8 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
-                <li class="nav__item"><a href="/pages/shop.html" class="nav__link ">SHOP</a></li>
-                <li class="nav__item"><a href="/pages/blog.html" class="nav__link nav__link--active">BLOGS</a></li>
+                <li class="nav__item"><a href="/pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
+                <li class="nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
                 <li class="nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
                 <li class="nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
               </ul>
@@ -414,78 +244,65 @@
         </div>
     </header>
 
-    <nav class="mobile-nav" id="mobileNav">
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav" id="mobileNav">
         <div class="mobile-nav__header">
           <h3>Menu</h3>
           <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
         </div>
         <ul class="mobile-nav__list">
           <li class="mobile-nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
-          <li class="mobile-nav__item"><a href="/pages/shop.html" class="nav__link ">SHOP</a></li>
-          <li class="mobile-nav__item"><a href="/pages/blog.html" class="nav__link  nav__link--active">BLOGS</a></li>
+          <li class="mobile-nav__item"><a href="/pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
+          <li class="mobile-nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
           <li class="mobile-nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
           <li class="mobile-nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+      <!-- Mobile Navigation Overlay -->
+      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-    <!-- Modal -->
-    <!-- Cart Sidebar -->
-    <div id="cart-sidebar" class="cart-sidebar font-jost">
-    <div class="cart-content">
-        <div class="cart-header">
-        <h2>REVIEW YOUR CART</h2>
-        <span class="items-count">1 item</span>
+    <main class="login-page-main container">
+        <h1 class="page-title">Login</h1>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <nav aria-label="breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Account</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="login-container">
+            <div class="login-form-section">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email <span class="required">*</span></label>
+                        <input type="email" id="login-email" placeholder="Your email*" required>
                     </div>
-                    
-        <p class="free-shipping-info">Only $791.00 away from Free Shipping.</p>
-
-        
-        <div class="cart-items">
-        <div class="cart-item">
-            <div class="item-image">
-            <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/80w/attribute_rule_images/401_source_1636082935.jpg" alt="Product image">
-                </div>
-            <div class="item-details">
-            <h3 class="item-title">[Sample Product 60] - Bag And Accessory Boutiques For Sale</h3>
-            <p class="item-variant">Tonys Pink / XS <span class="edit-icon">✎</span></p>
-            <p class="item-price">$209.00</p>
-            
-            <div class="item-quantity">
-                <label for="quantity">Quantity:</label>
-                <div class="quantity-control">
-                <input type="number" id="quantity" name="quantity" value="1" min="1">
-                <div class="quantity-buttons">
-                    <button class="quantity-up">▲</button>
-                    <button class="quantity-down">▼</button>
-                </div>
-                </div>
-                <button class="remove-btn">Remove</button>
+                    <div class="form-group">
+                        <label for="login-password">Password <span class="required">*</span></label>
+                        <input type="password" id="login-password" placeholder="Password*" required>
+                    </div>
+                    <div class="form-links">
+                      <a href="#" class="forgot-password">Forgot your password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-submit">SUBMIT</button>
+                </form>
             </div>
-                    </div>
-                    </div>
-                </div>
-        
-        <div class="cart-summary">
-        <div class="summary-row">
-            <span>Subtotal:</span>
-            <span class="price">$209.00</span>
-                    </div>
-        <div class="summary-row total">
-            <span>Grand total:</span>
-            <span class="price">$209.00</span>
-                </div>
-                </div>
-        
-        <div class="cart-actions">
-        <button class="checkout-btn">CHECK OUT NOW</button>
-        <button class="view-cart-btn">VIEW CART</button>
+
+            <div class="new-customer-section">
+                <h2>New Customer</h2>
+                <p>Sign up for early Sale access plus tailored new arrivals, trends and promotions. To opt out, click unsubscribe in our emails.</p>
+                <button type="button" id="create-account-btn" class="btn btn-dark btn-create">CREATE ACCOUNT</button>
+            </div>
         </div>
-        </div>
-    </div>
-     <!-- Footer Section -->
+    </main>
+
+    <!-- Footer (Assuming it's included dynamically or copy-pasted) -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
             <!-- Logo and contact info -->
@@ -559,6 +376,8 @@
             </div>
         </div>
     </footer>
+
     <script type="module" src="../js/main.js"></script>
+    <!-- Add login specific script if needed, or handle in main.js -->
 </body>
-</html>
+</html> 

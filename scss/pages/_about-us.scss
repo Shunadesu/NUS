@@ -4,6 +4,17 @@
   font-family: var(--font-primary);
 }
 
+// Shared image hover wrapper
+.img-hover-wrapper {
+    display: block; // Or inline-block, depending on context
+    overflow: hidden;
+    img {
+        display: block; // Prevent extra space below image
+        width: 100%; // Ensure image fills wrapper
+        transition: transform 0.3s ease;
+    }
+}
+
 /* Breadcrumb styles */
 .breadcrumb {
   ol {
@@ -90,10 +101,14 @@
   }
 
   &__image {
+    .img-hover-wrapper {
+        border-radius: 10px; // Apply radius to wrapper
+    }
     img {
       width: 100%;
       height: auto;
       border-radius: 10px;
+      
     }
   }
 }
@@ -108,7 +123,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 
   @media (max-width: 992px) {
@@ -206,8 +221,6 @@
   }
 }
 
-
-
 .things-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -215,9 +228,13 @@
   text-align: left;
   margin-top: 30px;
   .thing-item{
+    .img-hover-wrapper {
+        border-radius: 0.375rem; // Apply radius to wrapper
+        margin-bottom: 1.5rem; // Move margin here if needed
+    }
 
     .img-fluid {
-      margin-bottom: 1.5rem; /* Increased margin */
+      margin-bottom: 0; // Removed margin if moved to wrapper
       border-radius: 0.375rem; /* Bootstrap default rounded */
     }
      .item-title {
@@ -234,8 +251,6 @@
     }
   } 
 }
-
-
 
 /* Responsive adjustments */
 @media (max-width: 991.98px) { /* Bootstrap md breakpoint */
@@ -345,11 +360,13 @@
   }
 
   .info-image {
+    .img-hover-wrapper {
+        border-radius: 0.5rem; // Apply radius to wrapper
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); // Apply shadow to wrapper
+    }
     img {
-      // Assuming img-fluid sets width: 100%; height: auto;
-      // Assuming rounded class adds border-radius
       border-radius: 0.5rem; // Slightly larger radius
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: none; // Remove shadow from image itself if applied to wrapper
     }
   }
 
@@ -501,13 +518,17 @@
   }
 
   .explore-item {
-     // Styles specific to each item container if needed
+     .img-hover-wrapper {
+        border-radius: 0.5rem; // Apply radius to wrapper
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); // Apply shadow to wrapper
+        margin-bottom: 1.5rem; // Move margin here if needed
+    }
   }
 
   .explore-item .img-fluid {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0; // Remove margin if moved to wrapper
     border-radius: 0.5rem; // Match other rounded images
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); // Subtle shadow
+    box-shadow: none; // Remove shadow from image itself if applied to wrapper
   }
 
   .explore-item .item-title {
