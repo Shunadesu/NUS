@@ -2,7 +2,7 @@
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    // width: 80%;
     overflow: hidden;
   }
   .swiper-slide {
@@ -67,7 +67,7 @@
     z-index: 10;
 
     &::after {
-      font-size: 2rem;
+      font-size: 1rem !important;
       color: black;
     }
   }

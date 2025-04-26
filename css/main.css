@@ -1748,6 +1748,11 @@ img {
   width: 80%;
   margin: 0 auto;
 }
+.carousel .view-all-btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* Product Action Container */
 /* Button Container */
@@ -3068,7 +3073,6 @@ img {
   height: fit-content;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
   overflow: hidden;
 }
 
@@ -3130,7 +3134,7 @@ img {
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 2rem;
+  font-size: 1rem !important;
   color: black;
 }
 
