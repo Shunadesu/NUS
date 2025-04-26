@@ -1,7 +1,7 @@
 /* About Us Page Styles */
 .about-us-wrapper {
   margin-top: 140px;
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
 }
 
 // Shared image hover wrapper
@@ -83,7 +83,7 @@
     h1 {
         font-size: 2.5rem;
         font-weight: 500;
-        font-family: var(--font-primary);
+        font-family: var(--font-secondary);
         text-align: center;
         @media (max-width: 768px) {
             font-size: 1.75rem;
@@ -148,7 +148,7 @@
     font-weight: 600;
     color: #000;
  
-    font-family: var(--font-primary);
+    
   }
 
   .stat-suffix {
@@ -157,7 +157,7 @@
     font-weight: 600;
     color: #000;
 
-    font-family: var(--font-primary);
+    
   }
 
   h3 {
@@ -205,7 +205,7 @@
   h1 {
     font-size: 2.5rem;
     font-weight: 500;
-    font-family: var(--font-primary);
+    
     text-align: center;
     @media (max-width: 768px) {
         font-size: 1.75rem;
@@ -323,7 +323,7 @@
     .section-title {
       font-size: 2rem;
         font-weight: 500;
-        font-family: var(--font-primary);
+        
         text-align: center;
         @media (max-width: 768px) {
             font-size: 1.75rem;
@@ -453,7 +453,7 @@
   .about-us-quote-author {
     font-size: 1rem;
     color: white;
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-weight: 400;
   }
 

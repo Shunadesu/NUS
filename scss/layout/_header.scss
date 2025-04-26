@@ -10,7 +10,7 @@ Header
     color: var(--white);
     padding: 20px 0;
     z-index: 30;
-
+    font-family: var(--font-secondary);
     &.shrink {
         background-color: white;
         color: var(--text-dark);

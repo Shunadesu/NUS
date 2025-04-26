@@ -1,27 +1,86 @@
-/* Account Page Styles */
-.account-page-main {
-    padding: 40px 0; // Adjust as needed
-    min-height: 60vh; // Ensure content pushes footer down
+.account-page {
+    padding: 40px 0;
+    margin-top: 140px;
+    // max-width: 1100px;
+    @media screen and (max-width: 768px) {
+        padding: 20px 0;
+    }
+    .account-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            margin-bottom: 3rem; // Space below breadcrumbs
+            justify-content: center; // Center breadcrumbs
+            ol {
+                justify-content: center;
+            }
+        }
+    }
+    .account-layout {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+        .account-sidebar {
+            .account-nav {
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                    li{
+                        padding: 10px;
+                        cursor: pointer;
+                        &:hover {
+                        color: var(--color-primary);
+                        font-weight: 600;
+                    }
+                }
+
+                #logout-btn {
+                    cursor: pointer;
+                    &:hover {
+                        color: var(--color-primary);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-// Reuse .page-title and .breadcrumb styles if defined globally or in _login.scss
-// Or redefine them here if needed.
-
 .account-content {
-    max-width: 800px; // Adjust as needed
     margin: 0 auto;
     padding: 2rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #fff;
-
-    p {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        color: #333;
-        #account-email {
-            font-weight: 600;
-        }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    .account-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     #logout-btn {
@@ -32,4 +91,41 @@
         text-transform: uppercase;
         border-radius: 25px; // Match login buttons
     }
+    .view-address-btn {
+        width: fit-content;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        border: 1px solid black;
+        background-color: var(--color-primary);
+        color: black;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+        
+    }
+
+    
 } 
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  .order-table th, .order-table td {
+    border: 1px solid #e5e5e5;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  .order-table th {
+    background: #f8f9fa;
+  }
+
+  

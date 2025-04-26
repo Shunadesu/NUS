@@ -5,6 +5,7 @@
     padding: 40px 0; // Adjust as needed
     min-height: 60vh; // Ensure content pushes footer down
     margin-top: 140px;
+    font-family: var(--font-secondary);
 }
 
 // Reuse .page-title and .breadcrumb styles from _login.scss or global styles
@@ -57,6 +58,14 @@
         font-weight: 600;
         text-transform: uppercase;
         border-radius: 25px;
+        background-color: var(--color-primary);
+        color: black;
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
         margin-bottom: 1rem; // Space between buttons
         // Assumes .btn, .btn-dark, .btn-outline provide base button styling
     }

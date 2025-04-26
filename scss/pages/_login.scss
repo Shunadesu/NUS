@@ -2,6 +2,7 @@
 .login-page-main {
     padding: 40px 0; // Adjust as needed
     margin-top: 140px;
+    font-family: var(--font-secondary);
 }
 
 .page-title {
@@ -94,6 +95,14 @@
         font-weight: 600;
         text-transform: uppercase;
         border-radius: 25px;
+        background-color: var(--color-primary);
+        color: black;
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
         // Assumes .btn and .btn-dark provide base button styling
     }
 }
@@ -106,6 +115,14 @@
         font-weight: 600;
         text-transform: uppercase;
         border-radius: 25px;
+        background-color: var(--color-primary);
+        color: black;
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
         // Assumes .btn and .btn-dark provide base button styling
     }
 } 

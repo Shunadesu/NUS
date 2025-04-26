@@ -56,7 +56,8 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
   color: var(--text-color);
   min-height: 100vh;
   position: relative;
@@ -225,4 +226,31 @@ img {
 
 .text-black{
   color: var(--black) !important;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: var(--border-radius-sm);
+  transition: background var(--transition-fast);
+
+  &:hover {
+    background: var(--text-color);
+  }
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-light) var(--bg-color);
 }

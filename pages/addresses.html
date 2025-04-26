@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Addresses - Nussunny">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <title>Your Addresses - Sunny</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- Page loading spinner -->
+    <div class="loading" id="page-loader"></div>
+
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Your Addresses</h1>
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Addresses
+            </nav>
+        </header>
+
+        <div class="account-layout">
+            <aside class="sidebar">
+                <nav class="account-nav">
+                    <ul>
+                        <li><a href="account.html" class="dashboard">Dashboard</a></li>
+                        <li class="active"><a href="addresses.html" class="addresses">Your addresses</a></li>
+                        <li><a href="#" class="wishlist">Your Wishlist</a></li>
+                        <li><button id="logout-btn" class="btn btn-outline">LOGOUT</button></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="account-content">
+                <div class="addresses-header">
+                    <h2>Your addresses (1)</h2>
+                    <button class="add-address-btn">ADD A NEW ADDRESS</button>
+                </div>
+
+                <section class="default-addresses">
+                    <h3>Default addresses</h3>
+                    <div class="address-card">
+                        <div class="address-type">Addresses (Default addresses)</div>
+                        <div class="address-details">
+                            <p class="name">Pham Nam</p>
+                            <p class="email">nampham100802@gmail.com</p>
+                            <p class="country">United States</p>
+                        </div>
+                        <div class="address-actions">
+                            <button class="edit-btn">EDIT</button>
+                            <button class="delete-btn">DELETE</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="deleteAddressModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Delete Address</h2>
+                <button class="close-modal" data-modal="delete">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this address?</p>
+                <div class="form-actions">
+                    <button class="delete-confirm-btn">DELETE</button>
+                    <button class="cancel-btn" data-modal="delete">CANCEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Address Modal -->
+    <div class="modal" id="editAddressModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit address: <span class="edit-title">Default addresses</span></h2>
+                <button class="close-modal" data-modal="edit">&times;</button>
+            </div>
+            <form id="editAddressForm" class="address-form">
+                <input type="hidden" id="addressId" name="addressId">
+                <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Company">
+                </div>
+
+                <div class="form-group">
+                    <label for="address1">Address 1</label>
+                    <input type="text" id="address1" name="address1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address2">Address 2</label>
+                    <input type="text" id="address2" name="address2">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country/region</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select a country/region</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="GB">United Kingdom</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="postal">Postal/ZIP code</label>
+                    <input type="text" id="postal" name="postal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="defaultAddress" name="defaultAddress">
+                    <label for="defaultAddress">Set as default address</label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="update-btn">UPDATE ADDRESS</button>
+                    <button type="button" class="cancel-btn" data-modal="edit">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Template for address card -->
+    <template id="addressCardTemplate">
+        <div class="address-card" data-address-id="">
+            <div class="address-type">Default addresses</div>
+            <div class="address-details">
+                <p class="name"></p>
+                <p class="company"></p>
+                <p class="address1"></p>
+                <p class="address2"></p>
+                <p class="city-state"></p>
+                <p class="country"></p>
+                <p class="phone"></p>
+            </div>
+            <div class="address-actions">
+                <button class="edit-btn">EDIT</button>
+                <button class="delete-btn">DELETE</button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="../js/main.js"></script>
+    <script src="../js/addresses.js"></script>
+</body>
+</html> 
