@@ -2579,6 +2579,7 @@ img {
   font-family: var(--font-primary);
 }
 .brand .brand__container {
+  margin-top: 20px;
   width: 90%;
   height: 100%;
 }
