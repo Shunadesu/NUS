@@ -160,17 +160,22 @@
                     </a>
                   </li>
                   <li class="sidebar__item" data-category="ABOUT US">
-                    <a href="#about-us" class="sidebar__link">
+                    <a href="./pages/about-us.html" class="sidebar__link">
                       ABOUT US
                     </a>
                   </li>
+                  <li class="sidebar__item" data-category="CONTACT US">
+                    <a href="./pages/contact-us.html" class="sidebar__link">
+                      CONTACT US
+                    </a>
+                  </li>
                   <li class="sidebar__item" data-category="POLICY">
-                    <a href="#policy" class="sidebar__link">
+                    <a href="./pages/policy.html" class="sidebar__link">
                       POLICY
                     </a>
                   </li>
                   <li class="sidebar__item" data-category="MEMBERSHIP">
-                    <a href="#membership" class="sidebar__link">
+                    <a href="./pages/membership.html" class="sidebar__link">
                       MEMBERSHIP
                     </a>
                   </li>
@@ -579,7 +584,9 @@
                   <li class="nav__item"><a href="/" class="nav__link nav__link--active" aria-current="page">HOME</a></li>
                   <li class="nav__item"><a href="/pages/shop.html" class="nav__link ">SHOP</a></li>
                   <li class="nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
-                  <li class="nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
+                  <li class="nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT</a></li>
+                  <li class="nav__item"><a href="/pages/contact-us.html" class="nav__link">CONTACT</a></li>
+                  <li class="nav__item"><a href="/pages/policy.html" class="nav__link">POLICY</a></li>
                   <li class="nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
                 </ul>
               </nav>
@@ -766,10 +773,10 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
                 </button>
 
-                <button class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <a href="/pages/cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                   <span class="cart-count" aria-live="polite">0</span>
-                </button>
+                </a>
                     
               </div>
             </div>
@@ -787,7 +794,9 @@
             <li class="mobile-nav__item"><a href="/" class="mobile-nav__link nav__link--active" aria-current="page">HOME</a></li>
             <li class="mobile-nav__item"><a href="/pages/shop.html" class="mobile-nav__link ">SHOP</a></li>
             <li class="mobile-nav__item"><a href="/pages/blog.html" class="mobile-nav__link">BLOGS</a></li>
-            <li class="mobile-nav__item"><a href="/pages/about-us.html" class="mobile-nav__link">ABOUT US</a></li>
+            <li class="mobile-nav__item"><a href="/pages/about-us.html" class="mobile-nav__link">ABOUT</a></li>
+            <li class="mobile-nav__item"><a href="/pages/contact-us.html" class="mobile-nav__link">CONTACT</a></li>
+            <li class="mobile-nav__item"><a href="/pages/policy.html" class="mobile-nav__link">POLICY</a></li>
             <li class="mobile-nav__item"><a href="/pages/membership.html" class="mobile-nav__link">MEMBERSHIP</a></li>
           </ul>
         </nav>
@@ -1798,7 +1807,7 @@
           </div>
         </section>
 
-        <section class="carousel ">
+        <section class="carousel">
             <div class="carousel__content container">
               <h1 class="carousel__title font-accent">Highlights</h1>
               <div class="carousel__categories">
@@ -3128,62 +3137,7 @@
           </div>
         </footer>
       </div>
-
-      <!-- Modal -->
-      <!-- Cart Sidebar -->
-      <div id="cart-sidebar" class="cart-sidebar font-jost">
-        <div class="cart-content">
-          <div class="cart-header">
-            <h2>REVIEW YOUR CART</h2>
-            <span class="items-count">1 item</span>
-                      </div>
-                      
-          <p class="free-shipping-info">Only $791.00 away from Free Shipping.</p>
-
-          
-          <div class="cart-items">
-            <div class="cart-item">
-              <div class="item-image">
-                <img src="https://cdn11.bigcommerce.com/s-4kqhmhfa8l/images/stencil/80w/attribute_rule_images/401_source_1636082935.jpg" alt="Product image">
-                    </div>
-              <div class="item-details">
-                <h3 class="item-title">[Sample Product 60] - Bag And Accessory Boutiques For Sale</h3>
-                <p class="item-variant">Tonys Pink / XS <span class="edit-icon">✎</span></p>
-                <p class="item-price">$209.00</p>
-                
-                <div class="item-quantity">
-                  <label for="quantity">Quantity:</label>
-                  <div class="quantity-control">
-                    <input type="number" id="quantity" name="quantity" value="1" min="1">
-                    <div class="quantity-buttons">
-                      <button class="quantity-up">▲</button>
-                      <button class="quantity-down">▼</button>
-                  </div>
-                  </div>
-                  <button class="remove-btn">Remove</button>
-                </div>
-                      </div>
-                      </div>
-                    </div>
-          
-          <div class="cart-summary">
-            <div class="summary-row">
-              <span>Subtotal:</span>
-              <span class="price">$209.00</span>
-                      </div>
-            <div class="summary-row total">
-              <span>Grand total:</span>
-              <span class="price">$209.00</span>
-                    </div>
-                  </div>
-          
-          <div class="cart-actions">
-            <button class="checkout-btn">CHECK OUT NOW</button>
-            <button class="view-cart-btn">VIEW CART</button>
-            </div>
-          </div>
-      </div>
-
+      
       <!-- Initialize Swiper -->
       <!-- Add this before closing body tag -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

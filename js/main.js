@@ -5,7 +5,6 @@ import { setupSearch, submitSearch } from './modules/search.js';
 import { initModals } from './modules/modal.js';
 import { initUI } from './modules/ui.js';
 import { initProducts } from './modules/products.js';
-import { initCart } from './modules/cart.js';
 import { initPagination } from './modules/pagnigation.js';                 
 import { initProductOptions } from './modules/product-options.js';
 import { initFullscreenGallery } from './modules/fullscreen-gallery.js';
@@ -17,6 +16,7 @@ import { init404Page } from './modules/404.js';
 import { createTestimonialSlider } from './modules/testimonial.js';
 import ScrollHandler from './modules/scroll-handler.js';
 import { initCounterAnimation } from './components/counter-animation.js';
+import { initCartStorage, addToCart, getCartCount, updateCartCount } from './modules/cart.js';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,13 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
   setupSearch();
   submitSearch();
   initUI();
+  
+  initCartStorage();
+  addToCart();
+  getCartCount();
+  updateCartCount();
 
+  
   const testimonialContainer = document.querySelector('.testimonial-container');
   if (testimonialContainer) {
     const testimonialSlider = createTestimonialSlider(testimonialContainer);
   }
   initPriceSlider();
-  initCart();
   initNotifications();
   initModals();
   initProducts();
