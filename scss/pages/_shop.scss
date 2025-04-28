@@ -588,7 +588,7 @@
             transform: translateZ(0);
             backface-visibility: hidden;
             perspective: 1000px;
-            
+            border: 1px solid var(--border-color);
             &.animate-in {
                 opacity: 1;
                 transform: translateY(0);
@@ -597,6 +597,7 @@
             &:hover {
                 transform: scale(1.008) translateY(-1px);
                 z-index: 1;
+                box-shadow: var(--shadow-md);
                 // box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
                 transition-duration: 0.3s;
             }

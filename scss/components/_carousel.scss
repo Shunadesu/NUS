@@ -43,9 +43,25 @@
     }
 
     .view-all-btn {
+       width: fit-content;
         display: block;
-        margin: 0 auto;
+        margin: 40px auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid var(--white);
         text-align: center;
+        color: var(--primary-color);
+        font-weight: 500;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        @media (max-width: 767px) {
+            font-size: 1rem;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+        
+
     }
 }
 

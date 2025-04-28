@@ -78,3 +78,16 @@
       opacity: 1;
     }
   }
+.swiper-scrollbar{
+    position: relative !important;
+    z-index: 10 !important;
+    
+    .swiper-scrollbar-horizontal{
+        position: relative !important;
+        z-index: 10 !important;
+        
+        .swiper-scrollbar-drag{
+            background-color: #000 !important;
+        }
+    }
+}

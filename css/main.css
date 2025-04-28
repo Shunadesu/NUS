@@ -1749,9 +1749,25 @@ img {
   margin: 0 auto;
 }
 .carousel .view-all-btn {
+  width: fit-content;
   display: block;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--white);
   text-align: center;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .carousel .view-all-btn {
+    font-size: 1rem;
+  }
+}
+.carousel .view-all-btn:hover {
+  text-decoration: underline;
 }
 
 /* Product Action Container */
@@ -3143,6 +3159,18 @@ img {
   opacity: 1;
 }
 
+.swiper-scrollbar {
+  position: relative !important;
+  z-index: 10 !important;
+}
+.swiper-scrollbar .swiper-scrollbar-horizontal {
+  position: relative !important;
+  z-index: 10 !important;
+}
+.swiper-scrollbar .swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  background-color: #000 !important;
+}
+
 /* --------------------
 Header
 -------------------- */
@@ -4407,85 +4435,6 @@ Header
   gap: 10px;
   margin-top: 20px;
 }
-.search-popup .products-container .product-card {
-  display: flex;
-  flex-direction: column;
-}
-.search-popup .products-container .product-card .product-image {
-  width: 100%;
-  height: 250px;
-  position: relative;
-}
-.search-popup .products-container .product-card .product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1s, opacity var(--transition-normal);
-  will-change: transform, opacity;
-}
-.search-popup .products-container .product-card .product-image .primary-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.search-popup .products-container .product-card .product-image .primary-image:hover {
-  transform: scale(1.02);
-}
-.search-popup .products-container .product-card .product-image .hover-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.search-popup .products-container .product-card .product-image .hover-image:hover {
-  transform: scale(1.05);
-}
-.search-popup .products-container .product-card .product-image:hover .primary-image {
-  opacity: 0;
-}
-.search-popup .products-container .product-card .product-image:hover .hover-image {
-  opacity: 1;
-}
-.search-popup .products-container .product-card .product-title {
-  font-size: 14px;
-  color: var(--text-dark);
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-.search-popup .products-container .product-card .product-color {
-  color: #666;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-.search-popup .products-container .product-card .product-price {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.search-popup .products-container .product-card .original-price {
-  text-decoration: line-through;
-  color: #999;
-  font-size: 14px;
-  margin-right: 10px;
-}
-.search-popup .products-container .product-card .sale-price {
-  color: var(--accent-color);
-  font-size: 16px;
-  font-weight: 500;
-}
-.search-popup .products-container .product-card .color-options {
-  display: flex;
-  gap: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-.search-popup .products-container .product-card .color-options .color-option {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  cursor: pointer;
-}
 .search-popup .buy-now-btn {
   border: 1px solid var(--text-dark);
   background: transparent;
@@ -4916,70 +4865,6 @@ Header
     color: #333;
   }
 }
-.recently-viewed {
-  max-width: 90px;
-  position: fixed;
-  right: 20px;
-  bottom: 50px;
-  background-color: var(--white);
-  z-index: 2;
-  padding: 10px;
-  transition: all 0.5s ease-in-out;
-}
-.recently-viewed.close {
-  right: -200px;
-}
-.recently-viewed .tab-toggle {
-  position: absolute;
-  left: -20px;
-  top: 0;
-  width: 20px;
-  height: 30px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.recently-viewed .recently-viewed-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.recently-viewed .recently-viewed-box .btn .icon {
-  font-size: 20px;
-}
-.recently-viewed h4 {
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.floating-buttons {
-  max-width: 90px;
-  position: fixed;
-  right: -200px;
-  padding: 10px;
-  bottom: 50px;
-  background-color: var(--white);
-  z-index: 50;
-  transition: all 0.5s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.floating-buttons.open {
-  right: 0;
-}
-.floating-buttons .btn {
-  border: none;
-  background: #fff;
-  cursor: pointer;
-}
-.floating-buttons .btn .icon {
-  font-size: 20px;
-}
-
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -5720,6 +5605,7 @@ Header
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+  border: 1px solid var(--border-color);
 }
 .shop-wapper .products__grid .product-card.animate-in {
   opacity: 1;
@@ -5728,6 +5614,7 @@ Header
 .shop-wapper .products__grid .product-card:hover {
   transform: scale(1.008) translateY(-1px);
   z-index: 1;
+  box-shadow: var(--shadow-md);
   transition-duration: 0.3s;
 }
 .shop-wapper .products__grid .product-card:nth-child(1) {
