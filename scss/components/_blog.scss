@@ -1,9 +1,4 @@
-// Variables
-$primary-color: #000;
-$secondary-color: #fff;
-$background-color: #f8f8f8;
-$border-radius: 25px;
-$transition-speed: 0.3s;
+@import '../abstracts/variable';
 
 // Blog Section
 .blog {

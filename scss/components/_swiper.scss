@@ -62,8 +62,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 45% !important;
     z-index: 10;
 
     &::after {
@@ -71,13 +70,19 @@
       color: black;
     }
   }
-
-  .swiper-container:hover {
-    .swiper-button-next,
-    .swiper-button-prev {
-      opacity: 1;
-    }
+  .swiper-button-next{
+    right: -25px !important;
   }
+  .swiper-button-prev{
+    left: -25px !important;
+  }
+
+.swiper-container:hover {
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 1;
+}
+}
 .swiper-scrollbar{
     position: relative !important;
     z-index: 10 !important;

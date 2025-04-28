@@ -18,7 +18,7 @@
 @import "./components/button";
 @import "./components/form";
 @import "./components/loading";
-@import "./components/to-top";
+
 @import "./components/search";
 @import "./components/breadcrumb";
 @import "./components/pagination";
@@ -38,7 +38,7 @@
 @import "./components/blog";
 @import "./components/membership-section";
 @import "./components/hero";
-
+@import "./components/modal";
 
 
 @import "./components/swiper";
@@ -46,7 +46,6 @@
 // Layout - Page structure components
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/login";
 
 // Pages - Page-specific styles
 @import "./pages/about-us";

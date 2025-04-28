@@ -13,12 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 'default',
             firstName: 'Pham',
             lastName: 'Nam',
-            company: '',
             address1: '123 Main St',
             address2: '',
             city: 'New York',
             country: 'US',
-            postal: '10001',
             phone: '123-456-7890',
             isDefault: true
         }]));
@@ -36,11 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             cardElement.dataset.addressId = address.id;
             cardElement.querySelector('.name').textContent = `${address.firstName} ${address.lastName}`;
-            if (address.company) {
-                cardElement.querySelector('.company').textContent = address.company;
-            } else {
-                cardElement.querySelector('.company').remove();
-            }
             cardElement.querySelector('.address1').textContent = address.address1;
             if (address.address2) {
                 cardElement.querySelector('.address2').textContent = address.address2;
