@@ -9,12 +9,12 @@
     <meta property="og:title" content="Bagratica - Premium Luxury Bags">
     <meta property="og:description" content="Discover our collection of premium luxury bags and accessories">
     <meta property="og:image" content="assets/og-image.jpg">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
-    <title>Bagratica - Premium Luxury Bags</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/LOGO-NUS-01.png" />
+    <title>Nus - Premium Luxury</title>
 
     <!-- Preload critical assets -->
     <link rel="preload" href="css/main.css" as="style">
-    <link rel="preload" href="assets/favicon.ico" as="image">
+    <link rel="preload" href="img/logo/LOGO-NUS-01.png" as="image">
 
     <!-- Load critical CSS first -->
     <link rel="stylesheet" href="css/main.css" />
@@ -25,10 +25,12 @@
 
     <!-- Defer non-critical JavaScript -->
     <script type="module" defer src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Add Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/modules/grid/grid.min.css" />
+
   </head>
 
   <body>
@@ -125,25 +127,25 @@
               <nav class="sidebar" aria-label="Main Navigation">
                 <ul class="sidebar__menu">
                   <li class="sidebar__item" data-category="NEW ARRIVALS">
-                    <a href="#new-arrivals" class="sidebar__link">
+                    <a href="/pages/new-arrival.html" class="sidebar__link">
                       NEW ARRIVALS
                       <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
                     </a>
                   </li>
                   <li class="sidebar__item" data-category="CLOTHES">
-                    <a href="#clothes" class="sidebar__link">
+                    <a href="/pages/clothes.html" class="sidebar__link">
                       CLOTHES
                       <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
                     </a>
                   </li>
                   <li class="sidebar__item" data-category="ACCESSORIES">
-                    <a href="#accessories" class="sidebar__link">
+                    <a href="/pages/accessories.html" class="sidebar__link">
                       ACCESSORIES
                       <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
                     </a>
                   </li>
                   <li class="sidebar__item" data-category="BRANDS">
-                    <a href="#brands" class="sidebar__link">
+                    <a href="/pages/shop.html" class="sidebar__link">
                       BRANDS
                       <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
                     </a>
@@ -3138,12 +3140,7 @@
         </footer>
       </div>
       
-      <!-- Initialize Swiper -->
-      <!-- Add this before closing body tag -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <!-- Initialize modules -->
-      <script type="module" src="js/main.js"></script>
-      <!-- Add this before closing body tag -->
+
       <script>
         const brandSwiper = new Swiper('.brand-swiper', {
           slidesPerView: "auto",

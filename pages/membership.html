@@ -3,198 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Us - Discover Our Story and Mission">
+    <meta name="description" content="Membership - Join Our Exclusive Membership Program">
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo/LOGO-NUS-01.png" />
-    <title>NUS - About Us</title>
+    <title>NUS - Membership</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    
-
     <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+    <!-- Page loading spinner -->
+    <div class="loading" id="page-loader" role="status" aria-label="Loading"></div>
 
-    <div class="loading" id="page-loader"></div>
-
-    <!-- Updated Top Bar with Infinite Scrolling -->
     <div class="top-bar" role="marquee" aria-label="Announcements">
         <div class="top-bar__scroll-container">
+          <!-- First copy of the content -->
           <div class="top-bar__content">
             <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
             <div class="customer-service">Customer Service (123) 456 7890</div>
           </div>
+
+          <!-- Duplicate copy for seamless scrolling -->
           <div class="top-bar__content" aria-hidden="true">
             <div class="guarantee">GENUINE &amp; OFFICIAL PRODUCT GUARANTEE</div>
             <div class="customer-service">Customer Service (123) 456 7890</div>
           </div>
         </div>
     </div>
-
-    <!-- About Us Content -->
-    <div class="about-us-wrapper">
-        <div class="about-content container">
-           
-    
-            <!-- Hero Section -->
-            <section class="about-hero">
-                <div class="about-hero__content">
-                    <p class="section-subtitle">WELCOME TO NUS</p>
-                    <h1>Perfect Store</h1>
-                    <h1>Available to Everyone!</h1>
-                    <p>Over 20 years of experience, we have meticulously curated collections that transcend fleeting trends, embodying a timeless elegance that resonates with our discerning clientele.</p>
-                </div>
-                <div class="about-hero__image">
-                    <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-us.png?v=1704963946" alt="Our fashion store interior">
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Mission Section -->
-            <section class="about-mission">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="56">0</span>
-                        <span class="stat-suffix">M</span>
-                        <h3>Products for Sale</h3>
-                        <p>That's why we strive to offer a diverse range of products that cater to all styles.</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="9.6">0</span>
-                        <span class="stat-suffix">M</span>
-                        <h3>Happy Customer</h3>
-                        <p>We pride ourselves on creating great products and experiences with our valued customers.</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="13">0</span>
-                        <span class="stat-suffix">M</span>
-                        <h3>Partner Brand</h3>
-                        <p>Partner with brands that share our values, striving to protect our environment.</p>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="unique-things-section">
-                <div class="container"> <!-- Assuming a common container class for centering content -->
-                  <p class="section-subtitle text-center">WHY CHOOSE US</p>
-                  <h1 class="text-center">Our Unique Things</h1>
-                  <p class="section-description text-center">
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra per inceptos vel pretium lectus qua. Nunc id cursus metus ididunt ut labore metus episcing.
-                  </p>
-                  <div class="things-grid">
-                    <div class="thing-item">
-                      <!-- Placeholder image - replace src with actual image path -->
-                      <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner-about.png?v=1704963946" alt="Unique fashion for Women" class="img-fluid rounded">
-                      </div>
-                      <h3 class="item-title">Unique for Women's</h3>
-                      <p class="item-description">Our collections dress a unique and feminine woman. The pieces showcase a timeless style while keeping in mind fashion aesthetics and trends.</p>
-                    </div>
-                    <div class="thing-item">
-                       <!-- Placeholder image - replace src with actual image path -->
-                       <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner-about-2.png?v=1704963946" alt="Elegant fashion for Men" class="img-fluid rounded">
-                       </div>
-                      <h3 class="item-title">Elegant for Men's</h3>
-                      <p class="item-description">From traditional tailoring to the most informal pieces. Our Umino Man collections feature the latest trends with the maximum comfort.</p>
-                    </div>
-                    <div class="thing-item">
-                       <!-- Placeholder image - replace src with actual image path -->
-                       <div class="img-hover-wrapper">
-                        <img src="https://umino-demo.myshopify.com/cdn/shop/files/banner-about-3.png?v=1704963946" alt="Fashion Freedom for Everyone" class="img-fluid rounded">
-                       </div>
-                      <h3 class="item-title">Freedom for Everyone</h3>
-                      <p class="item-description">The designs have been created adopting the current trends, while leaving room for personal expression among young people.</p>
-                    </div>
-                  </div>
-                </div>
-            </section>
-
-            <section class="info-section timeless-products">
-                <div class="info-image">
-                  <div class="img-hover-wrapper">
-                    <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-2.png?v=1704963946" alt="Folded polo shirts in a box" class="img-fluid rounded">
-                  </div>
-                </div>
-                <div class="info-content">
-                  <p class="section-subtitle">OUR QUALITY</p>
-                  <h2 class="section-title">Timeless Products</h2>
-                  <p class="section-description">
-                    At Umino, we're not big on trends. We want you to wear our pieces for years, even decades, to come. That's why we source the finest materials and factories for our timeless products— like our Grade-A cashmere sweaters, Italian shoes, and Peruvian Pima tees.
-                  </p>
-                   <a href="#" class="btn btn-dark">LEARN MORE</a>
-                </div>
-            </section>
-           
-            <section class="info-section best-product">
-              <div class="info-content">
-                <p class="section-subtitle">OUR FACTORIES</p>
-                <h2 class="section-title">The Best Product</h2>
-                <p class="section-description">
-                  We spend months finding the best factories around the world—the same ones that produce your favorite designer labels. We visit them often and build strong personal relationships with the owners. Each factory is given a compliance audit to evaluate factors like fair wages.
-                </p>
-                <a href="#" class="btn btn-dark">LEARN MORE</a> <!-- Assuming btn and btn-dark classes exist -->
-              </div>
-              <div class="info-image">
-                <!-- Placeholder image - replace src -->
-                <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-1.png?v=1704963946" alt="Woman in a clothing factory" class="img-fluid rounded">
-                </div>
-              </div>
-            </section>
-        </div>
-
-        
-        <section class="about-us-quote-section">
-          <div class="container"> <!-- Use container for text width limit -->
-            <blockquote class="about-us-quote-text">
-              " Umino will become an example of the responsible business model by doing business with kindness, profit and bringing practical and long-term values to customers, employees, partners, the community for the environment and for shareholders "
-            </blockquote>
-            <p class="about-us-quote-author">Michael Anthony, CEO & Founder Umino</p>
-          </div>
-        </section>
-        
-        <!-- ========== START MORE TO EXPLORE SECTION ========== -->
-        <section class="more-explore-section">
-          <div class="container"> <!-- Use container for centering and width limit -->
-            <p class="section-subtitle text-center">HOW WE WORK</p>
-            <h2 class="section-title text-center">More to Explore</h2>
-            <p class="section-description text-center">
-              At Umino, our work culture is deeply rooted in collaboration, innovation and passion. We believe that a positive and inclusive work environment is the foundation for creativity and success.
-            </p>
-            <div class="explore-grid">
-              <div class="explore-item">
-                <!-- Placeholder image - replace src -->
-                <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-3.png?v=1704963945" alt="Team high-fiving in office" class="img-fluid rounded">
-                </div>
-                <h3 class="item-title">Who We Are</h3>
-                <p class="item-description">Adipisicing elit sed do eiusmod tempor labore et dolore dignissimos cumque. Excepteur sint occaecat cupidatat proident.</p>
-              </div>
-              <div class="explore-item">
-                 <!-- Placeholder image - replace src -->
-                 <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-4.png?v=1704963945" alt="Delivery man holding a package" class="img-fluid rounded">
-                 </div>
-                <h3 class="item-title">Our Products</h3>
-                <p class="item-description">Adipisicing elit sed do eiusmod tempor labore et dolore dignissimos cumque. Excepteur sint occaecat cupidatat proident.</p>
-              </div>
-              <div class="explore-item">
-                 <!-- Placeholder image - replace src -->
-                 <div class="img-hover-wrapper">
-                  <img src="https://umino-demo.myshopify.com/cdn/shop/files/about-5.png?v=1704963945" alt="Team working on laptops" class="img-fluid rounded">
-                 </div>
-                <h3 class="item-title">Our Careers</h3>
-                <p class="item-description">Adipisicing elit sed do eiusmod tempor labore et dolore dignissimos cumque. Excepteur sint occaecat cupidatat proident.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ========== END MORE TO EXPLORE SECTION ========== -->
-
-    </div>
-
-     <!-- Header -->
-     <header class="header text-black">
+    <!-- Header (Assuming it's included dynamically or copy-pasted) -->
+    <!-- Header -->
+    <header class="header text-black">
         <div class="container">
           <div class="header__content">
             <!-- Mobile Menu Button -->
@@ -211,8 +49,8 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
-                <li class="nav__item"><a href="/pages/shop.html" class="nav__link ">SHOP</a></li>
-                <li class="nav__item"><a href="/pages/blog.html" class="nav__link nav__link--active">BLOGS</a></li>
+                <li class="nav__item"><a href="/pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
+                <li class="nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
                 <li class="nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
                 <li class="nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
               </ul>
@@ -407,25 +245,189 @@
         </div>
     </header>
 
-    <nav class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav__header">
-          <h3>Menu</h3>
-          <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
+   <!-- Mobile Navigation -->
+   <nav class="mobile-nav" id="mobileNav">
+       <div class="mobile-nav__header">
+       <h3>Menu</h3>
+       <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
+       </div>
+       <ul class="mobile-nav__list">
+       <li class="mobile-nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
+       <li class="mobile-nav__item"><a href="/pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
+       <li class="mobile-nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
+       <li class="mobile-nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
+       <li class="mobile-nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
+       </ul>
+   </nav>
+
+      <!-- Mobile Navigation Overlay -->
+   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Membership Content -->
+    <div class="membership-wrapper">
+        <div class="membership-content container">
+            <!-- Hero Section -->
+            <section class="membership-hero">
+                <div class="membership-hero__content">
+                    <p class="section-subtitle">JOIN OUR MEMBERSHIP</p>
+                    <h1>Buy More, Get More</h1>
+                    <h1>Exclusive Rewards Program</h1>
+                    <p>Shop more, earn more points, and unlock exclusive rewards. The more you shop, the more benefits you'll enjoy!</p>
+                </div>
+            </section>
+
+            <!-- User Info Section -->
+            <div class="user-info-section" id="userInfoSection" style="display: none;">
+                
+                <div class="user-info-content">
+                    <div class="user-info-left">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userEmail"></span>
+                    </div>
+                    <div class="user-info-right">
+                        <div class="points-display">
+                            <i class="fas fa-coins"></i>
+                            <span>Current Points: </span>
+                            <span id="userPoints" class="points-value">0</span>
+                        </div>
+                        <div class="points-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="pointsProgress"></div>
+                                <div class="progress-marker" id="currentPointsMarker"></div>
+                            </div>
+                            <div class="next-level">
+                                <span>Next Level: </span>
+                                <span id="nextLevelPoints">500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Membership Levels Section -->
+            <section class="membership-levels">
+                <div class="membership-grid">
+                    <!-- Regular Member -->
+                    <div class="membership-card">
+                        <div class="membership-card__header">
+                            <h3>Regular Member</h3>
+                            <p class="price">Free</p>
+                        </div>
+                        <div class="membership-card__features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> 1 point per $1 spent</li>
+                                <li><i class="fas fa-check"></i> Basic account access</li>
+                                <li><i class="fas fa-check"></i> Newsletter subscription</li>
+                                <li><i class="fas fa-check"></i> Standard shipping</li>
+                            </ul>
+                        </div>
+                        <div class="membership-card__footer" id="regularMemberFooter">
+                            <a href="/pages/register.html" class="btn btn-outline">Start Earning Points</a>
+                        </div>
+                    </div>
+
+                    <!-- Silver Member -->
+                    <div class="membership-card">
+                        <div class="membership-card__header">
+                            <h3>Silver Member</h3>
+                            <p class="price">500 Points</p>
+                        </div>
+                        <div class="membership-card__features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> 1.5 points per $1 spent</li>
+                                <li><i class="fas fa-check"></i> 5% discount on all purchases</li>
+                                <li><i class="fas fa-check"></i> Free shipping on orders over $100</li>
+                                <li><i class="fas fa-check"></i> Priority customer support</li>
+                                <li><i class="fas fa-check"></i> Early access to sales</li>
+                            </ul>
+                        </div>
+                        <div class="membership-card__footer">
+                            <a href="/pages/register.html" class="btn btn-outline">Reach 500 Points</a>
+                        </div>
+                    </div>
+
+                    <!-- Gold Member -->
+                    <div class="membership-card">
+                        <div class="membership-card__header">
+                            <h3>Gold Member</h3>
+                            <p class="price">1,000 Points</p>
+                        </div>
+                        <div class="membership-card__features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> 2 points per $1 spent</li>
+                                <li><i class="fas fa-check"></i> 10% discount on all purchases</li>
+                                <li><i class="fas fa-check"></i> Free shipping on all orders</li>
+                                <li><i class="fas fa-check"></i> VIP customer support</li>
+                                <li><i class="fas fa-check"></i> Exclusive product previews</li>
+                                <li><i class="fas fa-check"></i> Birthday gift</li>
+                            </ul>
+                        </div>
+                        <div class="membership-card__footer">
+                            <a href="/pages/register.html" class="btn btn-primary">Reach 1,000 Points</a>
+                        </div>
+                    </div>
+
+                    <!-- Diamond Member -->
+                    <div class="membership-card">
+                        <div class="membership-card__header">
+                            <h3>Diamond Member</h3>
+                            <p class="price">2,000 Points</p>
+                        </div>
+                        <div class="membership-card__features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> 3 points per $1 spent</li>
+                                <li><i class="fas fa-check"></i> 15% discount on all purchases</li>
+                                <li><i class="fas fa-check"></i> Free express shipping</li>
+                                <li><i class="fas fa-check"></i> Personal shopping assistant</li>
+                                <li><i class="fas fa-check"></i> Exclusive events access</li>
+                                <li><i class="fas fa-check"></i> Quarterly luxury gift box</li>
+                                <li><i class="fas fa-check"></i> Priority access to limited editions</li>
+                            </ul>
+                        </div>
+                        <div class="membership-card__footer">
+                            <a href="/pages/register.html" class="btn btn-outline">Reach 2,000 Points</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="membership-benefits">
+                <div class="container">
+                    <p class="section-subtitle text-center">WHY JOIN US</p>
+                    <h2 class="section-title text-center">Membership Benefits</h2>
+                    <p class="section-description text-center">
+                        Experience the advantages of being a NUS member with our exclusive rewards program.
+                    </p>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-coins"></i>
+                            <h3>Earn Points</h3>
+                            <p>Earn points with every purchase and watch them multiply as you shop more.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-percentage"></i>
+                            <h3>Bigger Discounts</h3>
+                            <p>Enjoy increasing discounts as you move up through our membership levels.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-gift"></i>
+                            <h3>Exclusive Rewards</h3>
+                            <p>Redeem your points for special rewards and exclusive member-only gifts.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <h3>VIP Treatment</h3>
+                            <p>Get priority access to new products, sales, and special events.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <ul class="mobile-nav__list">
-          <li class="mobile-nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
-          <li class="mobile-nav__item"><a href="/pages/shop.html" class="nav__link ">SHOP</a></li>
-          <li class="mobile-nav__item"><a href="/pages/blog.html" class="nav__link  nav__link--active">BLOGS</a></li>
-          <li class="mobile-nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
-          <li class="mobile-nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
-        </ul>
-    </nav>
+    </div>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-
-    
-     <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
             <!-- Logo and contact info -->
@@ -499,5 +501,77 @@
             </div>
         </div>
     </footer>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        // Check if user is logged in
+        const userEmail = localStorage.getItem('loggedInUserEmail');
+        const userInfoSection = document.getElementById('userInfoSection');
+        const userEmailElement = document.getElementById('userEmail');
+        const regularMemberFooter = document.getElementById('regularMemberFooter');
+        const userPointsElement = document.getElementById('userPoints');
+        const pointsProgressElement = document.getElementById('pointsProgress');
+        const nextLevelPointsElement = document.getElementById('nextLevelPoints');
+
+        // Get user points from localStorage or set default
+        const userPoints = parseInt(localStorage.getItem('userPoints')) || 0;
+
+        if (userEmail) {
+            // Show user info section
+            userInfoSection.style.display = 'block';
+            userEmailElement.textContent = userEmail;
+            
+            // Update points display
+            userPointsElement.textContent = userPoints;
+
+            // Calculate next level and progress
+            let nextLevel = 500;
+            if (userPoints >= 2000) {
+                nextLevel = 'Max Level';
+            } else if (userPoints >= 1000) {
+                nextLevel = 2000;
+            } else if (userPoints >= 500) {
+                nextLevel = 1000;
+            }
+            nextLevelPointsElement.textContent = nextLevel;
+
+            // Calculate progress percentage
+            let progressPercentage = 0;
+            if (userPoints < 500) {
+                progressPercentage = (userPoints / 500) * 100;
+            } else if (userPoints < 1000) {
+                progressPercentage = ((userPoints - 500) / 500) * 100;
+            } else if (userPoints < 2000) {
+                progressPercentage = ((userPoints - 1000) / 1000) * 100;
+            } else {
+                progressPercentage = 100;
+            }
+            pointsProgressElement.style.width = `${progressPercentage}%`;
+            
+            // Hide the "Start Earning Points" button
+            regularMemberFooter.style.display = 'none';
+        } else {
+            // If not logged in, redirect to login page
+            window.location.href = '/pages/login.html';
+        }
+
+    // Update progress marker position based on progress percentage
+    const progressBar = document.querySelector('.progress-bar');
+    const currentPointsMarker = document.getElementById('currentPointsMarker');
+    
+    if (progressBar && currentPointsMarker) {
+        // Get the width of the progress bar
+        const progressBarWidth = progressBar.offsetWidth;
+        
+        // Calculate marker position based on progress percentage
+        const markerPosition = (progressPercentage / 100) * progressBarWidth;
+        
+        // Position the marker
+        currentPointsMarker.style.left = `${markerPosition - 5}px`; // Subtract half marker width (10px/2) for centering
+        
+        // Only show marker if there are points
+        currentPointsMarker.style.display = userPoints > 0 ? 'block' : 'none';
+    }
+    </script>
 </body>
-</html>
+</html> 
