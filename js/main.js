@@ -204,3 +204,23 @@ mobileNavClose.addEventListener('click', toggleMobileMenu);
 mobileNavOverlay.addEventListener('click', toggleMobileMenu);
 });
 
+// Image Fallback
+document.addEventListener('DOMContentLoaded', function() {
+  function handleImageError(img) {
+    // Default fallback image URL
+    const fallbackImage = 'https://www.pace.edu.vn/uploads/news/2019/6/24/ceo080719avajpg.jpg';
+    
+    // Only replace if not already the fallback image
+    if (img.src !== fallbackImage) {
+      img.src = fallbackImage;
+      img.alt = 'Image not available';
+    }
+  }
+
+  // Add event listeners to all images with the 'lazy-image' class
+  const Images = document.querySelectorAll('img');
+  console.log(Images);
+  Images.forEach(img => {
+    img.addEventListener('error', () => handleImageError(img));
+  });
+});
