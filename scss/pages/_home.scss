@@ -101,7 +101,7 @@
    Sidebar
 -------------------- */
 .sidebar {
-  z-index: 2;
+  z-index: 1001;
   width: var(--sidebar-width);
   padding: 20px 0;
   position: absolute;

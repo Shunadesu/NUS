@@ -96,52 +96,50 @@ document.addEventListener('DOMContentLoaded', function() {
   const mainnav = document.querySelector('.nav__list');
   const logoWhite = document.querySelector('.logo_div.white');
   const logoNormal = document.querySelector('.logo_div:not(.white)');
+
+  const menuIconSpan = document.querySelector('.menu-icon-span');
+  const menuIcon = document.querySelector('.menu-icon');
+
   let lastScrollTop = 0;+
- 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > 0) {
-      if (currentScroll > lastScrollTop) {
-        // Cuộn xuống
-        header.classList.add('shrink');
-        if(sidebar){
-          sidebar.classList.add('hide');
-        }
-        if(mainnav){
-          mainnav.classList.remove('main_nav');
-        }
-         // Toggle logo visibility
-         if(logoWhite){
-          logoWhite.style.display = 'none';
-         }
-         if(logoNormal){
-          logoNormal.style.display = 'block';
-         }
-      } else {
-        // Cuộn lên
-        // header.classList.remove('shrink');
-        // sidebar.classList.remove('hide');
-        // mainnav.classList.add('main_nav');
-       
-      }
-    }if (currentScroll === 0) {
-      header.classList.remove('shrink');
-      if(sidebar){
-        sidebar.classList.remove('hide');
-      }
-      if(mainnav){
-        mainnav.classList.add('main_nav');
-      }
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  if (currentScroll > 0) {
+    if (currentScroll > lastScrollTop) {
+      // Cuộn xuống
+      header.classList.add('shrink');
+      sidebar.classList.add('hide');
+      mainnav.classList.remove('main_nav');
+      logoWhite.style.display = 'none';
+      logoNormal.style.display = 'block';
+
+      menuIconSpan.style.display = 'block';
+      menuIcon.style.display = 'none';
+
+    //   <button class="mobile-menu-btn" id="mobileMenuBtn">
+    //   <span></span>
+    //   <div class="menu-icon"></div>
+    // </button>
+    } else {
       
-      logoWhite.style.display = 'block';
-      
-      
-      logoNormal.style.display = 'none';
+      // header.classList.remove('shrink');
+      // sidebar.classList.remove('hide');
+      // mainnav.classList.add('main_nav');
       
     }
+  }if (currentScroll === 0) {
+    header.classList.remove('shrink');
+    sidebar.classList.remove('hide');
+    mainnav.classList.add('main_nav');
+    logoWhite.style.display = 'block';
+    logoNormal.style.display = 'none';
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevent negative scroll
-  });
+    menuIconSpan.style.display = 'none';
+    menuIcon.style.display = 'block';
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevent negative scroll
+});
 
 });
 

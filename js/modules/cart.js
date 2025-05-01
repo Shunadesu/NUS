@@ -63,7 +63,7 @@ function initCartStorage() {
       const btn = e.target;
       
       // Add loading state
-      btn.classList.add('loading');
+      btn.classList.add('sunny-loading');
       btn.disabled = true;
       
       const productCard = btn.closest('.product-card');
@@ -87,7 +87,7 @@ function initCartStorage() {
       
       // Remove loading state after delay
       setTimeout(() => {
-        btn.classList.remove('loading');
+        btn.classList.remove('sunny-loading');
         btn.disabled = false;
       }, 500);
     }
