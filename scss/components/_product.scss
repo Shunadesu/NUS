@@ -1,18 +1,15 @@
 .product-card {
     position: relative;
-    background-color: #fff;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: $white-color;
+    border-radius: $border-radius-md;
+    transition: $transition-normal;
     text-decoration: none;
-    color: inherit;
+    color: $text-color;
     display: block;
     height: fit-content;
-    // border: 1px solid var(--border-color);
+    border: 1px solid $border-color;
     
     &:hover {
-      // transform: translateY(-5px);
-      // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      
       .product-card__actions {
         opacity: 1;
         transform: translateY(0);
@@ -121,98 +118,98 @@
       display: flex;
       gap: 0.5rem;
     }
-  }
-  .product-card__actions{
-  .action-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
+}
+.product-card__actions{
+.action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
 
-    @media (max-width: 768px) {
-      border-radius: 100%;
-      padding: 5px;
-      font-size: 12px;
-      width: 25px;
-      height: 25px;
-    }
-    &:hover {
-      background-color: #333;
-      color: white;
-    }
+  @media (max-width: 768px) {
+    border-radius: 100%;
+    padding: 5px;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
   }
+  &:hover {
+    background-color: #333;
+    color: white;
   }
+}
+}
 
-  .color-option {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #eee;
-    
-    &--teal {
-      background-color: #4ecdc4;
-    }
-    
-    &--pink {
-      background-color: #ff6b6b;
-    }
-    
-    &--black {
-      background-color: #333;
-    }
-    
-    &--white {
-      background-color: #fff;
-    }
-    
-    &--brown {
-      background-color: #a0522d;
-    }
-    
-    &--blue {
-      background-color: #3498db;
-    }
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #eee;
+  
+  &--teal {
+    background-color: #4ecdc4;
   }
   
-  // Add to cart button
-  .add-to-cart-wrapper {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    z-index: 3;
-    opacity: 0;
-    transition: opacity .5s ease;
+  &--pink {
+    background-color: #ff6b6b;
   }
   
-  .add-to-cart-button {
+  &--black {
+    background-color: #333;
+  }
+  
+  &--white {
+    background-color: #fff;
+  }
+  
+  &--brown {
+    background-color: #a0522d;
+  }
+  
+  &--blue {
+    background-color: #3498db;
+  }
+}
+
+// Add to cart button
+.add-to-cart-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
     width: 100%;
-    padding: 12px 20px;
-    background-color: white;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-      width: 100%;
-      padding: 8px 12px;
-    }
-    &:hover {
-      background-color: #333;
-      color: white;
-    }
+    padding: 8px 12px;
   }
+  &:hover {
+    background-color: #333;
+    color: white;
+  }
+}

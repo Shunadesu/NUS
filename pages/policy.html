@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policy - NUS Store</title>
+    <meta name="description" content="Our Policies - NUS">
+    <title>Policy - NUS</title>
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="NUS policies, terms and conditions, privacy policy, shipping policy, return policy, customer service">
+    <meta name="author" content="NUS">
+    <meta property="og:title" content="Policy - NUS">
+    <meta property="og:description" content="Our Policies - NUS">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nussunny.com/pages/policy.html">
+    <meta property="og:site_name" content="NUS">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Policy - NUS">
+    <meta name="twitter:description" content="Our Policies - NUS">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nussunny.com/pages/policy.html">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/pages/policy.js"></script>
+  </head>
 <body>
 
    <!-- Page loading spinner -->
@@ -27,7 +48,7 @@
          </div>
        </div>
    </div>
-   <!-- Header (Assuming it's included dynamically or copy-pasted) -->
+  
    <!-- Header -->
    <header class="header text-black">
        <div class="container">
@@ -456,28 +477,6 @@
             </div>
         </div>
     </div>
-    </footer>
-
-    <script type="module" src="../js/main.js"></script>
-    <script>
-        // Policy page specific JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-btn');
-            const tabPanes = document.querySelectorAll('.tab-pane');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons and panes
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabPanes.forEach(pane => pane.classList.remove('active'));
-
-                    // Add active class to clicked button and corresponding pane
-                    button.classList.add('active');
-                    const tabId = button.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-        });
-    </script>
+  </footer>
 </body>
 </html> 

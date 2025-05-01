@@ -184,7 +184,7 @@
         transition: all 0.3s ease;
         
         &:hover {
-            background-color: lighten(#000, 20%);
+            background-color: (#000, 20%);
         }
     }
 }
@@ -235,7 +235,7 @@
             font-weight: 500;
             transition: all 0.3s ease;  
             &:hover {
-                background-color: lighten(#000, 20%);
+                background-color: (#000, 20%);
             }
         }
         .cancel-btn{
@@ -348,7 +348,7 @@
             border: none;
 
             &:hover {
-                background-color: lighten(#000, 20%);
+                background-color: (#000, 20%);
             }
         }
 

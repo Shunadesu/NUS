@@ -3,20 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bagratica - Premium luxury bags and accessories">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
-    <title>Bagratica - Product Detail Page</title>
-    <!-- Load critical CSS first -->
+    
+    <meta name="description" content="NUS - Product Detail Page">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo/LOGO-NUS-01.png" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="NUS, products, online shopping, retail">
+    <meta property="og:title" content="NUS - Product Detail Page">
+    <meta property="og:description" content="NUS - Product Detail Page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nus.com/product-detail">
+    <meta property="og:image" content="../img/logo/LOGO-NUS-01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NUS - Product Detail Page">
+    <meta name="twitter:description" content="NUS - Product Detail Page">
+    <meta name="twitter:image" content="../img/logo/LOGO-NUS-01.png">
+    <title>NUS - Product Detail Page</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <!-- Load Font Awesome asynchronously -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
-
-    
     <!-- Add Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/modules/grid/grid.min.css" />
+
+    <!-- Load critical scripts first -->
+    <script type="module" src="../js/pages/pro-detail.js"></script>
+    <script type="module" src="../js/main.js"></script>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <!-- Add Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
   </head>
   <body>
     <!-- Page loading spinner -->
@@ -1909,8 +1928,6 @@
         <img class="modal-content" id="zoomedImage">
       </div>
     </section>
-
-    
     <!-- Footer -->    
     <footer class="footer">
       <div class="footer-container">
@@ -1985,15 +2002,7 @@
           </div>
       </div>
     </footer>    
-    
-    <!-- Load critical scripts first -->
-    <!-- <script type="module" src="../js/product-detail.js"></script> -->
-    <script type="module" src="../js/pro-detail.js"></script>
-    <script type="module" src="../js/main.js"></script>    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
-    <!-- Add Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper-container', {
            // Optional parameters

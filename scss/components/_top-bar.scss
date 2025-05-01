@@ -1,53 +1,52 @@
-/* --------------------
-   Top Bar
--------------------- */
-/* Infinite left scrolling animation for top bar */
 
-/* Update top-bar to have scrolling content */
 .top-bar {
-    background-color: #222;
-    color: var(--white);
-    padding: 8px 0;
-    font-size: 12px;
+    background-color: $black-color;
+    color: $white-color;
+    padding: $spacing-xs 0;
+    font-size: $font-size-small;
     height: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Hide content that scrolls outside the top bar */
-    @media (max-width: 1400px) {
-      font-size: 10px;
+    overflow: hidden;
+    font-family: $font-primary;
+    transition: all $transition-normal;
+
+    @media (max-width: $breakpoint-xl) {
+        font-size: 12px;
     }
 
-    @media (max-width: 1400px) {
-      font-size: 8px;
+    @media (max-width: $breakpoint-lg) {
+        font-size: 10px;
     }
+
     .container {
-      padding: 0;
-      width: 100%;
-      max-width: none;
+        padding: 0;
+        width: 100%;
+        max-width: none;
     }
     
     &:hover .top-bar__scroll-container {
-      animation-play-state: paused;
+        animation-play-state: paused;
     }
-    /* Create a container for the scrolling content */
+
     .top-bar__scroll-container {
-      display: flex;
-      width: 200%; /* Make it wider than viewport to allow continuous scrolling */
-      animation: scrollLeft 30s linear infinite; /* Adjust speed with the duration value */
+        display: flex;
+        width: 200%;
+        animation: scrollLeft 30s linear infinite;
     }
-    /* Each content section that will be duplicated */
+
     .top-bar__content {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 80%; /* Each copy takes up half of the container */
-      padding: 0 20px;
-      
-      > * {
-        margin: 0 30px;
-      }
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        padding: 0 $spacing-lg;
+        
+        > * {
+            margin: 0 $spacing-xl;
+        }
     }
-  }
+}
   

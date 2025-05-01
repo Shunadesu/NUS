@@ -2,18 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="addresses, shipping address, billing address, account management, NUS store, online shopping">
+    <meta name="author" content="NUS Store">
+    <meta property="og:title" content="Manage Your Addresses - NUS Store">
+    <meta property="og:description" content="Easily manage your shipping and billing addresses for a seamless shopping experience at NUS Store. Add, edit or delete addresses securely.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../img/logo/LOGO-NUS-01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manage Your Addresses - NUS Store">
+    <meta name="twitter:description" content="Easily manage your shipping and billing addresses for a seamless shopping experience at NUS Store. Add, edit or delete addresses securely.">
+    <meta name="twitter:image" content="../img/logo/LOGO-NUS-01.png">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Addresses - Nussunny">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
-    <title>Your Addresses - Sunny</title>
+    <meta name="description" content="Your Addresses - NUS">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo/LOGO-NUS-01.png" />
+    <title>Your Addresses - NUS</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <script type="module" src="../js/main.js"></script>
+    <script src="../js/pages/addresses.js"></script>
 </head>
 <body>
     <!-- Page loading spinner -->
     <div class="loading" id="page-loader" role="status" aria-label="Loading"></div>
-
     <div class="top-bar" role="marquee" aria-label="Announcements">
         <div class="top-bar__scroll-container">
           <!-- First copy of the content -->
@@ -29,7 +44,6 @@
           </div>
         </div>
     </div>
-    <!-- Header (Assuming it's included dynamically or copy-pasted) -->
     <!-- Header -->
     <header class="header text-black">
         <div class="container">
@@ -243,71 +257,70 @@
           </div>
         </div>
     </header>
-
-      <!-- Mobile Navigation -->
-      <nav class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav__header">
-          <h3>Menu</h3>
-          <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
-        </div>
-        <ul class="mobile-nav__list">
-          <li class="mobile-nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
-          <li class="mobile-nav__item"><a href="/pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
-          <li class="mobile-nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
-          <li class="mobile-nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
-          <li class="mobile-nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile Navigation Overlay -->
-      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-
-      <div class="addresses-page-main">
-        <div class="container">
-            <header class="addresses-page-header">
-                <h1>Your Addresses</h1>
-                <nav class="breadcrumb">
-                    <a href="../index.html">Home</a> / Addresses
-                </nav>
-            </header>
-    
-            <div class="address-layout">
-                <aside class="address-sidebar">
-                    <nav class="address-nav">
-                        <ul>
-                            <li><a href="account.html" class="dashboard">Dashboard</a></li>
-                            <li class="active"><a href="addresses.html" class="addresses">Your addresses</a></li>
-                            <li><a href="#" class="wishlist">Your Wishlist</a></li>
-                            <li><button id="logout-btn" class="btn btn-outline">LOGOUT</button></li>
-                        </ul>
-                    </nav>
-                </aside>
-    
-                <main class="address-content">
-                    <div class="addresses-header">
-                        <h2>Your addresses (1)</h2>
-                        <button class="add-address-btn">ADD A NEW ADDRESS</button>
-                    </div>
-    
-                    <section class="default-addresses">
-                        <h3>Default addresses</h3>
-                        <div class="address-card">
-                            <div class="address-type">Addresses (Default addresses)</div>
-                            <div class="address-details">
-                                <p class="name">Pham Nam</p>
-                                <p class="email">nampham100802@gmail.com</p>
-                                <p class="country">United States</p>
-                            </div>
-                            <div class="address-actions">
-                                <button class="edit-btn">EDIT</button>
-                                <button class="delete-btn">DELETE</button>
-                            </div>
-                        </div>
-                    </section>
-                </main>
-            </div>
-        </div>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav__header">
+        <h3>Menu</h3>
+        <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
       </div>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="/" class="nav__link" aria-current="page">HOME</a></li>
+        <li class="mobile-nav__item"><a href="/pages/shop.html" class="nav__link nav__link--active">SHOP</a></li>
+        <li class="mobile-nav__item"><a href="/pages/blog.html" class="nav__link">BLOGS</a></li>
+        <li class="mobile-nav__item"><a href="/pages/about-us.html" class="nav__link">ABOUT US</a></li>
+        <li class="mobile-nav__item"><a href="/pages/membership.html" class="nav__link">MEMBERSHIP</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <div class="addresses-page-main">
+      <div class="container">
+          <header class="addresses-page-header">
+              <h1>Your Addresses</h1>
+              <nav class="breadcrumb">
+                  <a href="../index.html">Home</a> / Addresses
+              </nav>
+          </header>
+  
+          <div class="address-layout">
+              <aside class="address-sidebar">
+                  <nav class="address-nav">
+                      <ul>
+                          <li><a href="account.html" class="dashboard">Dashboard</a></li>
+                          <li class="active"><a href="addresses.html" class="addresses">Your addresses</a></li>
+                          <li><a href="#" class="wishlist">Your Wishlist</a></li>
+                          <li><button id="logout-btn" class="btn btn-outline">LOGOUT</button></li>
+                      </ul>
+                  </nav>
+              </aside>
+  
+              <main class="address-content">
+                  <div class="addresses-header">
+                      <h2>Your addresses (1)</h2>
+                      <button class="add-address-btn">ADD A NEW ADDRESS</button>
+                  </div>
+  
+                  <section class="default-addresses">
+                      <h3>Default addresses</h3>
+                      <div class="address-card">
+                          <div class="address-type">Addresses (Default addresses)</div>
+                          <div class="address-details">
+                              <p class="name">Pham Nam</p>
+                              <p class="email">nampham100802@gmail.com</p>
+                              <p class="country">United States</p>
+                          </div>
+                          <div class="address-actions">
+                              <button class="edit-btn">EDIT</button>
+                              <button class="delete-btn">DELETE</button>
+                          </div>
+                      </div>
+                  </section>
+              </main>
+          </div>
+      </div>
+    </div>
 
     <!-- Delete Confirmation Modal -->
     <div class="modal" id="deleteAddressModal">
@@ -409,7 +422,6 @@
         </div>
     </template>
 
-    <!-- Footer (Assuming it's included dynamically or copy-pasted) -->
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
@@ -484,8 +496,5 @@
             </div>
         </div>
     </footer>
-
-    <script type="module" src="../js/main.js"></script>
-    <script src="../js/addresses.js"></script>
 </body>
 </html> 

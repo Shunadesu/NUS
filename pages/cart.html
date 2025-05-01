@@ -3,17 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cart - Nussunny</title>
+  <meta name="description" content="Your Cart - NUS">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/logo/LOGO-NUS-01.png" />
+  <title>Your Cart - NUS</title>
   <link rel="stylesheet" href="../css/main.css" />
-  <script type="module" src="../js/main.js"></script>
-
-
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- Add Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/modules/grid/grid.min.css" />
+  <!-- Add Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/modules/grid/grid.min.css" />
+
+  <script type="module" src="../js/pages/cart.js"></script>
+  <script type="module" src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+          // Responsive breakpoints
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              grid: {
+                rows: 1
+              }
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+              grid: {
+                rows: 1
+              }
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+              grid: {
+                rows: 1
+              }
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+              grid: {
+                rows: 1
+              }
+            }
+          },
+          direction: 'horizontal',
+          slidesPerView: 5,
+          grid: {
+            rows: 1,
+            fill: 'row'
+          },
+          autoplay: {
+            delay: 5000,
+          },
+          spaceBetween: 30,
+          loop: true,
+          grabCursor: true,
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        });
+  </script>
 </head>
 <body>
   <!-- Page loading spinner -->
@@ -1441,67 +1503,5 @@
         </div>
     </div>
   </footer>
-  
-  <script src="../js/cart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-         // Optional parameters
-          // Responsive breakpoints
-          breakpoints: {
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-              grid: {
-                rows: 1
-              }
-            },
-            480: {
-              slidesPerView: 1,
-              spaceBetween: 15,
-              grid: {
-                rows: 1
-              }
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 10,
-              grid: {
-                rows: 1
-              }
-            },
-            1200: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-              grid: {
-                rows: 1
-              }
-            }
-          },
-          direction: 'horizontal',
-          slidesPerView: 5,
-          grid: {
-            rows: 1,
-            fill: 'row'
-          },
-          autoplay: {
-            delay: 5000,
-          },
-          spaceBetween: 30,
-          loop: true,
-          grabCursor: true,
-
-          // Navigation arrows
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-
-          // And if we need scrollbar
-          scrollbar: {
-            el: '.swiper-scrollbar',
-          },
-        });
-  </script>
 </body>
 </html> 

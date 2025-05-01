@@ -1,12 +1,9 @@
-import { initCart } from './modules/cart.js';
-import { initReviews } from './modules/review.js'
-import {initTabs} from './modules/tabs.js'
+import { initReviews } from '../modules/review.js'
+import {initTabs} from '../modules/tabs.js'
 
 document.addEventListener('DOMContentLoaded', function() {
     initTabs();
     initReviews();
-    initCart();  
-
 })
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -171,81 +168,5 @@ document.addEventListener('DOMContentLoaded', function() {
       return Math.round(Math.abs((endDate - startDate) / oneDay)) + 1;
     }
 });
-// Mobile menu functionality
-if (mobileMenuToggle) {
-  const mobileMenu = document.createElement('div');
-  mobileMenu.className = 'mobile-menu';
-  
-  // Create overlay
-  const overlay = document.createElement('div');
-  overlay.className = 'menu-overlay';
-  document.body.appendChild(overlay);
-  
-  // Clone navigation for mobile menu
-  const nav = document.querySelector('.nav');
-  if (nav) {
-    const mobileNav = document.createElement('nav');
-    mobileNav.className = 'mobile-nav';
-    
-    const navList = nav.querySelector('.nav__list');
-    if (navList) {
-      const mobileNavList = navList.cloneNode(true);
-      mobileNavList.className = 'mobile-nav__list';
-      
-      // Update classes for mobile
-      const navItems = mobileNavList.querySelectorAll('.nav__item');
-      navItems.forEach(item => {
-        item.className = 'mobile-nav__item';
-        const link = item.querySelector('.nav__link');
-        if (link) {
-          link.className = 'mobile-nav__link';
-        }
-      });
-      
-      mobileNav.appendChild(mobileNavList);
-      mobileMenu.appendChild(mobileNav);
-    }
-  }
-  
-  // Add close button to mobile menu
-  const closeBtn = document.createElement('button');
-  closeBtn.className = 'mobile-menu-close';
-  closeBtn.innerHTML = '&times;';
-  closeBtn.setAttribute('aria-label', 'Close menu');
-  mobileMenu.insertBefore(closeBtn, mobileMenu.firstChild);
-  
-  // Append mobile menu to body
-  document.body.appendChild(mobileMenu);
-  
-  // Toggle mobile menu
-  mobileMenuToggle.addEventListener('click', function() {
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    
-    // Animate hamburger to X
-    this.classList.toggle('active');
-    
-    // Update aria-expanded
-    const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-    this.setAttribute('aria-expanded', !expanded);
-  });
-  
-  // Close mobile menu when clicking close button
-  closeBtn.addEventListener('click', function() {
-    mobileMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-    mobileMenuToggle.classList.remove('active');
-    mobileMenuToggle.setAttribute('aria-expanded', 'false');
-  });
-  
-  // Close mobile menu when clicking overlay
-  overlay.addEventListener('click', function() {
-    mobileMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-    mobileMenuToggle.classList.remove('active');
-    mobileMenuToggle.setAttribute('aria-expanded', 'false');
-  });
-}
+
+

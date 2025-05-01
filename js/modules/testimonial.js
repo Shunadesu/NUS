@@ -1,4 +1,4 @@
-import { createBaseSlider } from './base-slider.js';
+import { createBaseSlider } from '../components/base-slider.js';
 
 export function createTestimonialSlider(container, options = {}) {
   const elements = {

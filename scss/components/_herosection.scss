@@ -5,17 +5,17 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-  }
-  
-  /* Slides Container */
-  .hero-slides {
+}
+
+/* Slides Container */
+.hero-slides {
     position: relative;
     width: 100%;
     height: 100%;
-  }
-  
-  /* Individual Slide */
-  .hero-slide {
+}
+
+/* Individual Slide */
+.hero-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,214 +23,212 @@
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease;
-  }
-  
-  .hero-slide.active {
+    transition: opacity $transition-normal, visibility $transition-normal;
+}
+
+.hero-slide.active {
     opacity: 1;
     visibility: visible;
-  }
-  
-  /* Slide Image */
-  .hero-image {
+}
+
+/* Slide Image */
+.hero-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Dark Overlay */
-  .hero-overlay {
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Dark Overlay */
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Content */
-  .hero-content {
+    background-color: rgba($black-color, 0.1);
+}
+
+/* Content */
+.hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--white);
+    color: $white-color;
     width: 100%;
     max-width: 800px;
-    padding: 0 20px;
+    padding: 0 $spacing-lg;
     z-index: 2;
-  }
-  
-  .hero-title {
-    font-family: var(--font-accent);
-    font-size: 40px;
+}
+
+.hero-title {
+    @include font-accent;
+    font-size: $font-size-large;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: $spacing-lg;
     line-height: 1.2;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY($spacing-lg);
+    transition: opacity $transition-slow, transform $transition-slow;
     transition-delay: 0.3s;
-  }
-  
-  .hero-subtitle {
-    font-family: var(--font-accent);
-    font-size: 16px;
+}
+
+.hero-subtitle {
+    @include font-accent;
+    font-size: $font-size-base;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: $spacing-xl;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY($spacing-lg);
+    transition: opacity $transition-slow, transform $transition-slow;
     transition-delay: 0.5s;
-  }
-  
-  .shop-now-btn {
+}
+
+.shop-now-btn {
     display: inline-block;
-    background-color: var(--white);
-    color: var(--text-dark);
-    padding: 14px 32px;
-    font-size: 14px;
+    background-color: $white-color;
+    color: $text-color;
+    padding: $spacing-sm $spacing-xl;
+    font-size: $font-size-small;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease !important;
+    transform: translateY($spacing-lg);
+    transition: opacity $transition-slow, transform $transition-slow, background-color $transition-normal;
     transition-delay: 0.5s;
-  }
-  
-  .shop-now-btn:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  
-  /* When slide is active, animate content elements */
-  .hero-slide.active .hero-title,
-  .hero-slide.active .hero-subtitle,
-  .hero-slide.active .shop-now-btn {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Navigation Controls */
-  .hero-navigation {
+
+    &:hover {
+        background-color: rgba($white-color, 0.9);
+    }
+}
+
+/* When slide is active, animate content elements */
+.hero-slide.active {
+    .hero-title,
+    .hero-subtitle,
+    .shop-now-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Controls */
+.hero-navigation {
     position: absolute;
-    bottom: 40px;
+    bottom: $spacing-xl;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: $spacing-sm;
     z-index: 3;
-  }
-  
-  .hero-prev-btn,
-  .hero-next-btn {
+}
 
+.hero-prev-btn,
+.hero-next-btn {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white);
+    border-radius: $border-radius-circle;
+    background-color: rgba($black-color, 0.5);
+    color: $white-color;
     display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero-prev-btn:hover,
-  .hero-next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .hero-prev-btn svg,
-  .hero-next-btn svg {
-    width: 20px;
-    height: 20px;
-  }
-  
-  /* Dots Navigation */
-  .hero-dots {
+    transition: background-color $transition-normal;
+
+    &:hover {
+        background-color: rgba($black-color, 0.7);
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Dots Navigation */
+.hero-dots {
     display: flex;
-    gap: 8px;
-  }
-  
-  .hero-dot {
+    gap: $spacing-xs;
+}
+
+.hero-dot {
     display: none;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: $border-radius-circle;
+    background-color: rgba($white-color, 0.5);
     cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .hero-dot.active {
-    width: 30px;
-    border-radius: 10px;
-    background-color: var(--white);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
+    transition: all $transition-normal;
+
+    &.active {
+        width: 30px;
+        border-radius: $border-radius-lg;
+        background-color: $white-color;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: $breakpoint-md) {
     .hero-title {
-      font-size: 32px;
+        font-size: $font-size-medium;
     }
     
     .hero-subtitle {
-      font-size: 14px;
+        font-size: $font-size-small;
     }
     
     .shop-now-btn {
-      padding: 12px 24px;
-      font-size: 12px;
+        padding: $spacing-sm $spacing-lg;
+        font-size: $font-size-small;
     }
     
     .hero-navigation {
-      bottom: 20px;
-      gap: 16px;
+        bottom: $spacing-lg;
+        gap: $spacing-md;
     }
     
     .hero-prev-btn,
     .hero-next-btn {
-      width: 36px;
-      height: 36px;
+        width: 36px;
+        height: 36px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: $breakpoint-xs) {
     .hero-title {
-      font-size: 28px;
+        font-size: $font-size-medium;
     }
     
     .hero-subtitle {
-      font-size: 13px;
-      margin-bottom: 20px;
+        font-size: $font-size-small;
+        margin-bottom: $spacing-lg;
     }
     
     .hero-navigation {
-      gap: 12px;
+        gap: $spacing-sm;
     }
     
     .hero-prev-btn,
     .hero-next-btn {
-      width: 32px;
-      height: 32px;
+        width: 32px;
+        height: 32px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
     }
-    
-    .hero-prev-btn svg,
-    .hero-next-btn svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
+}

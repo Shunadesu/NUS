@@ -5,73 +5,71 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: $z-index-modal;
     overflow: auto;
-    font-family: "Jost", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
+    font-family: $font-secondary;
+      
     &.active {
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: slideDown 0.3s ease-in-out;
+      animation: slideDown $transition-normal;
     }
     .modal-content {
-      background-color: var(--white);
+      background-color: $white-color;
       width: 100%;
       height: fit-content;
       position: relative;
-      animation: slideIn 0.3s ease-in-out;
+      animation: slideIn $transition-normal;
       
-      display: flex ;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
   
-  
-      @media (max-width: 850px) {
+      @media (max-width: $breakpoint-md) {
         width: 95%;
-        margin: 20px;
+        margin: $spacing-lg;
       }
       .modal-header {
-        color: #000;
+        color: $primary-color;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 30px 0 30px;
+        padding: $spacing-lg $spacing-xl 0 $spacing-xl;
         
         h2 {
-          font-size: 24px;
+          font-size: $font-size-medium;
           font-weight: 500;
         }
       }
       .close-button {
         position: absolute;
-        z-index: 11;
-        top: 10px;
-        right: 20px;
+        z-index: $z-index-modal + 1;
+        top: $spacing-sm;
+        right: $spacing-lg;
         background: none;
         border: none;
-        font-size: 32px;
+        font-size: $font-size-large;
         cursor: pointer;
-        color: #555;
-        transition: color 0.3s;
+        color: $secondary-color;
+        transition: color $transition-normal;
         
         &:hover {
-          color: #000;
+          color: $primary-color;
         }
       }
       
       .modal-notice {
-        padding: 15px 30px;
+        padding: $spacing-md $spacing-xl;
         
         p {
-          font-size: 14px;
-          color: #000;
+          font-size: $font-size-small;
+          color: $primary-color;
         }
         
         .learn-more {
-          color: #000;
+          color: $primary-color;
           text-decoration: none;
           font-weight: 500;
           
@@ -83,10 +81,10 @@
       
       .modal-body {
         display: flex;
-        padding: 30px;
+        padding: $spacing-xl;
         width: 100%;
         max-width: 1400px;  
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-md) {
           flex-direction: column;
         }
       }
@@ -97,19 +95,18 @@
     flex: 3;
     width: 100%;
     display: flex;
-    // align-items: center;
     justify-content: space-evenly;
-    gap: 40px;
-    color: #555;
-    padding-right: 20px;
-    border-right: 1px solid #555;
+    gap: $spacing-xl;
+    color: $secondary-color;
+    padding-right: $spacing-lg;
+    border-right: 1px solid $secondary-color;
     
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       border-right: none;
-      border-bottom: 1px solid #555;
+      border-bottom: 1px solid $secondary-color;
       padding-right: 0;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
+      padding-bottom: $spacing-lg;
+      margin-bottom: $spacing-lg;
     }
     .contact-option {
       display: flex;
@@ -123,31 +120,31 @@
         align-items: center;
         
         i {
-          font-size: 20px;
-          color: #000;
+          font-size: $spacing-lg;
+          color: $primary-color;
         }
       }
       
       .contact-details {
         text-align: center;
         h3 {
-          font-size: 18px;
+          font-size: $font-size-base;
           font-weight: 500;
-          margin-bottom: 5px;
-          color: #000;
+          margin-bottom: $spacing-xs;
+          color: $primary-color;
         }
         
         p {
-          font-size: 14px;
-          color: #000;
-          margin-bottom: 8px;
+          font-size: $font-size-small;
+          color: $primary-color;
+          margin-bottom: $spacing-sm;
         }
         
         .send-message {
           display: inline-block;
-          color: #000;
+          color: $primary-color;
           text-decoration: none;
-          font-size: 14px;
+          font-size: $font-size-small;
           font-weight: 500;
           
           &:hover {
@@ -158,29 +155,29 @@
     }
 }
 .help-links {
-flex: 1;
-padding-left: 70px;
+    flex: 1;
+    padding-left: $spacing-xxl;
 
-@media (max-width: 768px) {
-    padding-left: 0;
-}
+    @media (max-width: $breakpoint-md) {
+        padding-left: 0;
+    }
 
-ul {
-    list-style: none;
-    
-    li {
-    margin-bottom: 10px;
-    
-    a {
-        color: #000;
-        text-decoration: underline;
-        font-size: 13px;
-        transition: color 0.3s;
+    ul {
+        list-style: none;
         
-        &:hover {
-        color: #000;
+        li {
+            margin-bottom: $spacing-sm;
+            
+            a {
+                color: $primary-color;
+                text-decoration: underline;
+                font-size: $font-size-small;
+                transition: color $transition-normal;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+            }
         }
     }
-    }
-}
 }

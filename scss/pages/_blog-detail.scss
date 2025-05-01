@@ -1,51 +1,22 @@
 /* Blog Detail Styles */
 .blog-detail-wrapper {
-
-  padding: 20px 0;
-  margin-top: 140px;
-  font-family: var(--font-primary);
-  @media (max-width: 768px) {
-    padding: 20px 0;
+  padding: $spacing-lg 0;
+  margin-top: $spacing-xxl + 80px;
+  font-family: $font-primary;
+  
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-lg 0;
   }
-  .blog-content{
-    font-family: var(--font-primary);
+
+  .blog-content {
+    font-family: $font-primary;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    @media (max-width: 768px) {
-      gap: 20px;
-    }
-  }
-}
+    gap: $spacing-xl;
 
-.breadcrumb {
-  ol {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li:not(:last-child):after {
-    content: "/";
-    margin-left: 10px;
-    color: #999;
-  }
-  
-  a {
-    color: #666;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    
-    &:hover {
-      color: #000;
+    @media (max-width: $breakpoint-md) {
+      gap: $spacing-lg;
     }
-  }
-  
-  .active {
-    color: #000;
-    font-weight: 500;
   }
 }
 
@@ -55,29 +26,30 @@
 }
 
 .blog-meta {
-    padding: 10px 0;
-    font-size: 0.8rem;
-    color: #666;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    span {
-        @media (max-width: 768px) {
-        font-size: 0.7rem;
-        }
+  padding: $spacing-sm 0;
+  font-size: $font-size-small;
+  color: $secondary-color;
+  display: flex;
+  gap: $spacing-sm;
+  align-items: center;
+
+  span {
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-small - 2px;
     }
+  }
 }
 
 .blog-title {
-  font-size: 2.5rem;
-  padding: 10px 0;
+  font-size: $font-size-large - 20px;
+  padding: $spacing-sm 0;
   font-weight: 400;
   margin: 0;
   line-height: 1.2;
   
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     padding: 0;
-    font-size: 2rem;
+    font-size: $font-size-medium;
   }
 }
 
@@ -85,81 +57,81 @@
   img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: $border-radius-md;
   }
 }
 
-.blog-featured-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 0 40px;
-    @media (max-width: 768px) {
-        gap: 10px;
-        padding: 0 20px;
-    }
+.blog-featured-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl - 10px;
+  padding: 0 $spacing-xl;
+
+  @media (max-width: $breakpoint-md) {
+    gap: $spacing-sm;
+    padding: 0 $spacing-lg;
+  }
 }
 
 .blog-text {
-  font-size: 0.9rem;
+  font-size: $font-size-small;
   line-height: 1.8;
-  color: #333;
+  color: $black-color;
   
   p {
-    margin-bottom: 15px;
+    margin-bottom: $spacing-md;
   }
   
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-small - 2px;
   }
 }
 
 .blog-footer {
-  margin-top: 60px;
-  padding-top: 30px;
-  border-top: 1px solid #eee;
+  margin-top: $spacing-xxl;
+  padding-top: $spacing-xl - 10px;
+  border-top: 1px solid $border-color;
 }
 
 .share-buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: $spacing-md;
   
   h4 {
     margin: 0;
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 }
 
 .share-button {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background: #f5f5f5;
+  border-radius: $border-radius-circle;
+  background: $background-light;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
+  color: $black-color;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: $transition-normal;
   
   &:hover {
-    background: #000;
-    color: #fff;
+    background: $primary-color;
+    color: $white;
   }
 }
 
 .comments-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  border-top: 1px solid #eee;
+  padding: $spacing-xxl 0;
+  border-top: 1px solid $border-color;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: $spacing-xl - 10px;
   
   h2 {
-    font-size: 2rem;
-    font-family: var(--font-accent);
+    font-size: $font-size-medium;
+    font-family: $font-accent;
     text-align: center;
     font-weight: 400;
     margin: 0;
@@ -170,16 +142,16 @@
 .comments-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: $spacing-xl - 10px;
 }
 
 .comment-item {
   display: flex;
-  gap: 20px;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  gap: $spacing-lg;
+  padding: $spacing-lg 0;
+  border-bottom: 1px solid $border-color;
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     align-items: flex-start;
   }
 }
@@ -187,7 +159,7 @@
 .comment-avatar {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: $border-radius-circle;
   overflow: hidden;
   flex-shrink: 0;
   
@@ -206,85 +178,88 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: $spacing-sm;
   
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
+    gap: $spacing-xs;
   }
 }
 
 .comment-author {
-  font-size: 0.875rem;
+  font-size: $font-size-small;
   font-weight: 600;
   margin: 0;
   text-transform: uppercase;
-  color: #000;
+  color: $primary-color;
 }
 
 .comment-date {
-  font-size: 0.875rem;
-  color: #666;
+  font-size: $font-size-small;
+  color: $secondary-color;
 }
 
 .comment-text {
-  font-size: 0.875rem;
+  font-size: $font-size-small;
   line-height: 1.6;
-  color: #333;
+  color: $black-color;
   margin: 0;
 }
 
 .comment-form-wrapper {
   h3 {
-    font-size: 1.5rem;
+    font-size: $font-size-medium - 8px;
     font-weight: 400;
-    margin-bottom: 25px;
+    margin-bottom: $spacing-lg + 5px;
   }
 }
 
 .comment-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: $spacing-lg;
+
   .flex {
     width: 100%;
-    gap: 20px;
+    gap: $spacing-lg;
     justify-content: center;
     align-items: center;
-    @media (max-width: 768px) {
+
+    @media (max-width: $breakpoint-md) {
       flex-direction: column;
     }
   }
+
   .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: $spacing-xs + 3px;
     width: 100%;
 
     label {
-      font-size: 0.875rem;
+      font-size: $font-size-small;
       font-weight: 500;
-      color: #333;
+      color: $black-color;
 
       .required {
-        color: #ff0000;
+        color: $accent-color;
       }
     }
 
     input,
     textarea {
-      font-family: var(--font-primary);
+      font-family: $font-primary;
       width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 0.875rem;
-      transition: border-color 0.3s ease;
+      padding: $spacing-sm + 2px $spacing-md;
+      border: 1px solid $border-color;
+      border-radius: $border-radius-lg - 20px;
+      font-size: $font-size-small;
+      transition: $transition-normal;
 
       &:focus {
         outline: none;
-        border-color: #000;
+        border-color: $primary-color;
       }
     }
 
@@ -294,48 +269,48 @@
     }
   }
 
-
   .btn-primary {
     align-self: center;
-    font-size: 0.875rem;
+    font-size: $font-size-small;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 12px 30px;
-    background: #000;
-    color: #fff;
-    border: 1px solid #000;
-    border-radius: 10px;
+    padding: $spacing-sm + 2px $spacing-xl - 10px;
+    background: $primary-color;
+    color: $white;
+    border: 1px solid $primary-color;
+    border-radius: $border-radius-lg - 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: $transition-normal;
     
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       width: 100%;
     }
+
     &:hover {
-      background: #fff;
-      color: #000;
-      border: 1px solid #000;
+      background: $white;
+      color: $primary-color;
+      border: 1px solid $primary-color;
     }
   }
 }
 
 .quote-section {
-  background: #f8f8f8;
-  padding: 60px 40px;
-  margin: 40px auto;
-  border-radius: 10px;
+  background: $background-color;
+  padding: $spacing-xxl $spacing-xl;
+  margin: $spacing-xl auto;
+  border-radius: $border-radius-lg - 20px;
   max-width: 800px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: $spacing-lg;
 
   .quote-text {
-    font-size: 1.5rem;
+    font-size: $font-size-medium - 8px;
     line-height: 1.6;
-    color: #333;
+    color: $black-color;
     font-style: italic;
     max-width: 800px;
     margin: 0 auto;
@@ -344,35 +319,35 @@
     &::before,
     &::after {
       content: '"';
-      font-size: 2.5rem;
-      color: #000;
-      font-family: var(--font-accent);
+      font-size: $font-size-medium + 8px;
+      color: $primary-color;
+      font-family: $font-accent;
     }
   }
 
   .quote-author {
-    font-size: 1rem;
-    color: #666;
+    font-size: $font-size-base;
+    color: $secondary-color;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: $spacing-sm;
 
     &::before {
       content: "—";
-      margin-right: 8px;
+      margin-right: $spacing-xs + 3px;
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 40px 20px;
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-xl $spacing-lg;
     
     .quote-text {
-      font-size: 1.2rem;
+      font-size: $font-size-medium - 12px;
     }
     
     .quote-author {
-      font-size: 0.9rem;
+      font-size: $font-size-small;
     }
   }
 }
@@ -380,12 +355,12 @@
 .blog-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 40px 0;
+  gap: $spacing-lg;
+  margin: $spacing-xl 0;
 
   .gallery-item {
     position: relative;
-    border-radius: 8px;
+    border-radius: $border-radius-md;
     overflow: hidden;
     aspect-ratio: 1/1;
 
@@ -393,7 +368,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      transition: $transition-normal;
     }
 
     &:hover img {
@@ -401,100 +376,100 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
   }
 }
 
 .blog-content-text {
-  font-size: 0.9rem;
+  font-size: $font-size-small;
   line-height: 1.8;
-  color: #333;
-  margin: 40px 0;
+  color: $black-color;
+  margin: $spacing-xl 0;
 
   p {
-    margin-bottom: 20px;
+    margin-bottom: $spacing-lg;
   }
 
-  @media (max-width: 768px) {
-    font-size: 0.875rem;
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-small - 2px;
   }
 }
 
 .post-navigation {
-  padding: 40px 0;
-  border-top: 1px solid #eee;
-  margin-top: 60px;
+  padding: $spacing-xl 0;
+  border-top: 1px solid $border-color;
+  margin-top: $spacing-xxl;
 
   .nav-link {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: $spacing-sm;
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease;
+    transition: $transition-normal;
 
     &:hover {
-      color: #666;
+      color: $secondary-color;
       
       .nav-title {
-        color: #000;
+        color: $primary-color;
       }
     }
   }
 
   .nav-label {
-    font-size: 0.75rem;
+    font-size: $font-size-small - 2px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #666;
+    color: $secondary-color;
   }
 
   .nav-title {
-    font-size: 1.1rem;
+    font-size: $font-size-base + 2px;
     font-weight: 400;
     margin: 0;
-    transition: color 0.3s ease;
+    transition: $transition-normal;
   }
 }
 
 .related-articles {
-  padding: 60px 0;
-  border-top: 1px solid #eee;
+  padding: $spacing-xxl 0;
+  border-top: 1px solid $border-color;
 
   .section-title {
-    font-size: 2rem;
+    font-size: $font-size-medium;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 40px;
-    font-family: var(--font-accent);
+    margin-bottom: $spacing-xl;
+    font-family: $font-accent;
     text-transform: capitalize;
   }
 
   .articles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: $spacing-xl - 10px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-lg) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: $spacing-lg;
     }
   }
 
   .article-card {
     .article-image {
-      margin-bottom: 20px;
+      margin-bottom: $spacing-lg;
       overflow: hidden;
       
       img {
         width: 100%;
         height: auto;
-        transition: transform 0.6s ease;
+        transition: $transition-slow;
       }
 
       &:hover img {
@@ -505,35 +480,36 @@
     .article-content {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: $spacing-sm;
     }
 
     .article-title {
-      font-size: 1.1rem;
+      font-size: $font-size-base + 2px;
       font-weight: 400;
       margin: 0;
       line-height: 1.4;
-      transition: color 0.3s ease;
-      color: #000;
+      transition: $transition-normal;
+      color: $primary-color;
       line-clamp: 1;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       display: -webkit-box;
       overflow: hidden;
+
       &:hover {
-        color: #666;
+        color: $secondary-color;
       }
     }
 
     .article-meta {
       display: flex;
-      gap: 15px;
-      font-size: 0.75rem;
-      color: #666;
+      gap: $spacing-md;
+      font-size: $font-size-small - 2px;
+      color: $secondary-color;
       text-transform: uppercase;
 
-      @media (max-width: 768px) {
-        font-size: 0.7rem;
+      @media (max-width: $breakpoint-md) {
+        font-size: $font-size-small - 4px;
       }
     }
   }

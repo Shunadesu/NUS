@@ -1,20 +1,20 @@
-/* Login Page Styles */
+@import "../abstracts/variable";
+
 .login-page-main {
-    padding: 40px 0; // Adjust as needed
+    padding: $spacing-xxl 0;
     margin-top: 140px;
-    font-family: var(--font-secondary);
+    font-family: $font-secondary;
 }
 
 .page-title {
     text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2.5rem; // Adjust size
+    margin-bottom: $spacing-md;
+    font-size: $font-size-large;
     font-weight: 600;
 }
 
 .breadcrumb {
-    margin-bottom: 3rem; // Space below breadcrumbs
-    // justify-content: center; // Center breadcrumbs
+    margin-bottom: $spacing-xl;
     ol {
         justify-content: center;
     }
@@ -23,65 +23,65 @@
 .login-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem; // Space between login and new customer sections
-    max-width: 1100px; // Limit overall width
+    gap: $spacing-xxl;
+    max-width: $breakpoint-xl;
     margin: 0 auto;
 
-    @media (max-width: 991.98px) {
-        gap: 3rem;
+    @media (max-width: $breakpoint-lg) {
+        gap: $spacing-xl;
     }
 
-    @media (max-width: 767.98px) {
+    @media (max-width: $breakpoint-md) {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: $spacing-xl;
     }
 }
 
 .login-form-section,
 .new-customer-section {
     h2 {
-        font-size: 1.5rem; // Adjust size
+        font-size: $font-size-medium;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: $spacing-lg;
     }
     p {
-        color: #6c757d; // Bootstrap secondary color
+        color: $secondary-color;
         line-height: 1.6;
-        margin-bottom: 1.5rem;
+        margin-bottom: $spacing-lg;
     }
 }
 
 #login-form {
     .form-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: $spacing-lg;
         label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: $spacing-xs;
             font-weight: 500;
             .required {
-                color: red; // Or your theme's required color
+                color: $accent-color;
             }
         }
         input[type="email"],
         input[type="password"] {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ced4da; // Bootstrap form input border color
-            border-radius: 25px; // Fully rounded corners like image
-            font-size: 1rem;
+            padding: $spacing-sm $spacing-md;
+            border: 1px solid $border-color;
+            border-radius: $border-radius-lg;
+            font-size: $font-size-base;
             &:focus {
                 outline: none;
-                border-color: #86b7fe; // Bootstrap focus color
-                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); // Bootstrap focus shadow
+                border-color: $primary-color;
+                box-shadow: $shadow-sm;
             }
         }
     }
     .form-links {
-        margin-bottom: 1.5rem;
+        margin-bottom: $spacing-lg;
         .forgot-password {
-            color: #6c757d;
+            color: $secondary-color;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: $font-size-small;
             &:hover {
                 text-decoration: underline;
             }
@@ -90,39 +90,37 @@
 
     .btn-submit {
         width: 100%;
-        padding: 12px;
-        font-size: 0.9rem;
+        padding: $spacing-sm;
+        font-size: $font-size-small;
         font-weight: 600;
         text-transform: uppercase;
-        border-radius: 25px;
-        background-color: var(--color-primary);
-        color: black;
-        border: 1px solid black;
-        transition: all 0.3s ease;
+        border-radius: $border-radius-lg;
+        background-color: $white;
+        color: $black-color;
+        border: 1px solid $black-color;
+        transition: $transition-normal;
         &:hover {
-            background-color: black;
-            color: white;
+            background-color: $black-color;
+            color: $white;
         }
-        // Assumes .btn and .btn-dark provide base button styling
     }
 }
 
 .new-customer-section {
     .btn-create {
         width: 100%;
-        padding: 12px;
-        font-size: 0.9rem;
+        padding: $spacing-sm;
+        font-size: $font-size-small;
         font-weight: 600;
         text-transform: uppercase;
-        border-radius: 25px;
-        background-color: var(--color-primary);
-        color: black;
-        border: 1px solid black;
-        transition: all 0.3s ease;
+        border-radius: $border-radius-lg;
+        background-color: $white;
+        color: $black-color;
+        border: 1px solid $black-color;
+        transition: $transition-normal;
         &:hover {
-            background-color: black;
-            color: white;
+            background-color: $black-color;
+            color: $white;
         }
-        // Assumes .btn and .btn-dark provide base button styling
     }
-} 
+}

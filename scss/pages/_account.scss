@@ -1,62 +1,67 @@
 .account-page {
-    padding: 40px 0;
+    padding: $spacing-xl 0;
     margin-top: 140px;
-    // max-width: 1100px;
-    @media screen and (max-width: 768px) {
-        padding: 20px 0;
+    
+    @media screen and (max-width: $breakpoint-md) {
+        padding: $spacing-lg 0;
     }
-    .account-header{
+
+    .account-header {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-        }
-        h1{
+
+        h1 {
             text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
+            margin-bottom: $spacing-sm;
+            font-size: $font-size-large;
             font-weight: 600;
         }
+
         .breadcrumb {
-            margin-bottom: 3rem; // Space below breadcrumbs
-            justify-content: center; // Center breadcrumbs
+            margin-bottom: $spacing-xl;
+            justify-content: center;
+            
             ol {
                 justify-content: center;
             }
         }
     }
+
     .account-layout {
         display: grid;
         grid-template-columns: 1fr 3fr;
-        gap: 2rem;
+        gap: $spacing-lg;
         max-width: 1100px;
         margin: 0 auto;
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: $breakpoint-md) {
             grid-template-columns: 1fr;
         }
+
         .account-sidebar {
             .account-nav {
-                ul{
+                ul {
                     display: flex;
                     flex-direction: column;
-                    
-                    border: 1px solid #e0e0e0;
-                    border-radius: 8px;
-                    li{
-                        padding: 10px;
+                    border: 1px solid $border-color;
+                    border-radius: $border-radius-md;
+
+                    li {
+                        padding: $spacing-sm;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $primary-color;
+                            font-weight: 600;
+                        }
+                    }
+
+                    #logout-btn {
                         cursor: pointer;
                         &:hover {
-                        color: var(--color-primary);
-                        font-weight: 600;
-                    }
-                }
-
-                #logout-btn {
-                    cursor: pointer;
-                    &:hover {
-                        color: var(--color-primary);
+                            color: $primary-color;
                             font-weight: 600;
                         }
                     }
@@ -68,64 +73,61 @@
 
 .account-content {
     margin: 0 auto;
-    padding: 2rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #fff;
+    padding: $spacing-lg;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    background-color: $white;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: $spacing-xs;
     
     .account-details {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: $spacing-sm;
     }
 
     #logout-btn {
-        // Assuming .btn and .btn-outline provide base styling
-        padding: 10px 25px;
-        font-size: 0.9rem;
+        padding: $spacing-sm $spacing-lg;
+        font-size: $font-size-small;
         font-weight: 600;
         text-transform: uppercase;
-        border-radius: 25px; // Match login buttons
-    }
-    .view-address-btn {
-        width: fit-content;
-        border: none;
-        padding: 0.5rem 1.5rem;
-        border-radius: 4px;
-        border: 1px solid black;
-        background-color: var(--color-primary);
-        color: black;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        &:hover {
-            background-color: black;
-            color: white;
-        }
-        
+        border-radius: $border-radius-lg;
     }
 
-    
-} 
+    .view-address-btn {
+        width: fit-content;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $border-radius-sm;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $text-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: $font-size-small;
+        cursor: pointer;
+        transition: $transition-normal;
+
+        &:hover {
+            background-color: $text-color;
+            color: $white;
+        }
+    }
+}
 
 .order-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  .order-table th, .order-table td {
-    border: 1px solid #e5e5e5;
-    padding: 0.75rem;
-    text-align: left;
-  }
-  .order-table th {
-    background: #f8f9fa;
-  }
+    margin-top: $spacing-sm;
 
-  
+    th, td {
+        border: 1px solid $border-color;
+        padding: $spacing-sm;
+        text-align: left;
+    }
+
+    th {
+        background: $background-light;
+    }
+}

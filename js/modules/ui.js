@@ -5,6 +5,7 @@ export function initUI() {
   initProductHoverEffects();
   setupScrollingTopBar()
   setupHelp();
+  initCategoryTitles();
   // setupScrollingTopBar();
 }
 // Infinite scrolling top bar
@@ -108,5 +109,20 @@ function initProductHoverEffects() {
   });
 }
 
-  
+function initCategoryTitles() {
+  const categoryTitles = document.querySelectorAll('.carousel__category-title');
+
+  categoryTitles.forEach(title => {
+    title.addEventListener('click', function() {
+      // Remove active class from all titles
+      categoryTitles.forEach(t => {
+        t.classList.remove('active');
+      });
+
+      // Add active class to clicked title
+      this.classList.add('active');
+    });
+  });
+}
+
   

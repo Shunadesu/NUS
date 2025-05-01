@@ -4,8 +4,8 @@
 .loading {
     position: fixed;
     inset: 0;
-    background-color: var(--bg-color);
-    z-index: 9999;
+    background-color: $background-color;
+    z-index: $z-index-modal;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,10 +14,9 @@
       content: "";
       width: 40px;
       height: 40px;
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      border-top-color: var(--accent-color);
-      border-radius: 50%;
+      border: 2px solid rgba($black-color, 0.1);
+      border-top-color: $accent-color;
+      border-radius: $border-radius-circle;
       animation: spin 0.8s linear infinite;
     }
   }
-  
