@@ -17,65 +17,7 @@
   <script type="module" src="../js/pages/cart.js"></script>
   <script type="module" src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-          // Responsive breakpoints
-          breakpoints: {
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-              grid: {
-                rows: 1
-              }
-            },
-            480: {
-              slidesPerView: 1,
-              spaceBetween: 15,
-              grid: {
-                rows: 1
-              }
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 10,
-              grid: {
-                rows: 1
-              }
-            },
-            1200: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-              grid: {
-                rows: 1
-              }
-            }
-          },
-          direction: 'horizontal',
-          slidesPerView: 5,
-          grid: {
-            rows: 1,
-            fill: 'row'
-          },
-          autoplay: {
-            delay: 5000,
-          },
-          spaceBetween: 30,
-          loop: true,
-          grabCursor: true,
-
-          // Navigation arrows
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-
-          // And if we need scrollbar
-          scrollbar: {
-            el: '.swiper-scrollbar',
-          },
-        });
-  </script>
+  
 </head>
 <body>
   <!-- Page loading spinner -->
@@ -1503,5 +1445,65 @@
         </div>
     </div>
   </footer>
+
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+          // Responsive breakpoints
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              grid: {
+                rows: 1
+              }
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+              grid: {
+                rows: 1
+              }
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+              grid: {
+                rows: 1
+              }
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+              grid: {
+                rows: 1
+              }
+            }
+          },
+          direction: 'horizontal',
+          slidesPerView: 5,
+          grid: {
+            rows: 1,
+            fill: 'row'
+          },
+          autoplay: {
+            delay: 5000,
+          },
+          spaceBetween: 30,
+          loop: true,
+          grabCursor: true,
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        });
+  </script>
 </body>
 </html> 
