@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!cartItemsEl) return; // Not on cart page
 
   // Check login
-  const user = localStorage.getItem('loggedInUserEmail');
-  if (!user) {
-    window.location.href = '/pages/login.html';
-    return;
-  }
+  // const user = localStorage.getItem('loggedInUserEmail');
+  // if (!user) {
+  //   window.location.href = '/pages/login.html';
+  //   return;
+  // }
 
   const subtotalEl = document.querySelector('.cart-subtotal-value');
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
