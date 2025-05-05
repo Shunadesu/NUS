@@ -84,26 +84,61 @@ function handleCheckoutSubmit(event) {
 // Validate checkout form
 function validateCheckoutForm(formData) {
     if (!formData.fullName || !formData.address || !formData.city || !formData.phone || !formData.email) {
-        alert('Please fill in all required fields.');
+        const popup = document.createElement('div');
+        popup.className = 'membership-popup';
+        const popupContent = document.createElement('div');
+        popupContent.className = 'membership-popup-content';
+        popupContent.innerHTML = `
+            <h3>Form Error</h3>
+            <p>Please fill in all required fields.</p>
+            <button onclick="this.parentElement.parentElement.remove();" 
+                    style="background: #dc3545; color: white; border: none; padding: 8px 16px; 
+                    border-radius: 4px; margin-top: 1rem; cursor: pointer;">
+                OK
+            </button>
+        `;
+        popup.appendChild(popupContent);
+        document.body.appendChild(popup);
         return false;
     }
 
     if (!formData.agreeTerms) {
-        alert('Please agree to the Terms & Conditions to proceed.');
-        return false;
-    }
-
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-        alert('Please enter a valid email address.');
+        const popup = document.createElement('div');
+        popup.className = 'membership-popup';
+        const popupContent = document.createElement('div');
+        popupContent.className = 'membership-popup-content';
+        popupContent.innerHTML = `
+            <h3>Form Error</h3>
+            <p>Please agree to the Terms & Conditions to proceed.</p>
+            <button onclick="this.parentElement.parentElement.remove();" 
+                    style="background: #dc3545; color: white; border: none; padding: 8px 16px; 
+                    border-radius: 4px; margin-top: 1rem; cursor: pointer;">
+                OK
+            </button>
+        `;
+        popup.appendChild(popupContent);
+        document.body.appendChild(popup);
         return false;
     }
 
     // Validate phone number (basic validation)
     const phoneRegex = /^\+?[\d\s-]{10,}$/;
     if (!phoneRegex.test(formData.phone)) {
-        alert('Please enter a valid phone number.');
+        const popup = document.createElement('div');
+        popup.className = 'membership-popup';
+        const popupContent = document.createElement('div');
+        popupContent.className = 'membership-popup-content';
+        popupContent.innerHTML = `
+            <h3>Form Error</h3>
+            <p>Please enter a valid phone number.</p>
+            <button onclick="this.parentElement.parentElement.remove();" 
+                    style="background: #dc3545; color: white; border: none; padding: 8px 16px; 
+                    border-radius: 4px; margin-top: 1rem; cursor: pointer;">
+                OK
+            </button>
+        `;
+        popup.appendChild(popupContent);
+        document.body.appendChild(popup);
         return false;
     }
 
