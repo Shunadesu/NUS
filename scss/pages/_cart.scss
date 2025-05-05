@@ -276,7 +276,9 @@
 
   .cart-summary {
     margin-top: $spacing-xs;
-
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
     .cart-subtotal {
       display: flex;
       justify-content: space-between;

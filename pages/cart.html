@@ -17,7 +17,7 @@
   <script type="module" src="../js/pages/cart.js"></script>
   <script type="module" src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+  <script src="../js/pages/checkout.js"></script>
 </head>
 <body>
   <!-- Page loading spinner -->
@@ -341,15 +341,26 @@
               <textarea id="orderNote" placeholder="Add order note"></textarea>
             </div>
             <div class="cart-estimate-shipping">
-              <div class="estimate-title">Estimate Shipping</div>
-              <select id="countrySelect">
-                <option>United States</option>
-              </select>
-              <select id="provinceSelect">
-                <option>Alabama</option>
-              </select>
-              
-              <button class="estimate-btn">ESTIMATE</button>
+              <div class="estimate-title">Shipping Information</div>
+              <div class="shipping-form">
+                <div class="form-group">
+                  <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="address" placeholder="Street Address" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="city" placeholder="City" required>
+                </div>
+                
+                <div class="form-group">
+                  <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <!-- <button class="shipping-submit-btn">CALCULATE SHIPPING</button> -->
+              </div>
             </div>
             <div class="cart-summary">
               <div class="cart-subtotal">

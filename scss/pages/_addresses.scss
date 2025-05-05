@@ -38,25 +38,26 @@
         }
         .address-sidebar {
             .address-nav {
-                ul{
+                ul {
                     display: flex;
                     flex-direction: column;
-                    
-                    border: 1px solid #e0e0e0;
-                    border-radius: 8px;
-                    li{
-                        padding: 10px;
+                    border: 1px solid $border-color;
+                    border-radius: $border-radius-md;
+
+                    li {
+                        padding: $spacing-sm;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $primary-color;
+                            font-weight: 600;
+                        }
+                    }
+
+                    #logout-btn {
                         cursor: pointer;
                         &:hover {
-                        color: var(--color-primary);
-                        font-weight: 600;
-                    }
-                }
-    
-                #logout-btn {
-                    cursor: pointer;
-                    &:hover {
-                        color: var(--color-primary);
+                            color: $primary-color;
                             font-weight: 600;
                         }
                     }

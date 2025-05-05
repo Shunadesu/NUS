@@ -7,10 +7,10 @@ import { initUI } from './modules/ui.js';
 import { initProducts } from './modules/products.js';
 import { initPagination } from './modules/pagnigation.js';                 
 import { initProductOptions } from './modules/product-options.js';
-import { initFullscreenGallery } from './modules/fullscreen-gallery.js';
+// import { initFullscreenGallery } from './modules/gallery.js';
 import { initGallery } from './modules/gallery.js';
 import { initNotifications } from './modules/notification.js';
-import { initFilters } from './modules/filter.js';
+import { initFilters } from './components/filter.js';
 import { initFooterFunctionality } from './modules/footer.js';
 import { init404Page } from './modules/404.js';
 import { createTestimonialSlider } from './modules/testimonial.js';
@@ -224,3 +224,4 @@ document.addEventListener('DOMContentLoaded', function() {
     img.addEventListener('error', () => handleImageError(img));
   });
 });
+
