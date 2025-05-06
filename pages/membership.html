@@ -265,167 +265,119 @@
 
     <!-- Membership Content -->
     <div class="membership-wrapper">
-        <div class="membership-content container">
-            <!-- Hero Section -->
-            <section class="membership-hero">
-                <div class="membership-hero__content">
-                    <p class="section-subtitle">JOIN OUR MEMBERSHIP</p>
-                    <h1>Buy More, Get More</h1>
-                    <h1>Exclusive Rewards Program</h1>
-                    <p>Shop more, earn more points, and unlock exclusive rewards. The more you shop, the more benefits you'll enjoy!</p>
-                </div>
-            </section>
+      <div class="membership-content container">
+          <!-- Hero Section -->
+          <section class="membership-hero">
+              <div class="membership-hero__content">
+                  <p class="section-subtitle">JOIN OUR MEMBERSHIP</p>
+                  <h1>Buy More, Get More</h1>
+                  <h1>Exclusive Rewards Program</h1>
+                  <p>Shop more, unlock exclusive rewards. The more you shop, the more benefits you'll enjoy!</p>
+              </div>
+          </section>
 
-            <!-- User Info Section -->
-            <div class="user-info-section" id="userInfoSection" style="display: none;">
-                
-                <div class="user-info-content">
-                    <div class="user-info-left">
-                        <i class="fas fa-user-circle"></i>
-                        <span id="userEmail"></span>
-                    </div>
-                    <div class="user-info-right">
-                        <div class="points-display">
-                            <i class="fas fa-coins"></i>
-                            <span>Current Points: </span>
-                            <span id="userPoints" class="points-value">0</span>
-                        </div>
-                        <div class="points-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="pointsProgress"></div>
-                                <div class="progress-marker" id="currentPointsMarker"></div>
-                            </div>
-                            <div class="next-level">
-                                <span>Next Level: </span>
-                                <span id="nextLevelPoints">500</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+          <!-- Membership Table Section -->
+          <section class="membership-table-section">
+              <table class="membership-table">
+                  <thead>
+                      <tr>
+                          <th>MEMBER'S RANK</th>
+                          <th>CARING</th>
+                          <th>LOVING</th>
+                          <th>PRIVILEGE</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>SPENDING CONDITION</td>
+                          <td>FREE TO JOIN</td>
+                          <td>3.000.000₫/YEAR</td>
+                          <td>9.000.000₫/YEAR</td>
+                      </tr>
+                      <tr>
+                          <td>DISCOUNT</td>
+                          <td>-</td>
+                          <td>10%/YEAR</td>
+                          <td>30%/YEAR</td>
+                      </tr>
+                      <tr>
+                          <td>FREESHIP</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td><i class="fas fa-check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>FREE ACCESSORY RENTAL</td>
+                          <td>-</td>
+                          <td><i class="fas fa-check"></i></td>
+                          <td><i class="fas fa-check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>BIRTHDAY GIFT</td>
+                          <td><i class="fas fa-check"></i></td>
+                          <td><i class="fas fa-check"></i></td>
+                          <td><i class="fas fa-check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>UNBOXING PRIORITY</td>
+                          <td>-</td>
+                          <td><i class="fas fa-check"></i></td>
+                          <td><i class="fas fa-check"></i></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td><a href="#caring" class="btn btn-outline">Get Started</a></td>
+                          <td><a href="#loving" class="btn btn-outline">Get Started</a></td>
+                          <td><a href="#privilege" class="btn btn-outline">Get Started</a></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </section>
 
-            <!-- Membership Levels Section -->
-            <section class="membership-levels">
-                <div class="membership-grid">
-                    <!-- Regular Member -->
-                    <div class="membership-card">
-                        <div class="membership-card__header">
-                            <h3>Regular Member</h3>
-                            <p class="price">Free</p>
-                        </div>
-                        <div class="membership-card__features">
-                            <ul>
-                                <li><i class="fas fa-check"></i> 1 point per $1 spent</li>
-                                <li><i class="fas fa-check"></i> Basic account access</li>
-                                <li><i class="fas fa-check"></i> Newsletter subscription</li>
-                                <li><i class="fas fa-check"></i> Standard shipping</li>
-                            </ul>
-                        </div>
-                        <div class="membership-card__footer" id="regularMemberFooter">
-                            <a href="/pages/register.html" class="btn btn-outline">Start Earning Points</a>
-                        </div>
-                    </div>
-
-                    <!-- Silver Member -->
-                    <div class="membership-card">
-                        <div class="membership-card__header">
-                            <h3>Silver Member</h3>
-                            <p class="price">500 Points</p>
-                        </div>
-                        <div class="membership-card__features">
-                            <ul>
-                                <li><i class="fas fa-check"></i> 1.5 points per $1 spent</li>
-                                <li><i class="fas fa-check"></i> 5% discount on all purchases</li>
-                                <li><i class="fas fa-check"></i> Free shipping on orders over $100</li>
-                                <li><i class="fas fa-check"></i> Priority customer support</li>
-                                <li><i class="fas fa-check"></i> Early access to sales</li>
-                            </ul>
-                        </div>
-                        <div class="membership-card__footer">
-                            <a href="/pages/register.html" class="btn btn-outline">Reach 500 Points</a>
-                        </div>
-                    </div>
-
-                    <!-- Gold Member -->
-                    <div class="membership-card">
-                        <div class="membership-card__header">
-                            <h3>Gold Member</h3>
-                            <p class="price">1,000 Points</p>
-                        </div>
-                        <div class="membership-card__features">
-                            <ul>
-                                <li><i class="fas fa-check"></i> 2 points per $1 spent</li>
-                                <li><i class="fas fa-check"></i> 10% discount on all purchases</li>
-                                <li><i class="fas fa-check"></i> Free shipping on all orders</li>
-                                <li><i class="fas fa-check"></i> VIP customer support</li>
-                                <li><i class="fas fa-check"></i> Exclusive product previews</li>
-                                <li><i class="fas fa-check"></i> Birthday gift</li>
-                            </ul>
-                        </div>
-                        <div class="membership-card__footer">
-                            <a href="/pages/register.html" class="btn btn-primary">Reach 1,000 Points</a>
-                        </div>
-                    </div>
-
-                    <!-- Diamond Member -->
-                    <div class="membership-card">
-                        <div class="membership-card__header">
-                            <h3>Diamond Member</h3>
-                            <p class="price">2,000 Points</p>
-                        </div>
-                        <div class="membership-card__features">
-                            <ul>
-                                <li><i class="fas fa-check"></i> 3 points per $1 spent</li>
-                                <li><i class="fas fa-check"></i> 15% discount on all purchases</li>
-                                <li><i class="fas fa-check"></i> Free express shipping</li>
-                                <li><i class="fas fa-check"></i> Personal shopping assistant</li>
-                                <li><i class="fas fa-check"></i> Exclusive events access</li>
-                                <li><i class="fas fa-check"></i> Quarterly luxury gift box</li>
-                                <li><i class="fas fa-check"></i> Priority access to limited editions</li>
-                            </ul>
-                        </div>
-                        <div class="membership-card__footer">
-                            <a href="/pages/register.html" class="btn btn-outline">Reach 2,000 Points</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Benefits Section -->
-            <section class="membership-benefits">
-                <div class="container">
-                    <p class="section-subtitle text-center">WHY JOIN US</p>
-                    <h2 class="section-title text-center">Membership Benefits</h2>
-                    <p class="section-description text-center">
-                        Experience the advantages of being a NUS member with our exclusive rewards program.
-                    </p>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <i class="fas fa-coins"></i>
-                            <h3>Earn Points</h3>
-                            <p>Earn points with every purchase and watch them multiply as you shop more.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-percentage"></i>
-                            <h3>Bigger Discounts</h3>
-                            <p>Enjoy increasing discounts as you move up through our membership levels.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-gift"></i>
-                            <h3>Exclusive Rewards</h3>
-                            <p>Redeem your points for special rewards and exclusive member-only gifts.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-star"></i>
-                            <h3>VIP Treatment</h3>
-                            <p>Get priority access to new products, sales, and special events.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
+          <!-- Membership Details Section -->
+          <section class="membership-details">
+              <div>
+                  <h2>CARING</h2>
+                  <div class="membership-info">
+                      <p><strong>CONDITIONS:</strong> Book your first order and register for NUS membership.</p>
+                      <p><strong>BENEFITS:</strong></p>
+                      <ul>
+                          <li>Gifts for new members</li>
+                          <li>Gifts from NUS or <strong>100,000 VND</strong> deducted from the first order</li>
+                          <li>Voucher to buy at SUNDE.</li>
+                          <li>Birthday gift.</li>
+                      </ul>
+                  </div>
+              </div>
+              <div>
+                  <h2>LOVING</h2>
+                  <div class="membership-info">
+                      <p><strong>CONDITIONS:</strong> Be an NUS member. Spend 3 million VNĐ/year at NUS (calculated from the time of reaching 3 <strong>MILLION VND</strong>, <br><strong>FOR EXAMPLE:</strong> from April 4, 2024 to April 4, 2025).</p>
+                      <p><strong>BENEFITS:</strong></p>
+                      <ul>
+                          <li><strong>10% DISCOUNT</strong> on individual rentals after upgrading to Loving.</li>
+                          <li>Free accessory rental.</li>
+                          <li>Birthday gift.</li>
+                          <li>Priority unboxing of new tag products.</li>
+                      </ul>
+                  </div>
+              </div>
+              <div>
+                  <h2>PRIVILEGE</h2>
+                  <div class="membership-info">
+                      <p><strong>CONDITIONS:</strong> Be an NUS member. Spend 9 million VNĐ/year at NUS (calculated from the time of reaching 9 <strong>MILLION VND</strong>, <br><strong>FOR EXAMPLE:</strong> from April 4, 2024 to April 4, 2025).</p>
+                      <p><strong>BENEFITS:</strong></p>
+                      <ul>
+                          <li><strong>30% DISCOUNT</strong> on individual rentals after upgrading to Loving.</li>
+                          <li>Free accessory rental.</li>
+                          <li>Birthday gift.</li>
+                          <li>Priority unboxing of new tag products.</li>
+                      </ul>
+                  </div>
+              </div>
+          </section>
+      </div>
+  </div>
 
     <!-- Footer Section -->
     <footer class="footer">
