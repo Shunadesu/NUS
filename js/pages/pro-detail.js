@@ -1,9 +1,11 @@
+import { initProductOptions } from '../modules/product-options.js';
 import { initReviews } from '../modules/review.js'
 import {initTabs} from '../modules/tabs.js'
 
 document.addEventListener('DOMContentLoaded', function() {
     initTabs();
     initReviews();
+    initProductOptions();
 })
 
 document.addEventListener('DOMContentLoaded', function() {

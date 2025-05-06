@@ -7,7 +7,7 @@ import { initUI } from './modules/ui.js';
 import { initProducts } from './modules/products.js';
 import { initPagination } from './modules/pagnigation.js';                 
 import { initProductOptions } from './modules/product-options.js';
-// import { initFullscreenGallery } from './modules/gallery.js';
+import { initFullscreenGallery } from './modules/fullscreen-gallery.js';
 import { initGallery } from './modules/gallery.js';
 import { initNotifications } from './modules/notification.js';
 import { initFilters } from './components/filter.js';
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initPagination();
   initGallery();
   initFullscreenGallery();
-  initProductOptions();
+  
   initFooterFunctionality();
   
   
