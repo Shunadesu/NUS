@@ -457,6 +457,21 @@
     }
 }
 
+.membership-table .btn.active {
+    background: $accent-color;
+    color: $white;
+    border-color: $accent-color;
+    cursor: default;
+    pointer-events: none;
+    font-weight: 700;
+}
+
+.membership-table th.active {
+    background: $accent-color;
+    color: $white;
+    border-color: $accent-color;
+}
+
 // Membership Details Section
 .membership-details {
     max-width: 1200px;

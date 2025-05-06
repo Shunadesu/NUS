@@ -9346,6 +9346,21 @@ Header
   background: #f5f5f5;
 }
 
+.membership-table .btn.active {
+  background: #f44336;
+  color: #fff;
+  border-color: #f44336;
+  cursor: default;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.membership-table th.active {
+  background: #f44336;
+  color: #fff;
+  border-color: #f44336;
+}
+
 .membership-details {
   max-width: 1200px;
   margin: 60px auto 0 auto;
