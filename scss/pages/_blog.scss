@@ -598,3 +598,125 @@
       }
     }
 }
+
+.hot-blog-section {
+  // max-width: 1400px;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0 1rem;
+  margin: 2.5rem auto;
+  background: #ffffff;
+  overflow: hidden;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    // transform: scale(1.02);
+    // transition: transform 0.3s ease;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
+
+    .hot-blog-image {
+      max-width: 100%;
+      // border-radius: 18px 18px 0 0;
+      
+    }
+  }
+
+
+  
+  .hot-blog-image {
+    // flex: 1;
+    min-width: 220px;
+    max-width: 520px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  .hot-blog-content {
+    flex: 2;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    div {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.1rem;
+    }
+    .hot-blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      font-size: 0.95rem;
+      color: #888;
+      margin-bottom: 1.2rem;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+      }
+      .hot-blog-category {
+        background: #e0cfc2;
+        color: #7a5c3e;
+        padding: 2px 10px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+      }
+    }
+    a {
+      width: fit-content;
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 10px 28px;
+      background: #222;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+      &:hover {
+        background: #444;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    .hot-blog-image {
+      max-width: 100%;
+      border-radius: 18px 18px 0 0;
+      img {
+        border-radius: 18px 18px 0 0;
+      }
+    }
+    .hot-blog-content {
+      padding: 2rem 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    gap: 1rem;
+    .hot-blog-content {
+      padding: 1.2rem 0.5rem;
+      h2 {
+        font-size: 1.2rem;
+      }
+      div {
+        font-size: 1rem;
+      }
+    }
+  }
+}

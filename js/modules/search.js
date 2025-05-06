@@ -15,6 +15,7 @@ export function setupSearch() {
     
     const newSearchBtn = cleanupOldListeners();
     
+    // Handle click on search button
     newSearchBtn.addEventListener('click', function(e) {
       e.stopPropagation();
       
@@ -25,6 +26,11 @@ export function setupSearch() {
         searchInput.classList.display = 'block';
         searchInput.focus();
       }
+    });
+
+    // Handle click on search input to prevent closing
+    searchInput.addEventListener('click', function(e) {
+      e.stopPropagation();
     });
     
     // Unified document click handler for closing popups

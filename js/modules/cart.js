@@ -74,7 +74,7 @@ function initCartStorage() {
           id: productCard.dataset.productId || Math.random().toString(36).substr(2, 9),
           name: productCard.querySelector('.product-card__title').textContent,
           variant: 'Default',
-          price: parseFloat(productCard.querySelector('.price-sale').textContent.replace('$', '')),
+          price: Number(productCard.querySelector('.price-buy').textContent.replace('VNĐ', '').replace(/\./g, '')),
           qty: 1,
           img: productCard.querySelector('.primary-image').src
         };
@@ -123,31 +123,28 @@ document.addEventListener('DOMContentLoaded', function() {
       tr.innerHTML = `
         <td class="cart-product-info">
           <a href="/pages/product-detail.html">
-            <img src="${item.img}" alt="${item.name}" class="cart-product-img">
-            <div>
-              <div class="cart-product-title">${item.name}</div>
-              <div class="cart-product-variant">${item.variant}</div>
-              <div class="cart-product-price">$${item.price.toFixed(2)}</div>
-            </div>
+            <img src="${item.img}" alt="${item.name}" class="cart-product-img">  
           </a>
         </td>
+        <td class="cart-product-price">${item.price.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} VNĐ</td>
         <td class="cart-qty">
           <div class="cart-qty-control">
             <button class="cart-qty-btn" data-action="decrease" data-idx="${idx}">-</button>
             <span class="cart-qty-value">${item.qty}</span>
             <button class="cart-qty-btn" data-action="increase" data-idx="${idx}">+</button>
-            <button class="cart-qty-btn" data-action="remove" data-idx="${idx}" title="Remove">🗑️</button>
+
           </div>
         </td>
-        <td class="cart-total">$${(item.price * item.qty).toFixed(2)}</td>
-      `;
+        <td class="cart-total">${(item.price * item.qty).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} VNĐ</td> 
+        <td class="cart-delete"><button class="cart-qty-btn" data-action="remove" data-idx="${idx}" title="Remove">x</button></td>
+        `;
       cartItemsEl.appendChild(tr);
     });
 
     // Filter out invalid items
     cart = cart.filter(item => item && typeof item.price === 'number' && typeof item.qty === 'number');
     
-    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    subtotalEl.textContent = `${subtotal.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 2})} VNĐ`;
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
   }

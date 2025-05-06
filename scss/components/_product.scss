@@ -35,8 +35,8 @@
       position: relative;
       overflow: hidden;
       aspect-ratio: 3/4;
-      background-color: #f9f9f9;
-      
+      // background-color: #f9f9f9;
+
       .primary-image,
       .hover-image {
         width: 100%;
@@ -46,6 +46,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        
       }
       
       .primary-image {
