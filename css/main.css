@@ -1617,7 +1617,7 @@ img {
   color: #222;
   display: block;
   height: 100%;
-  justify-self: center;
+  overflow: hidden;
 }
 .product-card:hover .product-card__actions {
   opacity: 1;
@@ -1635,7 +1635,7 @@ img {
 .product-card__image {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 2/4;
+  aspect-ratio: 3/4;
   background-color: #f9f9f9;
 }
 .product-card__image .primary-image,
@@ -3385,6 +3385,14 @@ img {
 .swiper-button-prev::after {
   font-size: 1rem !important;
   color: black;
+}
+
+.swiper-button-next {
+  right: -25px !important;
+}
+
+.swiper-button-prev {
+  left: -25px !important;
 }
 
 .swiper-container:hover .swiper-button-next,

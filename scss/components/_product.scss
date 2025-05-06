@@ -7,8 +7,9 @@
     color: $text-color;
     display: block;
     height: 100%;
+    overflow: hidden;
     // max-width: 200px;
-    justify-self: center;
+    // justify-self: center;
     // border: 1px solid $border-color;
     
     &:hover {
@@ -33,7 +34,7 @@
     &__image {
       position: relative;
       overflow: hidden;
-      aspect-ratio: 2/4;
+      aspect-ratio: 3/4;
       background-color: #f9f9f9;
       
       .primary-image,
