@@ -1,0 +1,75 @@
+/* Register Page Styles */
+@import '../abstracts/variable'; // Import variables if needed
+
+.register-page-main {
+    padding: 40px 0; // Adjust as needed
+    min-height: 60vh; // Ensure content pushes footer down
+    margin-top: 110px;
+    font-family: var(--font-secondary);
+}
+
+.register-container {
+    max-width: 550px; // Narrower container for register form
+    margin: 0 auto;
+}
+
+#register-form {
+    .form-group {
+        margin-bottom: 1.5rem;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            .required {
+                color: red; // Or your theme's required color
+            }
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ced4da; // Bootstrap form input border color
+            border-radius: 25px; // Fully rounded corners like image
+            font-size: 1rem;
+            &:focus {
+                outline: none;
+                border-color: #86b7fe; // Bootstrap focus color
+                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); // Bootstrap focus shadow
+            }
+        }
+    }
+
+    .privacy-policy-notice {
+        font-size: 0.85rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .btn-submit,
+    .btn-login-alt {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 25px;
+        background-color: var(--color-primary);
+        color: black;
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+        margin-bottom: 1rem; // Space between buttons
+        // Assumes .btn, .btn-dark, .btn-outline provide base button styling
+    }
+
+    .btn-login-alt {
+        // Specific styles if needed to override .btn-outline
+        // e.g., border-color: #ced4da;
+    }
+} 
