@@ -8773,6 +8773,11 @@ Header
   margin-top: 110px;
   font-family: var(--font-secondary);
 }
+@media (max-width: 992px) {
+  .register-page-main {
+    margin-top: 80px;
+  }
+}
 
 .register-container {
   max-width: 550px;

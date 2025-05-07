@@ -6,6 +6,9 @@
     min-height: 60vh; // Ensure content pushes footer down
     margin-top: 110px;
     font-family: var(--font-secondary);
+    @media (max-width: $breakpoint-lg) {
+        margin-top: 80px;
+    }
 }
 
 .register-container {
