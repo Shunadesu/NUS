@@ -28,29 +28,16 @@
         .product-card__content{
             opacity: 0;
             transition: opacity 0.3s ease;
-            @media (max-width: 1200px) {
-                .product-card__title{
-                    font-size: 1rem;
-                }
-            }
-            @media (max-width: 1024px) {
-                .product-card__title{
-                    font-size: 0.8rem;
-                }
-            }
-            @media (max-width: 768px) {
-                .product-card__title{
-                    font-size: 0.6rem;
-                }
-            }
-            @media (max-width: 480px) {
-                .product-card__title{
-                    font-size: 0.8rem;
-                }
-            }
+            // padding: ;
         }
 
         &:hover {
+            .product-card__content {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1200px) {
             .product-card__content {
                 opacity: 1;
             }
@@ -73,9 +60,15 @@
   }
   .swiper-button-next{
     right: -25px !important;
+    @media (max-width: 1200px) {
+        right: 10px !important;
+    }
   }
   .swiper-button-prev{
     left: -25px !important;
+    @media (max-width: 1200px) {
+        left: 10px !important;
+    }
   }
 
 .swiper-container:hover {

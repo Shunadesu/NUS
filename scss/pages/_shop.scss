@@ -530,6 +530,9 @@
         transform: translateZ(0);
         backface-visibility: hidden;
         perspective: 1000px;
+        @media (max-width: $breakpoint-lg) {
+          gap: $spacing-md;
+        }
         &.grid-2 {
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas: 
