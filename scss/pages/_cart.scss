@@ -4,6 +4,9 @@
   font-family: $font-secondary;
   padding: $spacing-xxl 0;
   margin-top: 110px;
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 80px;
+  }
   .container {
     margin: 0 auto;
     max-width: 1400px;
@@ -32,7 +35,9 @@
   margin-bottom: $spacing-lg;
   text-align: center;
   font-size: $font-size-base;
-  
+  @media (max-width: $breakpoint-lg) {
+    font-size: $font-size-small;
+  }
   .cart-alert-icon {
     margin-right: $spacing-xs;
     font-size: 1.1em;
@@ -101,6 +106,11 @@
     border-bottom: 1px solid $border-color;
     text-align: center;
     font-size: $font-size-base;
+    font-weight: 500;
+    @media (max-width: $breakpoint-lg) {
+      font-size: $font-size-small;
+      padding: $spacing-sm $spacing-xs;
+    }
   }
 
   th {
@@ -108,6 +118,12 @@
     color: $text-color;
     font-weight: 600;
     background: $background-light;
+  }
+
+  td {
+    @media (max-width: $breakpoint-lg) {
+     font-size: 12px;
+    }
   }
 
   .cart-product-info {
@@ -122,6 +138,11 @@
       object-fit: contain;
       border-radius: $border-radius-md;
       // border: 1px solid $border-color;
+      @media (max-width: $breakpoint-lg) {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+      }
     }
 
     .cart-product-title {
@@ -170,6 +191,9 @@
     font-weight: 600;
     color: $text-color;
     font-size: $font-size-base;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 12px;
+    }
   }
 
   .cart-delete {
