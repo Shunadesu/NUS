@@ -86,6 +86,12 @@
           padding: $spacing-sm;
           min-width: 500px;
           background-color: $white-color;
+          @media (max-width: 1024px) {
+            min-width: 400px;
+          }
+          @media (max-width: 768px) {
+            min-width: 350px;
+          }
         }
 
         &.active {
@@ -142,6 +148,7 @@
         &.inRange {
           background: $primary-color !important;
           border-color: $primary-color !important;
+          color: $white-color !important;
         }
 
         &.inRange {

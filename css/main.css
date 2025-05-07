@@ -2040,6 +2040,16 @@ img {
   min-width: 500px;
   background-color: #FFFFFF;
 }
+@media (max-width: 1024px) {
+  .calendar-container--content {
+    min-width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .calendar-container--content {
+    min-width: 350px;
+  }
+}
 .calendar-container.active {
   display: flex;
   justify-content: center;
@@ -2088,6 +2098,7 @@ img {
 .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.inRange {
   background: #000 !important;
   border-color: #000 !important;
+  color: #FFFFFF !important;
 }
 .flatpickr-day.inRange {
   opacity: 0.7;
@@ -5714,7 +5725,6 @@ Header
   background-color: #f3f4f6;
 }
 .product-detail-wapper .product-page {
-  padding: 2rem;
   margin-top: 80px;
 }
 @media (min-width: 469px) {
@@ -5736,19 +5746,9 @@ Header
 .product-detail-wapper .product-page .hero-banner {
   padding: 0 2rem;
 }
-@media (min-width: 469px) {
+@media (max-width: 469px) {
   .product-detail-wapper .product-page .hero-banner {
-    padding: 1rem 2rem;
-  }
-}
-@media (min-width: 969px) {
-  .product-detail-wapper .product-page .hero-banner {
-    padding: 2rem;
-  }
-}
-@media (min-width: 1469px) {
-  .product-detail-wapper .product-page .hero-banner {
-    padding: 2rem 10rem;
+    padding: 0;
   }
 }
 .product-detail-wapper .product-page .hero-banner .breadcrumb {
@@ -5918,10 +5918,10 @@ Header
   max-width: 500px;
   max-height: 600px;
 }
-@media (max-width: 468px) {
+@media (max-width: 1024px) {
   .product-detail-wapper .product__main-image {
-    min-width: 250px;
-    max-height: 400px;
+    min-width: 400px;
+    max-height: 600px;
   }
 }
 @media (max-width: 768px) {
@@ -5930,10 +5930,10 @@ Header
     max-height: 500px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 468px) {
   .product-detail-wapper .product__main-image {
-    min-width: 400px;
-    max-height: 600px;
+    min-width: 250px;
+    max-height: 400px;
   }
 }
 .product-detail-wapper .product__main-image .image-container {
@@ -6374,6 +6374,11 @@ Header
   padding: 0 1.5rem;
   border-radius: 30px;
   transition: background-color var(--transition-normal);
+}
+@media (max-width: 768px) {
+  .product-detail-wapper .add-to-cart-btn .add-to-cart-btn__text {
+    display: none;
+  }
 }
 .product-detail-wapper .add-to-cart-btn:hover {
   background: linear-gradient(to right, var(--text-dark), var(--primary-color), var(--text-dark), var(--primary-color));
