@@ -755,6 +755,11 @@ img {
   display: none;
   /* Products */
 }
+@media screen and (max-width: 1200px) {
+  .search-popup {
+    right: 0;
+  }
+}
 .search-popup h3 {
   font-size: 16px;
   color: #222;
@@ -934,11 +939,11 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
-  padding: 0 20px;
+  width: 100%;
+  padding: 0;
 }
 .top-bar .top-bar__content > * {
-  margin: 0 40px;
+  margin: 0;
 }
 
 /* --------------------
@@ -2573,7 +2578,7 @@ img {
 }
 @media (max-width: 767px) {
   .category-banner__item-image {
-    height: 400px;
+    max-height: 400px;
   }
 }
 .category-banner__item-image img {
@@ -2647,8 +2652,13 @@ img {
   font-size: 1rem;
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
   color: #555;
+}
+@media (max-width: 1200px) {
+  .brand__subtitle {
+    font-size: 0.8rem;
+  }
 }
 .brand__container {
   margin-top: 20px;
@@ -3087,12 +3097,12 @@ img {
 }
 @media (max-width: 768px) {
   .membership__content {
-    height: 300px;
+    height: 400px;
   }
 }
 @media (max-width: 576px) {
   .membership__content {
-    height: 200px;
+    height: 300px;
   }
 }
 .membership__content-title {
@@ -3112,12 +3122,12 @@ img {
 }
 @media (max-width: 768px) {
   .membership__content-title h2 {
-    font-size: 24px;
+    font-size: 44px;
   }
 }
 @media (max-width: 576px) {
   .membership__content-title h2 {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 .membership__content-title h2 span {
@@ -3861,6 +3871,12 @@ Header
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 768px) {
   .footer-container {
@@ -5326,7 +5342,7 @@ Header
 .shop-wapper .close-filter-btn {
   background: none;
   border: none;
-  font-size: 44px;
+  font-size: 14px;
   cursor: pointer;
   color: #666;
 }
@@ -7179,6 +7195,18 @@ Header
   /* Filter */
   /* Media Queries */
 }
+@media (max-width: 1200px) {
+  .blog-wapper .blog {
+    margin: 1rem 0;
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 900px) {
+  .blog-wapper .blog {
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+}
 @media (max-width: 768px) {
   .blog-wapper .blog {
     grid-template-columns: 1fr;
@@ -7702,7 +7730,6 @@ Header
   margin: 2.5rem auto;
   background: #ffffff;
   overflow: hidden;
-  overflow: hidden;
 }
 .hot-blog-section:hover {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
@@ -7711,11 +7738,16 @@ Header
   .hot-blog-section {
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 1rem auto;
   }
   .hot-blog-section .hot-blog-image {
     max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .hot-blog-section {
+    padding: 0;
   }
 }
 .hot-blog-section .hot-blog-image {
@@ -7735,6 +7767,11 @@ Header
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 900px) {
+  .hot-blog-section .hot-blog-content {
+    padding: 1.5rem 0.5rem;
+  }
+}
 .hot-blog-section .hot-blog-content h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -7753,6 +7790,13 @@ Header
   font-size: 0.95rem;
   color: #888;
   margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+  .hot-blog-section .hot-blog-content .hot-blog-meta {
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .hot-blog-section .hot-blog-content .hot-blog-meta span {
   display: flex;
@@ -8086,6 +8130,11 @@ Header
   flex-direction: column;
   justify-content: start;
   align-items: start;
+}
+@media screen and (max-width: 768px) {
+  .addresses-page-main .address-content .default-addresses .address-card {
+    width: 100%;
+  }
 }
 .addresses-page-main .address-content .default-addresses .address-card .address-type {
   width: 100%;
@@ -9186,6 +9235,11 @@ Header
   padding: 60px 0;
   margin-top: 110px;
 }
+@media (max-width: 768px) {
+  .membership-wrapper {
+    margin-top: 80px;
+  }
+}
 
 .membership-hero {
   text-align: center;
@@ -9493,9 +9547,18 @@ Header
   }
 }
 .membership-table-section {
-  margin: 0 auto 60px auto;
+  margin: 60px auto 60px auto;
   max-width: 1200px;
-  overflow-x: auto;
+}
+@media (max-width: 768px) {
+  .membership-table-section {
+    margin: 0 auto 40px auto;
+  }
+}
+@media (max-width: 576px) {
+  .membership-table-section {
+    margin: 0 auto 20px auto;
+  }
 }
 
 .membership-table {
@@ -9509,11 +9572,31 @@ Header
   margin-bottom: 60px;
   border: 1px solid #e5e5e5;
 }
+@media (max-width: 768px) {
+  .membership-table {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
 .membership-table th, .membership-table td {
   padding: 20px 15px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   vertical-align: middle;
+  max-width: 100px;
+  text-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .membership-table th, .membership-table td {
+    padding: 15px 10px;
+    max-width: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .membership-table th, .membership-table td {
+    padding: 5px;
+    max-width: 60px;
+  }
 }
 .membership-table th {
   background: #f5f5f5;
@@ -9522,6 +9605,11 @@ Header
   color: #000;
   border-bottom: 2px solid #000;
   position: relative;
+}
+@media (max-width: 768px) {
+  .membership-table th {
+    font-size: 14px;
+  }
 }
 .membership-table .best-seller {
   display: inline-block;
@@ -9534,11 +9622,30 @@ Header
   margin-left: 6px;
   vertical-align: middle;
 }
+@media (max-width: 576px) {
+  .membership-table .best-seller {
+    font-size: 24px;
+    padding: 1px 6px;
+  }
+}
 .membership-table td {
   font-size: 16px;
   color: #222;
   background: #fff;
   min-width: 120px;
+  text-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .membership-table td {
+    font-size: 14px;
+    min-width: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .membership-table td {
+    font-size: 14px;
+    min-width: 80px;
+  }
 }
 .membership-table td i.fas.fa-check {
   color: #f44336;
@@ -9546,6 +9653,7 @@ Header
 }
 .membership-table td a.btn {
   margin: 0 auto;
+  width: 100%;
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
@@ -9555,6 +9663,17 @@ Header
   color: #000;
   background: transparent;
   transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .membership-table td a.btn {
+    padding: 5px 15px;
+  }
+}
+@media (max-width: 576px) {
+  .membership-table td a.btn {
+    font-size: 14px;
+    padding: 1px 6px;
+  }
 }
 .membership-table td a.btn:hover {
   background: #000;
@@ -9584,6 +9703,11 @@ Header
   max-width: 1200px;
   margin: 60px auto 0 auto;
 }
+@media (max-width: 768px) {
+  .membership-details {
+    margin: 40px auto 0 auto;
+  }
+}
 .membership-details > div {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -9594,6 +9718,13 @@ Header
   background: none;
   box-shadow: none;
   margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .membership-details > div {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px 0;
+  }
 }
 .membership-details > div:last-child {
   border-bottom: none;
@@ -9609,13 +9740,34 @@ Header
   line-height: 1.1;
   align-self: center;
 }
+@media (max-width: 768px) {
+  .membership-details h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .membership-details h2 {
+    font-size: 1.75rem;
+  }
+}
 .membership-details .membership-info {
   padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .membership-details .membership-info {
+    padding-left: 0;
+  }
 }
 .membership-details .membership-info p, .membership-details .membership-info ul {
   margin-bottom: 10px;
   font-size: 16px;
   color: #222;
+}
+@media (max-width: 768px) {
+  .membership-details .membership-info p, .membership-details .membership-info ul {
+    font-size: 14px;
+  }
 }
 .membership-details .membership-info ul {
   padding-left: 1.2em;
@@ -9627,25 +9779,15 @@ Header
   font-size: 16px;
   color: #222;
 }
+@media (max-width: 768px) {
+  .membership-details .membership-info li {
+    font-size: 14px;
+  }
+}
 .membership-details .membership-info li strong {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .membership-details > div {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 20px 0;
-  }
-  .membership-details h2 {
-    font-size: 2rem;
-    text-align: left;
-    margin-bottom: 15px;
-  }
-  .membership-details .membership-info {
-    padding-left: 0;
-  }
-}
 .policy-page {
   padding: 60px 0;
   margin-top: 110px;

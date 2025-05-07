@@ -41,11 +41,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 80%;
-        padding: 0 $spacing-lg;
+        width: 100%;
+        padding: 0;
         
         > * {
-            margin: 0 $spacing-xl;
+            margin: 0;
         }
     }
 }

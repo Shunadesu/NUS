@@ -12,6 +12,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media screen and (max-width: 1200px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
         @media screen and (max-width: $breakpoint-md) {
             padding: 10px 20px;
         }

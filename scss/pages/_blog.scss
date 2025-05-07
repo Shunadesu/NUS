@@ -9,6 +9,14 @@
         gap: 2rem;
         margin: 2rem 0;
         padding: 3rem 0;
+        @media (max-width: 1200px) {
+          margin: 1rem 0;
+          padding: 2rem 0;
+        }
+        @media (max-width: 900px) {
+          margin: 1rem 0;
+          padding: 1rem 0;
+        }
         
             @media (max-width: 768px) {
             grid-template-columns: 1fr;
@@ -608,7 +616,7 @@
   margin: 2.5rem auto;
   background: #ffffff;
   overflow: hidden;
-  overflow: hidden;
+  
   &:hover {
     box-shadow: 0 2px 16px rgba(0,0,0,0.04);
     // transform: scale(1.02);
@@ -618,7 +626,7 @@
   @media (max-width: 1200px) {
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 1rem auto;
 
     .hot-blog-image {
@@ -626,6 +634,9 @@
       // border-radius: 18px 18px 0 0;
       
     }
+  }
+  @media (max-width: 900px) {
+    padding: 0;
   }
 
 
@@ -647,6 +658,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 900px) {
+      padding: 1.5rem 0.5rem;
+    }
     h2 {
       font-size: 2rem;
       font-weight: bold;
@@ -665,6 +679,11 @@
       font-size: 0.95rem;
       color: #888;
       margin-bottom: 1.2rem;
+      @media (max-width: 900px) {
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
       span {
         display: flex;
         align-items: center;

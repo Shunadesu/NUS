@@ -3,6 +3,9 @@
 .membership-wrapper {
     padding: $spacing-xxl 0;
     margin-top: 110px;
+    @media (max-width: $breakpoint-md) {
+        margin-top: 80px;
+    }
 }
 
 .membership-hero {
@@ -376,9 +379,17 @@
 
 // Membership Table Styles
 .membership-table-section {
-    margin: 0 auto $spacing-xxl auto;
+    margin: $spacing-xxl auto $spacing-xxl auto;
     max-width: 1200px;
-    overflow-x: auto;
+    // overflow-x: auto;
+
+    @media (max-width: $breakpoint-md) {
+        margin: 0 auto $spacing-xl auto;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        margin: 0 auto $spacing-lg auto;
+    }
 }
 
 .membership-table {
@@ -387,17 +398,32 @@
     border-spacing: 0;
     background: $white;
     box-shadow: $shadow-md;
-    // border-radius: $border-radius-lg;
     overflow: hidden;
     font-size: $font-size-base;
     margin-bottom: $spacing-xxl;
     border: 1px solid $border-color;
+
+    @media (max-width: $breakpoint-md) {
+        font-size: $font-size-small;
+        margin-bottom: $spacing-xl;
+    }
 
     th, td {
         padding: $spacing-lg $spacing-md;
         text-align: center;
         border-bottom: 1px solid $border-color;
         vertical-align: middle;
+        max-width: 100px;
+        text-wrap: wrap;
+        @media (max-width: $breakpoint-md) {
+            padding: $spacing-md $spacing-sm;
+            max-width: 80px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            padding: 5px;
+            max-width: 60px;
+        }
     }
 
     th {
@@ -407,6 +433,10 @@
         color: $primary-color;
         border-bottom: 2px solid $primary-color;
         position: relative;
+
+        @media (max-width: $breakpoint-md) {
+            font-size: $font-size-small;
+        }
     }
 
     .best-seller {
@@ -419,6 +449,11 @@
         padding: 2px 8px;
         margin-left: 6px;
         vertical-align: middle;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: $font-size-medium;
+            padding: 1px 6px;
+        }
     }
 
     td {
@@ -426,6 +461,17 @@
         color: $text-color;
         background: $white;
         min-width: 120px;
+        text-wrap: wrap;
+
+        @media (max-width: $breakpoint-md) {
+            font-size: $font-size-small;
+            min-width: 100px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: $font-size-small;
+            min-width: 80px;
+        }
 
         i.fas.fa-check {
             color: $accent-color;
@@ -434,6 +480,7 @@
 
         a.btn {
             margin: 0 auto;
+            width: 100%;
             display: inline-block;
             padding: $spacing-sm $spacing-lg;
             border-radius: $border-radius-sm;
@@ -443,6 +490,14 @@
             color: $primary-color;
             background: transparent;
             transition: $transition-normal;
+
+            @media (max-width: $breakpoint-md) {
+                padding: $spacing-xs $spacing-md;
+            }
+            @media (max-width: $breakpoint-sm) {
+                font-size: $font-size-small;
+                padding: 1px 6px;
+            }
 
             &:hover {
                 background: $primary-color;
@@ -477,6 +532,10 @@
     max-width: 1200px;
     margin: $spacing-xxl auto 0 auto;
 
+    @media (max-width: $breakpoint-md) {
+        margin: $spacing-xl auto 0 auto;
+    }
+
     > div {
         display: grid;
         grid-template-columns: 280px 1fr;
@@ -487,6 +546,12 @@
         background: none;
         box-shadow: none;
         margin-bottom: 0;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+            gap: $spacing-md;
+            padding: $spacing-lg 0;
+        }
 
         &:last-child {
             border-bottom: none;
@@ -503,15 +568,32 @@
         text-align: left;
         line-height: 1.1;
         align-self: center;
+
+        @media (max-width: $breakpoint-md) {
+            font-size: 2rem;
+            margin-bottom: $spacing-md;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 1.75rem;
+        }
     }
 
     .membership-info {
         padding-left: $spacing-lg;
 
+        @media (max-width: $breakpoint-md) {
+            padding-left: 0;
+        }
+
         p, ul {
             margin-bottom: $spacing-sm;
             font-size: $font-size-base;
             color: $text-color;
+
+            @media (max-width: $breakpoint-md) {
+                font-size: $font-size-small;
+            }
         }
 
         ul {
@@ -525,25 +607,13 @@
             font-size: $font-size-base;
             color: $text-color;
 
+            @media (max-width: $breakpoint-md) {
+                font-size: $font-size-small;
+            }
+
             strong {
                 font-weight: 700;
             }
         }
-    }
-}
-
-@media (max-width: $breakpoint-md) {
-    .membership-details > div {
-        grid-template-columns: 1fr;
-        gap: $spacing-md;
-        padding: $spacing-lg 0;
-    }
-    .membership-details h2 {
-        font-size: 2rem;
-        text-align: left;
-        margin-bottom: $spacing-md;
-    }
-    .membership-details .membership-info {
-        padding-left: 0;
     }
 }

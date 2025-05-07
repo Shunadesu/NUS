@@ -49,7 +49,7 @@
       aspect-ratio: 3/4;
 
       @media (max-width: 767px) { 
-        height: 400px;
+        max-height: 400px;
       }
 
       img {
