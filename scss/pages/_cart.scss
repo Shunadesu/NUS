@@ -30,7 +30,7 @@
 .cart-alert {
   background: #e0f2fe;
   color: $accent-color;
-  border-radius: $border-radius-md;
+  // border-radius: $border-radius-md;
   padding: $spacing-sm $spacing-md;
   margin-bottom: $spacing-lg;
   text-align: center;
@@ -238,8 +238,8 @@
   flex: 1;
   min-width: 280px;
   background: $background-light;
-  border-radius: $border-radius-md;
-  box-shadow: $shadow-md;
+  // border-radius: $border-radius-md;
+  // box-shadow: $shadow-md;
   padding: $spacing-xl $spacing-lg $spacing-lg $spacing-lg;
   display: flex;
   flex-direction: column;
