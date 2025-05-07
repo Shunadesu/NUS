@@ -3,6 +3,10 @@
   margin-top: 110px;
   padding:  60px 0;
   font-family: var(--font-secondary);
+  @media (max-width: $breakpoint-md) {
+    margin-top: 80px;
+    padding: $spacing-xl 0;
+  }
 }
 
 // Shared image hover wrapper

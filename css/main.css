@@ -4061,6 +4061,12 @@ Header
   padding: 60px 0;
   font-family: var(--font-secondary);
 }
+@media (max-width: 768px) {
+  .about-us-wrapper {
+    margin-top: 80px;
+    padding: 40px 0;
+  }
+}
 
 .img-hover-wrapper {
   display: block;
@@ -4590,6 +4596,11 @@ Header
 .contact-us-wrapper {
   margin-top: 110px;
   font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 768px) {
+  .contact-us-wrapper {
+    margin-top: 80px;
+  }
 }
 
 .contact-map {
@@ -9244,6 +9255,7 @@ Header
 @media (max-width: 768px) {
   .membership-wrapper {
     margin-top: 80px;
+    padding: 40px 0;
   }
 }
 

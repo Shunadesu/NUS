@@ -4,6 +4,10 @@
 .contact-us-wrapper {
   margin-top: 110px;
   font-family: $font-secondary;
+  @media (max-width: $breakpoint-md) {
+    margin-top: 80px;
+    
+  }
 }
 
 .contact-map {
