@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Confirmation - Sunny</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo/LOGO-NUS-01.png" />
+    <title>NUS - Order Confirmation</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages/order-confirmation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,11 +12,8 @@
 
     <script type="module" src="../js/main.js"></script>
     <script src="../js/pages/order-confirmation.js"></script>
-
 </head>
 <body>
-
-
     <div class="top-bar">
         <div class="top-bar__scroll-container">
           <!-- First copy of the content -->
@@ -32,7 +30,7 @@
             
           </div>
         </div>
-      </div>
+    </div>
      
      <header class="header text-black">
       <div class="container">
@@ -265,94 +263,94 @@
       <!-- Mobile Navigation Overlay -->
       <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-    <div class="container">
-        <div class="order-confirmation">
-            <div class="confirmation-header">
-                <!-- <i class="fas fa-check-circle"></i> -->
-                 <div class="success-gif-container">
-                   <img src="/img/gif/success.gif" alt="success" class="success-gif">
-                 </div>
-                <h1>Order Confirmed!</h1>
-                <p>Thank you for your purchase</p>
-            </div>
+      <div class="container">
+          <div class="order-confirmation">
+              <div class="confirmation-header">
+                  <!-- <i class="fas fa-check-circle"></i> -->
+                  <div class="success-gif-container">
+                    <img src="/img/gif/success.gif" alt="success" class="success-gif">
+                  </div>
+                  <h1>Order Confirmed!</h1>
+                  <p>Thank you for your purchase</p>
+              </div>
 
-            <div class="order-details">
-                <div class="order-info">
-                    <h2>Order Information</h2>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="label">Order Number:</span>
-                            <span class="value" id="orderNumber"></span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Order Date:</span>
-                            <span class="value" id="orderDate"></span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Payment Method:</span>
-                            <span class="value" id="paymentMethod"></span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Shipping Address:</span>
-                            <span class="value" id="shippingAddress"></span>
-                        </div>
-                    </div>
-                </div>
+              <div class="order-details">
+                  <div class="order-info">
+                      <h2>Order Information</h2>
+                      <div class="info-grid">
+                          <div class="info-item">
+                              <span class="label">Order Number:</span>
+                              <span class="value" id="orderNumber"></span>
+                          </div>
+                          <div class="info-item">
+                              <span class="label">Order Date:</span>
+                              <span class="value" id="orderDate"></span>
+                          </div>
+                          <div class="info-item">
+                              <span class="label">Payment Method:</span>
+                              <span class="value" id="paymentMethod"></span>
+                          </div>
+                          <div class="info-item">
+                              <span class="label">Shipping Address:</span>
+                              <span class="value" id="shippingAddress"></span>
+                          </div>
+                      </div>
+                  </div>
 
-                <div class="order-summary">
-                    <h2>Order Summary</h2>
-                    <div class="summary-items" id="orderItems">
-                        <!-- Items will be populated by JavaScript -->
-                    </div>
-                    <div class="summary-totals">
-                        <div class="total-row">
-                            <span>Subtotal</span>
-                            <span id="subtotal"></span>
-                        </div>
-                        <div class="total-row">
-                            <span>Shipping</span>
-                            <span id="shipping"></span>
-                        </div>
-                        <div class="total-row">
-                            <span>Tax</span>
-                            <span id="tax"></span>
-                        </div>
-                        <div class="total-row grand-total">
-                            <span>Total</span>
-                            <span id="total"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                  <div class="order-summary">
+                      <h2>Order Summary</h2>
+                      <div class="summary-items" id="orderItems">
+                          <!-- Items will be populated by JavaScript -->
+                      </div>
+                      <div class="summary-totals">
+                          <div class="total-row">
+                              <span>Subtotal</span>
+                              <span id="subtotal"></span>
+                          </div>
+                          <div class="total-row">
+                              <span>Shipping</span>
+                              <span id="shipping"></span>
+                          </div>
+                          <div class="total-row">
+                              <span>Tax</span>
+                              <span id="tax"></span>
+                          </div>
+                          <div class="total-row grand-total">
+                              <span>Total</span>
+                              <span id="total"></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-            <div class="next-steps">
-                <h2>What's Next?</h2>
-                <div class="steps-grid">
-                    <div class="step-item">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Order Confirmation Email</h3>
-                        <p>We've sent a confirmation email to your registered email address.</p>
-                    </div>
-                    <div class="step-item">
-                        <i class="fas fa-truck"></i>
-                        <h3>Shipping Updates</h3>
-                        <p>You'll receive shipping updates via email once your order is dispatched.</p>
-                    </div>
-                    <div class="step-item">
-                        <i class="fas fa-headset"></i>
-                        <h3>Need Help?</h3>
-                        <p>Our customer service team is here to help with any questions.</p>
-                    </div>
-                </div>
-            </div>
+              <div class="next-steps">
+                  <h2>What's Next?</h2>
+                  <div class="steps-grid">
+                      <div class="step-item">
+                          <i class="fas fa-envelope"></i>
+                          <h3>Order Confirmation Email</h3>
+                          <p>We've sent a confirmation email to your registered email address.</p>
+                      </div>
+                      <div class="step-item">
+                          <i class="fas fa-truck"></i>
+                          <h3>Shipping Updates</h3>
+                          <p>You'll receive shipping updates via email once your order is dispatched.</p>
+                      </div>
+                      <div class="step-item">
+                          <i class="fas fa-headset"></i>
+                          <h3>Need Help?</h3>
+                          <p>Our customer service team is here to help with any questions.</p>
+                      </div>
+                  </div>
+              </div>
 
-            <div class="action-buttons">
-                <a href="/pages/shop.html" class="btn btn-secondary">Continue Shopping</a>
-                <a href="/pages/account.html" class="btn btn-primary">View Order History</a>
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
+              <div class="action-buttons">
+                  <a href="/pages/shop.html" class="btn btn-secondary">Continue Shopping</a>
+                  <a href="/pages/account.html" class="btn btn-primary">View Order History</a>
+              </div>
+          </div>
+      </div>
+      <footer class="footer">
         <div class="footer-container">
             <!-- Logo and contact info -->
             <div class="footer-col footer-brand">
