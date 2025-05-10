@@ -22,11 +22,11 @@
         position: relative;
 
         @media (max-width: $breakpoint-md) {
-            height: 300px;
+            height: 400px;
         }
 
         @media (max-width: $breakpoint-sm) {
-            height: 200px;
+            height: 300px;
         }
     }
 
@@ -46,11 +46,11 @@
             transition: all $transition-normal;
 
             @media (max-width: $breakpoint-md) {
-                font-size: $font-size-medium;
+                font-size: $font-size-large;
             }
 
             @media (max-width: $breakpoint-sm) {
-                font-size: $font-size-base;
+                font-size: $font-size-medium;
             }
 
             span {

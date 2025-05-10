@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Add event listeners to all images with the 'lazy-image' class
   const Images = document.querySelectorAll('img');
-  console.log(Images);
+  // console.log(Images);
   Images.forEach(img => {
     img.addEventListener('error', () => handleImageError(img));
   });

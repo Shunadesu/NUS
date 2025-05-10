@@ -105,6 +105,9 @@
                 flex-direction: column;
                 justify-content: start;
                 align-items: start;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
                 .address-type{
                     width: 100%;
                     text-align: center;
@@ -116,8 +119,6 @@
                     border-bottom: 1px solid #e0e0e0;
                     background-color: #f0f0f0;
                 }
-                
-            
                 .address-details {
                     width: 100%;
                     margin-bottom: 1.5rem;

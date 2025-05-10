@@ -12,7 +12,7 @@ rankButtons.forEach(btn => {
     if (userEmail) {
         // Nếu đã đăng nhập
         if (btnRank === currentRank) {
-            btn.textContent = 'Current Level';
+            btn.textContent = 'Current Status';
             btn.classList.add('active');
             btn.setAttribute('disabled', 'disabled');
             btn.href = 'javascript:void(0)';

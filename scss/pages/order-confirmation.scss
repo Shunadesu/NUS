@@ -4,6 +4,10 @@
     padding: 2rem;
     background: #fff;
     border-radius: 8px;
+    @media (max-width: $breakpoint-lg) {
+        margin: 80px auto;
+        padding: 1rem;
+    }
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 

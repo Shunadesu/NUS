@@ -3,6 +3,10 @@
     position: absolute;
     top: 100%;
     right: 160px;
+    @media screen and (max-width: 1200px) {
+        right: 0;
+    }
+    
     width: 100%;
     background-color: $white;
     box-shadow: $shadow-md;

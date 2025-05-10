@@ -26,9 +26,14 @@ function setupScrollingTopBar() {
       const content2 = document.createElement('div');
       content2.className = 'top-bar__content';
       content2.innerHTML = originalContent;
+
+      const content3 = document.createElement('div');
+      content3.className = 'top-bar__content';
+      content3.innerHTML = originalContent;
       
       scrollContainer.appendChild(content1);
       scrollContainer.appendChild(content2);
+      scrollContainer.appendChild(content3);
       
       topBar.innerHTML = '';
       topBar.appendChild(scrollContainer);
